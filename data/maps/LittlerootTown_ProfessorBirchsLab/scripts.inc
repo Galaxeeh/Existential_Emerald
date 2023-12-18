@@ -557,6 +557,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
 	giveitem ITEM_POKEMON_BOX_LINK
+	setvar VAR_0x40FF, 1
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_PokemonAwait::
