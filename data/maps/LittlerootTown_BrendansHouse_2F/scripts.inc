@@ -283,8 +283,10 @@ PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 	.string "They finished moving everything in\n"
 	.string "downstairs, too.\p"
 	.string "POKéMON movers are so convenient!\p"
-	.string "Oh, you should make sure that\n"
-	.string "everything's all there on your desk.$"
+	.string "You should make sure that\n"
+	.string "everything's all there on your desk.\p"
+	.string "Oh, and try on these new running shoes!$"
+
 
 PlayersHouse_2F_Text_Notebook:
 	.string "{PLAYER} flipped open the notebook.\p"

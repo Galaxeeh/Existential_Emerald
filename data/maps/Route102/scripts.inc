@@ -73,6 +73,47 @@ Route102_EventScript_Allen::
 	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route102_EventScript_OldRodFisherman::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_OLD_ROD, Route102_EventScript_HowsFishing
+	msgbox Route102_Text_GettingItchToFish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route102_EventScript_GiveOldRod
+	goto_if_eq VAR_RESULT, NO, Route102_EventScript_NotGettingItchToFish
+	end
+
+Route102_EventScript_GiveOldRod::
+	msgbox Route102_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
+	giveitem ITEM_OLD_ROD
+	setflag FLAG_RECEIVED_OLD_ROD
+	msgbox Route102_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_NotGettingItchToFish::
+	msgbox Route102_Text_ThatsTooBadThen, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_HowsFishing::
+	message Route102_Text_HowsYourFishing
+	waitmessage
+	multichoice 20, 8, MULTI_HOWS_FISHING, TRUE
+	goto_if_eq VAR_RESULT, 0, Route102_EventScript_FishingExcellent
+	goto_if_eq VAR_RESULT, 1, Route102_EventScript_FishingNotSoGood
+	end
+
+Route102_EventScript_FishingExcellent::
+	msgbox Route102_Text_GreatHaulInSomeBigOnes, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_FishingNotSoGood::
+	msgbox Route102_Text_FishingAdvice, MSGBOX_DEFAULT
+	release
+	end
+
+
 Route102_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"
 	.string "POKéMON hide in tall grass like this,\l"
@@ -107,3 +148,49 @@ Route102_Text_RouteSignOldale:
 Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
+
+Route102_Text_GettingItchToFish:
+	.string "This is a renowned fishing spot.\n"
+	.string "Are you getting the itch to fish?$"
+
+Route102_Text_HowsYourFishing:
+	.string "Yo!\n"
+	.string "How's your fishing?$"
+
+Route102_Text_GreatHaulInSomeBigOnes:
+	.string "Is that right! That's great!\n"
+	.string "Haul in some big ones!$"
+
+Route102_Text_FishingAdvice:
+	.string "Oh, hey, don't get down on yourself!\n"
+	.string "I'll give you a little fishing advice.\p"
+	.string "First, you want to face the water,\n"
+	.string "then use the ROD.\p"
+	.string "Focus your mind…\n"
+	.string "If you get a bite, pull the ROD.\p"
+	.string "Sometimes you can snag something\n"
+	.string "immediately, but with bigger catches,\l"
+	.string "you need to time the pulls on your ROD\l"
+	.string "to haul them in.$"
+
+Route102_Text_ThatsTooBadThen:
+	.string "Oh, is that so?\n"
+	.string "That's too bad, then.$"
+
+Route102_Text_GiveYouOneOfMyRods:
+	.string "I hear you, and I like what\n"
+	.string "you're saying!\p"
+	.string "I'll give you one of my fishing RODS.$"
+
+Route102_Text_ThrowInFishingAdvice:
+	.string "And, as an added bonus, I'll even throw\n"
+	.string "in a little fishing advice!\p"
+	.string "First, you want to face the water,\n"
+	.string "then use the ROD.\p"
+	.string "Focus your mind…\n"
+	.string "If you get a bite, pull on the ROD.\p"
+	.string "Sometimes you can snag something\n"
+	.string "immediately, but with bigger catches,\l"
+	.string "you need to time the pulls on your ROD\l"
+	.string "to haul them in.$"
+
