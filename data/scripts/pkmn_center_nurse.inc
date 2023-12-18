@@ -120,3 +120,15 @@ Movement_PkmnCenterNurse_Bow:
 	nurse_joy_bow
 	delay_4
 	step_end
+
+PokeVialHealScript::
+	special HealPlayerParty
+	playse SE_M_MILK_DRINK
+	msgbox PokeVialText, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PokeVialText::
+	.string "Your Pokemon feel much healthier.$"
+
+

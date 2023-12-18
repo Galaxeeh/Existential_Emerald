@@ -338,7 +338,7 @@ Route104_EventScript_Boy2::
 	end
 
 Route104_EventScript_ReceivedBulletSeed::
-	msgbox Route104_Text_TMsAreOneTimeUse, MSGBOX_DEFAULT
+	msgbox Route104_Text_TMsCanBeReused, MSGBOX_DEFAULT
 	release
 	end
 
@@ -1036,11 +1036,9 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 	.string "a move for firing seeds rapidly.$"
 
 Route104_Text_TMsAreOneTimeUse:
-	.string "A word of advice!\p"
-	.string "A TM, TECHNICAL MACHINE, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	Route104_Text_TMsCanBeReused:
+	.string "By the way, a TM, TECHNICAL MACHINE,\n"
+	.string "can be used as many times as you want!$"
 
 Route104_Text_DontNeedThisTakeIt:
 	.string "This FLOWER SHOP started selling\n"
@@ -1170,3 +1168,23 @@ Route104_Text_BrendanPostBattle:
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+
+Route104_EventScript_104PORTAPC_OFF::
+	lockall
+	setvar VAR_0x40FF, 0
+	releaseall
+	end
+
+Route104_EventScript_104PORTAPC_ON::
+	lockall
+	setvar VAR_0x40FF, 1
+	releaseall
+	end
+
+Route104_Text_PC_HasBeenDisabled:
+	.string "PortaPC functionality\p"
+	.string "has now been disabled.$"
+
+Route104_Text_PC_HasBeenReenabled:
+	.string "PortaPC functionality\p"
+	.string "has now been restored.$"

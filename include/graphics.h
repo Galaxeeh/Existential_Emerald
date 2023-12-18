@@ -7284,6 +7284,8 @@ extern const u32 gTrainerFrontPic_EliteFourPhoebe[];
 extern const u32 gTrainerFrontPic_EliteFourGlacia[];
 extern const u32 gTrainerFrontPic_EliteFourDrake[];
 extern const u32 gTrainerFrontPic_LeaderRoxanne[];
+extern const u32 gTrainerFrontPic_LeaderBugsy[];
+extern const u32 gTrainerFrontPic_LeaderGiovanni[];
 extern const u32 gTrainerFrontPic_LeaderBrawly[];
 extern const u32 gTrainerFrontPic_LeaderWattson[];
 extern const u32 gTrainerFrontPic_LeaderFlannery[];
@@ -7378,6 +7380,8 @@ extern const u32 gTrainerPalette_EliteFourPhoebe[];
 extern const u32 gTrainerPalette_EliteFourGlacia[];
 extern const u32 gTrainerPalette_EliteFourDrake[];
 extern const u32 gTrainerPalette_LeaderRoxanne[];
+extern const u32 gTrainerPalette_LeaderBugsy[];
+extern const u32 gTrainerPalette_LeaderGiovanni[];
 extern const u32 gTrainerPalette_LeaderBrawly[];
 extern const u32 gTrainerPalette_LeaderWattson[];
 extern const u32 gTrainerPalette_LeaderFlannery[];
@@ -7655,6 +7659,12 @@ extern const u32 gBattleTerrainPalette_StadiumPhoebe[];
 extern const u32 gBattleTerrainPalette_StadiumGlacia[];
 extern const u32 gBattleTerrainPalette_StadiumDrake[];
 extern const u32 gBattleTerrainPalette_StadiumWallace[];
+extern const u32 gBattleTerrainTiles_SnowLongGrass[];
+extern const u32 gBattleTerrainTilemap_SnowLongGrass[];
+extern const u32 gBattleTerrainAnimTiles_SnowLongGrass[];
+extern const u32 gBattleTerrainAnimTilemap_SnowLongGrass[];
+extern const u32 gBattleTerrainPalette_SnowLongGrass[];
+
 
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];
@@ -9357,6 +9367,7 @@ extern const u16 gBattleInterface_BallDisplayPal[];
 
 extern const u32 gSwapLineGfx[];
 extern const u32 gSwapLinePal[];
+extern const u32 gSwapLineGfx_RegisteredItemsMenu[];
 
 extern const u32 gBattlePyramidBag_Gfx[];
 extern const u32 gBattlePyramidBag_Pal[];

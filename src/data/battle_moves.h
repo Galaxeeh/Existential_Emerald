@@ -3746,8 +3746,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
 
     [MOVE_RETURN] =
     {
-        .effect = EFFECT_RETURN,
-        .power = 1,
+        .effect = EFFECT_HIT,
+        .power = 102,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -3776,8 +3776,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
 
     [MOVE_FRUSTRATION] =
     {
-        .effect = EFFECT_FRUSTRATION,
-        .power = 1,
+        .effect = EFFECT_HIT,
+        .power = 102,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,

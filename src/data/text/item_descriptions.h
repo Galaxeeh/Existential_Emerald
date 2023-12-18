@@ -540,6 +540,11 @@ static const u8 sRareCandyDesc[] = _(
     "of a Pokémon by\n"
     "one.");
 
+static const u8 sCandyDustDesc[] = _(
+    "Raises the level\n"
+    "of a Pokémon by\n"
+    "one. Infinite use.");
+
 static const u8 sExpCandyXSDesc[] = _(
     "Gives a very small\n"
     "amount of Exp. to\n"
@@ -3918,3 +3923,16 @@ static const u8 sBerserkGene[] = _(
     "Sharply boosts\n"
     "Attack, but causes\n"
     "lasting confusion.");
+
+    //Pokevial Branch
+static const u8 sPokevialDesc[] = _(
+    "Fully revives and\n"
+    "restores all\n"
+    "fainted POKéMON.");
+
+    //PokeRepellant Branch
+static const u8 sPokeRepellantDesc[] = _(
+    "Repels weak wild\n"
+    "Pokémon.");
+
+

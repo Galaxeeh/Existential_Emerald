@@ -899,14 +899,10 @@ LittlerootTown_EventScript_SetReceivedRunningShoes::
 
 LittlerootTown_EventScript_GiveRunningShoes::
 	msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_Text_SwitchShoesWithRunningShoes
-	waitfanfare
+	giveitem ITEM_POKEVIAL
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
-	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
 	closemessage
-	delay 30
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
@@ -932,20 +928,18 @@ LittlerootTown_Text_WearTheseRunningShoes:
 	.string "You're your father's child, all right.\n"
 	.string "You look good together with POKéMON!\p"
 	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "adventure, take this POKéVIAL.$"
+
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "{PLAYER} switched shoes with the\n"
 	.string "RUNNING SHOES.$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, those shoes came with\n"
-	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
-	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+	.string "MOM: {PLAYER}, this POKéVIAL will keep\n"
+	.string "your POKéMON in tip-top shape!\p"
+	.string "Use it to heal all your\n"
+	.string "POKéMON to full health in a jiffy.\p"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"
@@ -956,6 +950,25 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "…But please be careful.\n"
 	.string "If anything happens, you can come home.\p"
 	.string "Go on, go get them, honey!$"
+
+LittlerootTown_Text_TakePokevial:
+	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
+	.string "wipe your ass after you shidded?\p"
+	.string "You should also take this ass\n"
+	.string "farder that Prof Birch gave me!\p"
+	.string "It would be better in your hands.\n"
+	.string "I only got shid in my ass!$"
+
+LittlerootTown_Text_ReceivePokevial:
+	.string "{PLAYER} stuffed the Pokevial\n"
+	.string "Up his ass.$"	
+
+LittlerootTown_Text_ExplainPokevial:
+	.string "MOM: {PLAYER}, that Pokevial came with\n"
+	.string "cum on it.\p"
+	.string "“Make sure to lick it real good,\n"
+	.string "and tell me what that smell like!$"
+
 
 LittlerootTown_Text_CanUsePCToStoreItems:
 	.string "If you use a PC, you can store items\n"

@@ -118,6 +118,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_CandyDust, MSGBOX_DEFAULT
+	giveitem ITEM_CANDY_DUST	
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
@@ -554,6 +556,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	special SetUnlockedPokedexFlags
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
+	giveitem ITEM_POKEMON_BOX_LINK
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_PokemonAwait::
@@ -703,6 +706,15 @@ LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
 	.string "used earlier.\p"
 	.string "{PLAYER} received the {STR_VAR_1}!$"
 
+LittlerootTown_ProfessorBirchsLab_Text_CandyDust:
+	.string "You should also take this Candy Dust.\p"
+	.string "It will allow you to empower\n"
+	.string "your pokemon to it's utmost potential.\p"
+	.string "However,\n"
+	.string "pokemon will only power up to\l"
+	.string "match the strength of their trainer.$"
+
+
 LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon:
 	.string "PROF. BIRCH: While you're at it, why not\n"
 	.string "give a nickname to that {STR_VAR_1}?$"
@@ -742,9 +754,9 @@ LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex:
 	.string "for a long time.\p"
 	.string "{RIVAL} has an extensive history as\n"
 	.string "a TRAINER already.\p"
-	.string "Here, {PLAYER}{KUN}, I ordered this for my\n"
+	.string "Here, {PLAYER}{KUN}, I ordered these for my\n"
 	.string "research, but I think you should have\l"
-	.string "this POKéDEX.$"
+	.string "this POKéDEX and PORTAPC.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex:
 	.string "{PLAYER} received the POKéDEX!$"
@@ -758,7 +770,12 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "Whenever my kid catches a rare POKéMON\n"
 	.string "and records its data in the POKéDEX,\l"
 	.string "why, {RIVAL} looks for me while I'm out\l"
-	.string "doing fieldwork, and shows me.$"
+	.string "doing fieldwork, and shows me.\p"
+	.string "The PORTAPC lets you link up with the\n"
+	.string "POKéMON storage system while on the go.\p"
+	.string "It doesn't seem to get any signal in\n"
+	.string "caves and on certain routes.\p"
+	.string "So be mindful!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 	.string "PROF. BIRCH: Countless POKéMON\n"
@@ -768,7 +785,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 
 LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese:
 	.string "MAY: Oh, wow, {PLAYER}{KUN}!\n"
-	.string "You got a POKéDEX, too!\p"
+	.string "You got a POKéDEX and PORTAPC, too!\p"
 	.string "That's great! Just like me!\n"
 	.string "I've got something for you, too!$"
 

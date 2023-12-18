@@ -1,5 +1,6 @@
 .set LOCALID_BRINEY, 11
 .set LOCALID_WANDAS_BF_OUTSIDE, 21
+.set LOCALID_JOSE, 6
 
 Route116_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route116_OnTransition
@@ -230,14 +231,22 @@ Route116_Movement_GlassesManExitEast:
 	step_end
 
 Route116_EventScript_Joey::
-	trainerbattle_single TRAINER_JOEY, Route116_Text_JoeyIntro, Route116_Text_JoeyDefeat
+	trainerbattle_single TRAINER_JOEY, Route116_Text_JoeyIntro, Route116_Text_JoeyDefeat, Route116_EventScript_Jose
 	msgbox Route116_Text_JoeyPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route116_JOSEWALK::
+	applymovement LOCALID_JOSE, Route116_Movement_Jose
+	end
+
+Route116_Movement_Jose:
+	walk_down
+	step_end
 
 Route116_EventScript_Jose::
 	trainerbattle_single TRAINER_JOSE, Route116_Text_JoseIntro, Route116_Text_JoseDefeat
 	msgbox Route116_Text_JosePostBattle, MSGBOX_AUTOCLOSE
-	end
+	return
 
 Route116_EventScript_Jerry::
 	trainerbattle_single TRAINER_JERRY_1, Route116_Text_JerryIntro, Route116_Text_JerryDefeat, Route116_EventScript_TryRegisterJerryAfterBattle

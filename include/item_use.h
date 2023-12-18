@@ -18,6 +18,7 @@ void ItemUseOutOfBattle_SacredAsh(u8);
 void ItemUseOutOfBattle_PPRecovery(u8);
 void ItemUseOutOfBattle_PPUp(u8);
 void ItemUseOutOfBattle_RareCandy(u8);
+void ItemUseOutOfBattle_CandyDust(u8);
 void ItemUseOutOfBattle_TMHM(u8);
 void ItemUseOutOfBattle_Repel(u8);
 void ItemUseOutOfBattle_Lure(u8);
@@ -37,6 +38,11 @@ void ItemUseInBattle_PartyMenuChooseMove(u8 taskId);
 void Task_UseDigEscapeRopeOnField(u8 taskId);
 u8 CanUseDigOrEscapeRopeOnCurMap(void);
 u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId);
+void ItemUseOutOfBattle_Pokevial(u8); //Pokevial Branch
+void ItemUseOutOfBattle_PortaPC(u8); //PortaPC
+void ItemUseOutOfBattle_PokeRepellant(u8); //PokeRepellant
+
+
 
 enum {
     BALL_THROW_UNABLE_TWO_MONS,

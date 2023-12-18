@@ -115,3 +115,23 @@ Text_UseAnotherLure::
 Text_UsedNewRepelLure::
 	.string "{PLAYER} used the\n"
 	.string "{STR_VAR_2}.$"
+
+PokeRepellantOff::
+	playse SE_REPEL
+	msgbox PokeRepellantOffText, MSGBOX_DEFAULT
+	setvar VAR_REPELLANT, 0	
+	releaseall
+	end
+
+PokeRepellantOffText::
+	.string "PokeRepellant has been disabled.$"
+
+PokeRepellantOn::
+	playse SE_REPEL
+	msgbox PokeRepellantOnText, MSGBOX_DEFAULT
+	setvar VAR_REPELLANT, 1	
+	releaseall
+	end
+
+PokeRepellantOnText::
+	.string "PokeRepellant has been enabled.$"

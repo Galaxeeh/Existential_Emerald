@@ -20,6 +20,9 @@
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
 
+#define OBJ_EVENT_PAL_TAG_NPC_1                   0x1103
+
+
 struct MirageTowerPulseBlend
 {
     u8 taskId;
@@ -154,7 +157,7 @@ static const union AnimCmd *const sAnims_FallingFossil[] =
 static const struct SpriteTemplate sSpriteTemplate_FallingFossil =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .oam = &sOamData_FallingFossil,
     .anims = sAnims_FallingFossil,
     .images = NULL,
@@ -321,11 +324,12 @@ void SetMirageTowerVisibility(void)
     u16 rand;
     bool8 visible;
 
+
+
     if (VarGet(VAR_MIRAGE_TOWER_STATE))
     {
         // Mirage Tower event has already been completed, hide it
         FlagClear(FLAG_MIRAGE_TOWER_VISIBLE);
-        return;
     }
 
     rand = Random();
@@ -339,6 +343,7 @@ void SetMirageTowerVisibility(void)
         TryStartMirageTowerPulseBlendEffect();
         return;
     }
+
 
     FlagClear(FLAG_MIRAGE_TOWER_VISIBLE);
 }
@@ -477,7 +482,7 @@ static void SpriteCB_CeilingCrumble(struct Sprite *sprite)
     }
 }
 
-static void SetInvisibleMirageTowerMetatiles(void)
+void SetInvisibleMirageTowerMetatiles(void)
 {
     u8 i;
     for (i = 0; i < ARRAY_COUNT(sInvisibleMirageTowerMetatiles); i++)

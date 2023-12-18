@@ -145,6 +145,10 @@ gFieldEffectScript_LongGrass::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1, FldEff_LongGrass
 	field_eff_end
 
+gFieldEffectScript_SnowLongGrass::
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffectSnow, FldEff_SnowLongGrass
+	field_eff_end
+
 gFieldEffectScript_JumpLongGrass::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1, FldEff_JumpLongGrass
 	field_eff_end

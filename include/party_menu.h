@@ -58,9 +58,11 @@ void ItemUseCB_PPRecovery(u8 taskId, TaskFunc task);
 void ItemUseCB_PPUp(u8 taskId, TaskFunc task);
 u16 ItemIdToBattleMoveId(u16 item);
 bool8 MonKnowsMove(struct Pokemon *mon, u16 move);
+int MoveToHM(u16 move);
 bool8 BoxMonKnowsMove(struct BoxPokemon *boxMon, u16 move);
 void ItemUseCB_TMHM(u8 taskId, TaskFunc task);
 void ItemUseCB_RareCandy(u8 taskId, TaskFunc task);
+void ItemUseCB_CandyDust(u8 taskId, TaskFunc task);
 void ItemUseCB_SacredAsh(u8 taskId, TaskFunc task);
 void ItemUseCB_EvolutionStone(u8 taskId, TaskFunc task);
 void ItemUseCB_FormChange(u8 taskId, TaskFunc task);
@@ -96,5 +98,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+void CB2_ReturnToPartyMenuFromSummaryScreen(void);
+
 
 #endif // GUARD_PARTY_MENU_H

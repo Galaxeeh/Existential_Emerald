@@ -44,6 +44,7 @@
 #include "constants/items.h"
 #include "constants/songs.h"
 
+
 static void SetUpItemUseCallback(u8);
 static void FieldCB_UseItemOnField(void);
 static void Task_CallItemUseOnFieldCallback(u8);
@@ -60,6 +61,10 @@ static void ItemUseOnFieldCB_Bike(u8);
 static void ItemUseOnFieldCB_Rod(u8);
 static void ItemUseOnFieldCB_Itemfinder(u8);
 static void ItemUseOnFieldCB_Berry(u8);
+static void ItemUseCB_UsePokevial(u8); //Pokevial Branch
+static void ItemUseCB_UsePortaPC(u8); //PortaPC
+static void ItemUseCB_PokeRepellantOff(u8); //PokeRepellant
+static void ItemUseCB_PokeRepellantOn(u8); //PokeRepellant
 static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
 static bool8 TryToWaterSudowoodo(void);
@@ -100,6 +105,8 @@ static const struct YesNoFuncTable sUseTMHMYesNoFuncTable =
     .yesFunc = UseTMHM,
     .noFunc = CloseItemMessage,
 };
+
+
 
 #define tEnigmaBerryType data[4]
 static void SetUpItemUseCallback(u8 taskId)
@@ -825,6 +832,22 @@ void ItemUseOutOfBattle_RareCandy(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
+void ItemUseOutOfBattle_CandyDust(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        gItemUseCB = ItemUseCB_CandyDust;
+        gTasks[taskId].data[0] = FALSE;
+        SetUpItemUseCallback(taskId);
+    }
+    else
+    {
+        gItemUseCB = ItemUseCB_CandyDust;
+        SetUpItemUseCallback(taskId);
+    }
+}
+
+
 void ItemUseOutOfBattle_TMHM(u8 taskId)
 {
     if (gSpecialVar_ItemId >= ITEM_HM01)
@@ -1349,5 +1372,127 @@ void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
+
+extern u8 PokeVialHealScript[];
+
+//Pokevial Branch
+void ItemUseOutOfBattle_Pokevial(u8 taskId)
+{
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseCB_UsePokevial;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else{
+        sItemUseOnFieldCB = ItemUseCB_UsePokevial;
+        SetUpItemUseOnFieldCallback(taskId);        
+    }
+
+}
+
+//PortaPC
+void ItemUseOutOfBattle_PortaPC(u8 taskId)
+{
+    u16 pc = VarGet(VAR_0x40FF);
+    if (pc == 0)
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+    }
+
+    else if (!gTasks[taskId].tUsingRegisteredKeyItem)
+    {
+        sItemUseOnFieldCB = ItemUseCB_UsePortaPC;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    
+    else{
+        sItemUseOnFieldCB = ItemUseCB_UsePortaPC;
+        SetUpItemUseOnFieldCallback(taskId);        
+    }
+
+}
+
+
+extern u8 PokeRepellantOff[];
+extern u8 PokeRepellantOn[];
+
+//PokeRepellant
+void ItemUseOutOfBattle_PokeRepellant(u8 taskId)
+{
+    u16 rep = VarGet(VAR_REPELLANT);   
+    if (rep == 1)
+    {
+        if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        {
+            sItemUseOnFieldCB = ItemUseCB_PokeRepellantOff;
+            gFieldCallback = FieldCB_UseItemOnField;
+            gBagMenu->newScreenCallback = CB2_ReturnToField;
+            Task_FadeAndCloseBagMenu(taskId);
+        }
+        else{
+            sItemUseOnFieldCB = ItemUseCB_PokeRepellantOff;
+            SetUpItemUseOnFieldCallback(taskId);        
+        }
+    }
+
+    else
+    {
+        if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        {
+            sItemUseOnFieldCB = ItemUseCB_PokeRepellantOn;
+            gFieldCallback = FieldCB_UseItemOnField;
+            gBagMenu->newScreenCallback = CB2_ReturnToField;
+            Task_FadeAndCloseBagMenu(taskId);
+        }
+        else{
+            sItemUseOnFieldCB = ItemUseCB_PokeRepellantOn;
+            SetUpItemUseOnFieldCallback(taskId);        
+        }
+    }   
+
+}
+
+void ItemUseCB_PokeRepellantOff(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(PokeRepellantOff);
+    DestroyTask(taskId);
+    
+}
+
+void ItemUseCB_PokeRepellantOn(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(PokeRepellantOn);
+    DestroyTask(taskId);
+    
+}
+
+
+
+
+
+//Pokevial
+void ItemUseCB_UsePokevial(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(PokeVialHealScript);
+    DestroyTask(taskId);
+    
+}
+
+//PortaPC
+void ItemUseCB_UsePortaPC(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(EventScript_PC);
+    DestroyTask(taskId);
+    
+}
+
 
 #undef tUsingRegisteredKeyItem

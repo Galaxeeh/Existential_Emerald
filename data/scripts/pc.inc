@@ -3,9 +3,33 @@ EventScript_PC::
 	setvar VAR_0x8004, PC_LOCATION_OTHER
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
-	msgbox Text_BootUpPC, MSGBOX_DEFAULT
 	goto EventScript_PCMainMenu
 	end
+
+
+EventScript_104PORTAPC_OFF::
+	lockall
+	setvar VAR_0x40FF, 0
+	msgbox PC_HasBeenDisabled, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_104PORTAPC_ON::
+	lockall
+	setvar VAR_0x40FF, 1
+	msgbox PC_HasBeenReenabled, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PC_HasBeenDisabled::
+	.string "PortaPC functionality\p"
+	.string "has now been disabled.$"
+
+PC_HasBeenReenabled::
+	.string "PortaPC functionality\p"
+	.string "has now been restored.$"
+
+	
 
 EventScript_PCMainMenu::
 	message gText_WhichPCShouldBeAccessed

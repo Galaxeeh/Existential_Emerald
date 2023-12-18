@@ -33,6 +33,7 @@ void UpdateJumpImpactEffect(struct Sprite *);
 void UpdateFootprintsTireTracksFieldEffect(struct Sprite *);
 void UpdateSplashFieldEffect(struct Sprite *);
 void UpdateLongGrassFieldEffect(struct Sprite *);
+void UpdateSnowLongGrassFieldEffect(struct Sprite *);
 void UpdateSandPileFieldEffect(struct Sprite *);
 void UpdateDisguiseFieldEffect(struct Sprite *);
 void UpdateShortGrassFieldEffect(struct Sprite *);
@@ -41,5 +42,6 @@ void UpdateBubblesFieldEffect(struct Sprite *);
 void UpdateSparkleFieldEffect(struct Sprite *);
 void SetSpriteInvisible(u8 spriteId);
 void ShowWarpArrowSprite(u8 spriteId, u8 direction, s16 x, s16 y);
+void LoadFieldEffectPalette(u8 fieldEffect);
 
 #endif //GUARD_FIELD_EFFECT_HELPERS_H

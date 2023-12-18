@@ -202,9 +202,9 @@
 #define MAX_IV_MASK 31
 #define USE_RANDOM_IVS (MAX_PER_STAT_IVS + 1)
 #if P_EV_CAP >= GEN_6
-#define MAX_PER_STAT_EVS 252
+#define MAX_PER_STAT_EVS 0
 #else
-#define MAX_PER_STAT_EVS 255
+#define MAX_PER_STAT_EVS 0
 #endif
 #define MAX_TOTAL_EVS 510
 #if I_VITAMIN_EV_CAP >= GEN_8
@@ -327,6 +327,7 @@
 #define SPECIES_FLAG_ALL_PERFECT_IVS    (1 << 8)
 #define SPECIES_FLAG_CANNOT_BE_TRADED   (1 << 9)
 #define SPECIES_FLAG_ULTRA_BURST        (1 << 10)
+#define SPECIES_FLAG_STARTER            (1 << 11)
 
 #define LEGENDARY_PERFECT_IV_COUNT 3
 

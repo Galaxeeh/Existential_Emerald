@@ -937,6 +937,18 @@ static const struct SpriteFrameImage sPicTable_VigorothCarryingBox[] = {
     overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 2),
 };
 
+static const struct SpriteFrameImage sPicTable_Machoke[] = {
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Machoke, 4, 4, 2),
+};
+
 static const struct SpriteFrameImage sPicTable_VigorothFacingAway[] = {
     overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 3),
     overworld_frame(gObjectEventPic_Vigoroth, 4, 4, 3),
@@ -1237,6 +1249,18 @@ static const struct SpriteFrameImage sPicTable_Roxanne[] = {
     overworld_frame(gObjectEventPic_Roxanne, 2, 4, 1),
     overworld_frame(gObjectEventPic_Roxanne, 2, 4, 2),
     overworld_frame(gObjectEventPic_Roxanne, 2, 4, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_Bugsy[] = {
+    overworld_frame(gObjectEventPic_Bugsy, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Bugsy, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Bugsy, 4, 4, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_Giovanni[] = {
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Giovanni, 4, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_Brawly[] = {
@@ -2171,4 +2195,13 @@ static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
     overworld_frame(gObjectEventPic_RubySapphireMayNormal, 2, 4, 6),
     overworld_frame(gObjectEventPic_RubySapphireMayNormal, 2, 4, 7),
     overworld_frame(gObjectEventPic_RubySapphireMayNormal, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_Bayleef[] = {
+    overworld_frame(gObjectEventPic_Bayleef, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Bayleef, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Bayleef, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Bayleef, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Bayleef, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Bayleef, 4, 4, 5),
 };

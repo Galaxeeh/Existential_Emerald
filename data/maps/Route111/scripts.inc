@@ -16,6 +16,7 @@ Route111_MapScripts::
 Route111_OnLoad:
 	call_if_unset FLAG_REGI_DOORS_OPENED, Route111_EventScript_CloseDesertRuins
 	call_if_eq VAR_MIRAGE_TOWER_STATE, 1, Route111_EventScript_ShowTemporaryMirageTower
+	call_if_eq VAR_MIRAGE_TOWER_STATE, 3, Route111_EventScript_DestroyMirageTower
 	end
 
 Route111_EventScript_CloseDesertRuins::
@@ -45,10 +46,30 @@ Route111_EventScript_ShowTemporaryMirageTower::
 	setmetatile 20, 58, METATILE_Mauville_MirageTower_Tile11, FALSE
 	return
 
+Route111_EventScript_DestroyMirageTower::
+	setmetatile 18, 53, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 19, 53, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 20, 53, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 18, 54, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 19, 54, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 20, 54, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 18, 55, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 19, 55, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 20, 55, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 18, 56, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 19, 56, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 20, 56, METATILE_Mauville_DeepSand_Center, FALSE
+	setmetatile 18, 57, METATILE_Mauville_DeepSand_BottomMid, FALSE
+	setmetatile 19, 57, METATILE_Mauville_DeepSand_BottomMid, FALSE
+	setmetatile 20, 57, METATILE_Mauville_DeepSand_BottomMid, FALSE
+	setmetatile 18, 58, METATILE_General_SandPit_Center, FALSE
+	setmetatile 19, 58, METATILE_General_SandPit_Center, FALSE
+	setmetatile 20, 58, METATILE_General_SandPit_Center, FALSE
+	return
+
 Route111_OnTransition:
 	setvar VAR_TRAINER_HILL_IS_ACTIVE, 0
 	special SetMirageTowerVisibility
-	call_if_unset FLAG_MIRAGE_TOWER_VISIBLE, Route111_EventScript_SetLayoutNoMirageTower
 	call_if_eq VAR_MIRAGE_TOWER_STATE, 1, Route111_EventScript_SetFallingPlayerGfx
 	call_if_eq VAR_MIRAGE_TOWER_STATE, 2, Route111_EventScript_SetMirageTowerGone
 	call Route111_EventScript_CheckSetSandstorm
@@ -98,6 +119,7 @@ Route111_EventScript_SetLayoutNoMirageTower::
 
 Route111_EventScript_SetMirageTowerGone::
 	setvar VAR_MIRAGE_TOWER_STATE, 3
+	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
 	return
 
 Route111_OnWarp:
@@ -134,6 +156,7 @@ Route111_EventScript_MirageTowerDisappear::
 	clearflag FLAG_HIDE_DESERT_UNDERPASS_FOSSIL
 	goto_if_set FLAG_CHOSE_CLAW_FOSSIL, Route111_EventScript_RootFossilDisappeared
 	msgbox Route111_Text_ClawFossilDisappeared, MSGBOX_DEFAULT
+	setvar VAR_MIRAGE_TOWER_STATE, 3
 	releaseall
 	end
 
