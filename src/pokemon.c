@@ -812,7 +812,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     SetBoxMonData(boxMon, MON_DATA_EXP, &gExperienceTables[gSpeciesInfo[species].growthRate][level]);
     SetBoxMonData(boxMon, MON_DATA_FRIENDSHIP, &gSpeciesInfo[species].friendship);
 
-    if (gSpeciesInfo[species].isLegendary)
+    if (gSpeciesInfo[species].isStarter)
     {
         value = MAPSEC_LITTLEROOT_LAB;   
     }
@@ -874,6 +874,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         else if (P_LEGENDARY_PERFECT_IVS >= GEN_6 
          && (gSpeciesInfo[species].isLegendary
           || gSpeciesInfo[species].isMythical
+          || gSpeciesInfo[species].isStarter
           || gSpeciesInfo[species].isUltraBeast))
         {
             iv = MAX_PER_STAT_IVS;

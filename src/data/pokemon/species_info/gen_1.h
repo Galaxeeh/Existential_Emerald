@@ -1335,6 +1335,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_GUTS, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_PURPLE,
+        .isStarter = TRUE,
         .height = 3,
         .weight = 35,
         .description = COMPOUND_STRING(

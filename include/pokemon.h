@@ -382,6 +382,7 @@ struct SpeciesInfo /*0x8C*/
             // Flags
  /* 0x7A */ u32 isLegendary:1;
             u32 isMythical:1;
+            u32 isStarter:1;
             u32 isUltraBeast:1;
             u32 isParadoxForm:1;
             u32 isMegaEvolution:1;
