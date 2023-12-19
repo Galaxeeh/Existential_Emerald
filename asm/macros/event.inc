@@ -2025,3 +2025,11 @@
 	callnative CreateTrainerPartyForPlayer
 	trainerbattle_no_intro \trainer2, NULL
 	.endm
+
+    @ Changes the status of a selected Pokémon
+    .macro setmonstatus status:req
+    special ChoosePartyMon
+    waitstate
+    setvar VAR_TEMP_1, \status
+    special SetMonStatus
+    .endm	

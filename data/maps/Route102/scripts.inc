@@ -113,6 +113,10 @@ Route102_EventScript_FishingNotSoGood::
 	release
 	end
 
+Route102_EventScript_PoisonTest::
+	setmonstatus STATUS1_POISON
+	end
+
 
 Route102_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"

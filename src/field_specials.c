@@ -141,6 +141,35 @@ static void SetInitialFansOfPlayer(void);
 static u16 PlayerGainRandomTrainerFan(void);
 static void BufferFanClubTrainerName_(struct LinkBattleRecords *, u8, u8);
 
+void SetMonStatus(void)
+{
+    u16 status = VarGet(VAR_TEMP_1);
+    u32 curStatus = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS);
+    u32 species = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES);
+    u32 type1 = gSpeciesInfo[species].types[0];
+    u32 type2 = gSpeciesInfo[species].types[1];
+    if (status == STATUS1_POISON)
+	{
+	    if (type1 != TYPE_POISON && type1 != TYPE_STEEL && type2 != TYPE_POISON && type2 != TYPE_STEEL)
+		    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
+	    else
+		    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &curStatus);
+	}
+
+    if (status == STATUS1_BURN)
+	{
+	    if (type1 != TYPE_FIRE && type2 != TYPE_FIRE)
+		    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
+	    else
+		    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &curStatus);
+	}
+
+    if (status == STATUS1_FREEZE)
+	{
+	    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &curStatus);
+	}
+}
+
 void Special_ShowDiploma(void)
 {
     SetMainCallback2(CB2_ShowDiploma);
