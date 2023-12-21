@@ -3061,6 +3061,16 @@ extern const u8 gText_Moves_Menu[];
 extern const u8 gText_TurnRepellantOff[];
 extern const u8 gText_TurnRepellantOn[];
 
+//ResourceNPC
+extern const u8 gText_NPCStatus[];
+extern const u8 gText_NPCIV[];
+extern const u8 gText_NPCNature[];
+extern const u8 gText_NPCNickname[];
+extern const u8 gText_NPCBurn[];
+extern const u8 gText_NPCFreeze[];
+extern const u8 gText_NPCPoison[];
+
+
 extern const u8 gMenuText_Move[];
 extern const u8 gText_MoveItemWhere[];
 extern const u8 gText_XsYAnd[];

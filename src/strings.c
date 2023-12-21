@@ -1848,6 +1848,15 @@ const u8 gText_ExpShareOn[] = _("The Exp. Share has been turned on.{PAUSE_UNTIL_
 const u8 gText_ExpShareOff[] = _("The Exp. Share has been turned off.{PAUSE_UNTIL_PRESS}");
 const u8 gText_Moves_Menu[] = _("Change Moves");
 
+//ResourceNPC
+const u8 gText_NPCStatus[] = _("Status");
+const u8 gText_NPCIV[] = _("Maximize IV");
+const u8 gText_NPCNature[] = _("Change Nature");
+const u8 gText_NPCNickname[] = _("Nickname");
+const u8 gText_NPCBurn[] = _("Burn");
+const u8 gText_NPCFreeze[] = _("Freeze");
+const u8 gText_NPCPoison[] = _("Poison");
+
 const u8 gMenuText_Move[] = _("Move");
 const u8 gText_MoveItemWhere[] = _("Move item to where?");
 const u8 gText_XsYAnd[] = _("{STR_VAR_1}'s {STR_VAR_2} and\n");

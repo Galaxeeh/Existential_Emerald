@@ -39,6 +39,96 @@ OldaleTown_PokemonCenter_1F_EventScript_WirelessClubAvailable::
 	release
 	end
 
+OldaleTown_ResourceNPC::
+	lock
+	faceplayer
+	message OldaleTown_ResourceNPC_Text
+	multichoice 0, 1, MULTI_RESOURCE_NPC, 0
+	closemessage
+	switch VAR_RESULT
+	case 0, OldaleTown_ResourceNPC_PreStatus
+	case 1, OldaleTown_ResourceNPC_IV
+	case 2, OldaleTown_ResourceNPC_Nature
+	case 3, OldaleTown_ResourceNPC_Nickname
+	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
+
+OldaleTown_ResourceNPC_PreStatus::
+	message OldaleTown_ChooseStatus_Text
+	multichoice 0, 1, MULTI_PRESTATUS, 0
+	closemessage
+	switch VAR_RESULT
+	case 0, OldaleTown_ResourceNPC_Burn
+	case 1, OldaleTown_ResourceNPC_Freeze
+	case 2, OldaleTown_ResourceNPC_Poison
+	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
+
+OldaleTown_ResourceNPC_IV::
+	release
+	end
+
+OldaleTown_ResourceNPC_Nature::
+	release
+	end
+
+OldaleTown_ResourceNPC_Nickname::
+	special ChoosePartyMon
+	waitstate
+	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_NameRatersHouse_EventScript_RateMonNickname
+	end
+
+OldaleTown_ResourceNPC_Burn::
+	setmonstatus STATUS1_BURN
+	release
+	end
+
+OldaleTown_ResourceNPC_Freeze::
+	setmonstatus STATUS1_FREEZE
+	release
+	end
+
+OldaleTown_ResourceNPC_Poison::
+	setmonstatus STATUS1_POISON
+	release
+	end
+
+OldaleTown_ResourceNPC_ComeAgain::
+	msgbox OldaleTown_ResourceNPC_ComeAgain_Text, MSGBOX_DEFAULT
+	waitmessage
+	release
+	end
+
+
+OldaleTown_NameRatersHouse_EventScript_RateMonNickname::
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, SPECIES_EGG, OldaleTown_NameRatersHouse_EventScript_CantRateEgg
+	special BufferMonNickname
+	special IsMonOTIDNotPlayers
+	goto_if_eq VAR_RESULT, TRUE, OldaleTown_NameRatersHouse_EventScript_PlayerNotMonsOT
+	specialvar VAR_RESULT, MonOTNameNotPlayer
+	special BufferMonNickname
+	goto_if_eq VAR_RESULT, TRUE, OldaleTown_NameRatersHouse_EventScript_PlayerNotMonsOT
+	goto_if_eq VAR_RESULT, FALSE, OldaleTown_NameRatersHouse_EventScript_ChangeNickname
+	end
+
+OldaleTown_NameRatersHouse_EventScript_CantRateEgg::
+	msgbox OldaleTown_NameRatersHouse_Text_ThatIsMerelyAnEgg, MSGBOX_DEFAULT
+	release
+	end
+
+OldaleTown_NameRatersHouse_EventScript_PlayerNotMonsOT::
+	msgbox OldaleTown_NameRatersHouse_Text_MagnificentName, MSGBOX_DEFAULT
+	release
+	end
+
+OldaleTown_NameRatersHouse_EventScript_ChangeNickname::
+	msgbox OldaleTown_NameRatersHouse_Text_WhatShallNewNameBe, MSGBOX_DEFAULT
+	call Common_EventScript_NameReceivedPartyMon
+	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
+	special BufferMonNickname
+	release
+	end
+
+	
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
 	.string "That PC in the corner there is\n"
 	.string "for any POKéMON TRAINER to use.\p"
@@ -61,4 +151,33 @@ OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub:
 	.string "The POKéMON WIRELESS CLUB on\n"
 	.string "the second floor was built recently.\p"
 	.string "I traded POKéMON right away.$"
+
+OldaleTown_ResourceNPC_Text:
+	.string "What can I do for you?$"
+
+OldaleTown_ChooseStatus_Text:
+	.string "What status do you need?$"
+
+OldaleTown_ChooseIV_Text:
+	.string "What IV would you like to maximize?$"
+
+OldaleTown_ChooseNature_Text:
+	.string "What nature would you like?$"
+
+OldaleTown_ResourceNPC_ComeAgain_Text:
+	.string "Have a nice day!$"
+
+OldaleTown_NameRatersHouse_Text_WhatShallNewNameBe:
+	.string "What shall the new nickname be?$"
+
+OldaleTown_NameRatersHouse_Text_ThatIsMerelyAnEgg:
+	.string "You can't nickname an EGG!$"
+
+OldaleTown_NameRatersHouse_Text_MagnificentName:
+	.string "It would be rude to change\n"
+	.string "this Pokémon's name!$"
+
+
+
+
 

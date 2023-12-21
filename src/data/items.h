@@ -8766,7 +8766,7 @@ const struct Item gItems[] =
 
     [ITEM_POKEMON_BOX_LINK] =
     {
-        .name = _("{PKMN} Box Link"),
+        .name = _("PortaPC"),
         .price = 0,
         .description = sPokemonBoxLinkDesc,
         .importance = 1,

@@ -776,6 +776,21 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_ResourceNPC[] =
+{
+    {gText_NPCStatus},
+    {gText_NPCIV},
+    {gText_NPCNature},
+    {gText_NPCNickname},
+};
+
+static const struct MenuAction MultichoiceList_ResourceNPC_Status[] =
+{
+    {gText_NPCBurn},
+    {gText_NPCFreeze},
+    {gText_NPCPoison},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -898,6 +913,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
+    [MULTI_RESOURCE_NPC]               = MULTICHOICE(MultichoiceList_ResourceNPC),
+    [MULTI_PRESTATUS]                  = MULTICHOICE(MultichoiceList_ResourceNPC_Status),
 };
 
 const u8 *const gStdStrings[] =

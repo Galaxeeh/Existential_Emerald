@@ -166,7 +166,7 @@ void SetMonStatus(void)
 
     if (status == STATUS1_FREEZE)
 	{
-	    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &curStatus);
+	    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
 	}
 }
 
