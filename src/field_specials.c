@@ -4363,10 +4363,10 @@ u16 ScriptGetPartyMonSpDef(void)
     return GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPDEF_IV);
 }
 
-void SetNature(void)
-{
-    u16 status = VarGet(VAR_TEMP_1);
-    u8 nature = GetNature(&gPlayerParty[gSpecialVar_0x8004]);
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPATK_IV, &SpAtkIv);
-    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
-}
+//void SetNature(void)
+//{
+    //u16 status = VarGet(VAR_TEMP_1);
+    //u8 nature = GetNature(&gPlayerParty[gSpecialVar_0x8004]);
+    //SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPATK_IV, &SpAtkIv);
+    //CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+//}
