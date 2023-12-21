@@ -543,3 +543,17 @@ gSpecials::
 	def_special VsSeekerResetObjectMovementAfterChargeComplete
 	def_special VsSeekerFreezeObjectsAfterChargeComplete
 	def_special SetMonStatus
+	def_special MaxHpIV
+	def_special MaxAtkIV
+	def_special MaxDefIV
+	def_special MaxSpdIV
+	def_special MaxSpAtkIV
+	def_special MaxSpDefIV
+	def_special ScriptGetPartyMonHP
+	def_special ScriptGetPartyMonAtk
+	def_special ScriptGetPartyMonDef
+	def_special ScriptGetPartyMonSpd
+	def_special ScriptGetPartyMonSpAtk
+	def_special ScriptGetPartyMonSpDef
+	def_special SetNature
+	

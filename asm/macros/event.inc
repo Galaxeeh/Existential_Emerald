@@ -2033,3 +2033,11 @@
     setvar VAR_TEMP_1, \status
     special SetMonStatus
     .endm	
+
+    @ Changes the nature of a selected Pokémon
+    .macro setmonnature status:req
+    special ChoosePartyMon
+    waitstate
+    setvar VAR_TEMP_1, \nature
+    special SetMonNature
+    .endm	

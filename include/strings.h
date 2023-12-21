@@ -3066,9 +3066,16 @@ extern const u8 gText_NPCStatus[];
 extern const u8 gText_NPCIV[];
 extern const u8 gText_NPCNature[];
 extern const u8 gText_NPCNickname[];
+extern const u8 gText_NPCInformation[];
 extern const u8 gText_NPCBurn[];
 extern const u8 gText_NPCFreeze[];
 extern const u8 gText_NPCPoison[];
+extern const u8 gText_NPCHp[];
+extern const u8 gText_NPCAtk[];
+extern const u8 gText_NPCDef[];
+extern const u8 gText_NPCSpAtk[];
+extern const u8 gText_NPCSpDef[];
+extern const u8 gText_NPCSpd[];
 
 
 extern const u8 gMenuText_Move[];

@@ -1853,9 +1853,16 @@ const u8 gText_NPCStatus[] = _("Status");
 const u8 gText_NPCIV[] = _("Maximize IV");
 const u8 gText_NPCNature[] = _("Change Nature");
 const u8 gText_NPCNickname[] = _("Nickname");
+const u8 gText_NPCInformation[] = _("Information");
 const u8 gText_NPCBurn[] = _("Burn");
 const u8 gText_NPCFreeze[] = _("Freeze");
 const u8 gText_NPCPoison[] = _("Poison");
+const u8 gText_NPCHp[] = _("HP");
+const u8 gText_NPCAtk[] = _("Attack");
+const u8 gText_NPCDef[] = _("Defense");
+const u8 gText_NPCSpAtk[] = _("Sp.Atk");
+const u8 gText_NPCSpDef[] = _("Sp.Def");
+const u8 gText_NPCSpd[] = _("Speed");
 
 const u8 gMenuText_Move[] = _("Move");
 const u8 gText_MoveItemWhere[] = _("Move item to where?");

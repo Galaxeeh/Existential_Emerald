@@ -43,18 +43,19 @@ OldaleTown_ResourceNPC::
 	lock
 	faceplayer
 	message OldaleTown_ResourceNPC_Text
-	multichoice 0, 1, MULTI_RESOURCE_NPC, 0
+	multichoice 0, 0, MULTI_RESOURCE_NPC, 0
 	closemessage
 	switch VAR_RESULT
 	case 0, OldaleTown_ResourceNPC_PreStatus
 	case 1, OldaleTown_ResourceNPC_IV
 	case 2, OldaleTown_ResourceNPC_Nature
 	case 3, OldaleTown_ResourceNPC_Nickname
+	case 4, OldaleTown_ResourceNPC_Information
 	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
 
 OldaleTown_ResourceNPC_PreStatus::
 	message OldaleTown_ChooseStatus_Text
-	multichoice 0, 1, MULTI_PRESTATUS, 0
+	multichoice 0, 0, MULTI_PRESTATUS, 0
 	closemessage
 	switch VAR_RESULT
 	case 0, OldaleTown_ResourceNPC_Burn
@@ -63,8 +64,85 @@ OldaleTown_ResourceNPC_PreStatus::
 	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
 
 OldaleTown_ResourceNPC_IV::
+	special ChoosePartyMon
+	waitstate
+	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_ChooseIV
+	end
+
+OldaleTown_ResourceNPC_ChooseIV::
+	message OldaleTown_ChooseIV_Text
+	multichoice 0, 0, MULTI_IVS, 0
+	closemessage
+	switch VAR_RESULT
+	case 0, OldaleTown_ResourceNPC_MaxHP
+	case 1, OldaleTown_ResourceNPC_MaxAtk
+	case 2, OldaleTown_ResourceNPC_MaxDef
+	case 3, OldaleTown_ResourceNPC_MaxSpAtk
+	case 4, OldaleTown_ResourceNPC_MaxSpDef
+	case 5, OldaleTown_ResourceNPC_MaxSpd
+	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
+
+OldaleTown_ResourceNPC_MaxHP::
+	specialvar VAR_RESULT, ScriptGetPartyMonHP
+	goto_if_eq VAR_RESULT, 31, OldaleTown_ResourceNPC_NoEffect
+	msgbox OldaleTown_ConfirmHp, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
+	special MaxHpIV
 	release
 	end
+
+OldaleTown_ResourceNPC_MaxAtk::
+	specialvar VAR_RESULT, ScriptGetPartyMonAtk
+	goto_if_eq VAR_RESULT, 31, OldaleTown_ResourceNPC_NoEffect
+	msgbox OldaleTown_ConfirmAtk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
+	special MaxAtkIV
+	release
+	end
+
+OldaleTown_ResourceNPC_MaxDef::
+	specialvar VAR_RESULT, ScriptGetPartyMonDef
+	goto_if_eq VAR_RESULT, 31, OldaleTown_ResourceNPC_NoEffect
+	msgbox OldaleTown_ConfirmDef, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
+	special MaxDefIV
+	release
+	end
+
+OldaleTown_ResourceNPC_MaxSpd::
+	specialvar VAR_RESULT, ScriptGetPartyMonSpd
+	goto_if_eq VAR_RESULT, 31, OldaleTown_ResourceNPC_NoEffect
+	msgbox OldaleTown_ConfirmSpd, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
+	special MaxSpdIV
+	release
+	end
+
+OldaleTown_ResourceNPC_MaxSpAtk::
+	specialvar VAR_RESULT, ScriptGetPartyMonSpAtk
+	goto_if_eq VAR_RESULT, 31, OldaleTown_ResourceNPC_NoEffect
+	msgbox OldaleTown_ConfirmSpAtk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
+	special MaxSpAtkIV
+	release
+	end
+
+OldaleTown_ResourceNPC_MaxSpDef::
+	specialvar VAR_RESULT, ScriptGetPartyMonSpDef
+	goto_if_eq VAR_RESULT, 31, OldaleTown_ResourceNPC_NoEffect
+	msgbox OldaleTown_ConfirmSpDef, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
+	special MaxSpDefIV
+	release
+	end
+
+OldaleTown_ResourceNPC_NoEffect::
+	msgbox OldaleTown_ResourceNPC_NoEffect_Text, MSGBOX_DEFAULT
+	waitmessage
+	release
+	end
+
+
 
 OldaleTown_ResourceNPC_Nature::
 	release
@@ -74,6 +152,12 @@ OldaleTown_ResourceNPC_Nickname::
 	special ChoosePartyMon
 	waitstate
 	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_NameRatersHouse_EventScript_RateMonNickname
+	end
+
+OldaleTown_ResourceNPC_Information::
+	msgbox OldaleTown_Info, MSGBOX_DEFAULT
+	waitmessage
+	release
 	end
 
 OldaleTown_ResourceNPC_Burn::
@@ -159,13 +243,16 @@ OldaleTown_ChooseStatus_Text:
 	.string "What status do you need?$"
 
 OldaleTown_ChooseIV_Text:
-	.string "What IV would you like to maximize?$"
+	.string "What stat would you like to maximize?$"
 
 OldaleTown_ChooseNature_Text:
 	.string "What nature would you like?$"
 
 OldaleTown_ResourceNPC_ComeAgain_Text:
 	.string "Have a nice day!$"
+
+OldaleTown_ResourceNPC_NoEffect_Text:
+	.string "It would have no effect.$"
 
 OldaleTown_NameRatersHouse_Text_WhatShallNewNameBe:
 	.string "What shall the new nickname be?$"
@@ -177,6 +264,34 @@ OldaleTown_NameRatersHouse_Text_MagnificentName:
 	.string "It would be rude to change\n"
 	.string "this Pokémon's name!$"
 
+OldaleTown_ConfirmHp:
+	.string "Maximize HP?$"
+
+OldaleTown_ConfirmAtk:
+	.string "Maximize Attack?$"
+
+OldaleTown_ConfirmDef:
+	.string "Maximize Defense?$"
+
+OldaleTown_ConfirmSpAtk:
+	.string "Maximize Sp.Atk?$"
+
+OldaleTown_ConfirmSpDef:
+	.string "Maximize Sp.Def?$"
+
+OldaleTown_ConfirmSpd:
+	.string "Maximize Speed?$"
+
+OldaleTown_NoScales:
+	.string "You do not have enough Heart Scales.$"
+
+OldaleTown_Info:
+	.string "PreStatus and nickname services\n"
+	.string "free of charge.\p"
+	.string "If you have a Heart Scale I can\n"
+	.string "maximize one of your Pokémon's stats!\p"
+	.string "For 2 Heart Scales, I can even\n"
+	.string "change your Pokémon's nature!$"
 
 
 

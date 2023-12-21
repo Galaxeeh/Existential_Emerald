@@ -124,6 +124,7 @@
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_RESOURCE_NPC                 114
 #define MULTI_PRESTATUS                    115
+#define MULTI_IVS                          116
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

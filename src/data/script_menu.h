@@ -782,6 +782,7 @@ static const struct MenuAction MultichoiceList_ResourceNPC[] =
     {gText_NPCIV},
     {gText_NPCNature},
     {gText_NPCNickname},
+    {gText_NPCInformation},
 };
 
 static const struct MenuAction MultichoiceList_ResourceNPC_Status[] =
@@ -789,6 +790,16 @@ static const struct MenuAction MultichoiceList_ResourceNPC_Status[] =
     {gText_NPCBurn},
     {gText_NPCFreeze},
     {gText_NPCPoison},
+};
+
+static const struct MenuAction MultichoiceList_ResourceNPC_IVS[] =
+{
+    {gText_NPCHp},
+    {gText_NPCAtk},
+    {gText_NPCDef},
+    {gText_NPCSpAtk},
+    {gText_NPCSpDef},
+    {gText_NPCSpd},
 };
 
 struct MultichoiceListStruct
@@ -915,6 +926,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_RESOURCE_NPC]               = MULTICHOICE(MultichoiceList_ResourceNPC),
     [MULTI_PRESTATUS]                  = MULTICHOICE(MultichoiceList_ResourceNPC_Status),
+    [MULTI_IVS]                        = MULTICHOICE(MultichoiceList_ResourceNPC_IVS),
 };
 
 const u8 *const gStdStrings[] =
