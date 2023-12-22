@@ -206,6 +206,10 @@ Route103_EventScript_Boy::
 	msgbox Route103_Text_ShouldHaveBroughtPotion, MSGBOX_NPC
 	end
 
+Route103_EventScript_Truck::
+	msgbox Route103_Text_Truck, MSGBOX_NPC
+	end
+
 Route103_EventScript_Man::
 	msgbox Route103_Text_ShortcutToOldale, MSGBOX_NPC
 	end
@@ -365,4 +369,9 @@ Route103_Text_ShortcutToOldale:
 Route103_Text_RouteSign:
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
+
+Route103_Text_Truck:
+	.string "Sorry, but the bridge isn't finished yet.\p"
+	.string "but once it is, you'll have easy\n"
+	.string "access to Slateport City!$"
 

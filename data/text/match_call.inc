@@ -904,10 +904,10 @@ MatchCall_PersonalizedText24::
 MatchCall_PersonalizedText25::
 	.string "Snivel… It's… {STR_VAR_1}…\n"
 	.string "…Sob…\p"
-	.string "ROXANNE chewed me out in class\n"
+	.string "Bugsy chewed me out in class\n"
 	.string "today.\p"
-	.string "But I don't dislike her or anything.\p"
-	.string "ROXANNE tells me exactly what\n"
+	.string "But I don't dislike him or anything.\p"
+	.string "Bugsy tells me exactly what\n"
 	.string "I did wrong so I can learn from it.\p"
 	.string "You bet I'll be going to\n"
 	.string "the TRAINER'S SCHOOL tomorrow!\p"
@@ -915,14 +915,14 @@ MatchCall_PersonalizedText25::
 
 MatchCall_PersonalizedText26::
 	.string "It's {STR_VAR_1}!\p"
-	.string "ROXANNE let me battle with her\n"
+	.string "Bugsy let me battle with him\n"
 	.string "yesterday.\p"
 	.string "The results…\n"
 	.string "Terrible, like you needed to ask.\p"
-	.string "But I was delighted that ROXANNE\n"
-	.string "would even let me challenge her!\p"
+	.string "But I was delighted that Bugsy\n"
+	.string "would even let me challenge him!\p"
 	.string "You wouldn't believe how much\n"
-	.string "more I admire her!\p"
+	.string "more I admire him!\p"
 	.string "I'm going to really focus and work!\n"
 	.string "I'd better go!$"
 

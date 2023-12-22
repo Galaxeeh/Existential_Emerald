@@ -2821,7 +2821,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     {
         if (GetMonData(&mons[1], MON_DATA_SPECIES) != SPECIES_NONE)
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SWITCH);
-		if ((GetNumberOfRelearnableMoves(&mons[slotId]) != 0) == (VarGet(VAR_MOVE_RELEARNER) != 1))
+		if ((GetNumberOfRelearnableMoves(&mons[slotId]) != 0) && (VarGet(VAR_MOVE_RELEARNER) != 1) && FlagGet(FLAG_PARTY_MOVES))
         {
 			AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_MOVES);
 		}        
@@ -5428,6 +5428,8 @@ static void CB2_ReturnToPartyMenuWhileLearningMove(void)
 {
     if (gSpecialVar_ItemId == ITEM_RARE_CANDY && gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD && CheckBagHasItem(gSpecialVar_ItemId, 1))
         InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_USE_ITEM, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMove, gPartyMenu.exitCallback);
+    else if (gSpecialVar_ItemId == ITEM_CANDY_DUST && gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD && CheckBagHasItem(gSpecialVar_ItemId, 1))
+        InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_USE_ITEM, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMove, gPartyMenu.exitCallback);
     else
         InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, TRUE, PARTY_MSG_NONE, Task_ReturnToPartyMenuWhileLearningMove, gPartyMenu.exitCallback);
 }
@@ -5546,7 +5548,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     bool8 cannotUseEffect;
     u8 holdEffectParam = ItemId_GetHoldEffectParam(*itemPtr);
     u32 i;
-    u32 CandyCap = 15;
+    u32 CandyCap = 11;
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
     
     for (i = 0; i < NUM_SOFT_CAPS; i++)
@@ -5646,7 +5648,7 @@ void ItemUseCB_CandyDust(u8 taskId, TaskFunc task)
     bool8 cannotUseEffect;
     u8 holdEffectParam = ItemId_GetHoldEffectParam(*itemPtr);
     u32 i;
-    u32 CandyCap = 15;
+    u32 CandyCap = 11;
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
     
     for (i = 0; i < NUM_SOFT_CAPS; i++)
@@ -5692,10 +5694,13 @@ void ItemUseCB_CandyDust(u8 taskId, TaskFunc task)
         }
         else
         {
-            gPartyMenuUseExitCallback = FALSE;
+            gPartyMenuUseExitCallback = TRUE;
             DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
             ScheduleBgCopyTilemapToVram(2);
-            gTasks[taskId].func = task;
+            if (gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD)
+                gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+            else
+                gTasks[taskId].func = task;
         }
     }
     else

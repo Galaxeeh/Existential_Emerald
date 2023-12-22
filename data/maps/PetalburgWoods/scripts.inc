@@ -157,6 +157,7 @@ PetalburgWoods_EventScript_DevonResearcherIntro::
 	return
 
 PetalburgWoods_EventScript_DevonResearcherPostBattle::
+	setflag FLAG_WOODSGRUNT
 	msgbox PetalburgWoods_Text_YouveGotSomeNerve, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaRunAway
@@ -171,6 +172,7 @@ PetalburgWoods_EventScript_DevonResearcherPostBattle::
 	end
 
 PetalburgWoods_EventScript_DevonResearcherPostBattleRight::
+	setflag FLAG_WOODSGRUNT
 	msgbox PetalburgWoods_Text_YouveGotSomeNerve, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaRunAwayRight
@@ -185,6 +187,7 @@ PetalburgWoods_EventScript_DevonResearcherPostBattleRight::
 	end
 
 PetalburgWoods_EventScript_DevonResearcherPostBattleFarRight::
+	setflag FLAG_WOODSGRUNT
 	msgbox PetalburgWoods_Text_YouveGotSomeNerve, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaRunAwayFarRight

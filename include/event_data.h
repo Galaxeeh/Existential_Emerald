@@ -1,6 +1,7 @@
 #ifndef GUARD_EVENT_DATA_H
 #define GUARD_EVENT_DATA_H
-#define NUM_SOFT_CAPS 8
+#define NUM_SOFT_CAPS 9
+//#define NUM_SOFT_CAPS 18
 
 void InitEventData(void);
 void ClearTempFieldEventData(void);

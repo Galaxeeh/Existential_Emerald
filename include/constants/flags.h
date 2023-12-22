@@ -46,7 +46,7 @@
 #define FLAG_BUGSY_GYM_CLOSED   0x21 // Block Bugsy Gym
 #define FLAG_BUGSY_GYM_OPEN    0x22 // Open Bugsy Gym
 #define FLAG_RUSTBORO_BUGSY    0x23 // Make Bugsy dissappear
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_WOODSGRUNT      0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
