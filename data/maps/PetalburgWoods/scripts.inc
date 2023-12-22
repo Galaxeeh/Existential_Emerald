@@ -1,5 +1,6 @@
 .set LOCALID_GRUNT, 3
 .set LOCALID_DEVON_EMPLOYEE, 4
+.set LOCALID_BOY, 6
 
 PetalburgWoods_MapScripts::
 	.byte 0
@@ -244,6 +245,66 @@ PetalburgWoods_EventScript_Boy1::
 	msgbox PetalburgWoods_Text_StayOutOfTallGrass, MSGBOX_NPC
 	end
 
+PetalburgWoods_EventScript_Boy1Trigger1::
+	lockall
+	setvar VAR_GET_REPELLANT, 1
+	playse SE_PIN
+	applymovement LOCALID_BOY, BoyMove11
+	waitmovement 0
+	msgbox TakeRepellant, MSGBOX_DEFAULT
+	waitmessage
+	giveitem ITEM_POKEREPELLANT
+	applymovement LOCALID_BOY, BoyMove12
+	waitmovement 0
+	releaseall
+	end
+
+PetalburgWoods_EventScript_Boy1Trigger2::
+	lockall
+	setvar VAR_GET_REPELLANT, 1
+	playse SE_PIN
+	applymovement LOCALID_BOY, BoyMove21
+	waitmovement 0
+	msgbox TakeRepellant, MSGBOX_DEFAULT
+	waitmessage
+	giveitem ITEM_POKEREPELLANT
+	applymovement LOCALID_BOY, BoyMove22
+	waitmovement 0
+	releaseall
+	end
+
+BoyMove11:
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+BoyMove12:
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	face_down
+	step_end
+
+BoyMove21:
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	step_end
+
+BoyMove22:
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	face_down
+	step_end
+
 PetalburgWoods_EventScript_Boy2::
 	msgbox PetalburgWoods_Text_HiddenItemsExplanation, MSGBOX_NPC
 	end
@@ -317,6 +378,142 @@ PetalburgWoods_EventScript_JamesRematch::
 	trainerbattle_rematch TRAINER_JAMES_1, PetalburgWoods_Text_MyPokemonHaveGrown, PetalburgWoods_Text_CantBePopularIfLose
 	msgbox PetalburgWoods_Text_IveBeenTrainingHard, MSGBOX_AUTOCLOSE
 	end
+
+PetalburgWoods_EventScript_GymSign::
+	msgbox PetalburgWoods_Text_GymSign, MSGBOX_SIGN
+	setvar VAR_BUGSY_GYM, 1
+	end
+
+PetalburgWoods_Gymkeeper_Closed::
+	msgbox PetalburgWoods_Text_GymClosed, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_Gymkeeper_Open::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_RUSTBORO_GYM, PetalburgWoods_Gym_EventScript_GymGuidePostVictory
+	msgbox PetalburgWoods_Text_GymOpen, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_Gym_EventScript_GymGuidePostVictory::
+	msgbox PetalburgWoods_Gym_Text_GymGuidePostVictory, MSGBOX_DEFAULT
+	release
+	end
+
+
+
+
+
+
+PetalburgWoods_Gym_EventScript_Josh::
+	trainerbattle_single TRAINER_JOSH, PetalburgWoods_Gym_Text_JoshIntro, PetalburgWoods_Gym_Text_JoshDefeat, PetalburgWoods_Gym_EventScript_JoshDefeated
+	msgbox PetalburgWoods_Gym_Text_JoshPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+PetalburgWoods_Gym_EventScript_JoshDefeated::
+	addvar VAR_BUGSY_GYM, 1 
+	release
+	end
+
+
+PetalburgWoods_Gym_EventScript_Tommy::
+	trainerbattle_single TRAINER_TOMMY, PetalburgWoods_Gym_Text_TommyIntro, PetalburgWoods_Gym_Text_TommyDefeat, PetalburgWoods_Gym_EventScript_TommyDefeated
+	msgbox PetalburgWoods_Gym_Text_TommyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+PetalburgWoods_Gym_EventScript_TommyDefeated::
+	addvar VAR_BUGSY_GYM, 1 
+	release
+	end
+
+
+PetalburgWoods_Gym_EventScript_Marc::
+	trainerbattle_single TRAINER_MARC, PetalburgWoods_Gym_Text_MarcIntro, PetalburgWoods_Gym_Text_MarcDefeat, PetalburgWoods_Gym_EventScript_MarcDefeated
+	msgbox PetalburgWoods_Gym_Text_MarcPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+PetalburgWoods_Gym_EventScript_MarcDefeated::
+	addvar VAR_BUGSY_GYM, 1 
+	release
+	end
+
+PetalburgWoods_Gym_EventScript_BugsyStart::
+	lock
+	faceplayer
+	goto_if_eq VAR_BUGSY_GYM, 4, PetalburgWoods_Gym_EventScript_Bugsy
+	msgbox PetalburgWoods_BugsyNotReady_Text, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_Gym_EventScript_Bugsy::
+	trainerbattle_single TRAINER_ROXANNE_1, PetalburgWoods_Gym_Text_BugsyIntro, PetalburgWoods_Gym_Text_BugsyDefeat, PetalburgWoods_Gym_EventScript_BugsyDefeated, NO_MUSIC
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, PetalburgWoods_Gym_EventScript_BugsyRematch
+	goto_if_unset FLAG_RECEIVED_TM_ROCK_TOMB, PetalburgWoods_Gym_EventScript_GiveRockTomb
+	msgbox PetalburgWoods_Gym_Text_BugsyPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_Gym_EventScript_BugsyDefeated::
+	message PetalburgWoods_Gym_Text_ReceivedHiveBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	msgbox PetalburgWoods_Gym_Text_HiveBadgeInfoTakeThis, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_RUSTBORO_GYM
+	setflag FLAG_BADGE01_GET
+	setvar VAR_RUSTBORO_CITY_STATE, 1
+	addvar VAR_PETALBURG_GYM_STATE, 1
+	setvar VAR_0x8008, 1
+	call Common_EventScript_SetGymTrainers
+	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
+	goto PetalburgWoods_Gym_EventScript_GiveRockTomb
+	end
+
+PetalburgWoods_Gym_EventScript_GiveRockTomb::
+	giveitem ITEM_TM_ROCK_TOMB
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_TM_ROCK_TOMB
+	msgbox PetalburgWoods_Gym_Text_ExplainTM, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgWoods_Gym_EventScript_BugsyRematch::
+	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
+	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
+	end
+
+PetalburgWoods_Text_GymClosed:
+	.string "Sorry, Bugsy's not here at the moment.\p"
+	.string "I think he might still be packing up\n"
+	.string "at the gym in Rustboro.\p"
+	.string "You should try back later!$"
+
+PetalburgWoods_Text_GymOpen:
+	.string "Bugsy, the GYM LEADER, is a user\n"
+	.string "of bug type POKéMON.\p"
+	.string "The bug type is very strong, but\n"
+	.string "a little fire and a lot of spirit\l"
+	.string "could help you tame the swarm!\p"
+	.string "Come see me afterwards, if you beat\n"
+	.string "the GYM LEADER.\p"
+	.string "Well, go for it!$"
+
+PetalburgWoods_Gym_Text_GymGuidePostVictory:
+	.string "Whoa! What a breathtaking victory!\n"
+	.string "My advice must've worked!\p"
+	.string "Great!\n"
+	.string "Check your Trainer Card.\p"
+	.string "The HIVE BADGE you got should be\n"
+	.string "properly recorded on it.\p"
+	.string "In other words…\p"
+	.string "You've climbed the first step on\n"
+	.string "the stairs to the CHAMPIONSHIP!\p"
+	.string "That's got to feel awesome!$"
 
 PetalburgWoods_Text_NotAOneToBeFound:
 	.string "Hmmm…\n"
@@ -431,10 +628,16 @@ PetalburgWoods_Text_IveBeenTrainingHard:
 
 PetalburgWoods_Text_StayOutOfTallGrass:
 	.string "Yo, there!\n"
-	.string "Your POKéMON doing okay?\p"
-	.string "If your POKéMON are weak and you want\n"
-	.string "to avoid battles, you should stay out\l"
-	.string "of tall grass.$"
+	.string "Your Pokémon doing okay?\p"
+	.string "If you want to avoid wild Pokémon, just\n"
+	.string "use that PokéRepellant I gave you.$"
+
+TakeRepellant:
+	.string "Hey!\n"
+	.string "There's lot's of scary bugs out here.\p"
+	.string "You should take this extra Repellant.\n"
+	.string "I was going to give it to my friend,\l"
+	.string "but he whimped out and stayed home.$"
 
 PetalburgWoods_Text_HiddenItemsExplanation:
 	.string "Sometimes, there are things on the\n"
@@ -473,4 +676,97 @@ PetalburgWoods_Text_TrainerTipsPP:
 	.string "make moves during battle.\p"
 	.string "If a POKéMON runs out of PP, it must be\n"
 	.string "taken to a POKéMON CENTER.$"
+
+PetalburgWoods_Text_GymSign:
+	.string "Petalburg Woods POKéMON GYM\n"
+	.string "LEADER: BUGSY\l"
+	.string "“A bug type prodigy!”$"
+
+PetalburgWoods_Gym_Text_JoshIntro:
+	.string "Don't take us GYM TRAINERS lightly!\n"
+	.string "I'll show you why we're better!$"
+
+PetalburgWoods_Gym_Text_JoshDefeat:
+	.string "You were too good for me…$"
+
+PetalburgWoods_Gym_Text_JoshPostBattle:
+	.string "You haven't seen anything of the bug\n"
+	.string "type's terrifying power!$"
+
+PetalburgWoods_Gym_Text_TommyIntro:
+	.string "If you can't beat me, you won't stand\n"
+	.string "a chance against Bugsy!$"
+
+PetalburgWoods_Gym_Text_TommyDefeat:
+	.string "Wow! You've got some potential!$"
+
+PetalburgWoods_Gym_Text_TommyPostBattle:
+	.string "Bugsy is stronger than me by\n"
+	.string "several times.\p"
+	.string "You'd better be on your guard!$"
+
+PetalburgWoods_Gym_Text_MarcIntro:
+	.string "I love that we moved to the woods,\p"
+	.string "Now my bug POKéMON have room to\n"
+	.string "rampage!$"
+
+PetalburgWoods_Gym_Text_MarcDefeat:
+	.string "Oh, man oh man!\n"
+	.string "Our challenger is one feisty customer!$"
+
+PetalburgWoods_Gym_Text_MarcPostBattle:
+	.string "I have to hand it to our leader.\p"
+	.string "It took smarts and sense for him to\n"
+	.string "pick the bug type at his young age.$"
+	
+PetalburgWoods_Gym_Text_BugsyIntro:
+	.string "We meet again, I'm Bugsy, the\n"
+	.string "Petalburg Woods POKéMON GYM LEADER.\p"
+	.string "I became a GYM LEADER so that I might\n"
+	.string "apply what I learned at the POKéMON\l"
+	.string "Trainer's School in battle.\p"
+	.string "It's gonna take a lot to quell my bug\n"
+	.string "type POKéMON!$"
+
+PetalburgWoods_Gym_Text_BugsyDefeat:
+	.string "So…\n"
+	.string "I lost…\p"
+	.string "It seems that I still have much more\n"
+	.string "to learn…\p"
+	.string "I understand.\p"
+	.string "The POKéMON LEAGUE's rules state\n"
+	.string "that TRAINERS are to be given this\l"
+	.string "if they defeat a GYM LEADER.\p"
+	.string "Please accept the official POKéMON\n"
+	.string "LEAGUE HIVE BADGE.$"
+
+PetalburgWoods_Gym_Text_ReceivedHiveBadge:
+	.string "{PLAYER} received the HIVE BADGE\n"
+	.string "from Bugsy.$"
+
+PetalburgWoods_Gym_Text_HiveBadgeInfoTakeThis:
+	.string "The HIVE BADGE increased the power\n"
+	.string "ceilling of your POKéMON to level 22.\p"
+	.string "It also enables them to use the HM move\n"
+	.string "CUT outside of battle.\p"
+	.string "Please take this with you, too.$"
+
+PetalburgWoods_Gym_Text_ExplainTM:
+	.string "That TECHNICAL MACHINE, TM39,\n"
+	.string "contains ROCK TOMB.\p"
+	.string "It not only inflicts damage by dropping\n"
+	.string "rocks, it also lowers SPEED.\p"
+	.string "If you use a TM, it instantly teaches\n"
+	.string "the move to a POKéMON.\p"
+
+
+PetalburgWoods_Gym_Text_BugsyPostBattle:
+	.string "Since you are so strong, you should\n"
+	.string "challenge other GYM LEADERS.\p"
+	.string "By battling many TRAINERS, you should\n"
+	.string "learn many things.$"
+
+PetalburgWoods_BugsyNotReady_Text::
+	.string "You'll have to defeat my peers\l"
+	.string "before I'll accept your challenge!$"	
 

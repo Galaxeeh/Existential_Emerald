@@ -4,6 +4,8 @@
 .set LOCALID_GRUNT, 10
 .set LOCALID_RIVAL, 14
 .set LOCALID_SCIENTIST, 15
+.set LOCALID_BUGSY, 17
+
 
 RustboroCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, RustboroCity_OnTransition
@@ -34,6 +36,73 @@ RustboroCity_EventScript_HideMapNamePopup::
 RustboroCity_OnFrame:
 	map_script_2 VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_ScientistAddMatchCall
 	.2byte 0
+
+
+RustboroCity_Bugsy1::
+	lockall
+	faceplayer
+	setvar VAR_BUGSY_GYM, 1
+	msgbox RustboroBugsy_Text, MSGBOX_DEFAULT
+	applymovement LOCALID_BUGSY, Bugsy_Leave1
+	waitmovement 0
+	setflag FLAG_RUSTBORO_BUGSY
+	setflag FLAG_BUGSY_GYM_OPEN
+	clearflag FLAG_BUGSY_GYM_CLOSED
+	removeobject LOCALID_BUGSY
+	releaseall
+	end
+
+Bugsy_Leave1:
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+RustboroCity_Bugsy2::
+	lockall
+	faceplayer
+	setvar VAR_BUGSY_GYM, 1
+	msgbox RustboroBugsy_Text, MSGBOX_DEFAULT
+	applymovement LOCALID_BUGSY, Bugsy_Leave2
+	waitmovement 0
+	setflag FLAG_RUSTBORO_BUGSY
+	setflag FLAG_BUGSY_GYM_OPEN
+	clearflag FLAG_BUGSY_GYM_CLOSED
+	removeobject LOCALID_BUGSY
+	releaseall
+	end
+
+Bugsy_Leave2:
+	walk_fast_left
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+	
+
+
 
 RustboroCity_EventScript_ScientistAddMatchCall::
 	lockall
@@ -1241,8 +1310,7 @@ RustboroCity_Text_DevonCorpSign:
 
 RustboroCity_Text_GymSign:
 	.string "RUSTBORO CITY POKéMON GYM\n"
-	.string "LEADER: ROXANNE\p"
-	.string "“The ROCK-loving honors student!”$"
+	.string "PERMANENTLY CLOSED.$"
 
 RustboroCity_Text_DevonCorpBranchOfficeSign:
 	.string "DEVON CORP. BRANCH OFFICE\p"
@@ -1297,3 +1365,6 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroBugsy_Text:
+	.string "IM GONNA?$"
