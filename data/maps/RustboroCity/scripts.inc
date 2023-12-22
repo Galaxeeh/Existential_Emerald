@@ -40,9 +40,12 @@ RustboroCity_OnFrame:
 
 RustboroCity_Bugsy1::
 	lockall
-	faceplayer
+	playse SE_BANG
+	applymovement OBJ_EVENT_ID_PLAYER, Face1
+	applymovement LOCALID_BUGSY, Bugsy_Face1
 	setvar VAR_BUGSY_GYM, 1
 	msgbox RustboroBugsy_Text, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_BUGSY, Bugsy_Leave1
 	waitmovement 0
 	setflag FLAG_RUSTBORO_BUGSY
@@ -53,27 +56,38 @@ RustboroCity_Bugsy1::
 	end
 
 Bugsy_Leave1:
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Bugsy_Face1:
+	face_left
+	step_end
+
+Face1:
+	face_right
 	step_end
 
 RustboroCity_Bugsy2::
 	lockall
-	faceplayer
+	playse SE_BANG
 	setvar VAR_BUGSY_GYM, 1
+	applymovement OBJ_EVENT_ID_PLAYER, Face2
+	applymovement LOCALID_BUGSY, Bugsy_Face2
 	msgbox RustboroBugsy_Text, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_BUGSY, Bugsy_Leave2
 	waitmovement 0
 	setflag FLAG_RUSTBORO_BUGSY
@@ -84,20 +98,70 @@ RustboroCity_Bugsy2::
 	end
 
 Bugsy_Leave2:
-	walk_fast_left
-	walk_fast_down
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Bugsy_Face2:
+	face_down
+	step_end
+
+Face2:
+	face_up
+	step_end
+
+RustboroCity_Bugsy3::
+	lockall
+	playse SE_BANG
+	applymovement OBJ_EVENT_ID_PLAYER, Face3
+	applymovement LOCALID_BUGSY, Bugsy_Face3
+	setvar VAR_BUGSY_GYM, 1
+	msgbox RustboroBugsy_Text, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BUGSY, Bugsy_Leave1
+	waitmovement 0
+	setflag FLAG_RUSTBORO_BUGSY
+	setflag FLAG_BUGSY_GYM_OPEN
+	clearflag FLAG_BUGSY_GYM_CLOSED
+	removeobject LOCALID_BUGSY
+	releaseall
+	end
+
+Bugsy_Leave3:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Bugsy_Face3:
+	face_right
+	step_end
+
+Face3:
+	face_left
 	step_end
 
 	
@@ -1367,4 +1431,11 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "could beat two TRAINERS by yourself?$"
 
 RustboroBugsy_Text:
-	.string "IM GONNA?$"
+	.string "Oh hey!\n"
+	.string "I'm closing down Rustboro Gym.\p"
+	.string "I prefer to be in nature rather than\n"
+	.string "battle in the middle of the city.\p"
+	.string "If you're looking for a challenge, you\n"
+	.string "should head on down to Petalburg Woods!\p"
+	.string "Anyway, gotta blast!\n"
+	.string "See ya around!$"

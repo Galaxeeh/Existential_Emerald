@@ -84,23 +84,23 @@ Route103_EventScript_StartMayBattleRattata::
 
 
 Route103_EventScript_StartBrendanBattleChespin::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_CHESPIN, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_CHESPIN, Route103_Text_MayDefeated
+	goto Route103_EventScript_AfterBrendanBattle
 	end
 
 Route103_EventScript_StartBrendanBattleFennekin::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_FENNEKIN, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_FENNEKIN, Route103_Text_MayDefeated
+	goto Route103_EventScript_AfterBrendanBattle
 	end
 
 Route103_EventScript_StartBrendanBattleFroakie::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_FROAKIE, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_FROAKIE, Route103_Text_MayDefeated
+	goto Route103_EventScript_AfterBrendanBattle
 	end
 
 Route103_EventScript_StartBrendanBattleRattata::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_RATTATA, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_RATTATA, Route103_Text_MayDefeated
+	goto Route103_EventScript_AfterBrendanBattle
 	end
 
 Route103_EventScript_AfterMayBattle::

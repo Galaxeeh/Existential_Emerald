@@ -94,6 +94,7 @@ PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial::
 	msgbox PetalburgCity_Gym_Text_DadGoCollectBadges, MSGBOX_DEFAULT
 	setvar VAR_PETALBURG_GYM_STATE, 2
 	setflag FLAG_BUGSY_GYM_CLOSED
+	setvar VAR_BUGSY_GYM, 0
 	releaseall
 	end
 
