@@ -4468,7 +4468,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 70,
         .baseSpDefense = 50,
         .types = { TYPE_FIRE, TYPE_FIRE },
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_JUSTIFIED },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE },
         .categoryName = _("Puppy"),
         .height = 7,
         .weight = 190,
@@ -4505,7 +4505,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 100,
         .baseSpDefense = 80,
         .types = { TYPE_FIRE, TYPE_FIRE },
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_JUSTIFIED },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE },
         .height = 19,
         .weight = 1550,
         .description = COMPOUND_STRING(
@@ -5682,7 +5682,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_PONYTA
 #define KANTONIAN_PONYTA_FAMILY_INFO                                                \
         .types = { TYPE_FIRE, TYPE_FIRE },                                          \
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_FLASH_FIRE, ABILITY_FLAME_BODY },  \
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_FLAME_BODY, ABILITY_FLASH_FIRE },  \
         .bodyColor = BODY_COLOR_YELLOW
 
 #define PONYTA_FAMILY_MISC_INFO                             \
@@ -5758,7 +5758,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Ponyta),
         ICON(Ponyta, 3),
         LEARNSETS(Ponyta),
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_RAPIDASH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_RAPIDASH}),
     },
 
     [SPECIES_RAPIDASH] =

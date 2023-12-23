@@ -1552,7 +1552,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         ICON(Rolycoly, 0),
         .footprint = gMonFootprint_Rolycoly,
         LEARNSETS(Rolycoly),
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_CARKOL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_CARKOL}),
     },
 
     [SPECIES_CARKOL] =

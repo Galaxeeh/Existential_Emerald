@@ -3761,7 +3761,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Budew, 1),
         .footprint = gMonFootprint_Budew,
         LEARNSETS(Budew),
-        .evolutions = EVOLUTION({EVO_FRIENDSHIP_DAY, 0, SPECIES_ROSELIA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 5, SPECIES_ROSELIA}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 

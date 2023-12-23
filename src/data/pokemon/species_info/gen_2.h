@@ -2188,7 +2188,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         PALETTES(Wooper),
         ICON(Wooper, 0),
         LEARNSETS(Wooper),
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_QUAGSIRE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_QUAGSIRE}),
     },
 
     [SPECIES_QUAGSIRE] =
@@ -4136,7 +4136,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(Slugma, 0),
         .footprint = gMonFootprint_Slugma,
         LEARNSETS(Slugma),
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_MAGCARGO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_MAGCARGO}),
     },
 
     [SPECIES_MAGCARGO] =
@@ -4156,7 +4156,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
-        .abilities = { ABILITY_MAGMA_ARMOR, ABILITY_FLAME_BODY, ABILITY_WEAK_ARMOR },
+        .abilities = { ABILITY_SOLID_ROCK, ABILITY_FLAME_BODY, ABILITY_WEAK_ARMOR },
         .bodyColor = BODY_COLOR_RED,
         .noFlip = TRUE,
         .speciesName = _("Magcargo"),
@@ -4796,7 +4796,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE, ABILITY_UNNERVE },
+        .abilities = { ABILITY_EARLY_BIRD, ABILITY_UNNERVE, ABILITY_FLASH_FIRE },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Houndour"),
         .cryId = CRY_HOUNDOUR,
@@ -4855,7 +4855,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpAttack  = 110,
         .baseSpDefense = 80,
         .expYield = 175,
-        .abilities = { ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE, ABILITY_UNNERVE },
+        .abilities = { ABILITY_EARLY_BIRD, ABILITY_UNNERVE, ABILITY_FLASH_FIRE },
         .cryId = CRY_HOUNDOOM,
         .height = 14,
         .weight = 350,

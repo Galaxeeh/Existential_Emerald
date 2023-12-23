@@ -484,8 +484,8 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         ICON(Lechonk, 1),
         //.footprint = gMonFootprint_Lechonk,
         LEARNSETS(Lechonk),
-        .evolutions = EVOLUTION({EVO_LEVEL_MALE, 18, SPECIES_OINKOLOGNE_MALE},
-                                {EVO_LEVEL_FEMALE, 18, SPECIES_OINKOLOGNE_FEMALE}),
+        .evolutions = EVOLUTION({EVO_LEVEL_MALE, 17, SPECIES_OINKOLOGNE_MALE},
+                                {EVO_LEVEL_FEMALE, 17, SPECIES_OINKOLOGNE_FEMALE}),
     },
 
 #define OINKOLOGNE_MISC_INFO                                \

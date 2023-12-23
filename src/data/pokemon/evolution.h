@@ -160,7 +160,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_YANMA]                 = {{EVO_MOVE, MOVE_ANCIENT_POWER, SPECIES_YANMEGA}},
 #endif
-    [SPECIES_WOOPER]                = {{EVO_LEVEL, 20, SPECIES_QUAGSIRE}},
+    [SPECIES_WOOPER]                = {{EVO_LEVEL, 17, SPECIES_QUAGSIRE}},
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_MURKROW]               = {{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_HONCHKROW}},
     [SPECIES_MISDREAVUS]            = {{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_MISMAGIUS}},
@@ -293,7 +293,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_KRICKETOT]             = {{EVO_LEVEL, 10, SPECIES_KRICKETUNE}},
     [SPECIES_SHINX]                 = {{EVO_LEVEL, 15, SPECIES_LUXIO}},
     [SPECIES_LUXIO]                 = {{EVO_LEVEL, 30, SPECIES_LUXRAY}},
-    [SPECIES_BUDEW]                 = {{EVO_FRIENDSHIP_DAY, 0, SPECIES_ROSELIA}},
+    [SPECIES_BUDEW]                 = {{EVO_LEVEL, 5, SPECIES_ROSELIA}},
     [SPECIES_CRANIDOS]              = {{EVO_LEVEL, 30, SPECIES_RAMPARDOS}},
     [SPECIES_SHIELDON]              = {{EVO_LEVEL, 30, SPECIES_BASTIODON}},
     [SPECIES_BURMY]                 = {{EVO_LEVEL_FEMALE, 20, SPECIES_WORMADAM},
@@ -507,7 +507,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_WOOLOO]                = {{EVO_LEVEL, 24, SPECIES_DUBWOOL}},
     [SPECIES_CHEWTLE]               = {{EVO_LEVEL, 22, SPECIES_DREDNAW}},
     [SPECIES_YAMPER]                = {{EVO_LEVEL, 25, SPECIES_BOLTUND}},
-    [SPECIES_ROLYCOLY]              = {{EVO_LEVEL, 18, SPECIES_CARKOL}},
+    [SPECIES_ROLYCOLY]              = {{EVO_LEVEL, 17, SPECIES_CARKOL}},
     [SPECIES_CARKOL]                = {{EVO_LEVEL, 34, SPECIES_COALOSSAL}},
     [SPECIES_APPLIN]                = {{EVO_ITEM, ITEM_TART_APPLE, SPECIES_FLAPPLE},
                                        {EVO_ITEM, ITEM_SWEET_APPLE, SPECIES_APPLETUN}},

@@ -7853,7 +7853,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
-        .abilities = { ABILITY_FLAME_BODY, ABILITY_NONE, ABILITY_SWARM },
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_SWARM, ABILITY_SWARM },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Larvesta"),
         .cryId = CRY_LARVESTA,
@@ -7881,7 +7881,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Larvesta, 0),
         .footprint = gMonFootprint_Larvesta,
         LEARNSETS(Larvesta),
-        .evolutions = EVOLUTION({EVO_LEVEL, 59, SPECIES_VOLCARONA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 45, SPECIES_VOLCARONA}),
     },
 
     [SPECIES_VOLCARONA] =
@@ -7903,7 +7903,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
-        .abilities = { ABILITY_FLAME_BODY, ABILITY_NONE, ABILITY_SWARM },
+        .abilities = { ABILITY_FLAME_BODY, ABILITY_SWARM, ABILITY_SWARM },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Volcarona"),
         .cryId = CRY_VOLCARONA,

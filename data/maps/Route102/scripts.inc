@@ -84,7 +84,7 @@ Route102_EventScript_OldRodFisherman::
 
 Route102_EventScript_GiveOldRod::
 	msgbox Route102_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
-	giveitem ITEM_OLD_ROD
+	giveitem ITEM_SUPER_ROD
 	setflag FLAG_RECEIVED_OLD_ROD
 	msgbox Route102_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
 	release
