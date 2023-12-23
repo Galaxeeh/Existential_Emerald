@@ -4115,7 +4115,7 @@ static const struct TrainerMon sParty_Calvin1[] = {
     .heldItem = ITEM_NONE,
     .ability = ABILITY_ANALYTIC,
     .nature = TRAINER_PARTY_NATURE(NATURE_SERIOUS),
-    .moves = {MOVE_TACKLE, MOVE_LEER, MOVE_BITE, MOVE_NONE}
+    .moves = {MOVE_HYPER_FANG, MOVE_LEER, MOVE_BITE, MOVE_NONE}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -4161,7 +4161,7 @@ static const struct TrainerMon sParty_Billy[] = {
 static const struct TrainerMon sParty_Josh[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 13,
+    .lvl = 14,
     .species = SPECIES_PARAS,
     .heldItem = ITEM_QUICK_CLAW,
     .ability = ABILITY_EFFECT_SPORE,
@@ -4170,7 +4170,7 @@ static const struct TrainerMon sParty_Josh[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 13,
+    .lvl = 14,
     .species = SPECIES_SIZZLIPEDE,
     .heldItem = ITEM_METRONOME,
     .ability = ABILITY_FLAME_BODY,
@@ -4179,7 +4179,7 @@ static const struct TrainerMon sParty_Josh[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 13,
+    .lvl = 14,
     .species = SPECIES_DEWPIDER,
     .heldItem = ITEM_SHELL_BELL,
     .ability = ABILITY_WATER_BUBBLE,
@@ -4378,7 +4378,7 @@ static const struct TrainerMon sParty_Allen[] = {
     .heldItem = ITEM_ORAN_BERRY,
     .ability = ABILITY_OVERGROW,
     .nature = TRAINER_PARTY_NATURE(NATURE_QUIET),
-    .moves = {MOVE_TACKLE, MOVE_ABSORB, MOVE_CURSE, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_LEAFAGE, MOVE_CURSE, MOVE_NONE}
     }
 };
 
@@ -4479,7 +4479,7 @@ static const struct TrainerMon sParty_Ivan[] = {
     .heldItem = ITEM_LOADED_DICE,
     .ability = ABILITY_HUSTLE,
     .nature = TRAINER_PARTY_NATURE(NATURE_JOLLY),
-    .moves = {MOVE_ROCK_BLAST, MOVE_BULLET_SEED, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_ROCK_BLAST, MOVE_BULLET_SEED, MOVE_OCTAZOOKA, MOVE_NONE}
     }
 };
 
@@ -6159,7 +6159,7 @@ static const struct TrainerMon sParty_GinaAndMia1[] = {
     .heldItem = ITEM_FLAME_ORB,
     .ability = ABILITY_GUTS,
     .nature = TRAINER_PARTY_NATURE(NATURE_BRAVE),
-    .moves = {MOVE_SPARK, MOVE_FIRE_FANG, MOVE_ICE_FANG, MOVE_FACADE}
+    .moves = {MOVE_SPARK, MOVE_FIRE_FANG, MOVE_ICE_FANG, MOVE_HEADBUTT}
     }
 };
 
@@ -7895,7 +7895,7 @@ static const struct TrainerMon sParty_Tiana[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 7,
     .species = SPECIES_YUNGOOS,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_CLEAR_AMULET,
     .ability = ABILITY_ADAPTABILITY,
     .nature = TRAINER_PARTY_NATURE(NATURE_JOLLY),
     .moves = {MOVE_TACKLE, MOVE_PAYBACK, MOVE_WORK_UP, MOVE_NONE}
@@ -8071,7 +8071,7 @@ static const struct TrainerMon sParty_Rick[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 6,
     .species = SPECIES_BLIPBUG,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_COBA_BERRY,
     .ability = ABILITY_SWARM,
     .nature = TRAINER_PARTY_NATURE(NATURE_CALM),
     .moves = {MOVE_STICKY_WEB, MOVE_STRUGGLE_BUG, MOVE_NONE, MOVE_NONE}
@@ -8098,7 +8098,7 @@ static const struct TrainerMon sParty_Rick[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 6,
     .species = SPECIES_SCATTERBUG,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_OCCA_BERRY,
     .ability = ABILITY_COMPOUND_EYES,
     .nature = TRAINER_PARTY_NATURE(NATURE_IMPISH),
     .moves = {MOVE_STUN_SPORE, MOVE_BUG_BITE, MOVE_TACKLE, MOVE_NONE}
@@ -9312,7 +9312,7 @@ static const struct TrainerMon sParty_Darian[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 15,
     .species = SPECIES_MAGIKARP,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_RINDO_BERRY,
     .ability = ABILITY_SWIFT_SWIM,
     .nature = TRAINER_PARTY_NATURE(NATURE_ADAMANT),
     .moves = {MOVE_TACKLE, MOVE_SPLASH, MOVE_NONE, MOVE_NONE}
@@ -9328,7 +9328,7 @@ static const struct TrainerMon sParty_Darian[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 8,
+    .lvl = 10,
     .species = SPECIES_WISHIWASHI_SOLO,
     .heldItem = ITEM_ORAN_BERRY,
     .ability = ABILITY_SCHOOLING,
