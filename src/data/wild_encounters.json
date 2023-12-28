@@ -56,12 +56,6 @@
             1
           ],
           "groups": {
-            "old_rod": [
-
-            ],
-            "good_rod": [
-
-            ],
             "super_rod": [
               0,
               1,
@@ -156,7 +150,7 @@
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_PIDGEY"
+                "species": "SPECIES_STARLY"
               },
               {
                 "min_level": 3,
@@ -181,7 +175,7 @@
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 3,
@@ -9199,53 +9193,53 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_PSYDUCK"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_PSYDUCK"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_MARILL"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_MARILL"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_MARILL"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_SQUIRTLE"
               },
               {
-                "min_level": 3,
+                "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_SQUIRTLE"
               },
               {
-                "min_level": 3,
-                "max_level": 45,
+                "min_level": 5,
+                "max_level": 5,
                 "species": "SPECIES_SQUIRTLE"
               }
             ]

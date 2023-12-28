@@ -64,6 +64,8 @@ OldaleTown_ResourceNPC_PreStatus::
 	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
 
 OldaleTown_ResourceNPC_IV::
+	checkitem ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
 	special ChoosePartyMon
 	waitstate
 	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_ChooseIV
@@ -88,6 +90,13 @@ OldaleTown_ResourceNPC_MaxHP::
 	msgbox OldaleTown_ConfirmHp, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxHpIV
+	removeitem ITEM_HEART_SCALE
+	release
+	end
+
+NoHeartScale::
+	msgbox NoHeartScale_Text, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
@@ -97,6 +106,7 @@ OldaleTown_ResourceNPC_MaxAtk::
 	msgbox OldaleTown_ConfirmAtk, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxAtkIV
+	removeitem ITEM_HEART_SCALE
 	release
 	end
 
@@ -106,6 +116,7 @@ OldaleTown_ResourceNPC_MaxDef::
 	msgbox OldaleTown_ConfirmDef, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxDefIV
+	removeitem ITEM_HEART_SCALE
 	release
 	end
 
@@ -115,6 +126,7 @@ OldaleTown_ResourceNPC_MaxSpd::
 	msgbox OldaleTown_ConfirmSpd, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxSpdIV
+	removeitem ITEM_HEART_SCALE
 	release
 	end
 
@@ -124,6 +136,7 @@ OldaleTown_ResourceNPC_MaxSpAtk::
 	msgbox OldaleTown_ConfirmSpAtk, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxSpAtkIV
+	removeitem ITEM_HEART_SCALE
 	release
 	end
 
@@ -133,6 +146,7 @@ OldaleTown_ResourceNPC_MaxSpDef::
 	msgbox OldaleTown_ConfirmSpDef, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxSpDefIV
+	removeitem ITEM_HEART_SCALE
 	release
 	end
 
@@ -162,16 +176,22 @@ OldaleTown_ResourceNPC_Information::
 
 OldaleTown_ResourceNPC_Burn::
 	setmonstatus STATUS1_BURN
+	msgbox BurnHeal, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
 OldaleTown_ResourceNPC_Freeze::
 	setmonstatus STATUS1_FREEZE
+	msgbox Cold, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
 OldaleTown_ResourceNPC_Poison::
 	setmonstatus STATUS1_POISON
+	msgbox Toxic, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
@@ -212,7 +232,18 @@ OldaleTown_NameRatersHouse_EventScript_ChangeNickname::
 	release
 	end
 
-	
+NoHeartScale_Text:
+	.string "You don't have any heart scales!$"
+
+BurnHeal:
+	.string "You better have Burn Heal!$"
+
+Cold:
+	.string "Now that's cold!$"
+
+Toxic:
+	.string "Don't you know that you're Toxic?$"
+
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
 	.string "That PC in the corner there is\n"
 	.string "for any POKéMON TRAINER to use.\p"
