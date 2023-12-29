@@ -124,11 +124,6 @@ static void SetUpItemUseCallback(u8 taskId)
         gBagMenu->newScreenCallback = sItemUseCallbacks[type];
         Task_FadeAndCloseBagMenu(taskId);
     }
-    /*if (!InBattlePyramid() && (gSpecialVar_ItemId == ITEM_CANDY_DUST))
-    {
-        gPartyMenu->newScreenCallback = sItemUseCallbacks[type];
-        Task_ClosePartyMenu(taskId);
-    }*/
 
     else
     {
@@ -856,9 +851,9 @@ void ItemUseOutOfBattle_CandyDust(u8 taskId)
     }
     else
     {
+        VarSet(VAR_USING_KEYITEM, 1);
         gItemUseCB = ItemUseCB_CandyDust;
-        SetUpItemUseCallback(taskId);
-        //SetMainCallback2(CB2_ShowPartyMenuForItemUse)
+        SetMainCallback2(CB2_ShowPartyMenuForItemUse);
     }
 }
 
