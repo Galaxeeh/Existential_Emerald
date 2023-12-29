@@ -54,7 +54,7 @@ RustboroCity_House1_Text_IllTradeIfYouWant:
 	.string "Sure, I knew that.\p"
 	.string "But if you really want, I'm willing\n"
 	.string "to trade it to you.\p"
-	.string "I'll trade you my {STR_VAR_2} for\n"
+	.string "I'll trade you my Galarian {STR_VAR_2} for\n"
 	.string "a {STR_VAR_1} if you want.$"
 
 RustboroCity_House1_Text_PleaseBeGoodToMyPokemon:

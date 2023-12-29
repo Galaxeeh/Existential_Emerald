@@ -29,6 +29,7 @@
 #include "pokemon_icon.h"
 #include "pokemon_summary_screen.h"
 #include "pokemon_storage_system.h"
+#include "pokemon.h"
 #include "random.h"
 #include "save.h"
 #include "script.h"
@@ -4525,6 +4526,25 @@ static void BufferInGameTradeMonName(void)
     StringCopy(gStringVar2, GetSpeciesName(inGameTrade->species));
 }
 
+static void RemoveIVIndexFromList(u8 *ivs, u8 selectedIv)
+{
+    s32 i, j;
+    u8 temp[NUM_STATS];
+
+    ivs[selectedIv] = 0xFF;
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        temp[i] = ivs[i];
+    }
+
+    j = 0;
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        if (temp[i] != 0xFF)
+            ivs[j++] = temp[i];
+    }
+}
+
 static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTrade)
 {
     const struct InGameTrade *inGameTrade = &sIngameTrades[whichInGameTrade];
@@ -4534,15 +4554,80 @@ static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTr
     u8 metLocation = METLOC_IN_GAME_TRADE;
     u8 mailNum;
     struct Pokemon *pokemon = &gEnemyParty[0];
+    u32 personality;
+    u8 availableIVs[NUM_STATS];
+    u8 selectedIvs[LEGENDARY_PERFECT_IV_COUNT];
+    u8 i;
+    u32 iv;
+    u32 value;
 
-    CreateMon(pokemon, inGameTrade->species, level, USE_RANDOM_IVS, TRUE, inGameTrade->personality, OT_ID_PRESET, inGameTrade->otId);
+    personality = Random32();
 
-    SetMonData(pokemon, MON_DATA_HP_IV, &inGameTrade->ivs[0]);
+    CreateMon(pokemon, inGameTrade->species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PRESET, inGameTrade->otId);
+
+    value = Random();
+
+    iv = value & MAX_IV_MASK;
+    SetMonData(pokemon, MON_DATA_HP_IV, &iv);
+    iv = (value & (MAX_IV_MASK << 5)) >> 5;
+    SetMonData(pokemon, MON_DATA_ATK_IV, &iv);
+    iv = (value & (MAX_IV_MASK << 10)) >> 10;
+    SetMonData(pokemon, MON_DATA_DEF_IV, &iv);
+
+    value = Random();
+
+    iv = value & MAX_IV_MASK;
+    SetMonData(pokemon, MON_DATA_SPEED_IV, &iv);
+    iv = (value & (MAX_IV_MASK << 5)) >> 5;
+    SetMonData(pokemon, MON_DATA_SPATK_IV, &iv);
+    iv = (value & (MAX_IV_MASK << 10)) >> 10;
+    SetMonData(pokemon, MON_DATA_SPDEF_IV, &iv);
+
+    iv = MAX_PER_STAT_IVS;
+    // Initialize a list of IV indices.
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        availableIVs[i] = i;
+    }
+
+    // Select the 3 IVs that will be perfected.
+    for (i = 0; i < LEGENDARY_PERFECT_IV_COUNT; i++)
+    {
+        u8 index = Random() % (NUM_STATS - i);
+        selectedIvs[i] = availableIVs[index];
+        RemoveIVIndexFromList(availableIVs, index);
+    }
+    for (i = 0; i < LEGENDARY_PERFECT_IV_COUNT; i++)
+    {
+        switch (selectedIvs[i])
+        {
+        case STAT_HP:
+            SetMonData(pokemon, MON_DATA_HP_IV, &iv);
+            break;
+        case STAT_ATK:
+            SetMonData(pokemon, MON_DATA_ATK_IV, &iv);
+            break;
+        case STAT_DEF:
+            SetMonData(pokemon, MON_DATA_DEF_IV, &iv);
+            break;
+        case STAT_SPEED:
+            SetMonData(pokemon, MON_DATA_SPEED_IV, &iv);
+            break;
+        case STAT_SPATK:
+            SetMonData(pokemon, MON_DATA_SPATK_IV, &iv);
+            break;
+        case STAT_SPDEF:
+            SetMonData(pokemon, MON_DATA_SPDEF_IV, &iv);
+            break;
+        }
+    }
+
+    /*SetMonData(pokemon, MON_DATA_HP_IV, &inGameTrade->ivs[0]);
     SetMonData(pokemon, MON_DATA_ATK_IV, &inGameTrade->ivs[1]);
     SetMonData(pokemon, MON_DATA_DEF_IV, &inGameTrade->ivs[2]);
     SetMonData(pokemon, MON_DATA_SPEED_IV, &inGameTrade->ivs[3]);
     SetMonData(pokemon, MON_DATA_SPATK_IV, &inGameTrade->ivs[4]);
-    SetMonData(pokemon, MON_DATA_SPDEF_IV, &inGameTrade->ivs[5]);
+    SetMonData(pokemon, MON_DATA_SPDEF_IV, &inGameTrade->ivs[5]);*/
     SetMonData(pokemon, MON_DATA_NICKNAME, inGameTrade->nickname);
     SetMonData(pokemon, MON_DATA_OT_NAME, inGameTrade->otName);
     SetMonData(pokemon, MON_DATA_OT_GENDER, &inGameTrade->otGender);

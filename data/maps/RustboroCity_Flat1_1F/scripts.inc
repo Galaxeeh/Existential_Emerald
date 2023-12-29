@@ -6,7 +6,13 @@ RustboroCity_Flat1_1F_EventScript_Man::
 	end
 
 RustboroCity_Flat1_1F_EventScript_Woman::
-	msgbox RustboroCity_Flat1_1F_Text_PokemonStrange, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_SILK_SCARF, DewfordTown_House2_EventScript_ExplainSilkScarf
+	msgbox RustboroCity_Flat1_1F_Text_PokemonStrange, MSGBOX_DEFAULT
+	giveitem ITEM_SILK_SCARF
+	goto_if_eq VAR_RESULT, FALSE, DewfordTown_House2_EventScript_NoRoomForScarf
+	setflag FLAG_RECEIVED_SILK_SCARF
 	end
 
 RustboroCity_Flat1_1F_Text_EveryPokemonHasAbility:
@@ -14,5 +20,6 @@ RustboroCity_Flat1_1F_Text_EveryPokemonHasAbility:
 	.string "that it can use.$"
 
 RustboroCity_Flat1_1F_Text_PokemonStrange:
-	.string "POKéMON are such strange creatures.$"
+	.string "I've been knitting scarves all day.\n"
+	.string "Here, you should have one!$"
 

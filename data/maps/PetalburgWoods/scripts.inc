@@ -679,7 +679,7 @@ PetalburgWoods_Gym_EventScript_BugsyDefeated::
 	end
 
 PetalburgWoods_Gym_EventScript_GiveRockTomb::
-	giveitem ITEM_TM_ROCK_TOMB
+	giveitem ITEM_TM_BUG_BITE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM_ROCK_TOMB
 	msgbox PetalburgWoods_Gym_Text_ExplainTM, MSGBOX_DEFAULT
@@ -689,6 +689,14 @@ PetalburgWoods_Gym_EventScript_GiveRockTomb::
 PetalburgWoods_Gym_EventScript_BugsyRematch::
 	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
 	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
+	end
+
+PetalburgWoods_EncounterShortGrassTrigger::
+	setvar VAR_PETALBURG_WOODS_WILD_SET, 0
+	end
+
+PetalburgWoods_EncounterLongGrassTrigger::
+	setvar VAR_PETALBURG_WOODS_WILD_SET, 1
 	end
 
 PetalburgWoods_Text_GymClosed:
@@ -955,10 +963,11 @@ PetalburgWoods_Gym_Text_HiveBadgeInfoTakeThis:
 	.string "Please take this with you, too.$"
 
 PetalburgWoods_Gym_Text_ExplainTM:
-	.string "That TECHNICAL MACHINE, TM39,\n"
-	.string "contains ROCK TOMB.\p"
-	.string "It not only inflicts damage by dropping\n"
-	.string "rocks, it also lowers SPEED.\p"
+	.string "That TECHNICAL MACHINE, TM04,\n"
+	.string "contains BUG BITE.\p"
+	.string "It not only inflicts damage by biting\n"
+	.string "the enemy, it also steals their\n"
+	.string "held berry and uses consumes it.\p"
 	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a POKéMON.\p"
 

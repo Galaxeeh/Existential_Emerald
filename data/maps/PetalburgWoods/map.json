@@ -302,110 +302,20 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 27,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 26,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
       "y": 24,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
       "var_value": "0",
-      "script": "NULL"
+      "script": "PetalburgWoods_EncounterLongGrassTrigger"
     },
     {
       "type": "trigger",
       "x": 11,
       "y": 24,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 26,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 27,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 14,
-      "y": 37,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 19,
-      "y": 37,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 14,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
     },
     {
       "type": "trigger",
@@ -442,6 +352,132 @@
       "var": "VAR_PETALBURG_WOODS_STATE",
       "var_value": "0",
       "script": "PetalburgWoods_EventScript_DevonResearcherFarRight"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "1",
+      "script": "PetalburgWoods_EncounterShortGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "0",
+      "script": "PetalburgWoods_EncounterLongGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "0",
+      "script": "PetalburgWoods_EncounterLongGrassTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_WOODS_WILD_SET",
+      "var_value": "0",
+      "script": "PetalburgWoods_EncounterLongGrassTrigger"
     }
   ],
   "bg_events": [
