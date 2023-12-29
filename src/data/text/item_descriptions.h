@@ -3052,9 +3052,9 @@ static const u8 sTM03Desc[] = _(
     "that may confuse.");
 
 static const u8 sTM04Desc[] = _(
-    "Raises Sp. Atk and\n"
-    "Sp. Def by focusing\n"
-    "the mind.");
+    "A buggish bite\n"
+    "that may steal the\n"
+    "foe's berry.");
 
 static const u8 sTM05Desc[] = _(
     "A savage roar that\n"
@@ -3217,9 +3217,9 @@ static const u8 sTM36Desc[] = _(
     "the foe.");
 
 static const u8 sTM37Desc[] = _(
-    "Causes a sandstorm\n"
-    "that hits the foe\n"
-    "over several turns.");
+    "Bombards the foe\n"
+    "with rocks. Hits\n"
+    "two to five times.");
 
 static const u8 sTM38Desc[] = _(
     "A powerful fire\n"

@@ -11,11 +11,11 @@ Route103_EventScript_ItemPPUp::
 	end
 
 Route104_EventScript_ItemPPUp::
-	finditem ITEM_PP_UP
+	finditem ITEM_PP_MAX
 	end
 
-Route104_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
+Route104_EventScript_ItemNetBall::
+	finditem ITEM_NET_BALL
 	end
 
 Route104_EventScript_ItemXAccuracy::
@@ -59,7 +59,6 @@ Route110_EventScript_ItemElixir::
 	end
 
 Route111_EventScript_ItemTMSandstorm::
-	finditem ITEM_TM_SANDSTORM
 	end
 
 Route111_EventScript_ItemStardust::
@@ -314,8 +313,8 @@ MauvilleCity_EventScript_ItemXSpeed::
 	finditem ITEM_X_SPEED
 	end
 
-RustboroCity_EventScript_ItemXDefend::
-	finditem ITEM_X_DEFENSE
+RustboroCity_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
 	end
 
 LilycoveCity_EventScript_ItemMaxRepel::
@@ -338,8 +337,8 @@ PetalburgWoods_EventScript_ItemEther::
 	finditem ITEM_ETHER
 	end
 
-PetalburgWoods_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+PetalburgWoods_EventScript_ItemSilverPowder::
+	finditem ITEM_SILVER_POWDER
 	end
 
 RusturfTunnel_EventScript_ItemPokeBall::

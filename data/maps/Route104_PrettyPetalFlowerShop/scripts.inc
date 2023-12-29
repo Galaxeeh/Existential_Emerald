@@ -66,7 +66,6 @@ Route104_PrettyPetalFlowerShop_Pokemart_Plants:
 Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
 	lock
 	faceplayer
-	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail
 	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
 	release
 	end
@@ -88,6 +87,18 @@ Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
 	random 8
 	addvar VAR_RESULT, FIRST_BERRY_INDEX
 	giveitem VAR_RESULT
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
+	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_EventScript_LeppaBerryGirl::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry
+	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
+	giveitem ITEM_LEPPA_BERRY, 60
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
 	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT

@@ -158,6 +158,7 @@ PetalburgWoods_EventScript_DevonResearcherIntro::
 
 PetalburgWoods_EventScript_DevonResearcherPostBattle::
 	setflag FLAG_WOODSGRUNT
+	setflag FLAG_HIDE_CAVEGRUNTS
 	msgbox PetalburgWoods_Text_YouveGotSomeNerve, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaRunAway
@@ -173,6 +174,7 @@ PetalburgWoods_EventScript_DevonResearcherPostBattle::
 
 PetalburgWoods_EventScript_DevonResearcherPostBattleRight::
 	setflag FLAG_WOODSGRUNT
+	setflag FLAG_HIDE_CAVEGRUNTS
 	msgbox PetalburgWoods_Text_YouveGotSomeNerve, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaRunAwayRight
@@ -188,6 +190,7 @@ PetalburgWoods_EventScript_DevonResearcherPostBattleRight::
 
 PetalburgWoods_EventScript_DevonResearcherPostBattleFarRight::
 	setflag FLAG_WOODSGRUNT
+	setflag FLAG_HIDE_CAVEGRUNTS
 	msgbox PetalburgWoods_Text_YouveGotSomeNerve, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaRunAwayFarRight
@@ -847,9 +850,8 @@ PetalburgWoods_Text_HiddenItemsExplanation:
 	.string "walking.$"
 
 PetalburgWoods_Text_TryUsingThisItem:
-	.string "Oh, neat!\n"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
-	.string "You must be a TRAINER.\n"
+	.string "Oh, hey!\n"
+	.string "You must be a TRAINER!\p"
 	.string "You should try using this item.$"
 
 PetalburgWoods_Text_MiracleSeedExplanation:

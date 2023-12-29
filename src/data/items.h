@@ -7190,7 +7190,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_WATER_PULSE,
     },
 
-    [ITEM_TM_CALM_MIND] =
+    [ITEM_TM_BUG_BITE] =
     {
         .name = _("TM04"),
         .price = 3000,
@@ -7199,7 +7199,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_CALM_MIND,
+        .secondaryId = MOVE_BUG_BITE,
     },
 
     [ITEM_TM_ROAR] =
@@ -7586,7 +7586,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_SLUDGE_BOMB,
     },
 
-    [ITEM_TM_SANDSTORM] =
+    [ITEM_TM_ROCK_BLAST] =
     {
         .name = _("TM37"),
         .price = 2000,
@@ -7595,7 +7595,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_SANDSTORM,
+        .secondaryId = MOVE_ROCK_BLAST,
     },
 
     [ITEM_TM_FIRE_BLAST] =

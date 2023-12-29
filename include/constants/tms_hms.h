@@ -5,7 +5,7 @@
     F(FOCUS_PUNCH) \
     F(DRAGON_CLAW) \
     F(WATER_PULSE) \
-    F(CALM_MIND) \
+    F(BUG_BITE) \
     F(ROAR) \
     F(TOXIC) \
     F(HAIL) \
@@ -38,7 +38,7 @@
     F(SHOCK_WAVE) \
     F(FLAMETHROWER) \
     F(SLUDGE_BOMB) \
-    F(SANDSTORM) \
+    F(ROCK_BLAST) \
     F(FIRE_BLAST) \
     F(ROCK_TOMB) \
     F(AERIAL_ACE) \

@@ -292,8 +292,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 39,
-      "y": 15,
+      "x": 6,
+      "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -301,7 +301,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route104_EventScript_ItemPPUp",
-      "flag": "FLAG_ITEM_ROUTE_104_PP_UP"
+      "flag": "FLAG_ITEM_ROUTE_104_PP_MAX"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
@@ -313,8 +313,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_WhiteHerbFlorist",
-      "flag": "FLAG_HIDE_ROUTE_104_WHITE_HERB_FLORIST"
+      "script": "Route104_EventScript_ReceivedWhiteHerb",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
@@ -378,8 +378,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_ItemPokeBall",
-      "flag": "FLAG_ITEM_ROUTE_104_POKE_BALL"
+      "script": "Route104_EventScript_ItemNetBall",
+      "flag": "FLAG_ITEM_ROUTE_104_NET_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
@@ -395,7 +395,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_PIKACHU_DOLL",
       "x": 35,
       "y": 22,
       "elevation": 3,
@@ -406,19 +406,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route104_EventScript_ItemXAccuracy",
       "flag": "FLAG_ITEM_ROUTE_104_X_ACCURACY"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 6,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route104_EventScript_ItemPotion",
-      "flag": "FLAG_ITEM_ROUTE_104_POTION"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
@@ -458,6 +445,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route104_EventScript_Rival",
       "flag": "FLAG_HIDE_ROUTE_104_RIVAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 17,
+      "y": 73,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route104_Scram",
+      "flag": "FLAG_HIDE_CAVEGRUNTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 16,
+      "y": 73,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_CAVEGRUNTS"
     }
   ],
   "warp_events": [
@@ -537,8 +550,8 @@
     },
     {
       "type": "trigger",
-      "x": 16,
-      "y": 71,
+      "x": 4,
+      "y": 69,
       "elevation": 0,
       "var": "VAR_TEMP_MIXED_RECORDS",
       "var_value": "0",
@@ -546,8 +559,8 @@
     },
     {
       "type": "trigger",
-      "x": 17,
-      "y": 71,
+      "x": 5,
+      "y": 69,
       "elevation": 0,
       "var": "VAR_TEMP_MIXED_RECORDS",
       "var_value": "0",
@@ -588,14 +601,6 @@
       "script": "Route104_EventScript_FlowerShopSign"
     },
     {
-      "type": "sign",
-      "x": 33,
-      "y": 18,
-      "elevation": 3,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route104_EventScript_TrainerTipsDoubleBattles"
-    },
-    {
       "type": "hidden_item",
       "x": 26,
       "y": 5,
@@ -608,16 +613,16 @@
       "x": 22,
       "y": 22,
       "elevation": 3,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_POKE_BALL"
+      "item": "ITEM_BERRY_JUICE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_BERRY_JUICE"
     },
     {
       "type": "hidden_item",
       "x": 30,
       "y": 75,
       "elevation": 3,
-      "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_POTION"
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_STARDUST"
     },
     {
       "type": "hidden_item",

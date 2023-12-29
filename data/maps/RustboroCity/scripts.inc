@@ -20,6 +20,16 @@ RustboroCity_OnTransition:
 	goto_if_eq VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_PositionScientistForExit
 	end
 
+RustboroCity_StayTuned::
+	msgbox RustboroCity_StaytunedText, MSGBOX_DEFAULT
+	closemessage
+	end
+
+RustboroCity_StaytunedText:
+	.string "Sorry, we're not quite ready for you\n"
+	.string "to proceed. Have patience.\p"
+	.string "Now fuck off. I've gotta.\p"
+
 RustboroCity_EventScript_PositionScientistForExit::
 	goto_if_eq VAR_TEMP_0, 11, RustboroCity_EventScript_PositionScientistLeftExit
 	setobjectxyperm LOCALID_SCIENTIST, 12, 15

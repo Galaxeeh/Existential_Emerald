@@ -1,6 +1,7 @@
 @ NOTE: Route 104's sail to Dewford script references local IDs from Dewford's map.
 @  These are labeled in DewfordTown/scripts.inc
-.set LOCALID_RIVAL, 34
+.set LOCALID_RIVAL, 33
+.set LOCALID_GRUNT, 34
 
 Route104_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route104_OnFrame
@@ -262,7 +263,7 @@ Route104_EventScript_ExpertF::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104, Route104_EventScript_ReceivedBerry
 	msgbox Route104_Text_PlantBerriesInSoilTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_CHESTO_BERRY
+	giveitem ITEM_CHESTO_BERRY, 60
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104
 	msgbox Route104_Text_TrainersOftenMakeMonHoldBerries, MSGBOX_DEFAULT
@@ -997,6 +998,26 @@ Route104_EventScript_Darian::
 	trainerbattle_single TRAINER_DARIAN, Route104_Text_DarianIntro, Route104_Text_DarianDefeat
 	msgbox Route104_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route104_Scram::
+	lock
+	playse SE_PIN
+	applymovement LOCALID_GRUNT, Common_Movement_ExclamationMark
+	delay 50
+	faceplayer
+	msgbox Route104_Scram_Text, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_GRUNT, Route104_Movement_Grunt
+	waitmovement 0
+	release
+	end
+
+Route104_Movement_Grunt:
+	walk_in_place_faster_left
+	step_end
+
+Route104_Scram_Text:
+	.string "Scram kid!$"
 
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"

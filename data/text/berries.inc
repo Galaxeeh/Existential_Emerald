@@ -176,14 +176,10 @@ Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis:
 	.string "of it. You can have this.$"
 
 Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
-	.string "While BERRY plants are growing,\n"
-	.string "water them with the WAILMER PAIL.\p"
-	.string "Oh, another thing.\p"
-	.string "If you don't pick BERRIES for a while,\n"
-	.string "they'll drop off onto the ground.\l"
-	.string "But they'll sprout again.\p"
-	.string "Isn't that awesome?\n"
-	.string "It's like they have the will to live.$"
+	.string "Be on the lookout for berries!\n"
+	.string "They come in all shapes and sizes.\p"
+	.string "Each one brings with it a\n"
+	.string "different effect too!$"
 
 Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers:
 	.string "I'm trying to be like my big sisters.\n"
@@ -192,9 +188,8 @@ Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers:
 	.string "It's for you!$"
 
 Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries:
-	.string "You can plant a BERRY and grow it big,\n"
-	.string "or you can make a POKéMON hold it.\p"
-	.string "But now they have a machine that mixes\n"
+	.string "You can make a POKéMON hold berries.\p"
+	.string "They even have a machine that mixes\n"
 	.string "up different BERRIES and makes candies\l"
 	.string "for POKéMON.\p"
 	.string "I want some candy, too.$"

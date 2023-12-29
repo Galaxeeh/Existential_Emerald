@@ -2,10 +2,10 @@
   "id": "MAP_PETALBURG_CAVE",
   "name": "PetalburgCave",
   "layout": "LAYOUT_PETALBURG_CAVE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_RG_MT_MOON",
   "region_map_section": "MAPSEC_PETALBURG_CAVE",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
   "allow_escaping": true,
@@ -89,7 +89,7 @@
       "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PetalburgCave_EventScript_Boy",
       "flag": "0"
     }
   ],
@@ -106,6 +106,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_EVERSTONE",
+      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_CAVE_EVERSTONE"
+    }
   ]
 }
