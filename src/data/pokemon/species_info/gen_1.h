@@ -5239,7 +5239,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Bellsprout, 1),
         .footprint = gMonFootprint_Bellsprout,
         LEARNSETS(Bellsprout),
-        .evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_WEEPINBELL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_WEEPINBELL}),
     },
 
     [SPECIES_WEEPINBELL] =
@@ -7448,7 +7448,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Krabby, 0),
         .footprint = gMonFootprint_Krabby,
         LEARNSETS(Krabby),
-        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_KINGLER}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_KINGLER}),
     },
 
 #define KINGLER_MISC_INFO                                                               \

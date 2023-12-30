@@ -1465,7 +1465,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_SAP_SIPPER, ABILITY_NONE, ABILITY_GRASS_PELT },
+        .abilities = { ABILITY_GRASS_PELT, ABILITY_NONE, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Skiddo"),
         .cryId = CRY_SKIDDO,
@@ -1513,7 +1513,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_SAP_SIPPER, ABILITY_NONE, ABILITY_GRASS_PELT },
+        .abilities = { ABILITY_GRASS_PELT, ABILITY_NONE, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Gogoat"),
         .cryId = CRY_GOGOAT,
@@ -2429,7 +2429,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         ICON(Binacle, 2),
         .footprint = gMonFootprint_Binacle,
         LEARNSETS(Binacle),
-        .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_BARBARACLE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_BARBARACLE}),
     },
 
     [SPECIES_BARBARACLE] =
