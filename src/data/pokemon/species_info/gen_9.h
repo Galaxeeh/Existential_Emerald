@@ -456,7 +456,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_AROMA_VEIL, ABILITY_GLUTTONY, ABILITY_THICK_FAT },
+        .abilities = { ABILITY_AROMA_VEIL, ABILITY_THICK_FAT, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Lechonk"),
         .cryId = CRY_LECHONK,
@@ -519,7 +519,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .baseSpAttack  = 59,
         .baseSpDefense = 80,
         .genderRatio = PERCENT_FEMALE(0),
-        .abilities = { ABILITY_LINGERING_AROMA, ABILITY_GLUTTONY, ABILITY_THICK_FAT },
+        .abilities = { ABILITY_LINGERING_AROMA, ABILITY_THICK_FAT, ABILITY_GLUTTONY },
         .cryId = CRY_OINKOLOGNE_MALE,
         .description = COMPOUND_STRING(
             "Oinkologne is proud of its fine,\n"

@@ -677,7 +677,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         ICON(Rookidee, 0),
         .footprint = gMonFootprint_Rookidee,
         LEARNSETS(Rookidee),
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_CORVISQUIRE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_CORVISQUIRE}),
     },
 
     [SPECIES_CORVISQUIRE] =
@@ -726,7 +726,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         ICON(Corvisquire, 0),
         .footprint = gMonFootprint_Corvisquire,
         LEARNSETS(Corvisquire),
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_CORVIKNIGHT}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 43, SPECIES_CORVIKNIGHT}),
     },
 
 #define CORVIKNIGHT_MISC_INFO                                                       \
@@ -745,7 +745,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,                                          \
         .growthRate = GROWTH_MEDIUM_SLOW,                                           \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },                        \
-        .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE, ABILITY_MIRROR_ARMOR },   \
+        .abilities = { ABILITY_KEEN_EYE, ABILITY_UNNERVE, ABILITY_MIRROR_ARMOR },   \
         .bodyColor = BODY_COLOR_PURPLE,                                             \
         .speciesName = _("Corviknigh"),                                             \
         .cryId = CRY_CORVIKNIGHT,                                                   \
