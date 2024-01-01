@@ -3336,7 +3336,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Oddish, 4),
         .footprint = gMonFootprint_Oddish,
         LEARNSETS(Oddish),
-        .evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_GLOOM}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GLOOM}),
     },
 
     [SPECIES_GLOOM] =
@@ -4065,7 +4065,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 40,
         .evYield_Attack = 1,
         .types = { TYPE_STEEL, TYPE_STEEL },
-        .abilities = { ABILITY_PICKUP, ABILITY_TOUGH_CLAWS, ABILITY_UNNERVE },
+        .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_BROWN,
         .height = 4,
         .weight = 75,

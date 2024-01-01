@@ -4560,13 +4560,14 @@ static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTr
     u8 i;
     u32 iv;
     u32 value;
+    u32 ability;
 
     personality = Random32();
 
     CreateMon(pokemon, inGameTrade->species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PRESET, inGameTrade->otId);
 
     value = Random();
-
+    ability = RandomUniform(RNG_NONE, 0 , 1);
     iv = value & MAX_IV_MASK;
     SetMonData(pokemon, MON_DATA_HP_IV, &iv);
     iv = (value & (MAX_IV_MASK << 5)) >> 5;
@@ -4631,7 +4632,7 @@ static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTr
     SetMonData(pokemon, MON_DATA_NICKNAME, inGameTrade->nickname);
     SetMonData(pokemon, MON_DATA_OT_NAME, inGameTrade->otName);
     SetMonData(pokemon, MON_DATA_OT_GENDER, &inGameTrade->otGender);
-    SetMonData(pokemon, MON_DATA_ABILITY_NUM, &inGameTrade->abilityNum);
+    SetMonData(pokemon, MON_DATA_ABILITY_NUM, &ability);
     SetMonData(pokemon, MON_DATA_BEAUTY, &inGameTrade->conditions[1]);
     SetMonData(pokemon, MON_DATA_CUTE, &inGameTrade->conditions[2]);
     SetMonData(pokemon, MON_DATA_COOL, &inGameTrade->conditions[0]);
