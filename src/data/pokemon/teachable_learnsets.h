@@ -26171,7 +26171,6 @@ static const u16 sFerroseedTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_THUNDER_WAVE,
-    MOVE_ROCK_BLAST,
     MOVE_UNAVAILABLE,
 };
 
