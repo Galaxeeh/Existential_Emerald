@@ -176,6 +176,7 @@ OldaleTown_ResourceNPC_Information::
 
 OldaleTown_ResourceNPC_Burn::
 	setmonstatus STATUS1_BURN
+	playse SE_M_EMBER
 	msgbox BurnHeal, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -183,6 +184,7 @@ OldaleTown_ResourceNPC_Burn::
 
 OldaleTown_ResourceNPC_Freeze::
 	setmonstatus STATUS1_FREEZE
+	playse SE_M_ICY_WIND
 	msgbox Cold, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -190,6 +192,7 @@ OldaleTown_ResourceNPC_Freeze::
 
 OldaleTown_ResourceNPC_Poison::
 	setmonstatus STATUS1_POISON
+	playse SE_M_TOXIC
 	msgbox Toxic, MSGBOX_DEFAULT
 	closemessage
 	release
