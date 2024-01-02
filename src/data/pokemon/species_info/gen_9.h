@@ -2145,7 +2145,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .baseAttack    = 40,
         .baseDefense   = 35,
         .baseSpeed     = 70,
-        .baseSpAttack  = 50,
+        .baseSpAttack  = 70,
         .baseSpDefense = 100,
         .types = { TYPE_GROUND, TYPE_GRASS },
         .catchRate = 190,
@@ -2184,7 +2184,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         ICON(Toedscool, 0),
         //.footprint = gMonFootprint_Toedscool,
         LEARNSETS(Toedscool),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_TOEDSCRUEL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_TOEDSCRUEL}),
     },
 
     [SPECIES_TOEDSCRUEL] =
@@ -2193,7 +2193,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .baseAttack    = 70,
         .baseDefense   = 65,
         .baseSpeed     = 100,
-        .baseSpAttack  = 80,
+        .baseSpAttack  = 100,
         .baseSpDefense = 120,
         .types = { TYPE_GROUND, TYPE_GRASS },
         .catchRate = 90,

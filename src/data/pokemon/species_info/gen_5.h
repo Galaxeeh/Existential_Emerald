@@ -5815,7 +5815,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Ferroseed, 1),
         .footprint = gMonFootprint_Ferroseed,
         LEARNSETS(Ferroseed),
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_FERROTHORN}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_FERROTHORN}),
     },
 
     [SPECIES_FERROTHORN] =

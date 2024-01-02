@@ -26171,6 +26171,7 @@ static const u16 sFerroseedTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_THUNDER_WAVE,
+    MOVE_ROCK_BLAST,
     MOVE_UNAVAILABLE,
 };
 
@@ -26204,6 +26205,7 @@ static const u16 sFerrothornTeachableLearnset[] = {
     MOVE_SWAGGER,
     MOVE_SWORDS_DANCE,
     MOVE_THUNDER_WAVE,
+    MOVE_ROCK_BLAST,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_FERROSEED
