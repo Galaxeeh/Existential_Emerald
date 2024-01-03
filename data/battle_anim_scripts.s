@@ -19529,7 +19529,7 @@ SkyAttackSetUpAgainstOpponent:
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
-	goto SkyAttackEnd
+	goto SkyAttackUnleash
 SkyAttackSetUpAgainstPartner:
 	createvisualtask AnimTask_BlendBattleAnimPalExclude, 10, ANIM_TARGET, 1, 0, 12, RGB_BLACK
 	waitforvisualfinish
@@ -19546,7 +19546,7 @@ SkyAttackSetUpAgainstPartner:
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
-	goto SkyAttackEnd
+	goto SkyAttackUnleash
 SkyAttackUnleash:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_BIRD
