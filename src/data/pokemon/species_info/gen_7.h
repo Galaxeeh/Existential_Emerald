@@ -1985,7 +1985,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         ICON(Salandit, 2),
         .footprint = gMonFootprint_Salandit,
         LEARNSETS(Salandit),
-        .evolutions = EVOLUTION({EVO_LEVEL_FEMALE, 33, SPECIES_SALAZZLE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_SALAZZLE}),
     },
 
     [SPECIES_SALAZZLE] =

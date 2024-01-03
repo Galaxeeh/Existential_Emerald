@@ -2033,7 +2033,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = 0,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE },
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_KLUTZ, ABILITY_LIMBER },
+        .abilities = { ABILITY_CUTE_CHARM, ABILITY_LIMBER, ABILITY_LIMBER },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Buneary"),
         .cryId = CRY_BUNEARY,
@@ -2061,7 +2061,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         ICON(Buneary, 2),
         .footprint = gMonFootprint_Buneary,
         LEARNSETS(Buneary),
-        .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_LOPUNNY}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_LOPUNNY}),
     },
 
 #define LOPUNNY_MISC_INFO                                       \
@@ -2092,7 +2092,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseSpDefense = 96,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .expYield = 168,
-        .abilities = { ABILITY_CUTE_CHARM, ABILITY_KLUTZ, ABILITY_LIMBER },
+        .abilities = { ABILITY_CUTE_CHARM, ABILITY_LIMBER, ABILITY_LIMBER },
         .cryId = CRY_LOPUNNY,
         .height = 12,
         .weight = 333,

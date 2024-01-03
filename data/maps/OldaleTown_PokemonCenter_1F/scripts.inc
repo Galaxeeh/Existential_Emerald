@@ -90,6 +90,7 @@ OldaleTown_ResourceNPC_MaxHP::
 	msgbox OldaleTown_ConfirmHp, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxHpIV
+	playse SE_SAVE
 	removeitem ITEM_HEART_SCALE
 	release
 	end
@@ -106,6 +107,7 @@ OldaleTown_ResourceNPC_MaxAtk::
 	msgbox OldaleTown_ConfirmAtk, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxAtkIV
+	playse SE_SAVE
 	removeitem ITEM_HEART_SCALE
 	release
 	end
@@ -116,6 +118,7 @@ OldaleTown_ResourceNPC_MaxDef::
 	msgbox OldaleTown_ConfirmDef, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxDefIV
+	playse SE_SAVE
 	removeitem ITEM_HEART_SCALE
 	release
 	end
@@ -126,6 +129,7 @@ OldaleTown_ResourceNPC_MaxSpd::
 	msgbox OldaleTown_ConfirmSpd, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxSpdIV
+	playse SE_SAVE
 	removeitem ITEM_HEART_SCALE
 	release
 	end
@@ -136,6 +140,7 @@ OldaleTown_ResourceNPC_MaxSpAtk::
 	msgbox OldaleTown_ConfirmSpAtk, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxSpAtkIV
+	playse SE_SAVE
 	removeitem ITEM_HEART_SCALE
 	release
 	end
@@ -146,6 +151,7 @@ OldaleTown_ResourceNPC_MaxSpDef::
 	msgbox OldaleTown_ConfirmSpDef, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_ChooseIV
 	special MaxSpDefIV
+	playse SE_SAVE
 	removeitem ITEM_HEART_SCALE
 	release
 	end
