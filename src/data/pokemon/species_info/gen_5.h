@@ -2044,8 +2044,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Gurdurr, 1),
         .footprint = gMonFootprint_Gurdurr,
         LEARNSETS(Gurdurr),
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_CONKELDURR},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_CONKELDURR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 44, SPECIES_CONKELDURR}),
     },
 
     [SPECIES_CONKELDURR] =

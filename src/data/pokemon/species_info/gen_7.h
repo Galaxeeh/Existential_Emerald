@@ -1488,7 +1488,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         ICON(Mareanie, 2),
         .footprint = gMonFootprint_Mareanie,
         LEARNSETS(Mareanie),
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_TOXAPEX}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_TOXAPEX}),
     },
 
     [SPECIES_TOXAPEX] =

@@ -5186,7 +5186,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
-        .abilities = { ABILITY_OBLIVIOUS, ABILITY_ANTICIPATION, ABILITY_HYDRATION },
+        .abilities = { ABILITY_OBLIVIOUS, ABILITY_OBLIVIOUS, ABILITY_HYDRATION },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Barboach"),
         .cryId = CRY_BARBOACH,
@@ -5215,7 +5215,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Barboach, 0),
         .footprint = gMonFootprint_Barboach,
         LEARNSETS(Barboach),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_WHISCASH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_WHISCASH}),
     },
 
     [SPECIES_WHISCASH] =
@@ -5235,7 +5235,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
-        .abilities = { ABILITY_OBLIVIOUS, ABILITY_ANTICIPATION, ABILITY_HYDRATION },
+        .abilities = { ABILITY_OBLIVIOUS, ABILITY_HYDRATION, ABILITY_HYDRATION },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Whiscash"),
         .cryId = CRY_WHISCASH,
@@ -5312,7 +5312,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Corphish, 0),
         .footprint = gMonFootprint_Corphish,
         LEARNSETS(Corphish),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_CRAWDAUNT}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_CRAWDAUNT}),
     },
 
     [SPECIES_CRAWDAUNT] =
