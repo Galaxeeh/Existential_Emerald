@@ -2902,7 +2902,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_SUPER_FANG,
         .power = 1,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -8518,7 +8518,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_SLUDGE_WAVE] =
     {
         .effect = EFFECT_POISON_HIT,
-        .power = 95,
+        .power = 100,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 10,
