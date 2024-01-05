@@ -4023,7 +4023,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Carvanha, 0),
         .footprint = gMonFootprint_Carvanha,
         LEARNSETS(Carvanha),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_SHARPEDO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_SHARPEDO}),
     },
 
 #define SHARPEDO_MISC_INFO                                      \

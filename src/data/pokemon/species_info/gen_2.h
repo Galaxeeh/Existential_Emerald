@@ -733,16 +733,16 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         ICON(Ledyba, 0),
         .footprint = gMonFootprint_Ledyba,
         LEARNSETS(Ledyba),
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_LEDIAN}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_LEDIAN}),
     },
 
     [SPECIES_LEDIAN] =
     {
         .baseHP        = 55,
-        .baseAttack    = 35,
+        .baseAttack    = 55,
         .baseDefense   = 50,
-        .baseSpeed     = 85,
-        .baseSpAttack  = 55,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 75,
         .baseSpDefense = 110,
         .types = { TYPE_BUG, TYPE_FLYING },
         .catchRate = 90,

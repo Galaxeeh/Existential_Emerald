@@ -5562,8 +5562,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PALETTES(Graveler),
         ICON(Graveler, 1),
         LEARNSETS(Graveler),
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GOLEM},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GOLEM}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_GOLEM}),
     },
 
     [SPECIES_GOLEM] =
@@ -8948,7 +8947,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Horsea, 0),
         .footprint = gMonFootprint_Horsea,
         LEARNSETS(Horsea),
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_SEADRA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_SEADRA}),
     },
 
     [SPECIES_SEADRA] =
