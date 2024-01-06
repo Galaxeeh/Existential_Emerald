@@ -1380,7 +1380,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_PURIFYING_SALT, ABILITY_STURDY, ABILITY_CLEAR_BODY },
+        .abilities = { ABILITY_STURDY, ABILITY_STURDY, ABILITY_PURIFYING_SALT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Nacli"),
         .cryId = CRY_NACLI,
@@ -1428,7 +1428,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_PURIFYING_SALT, ABILITY_STURDY, ABILITY_CLEAR_BODY },
+        .abilities = { ABILITY_STURDY, ABILITY_STURDY, ABILITY_PURIFYING_SALT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Naclstack"),
         .cryId = CRY_NACLSTACK,
@@ -1456,7 +1456,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         ICON(Naclstack, 2), // TODO: recolor
         //.footprint = gMonFootprint_Naclstack,
         LEARNSETS(Naclstack),
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_GARGANACL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_GARGANACL}),
     },
 
     [SPECIES_GARGANACL] =

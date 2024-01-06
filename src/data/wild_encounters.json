@@ -3344,17 +3344,17 @@
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_SHELLOS_WEST_SEA"
+                "species": "SPECIES_SHELLDER"
               },
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_SHELLOS_WEST_SEA"
+                "species": "SPECIES_SHELLDER"
               },
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_SHELLOS_WEST_SEA"
+                "species": "SPECIES_SHELLDER"
               },
               {
                 "min_level": 7,
@@ -3379,17 +3379,17 @@
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_FINNEON"
+                "species": "SPECIES_BINACLE"
               },
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_FINNEON"
+                "species": "SPECIES_BINACLE"
               },
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_FINNEON"
+                "species": "SPECIES_BINACLE"
               }
             ]
           }

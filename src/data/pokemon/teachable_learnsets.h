@@ -12500,6 +12500,7 @@ static const u16 sPhanpyTeachableLearnset[] = {
     MOVE_SNORE,
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
+    MOVE_ROCK_BLAST,
     MOVE_UNAVAILABLE,
 };
 
@@ -12536,6 +12537,7 @@ static const u16 sDonphanTeachableLearnset[] = {
     MOVE_SNORE,
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
+    MOVE_ROCK_BLAST,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_PHANPY
