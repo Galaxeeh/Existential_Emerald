@@ -5462,7 +5462,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Foongus, 0),
         .footprint = gMonFootprint_Foongus,
         LEARNSETS(Foongus),
-        .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_AMOONGUSS}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_AMOONGUSS}),
     },
 
     [SPECIES_AMOONGUSS] =
@@ -5716,7 +5716,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Joltik, 0),
         .footprint = gMonFootprint_Joltik,
         LEARNSETS(Joltik),
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_GALVANTULA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_GALVANTULA}),
     },
 
     [SPECIES_GALVANTULA] =

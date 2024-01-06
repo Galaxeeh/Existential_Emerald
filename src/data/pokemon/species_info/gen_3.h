@@ -2155,7 +2155,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Slakoth, 2),
         .footprint = gMonFootprint_Slakoth,
         LEARNSETS(Slakoth),
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_VIGOROTH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_VIGOROTH}),
     },
 
     [SPECIES_VIGOROTH] =
