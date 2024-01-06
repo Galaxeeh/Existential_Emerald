@@ -211,8 +211,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RAZOR_WIND] =
     {
-        .effect = EFFECT_TWO_TURNS_ATTACK,
-        .power = 80,
+        .effect = EFFECT_HIT,
+        .power = 65,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 10,
@@ -2834,9 +2834,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_HYPER_FANG] =
     {
         .effect = EFFECT_FLINCH_HIT,
-        .power = 80,
+        .power = 100,
         .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
@@ -10420,7 +10420,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
             .split = SPLIT_PHYSICAL,
         #endif
         .effect = EFFECT_MULTI_HIT,
-        .power = 15,
+        .power = 20,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 20,

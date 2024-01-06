@@ -1333,7 +1333,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         RATTATA_FAMILY_MISC_INFO,
         RATTATA_MISC_INFO,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_GUTS, ABILITY_HUSTLE },
+        .abilities = { ABILITY_GUTS, ABILITY_GUTS, ABILITY_STRONG_JAW },
         .bodyColor = BODY_COLOR_PURPLE,
         .isStarter = TRUE,
         .height = 3,
@@ -1373,7 +1373,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 70,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_GUTS, ABILITY_HUSTLE },
+        .abilities = { ABILITY_GUTS, ABILITY_GUTS, ABILITY_STRONG_JAW },
         .bodyColor = BODY_COLOR_BROWN,
         .weight = 185,
         .description = COMPOUND_STRING(
@@ -1794,7 +1794,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     #endif
         .formChangeTable = sPikachuFormChangeTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_RAICHU},
-                                {EVO_NONE, 0, SPECIES_RAICHU_ALOLAN}),
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_RAICHU_ALOLAN}),
     },
 
 #if P_COSPLAY_PIKACHU_FORMS
@@ -6250,8 +6250,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Magneton, 0),
         .footprint = gMonFootprint_Magneton,
         LEARNSETS(Magneton),
-        .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_MAGNEZONE},
-                                {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_MAGNEZONE}),
+        .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_MAGNEZONE}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -9177,7 +9176,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_WATER_3, EGG_GROUP_WATER_3 },
-        .abilities = { ABILITY_ILLUMINATE, ABILITY_NATURAL_CURE, ABILITY_ANALYTIC },
+        .abilities = { ABILITY_NATURAL_CURE, ABILITY_NATURAL_CURE, ABILITY_ANALYTIC },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
         .speciesName = _("Staryu"),
@@ -9228,7 +9227,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_WATER_3, EGG_GROUP_WATER_3 },
-        .abilities = { ABILITY_ILLUMINATE, ABILITY_NATURAL_CURE, ABILITY_ANALYTIC },
+        .abilities = { ABILITY_NATURAL_CURE, ABILITY_NATURAL_CURE, ABILITY_ANALYTIC },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Starmie"),
         .cryId = CRY_STARMIE,
