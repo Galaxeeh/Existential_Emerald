@@ -1557,7 +1557,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_ROCK,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -7980,7 +7980,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_BUG_BITE] =
     {
         .effect = EFFECT_BUG_BITE,
-        .power = 60,
+        .power = 65,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,

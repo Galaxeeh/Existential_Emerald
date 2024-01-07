@@ -1164,6 +1164,43 @@ RustboroCity_EventScript_Boy1::
 	msgbox RustboroCity_Text_YouCanHave2On2Battle, MSGBOX_NPC
 	end
 
+RustboroCity_EventScript_Roxanne::
+	msgbox RustboroCity_Text_Roxanne, MSGBOX_NPC
+	end
+
+RustboroCity_EventScript_Brawly::
+	msgbox RustboroCity_Text_Brawly, MSGBOX_NPC
+	end
+
+RustboroCity_EventScript_Wattson::
+	msgbox RustboroCity_Text_Wattson, MSGBOX_NPC
+	end
+
+RustboroCity_EventScript_Flannery::
+	msgbox RustboroCity_Text_Flannery, MSGBOX_NPC
+	end
+
+RustboroCity_EventScript_Winona::
+	msgbox RustboroCity_Text_Winona, MSGBOX_NPC
+	end
+
+RustboroCity_Text_Roxanne:
+	.string "I'm gonna!$"
+
+RustboroCity_Text_Brawly:
+	.string "WHAT THAT SMELL LIKE?!$"
+
+RustboroCity_Text_Wattson:
+	.string "You should calc your life in\n"
+	.string "singles and get a girlfriend.$"
+
+RustboroCity_Text_Flannery:
+	.string "And then I sucked him off!$"
+
+RustboroCity_Text_Winona:
+	.string "Merda!$"
+
+
 RustboroCity_Text_WeShortenItToDevon:
 	.string "The DEVON CORPORATION…\n"
 	.string "We all just shorten it to DEVON.\p"

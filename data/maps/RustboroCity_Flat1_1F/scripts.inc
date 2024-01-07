@@ -13,6 +13,7 @@ RustboroCity_Flat1_1F_EventScript_Woman::
 	giveitem ITEM_SILK_SCARF
 	goto_if_eq VAR_RESULT, FALSE, DewfordTown_House2_EventScript_NoRoomForScarf
 	setflag FLAG_RECEIVED_SILK_SCARF
+	release
 	end
 
 RustboroCity_Flat1_1F_Text_EveryPokemonHasAbility:

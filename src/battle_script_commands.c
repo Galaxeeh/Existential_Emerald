@@ -617,7 +617,7 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
     FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 16, 20, 30, 40, 50, 60, 70, 80 };
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 16, 22, 30, 40, 50, 60, 70, 80 };
 const double sLevelCapReduction[7] = { .0, .1, .15, .20, .25, .33, .5 };
 const double sRelativePartyScaling[27] =
 {
@@ -4119,6 +4119,7 @@ double GetPkmnExpMultiplier(u8 level)
             levelDiff = sLevelCaps[i] - level ;
             if (levelDiff > 6)
                 levelDiff = 6;
+            else
             lvlCapMultiplier = sLevelCapReduction[levelDiff];
             break;
         }
@@ -15874,6 +15875,7 @@ u8 GetFirstFaintedPartyIndex(u8 battler)
 
 void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBattler)
 {
+    u8 i;
     u32 holdEffect = GetMonHoldEffect(&gPlayerParty[expGetterMonId]);
     u8 expGetterLevel = GetMonData(&gPlayerParty[expGetterMonId], MON_DATA_LEVEL);
     *expAmount *= GetPkmnExpMultiplier(expGetterLevel);
@@ -15904,7 +15906,16 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
         value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
         //*expAmount = value + 1;
-        *expAmount = value;
+        if (!FlagGet(sLevelCapFlags[i]) && expGetterLevel >= sLevelCaps[i])
+        {
+            *expAmount = 0;
+        }
+        else
+        {
+            *expAmount = value;
+        }
+        
+            
     }
 }
 

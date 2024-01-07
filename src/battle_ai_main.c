@@ -4596,7 +4596,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
             break;
         else if (ItemId_GetPocket(aiData->items[battlerDef]) == POCKET_BERRIES)
-            ADJUST_SCORE(3);
+            //ADJUST_SCORE(3);
         break;
     case EFFECT_INCINERATE:
         if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)

@@ -3279,7 +3279,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .heldItem = ITEM_EVIOLITE,
     .ability = ABILITY_SWARM,
     .nature = TRAINER_PARTY_NATURE(NATURE_SASSY),
-    .moves = {MOVE_BUG_BITE, MOVE_DISCHARGE, MOVE_SUBSTITUTE, MOVE_BATON_PASS}
+    .moves = {MOVE_BUG_BITE, MOVE_DISCHARGE, MOVE_SUBSTITUTE, MOVE_BITE}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -3288,7 +3288,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .heldItem = ITEM_SITRUS_BERRY,
     .ability = ABILITY_TECHNICIAN,
     .nature = TRAINER_PARTY_NATURE(NATURE_BRAVE),
-    .moves = {MOVE_ACROBATICS, MOVE_BUG_BITE, MOVE_PURSUIT, MOVE_TRAILBLAZE}
+    .moves = {MOVE_AERIAL_ACE, MOVE_BUG_BITE, MOVE_PURSUIT, MOVE_LEAFAGE}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -3306,7 +3306,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .heldItem = ITEM_LOADED_DICE,
     .ability = ABILITY_BATTLE_ARMOR,
     .nature = TRAINER_PARTY_NATURE(NATURE_HASTY),
-    .moves = {MOVE_LEECH_LIFE, MOVE_ROCK_BLAST, MOVE_WHIRLPOOL, MOVE_STEALTH_ROCK}
+    .moves = {MOVE_LEECH_LIFE, MOVE_ROCK_BLAST, MOVE_WATER_PULSE, MOVE_STEALTH_ROCK}
     }
 };
 

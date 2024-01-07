@@ -1,7 +1,7 @@
 @ NOTE: Route 104's sail to Dewford script references local IDs from Dewford's map.
 @  These are labeled in DewfordTown/scripts.inc
-.set LOCALID_RIVAL, 33
-.set LOCALID_GRUNT, 34
+.set LOCALID_RIVAL, 32
+.set LOCALID_GRUNT, 33
 
 Route104_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route104_OnFrame
@@ -287,6 +287,8 @@ Route104_EventScript_WhiteHerbFlorist::
 	end
 
 Route104_EventScript_ReceivedWhiteHerb::
+	lock
+	faceplayer
 	msgbox Route104_Text_FlowerShopSellingSaplings, MSGBOX_DEFAULT
 	release
 	end
@@ -296,7 +298,10 @@ Route104_EventScript_Girl1::
 	end
 
 Route104_EventScript_BugCatcher::
-	msgbox Route104_Text_WhatsItLikeAtBottomOfSea, MSGBOX_SIGN
+	lock
+	faceplayer
+	msgbox Route104_Text_WhatsItLikeAtBottomOfSea, MSGBOX_NPC
+	release
 	end
 
 Route104_EventScript_BrineysCottageSign::

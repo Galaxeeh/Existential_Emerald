@@ -1754,7 +1754,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         type |= 0xC0;
         StringCopy(txtPtr, gTypeNames[type & 0x3F]);
     }
-    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
+    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
     {
         mon = &GetSideParty(GetBattlerSide(battler))[gBattlerPartyIndexes[battler]];
         itemId = GetMonData(mon, MON_DATA_HELD_ITEM);
@@ -1763,11 +1763,14 @@ static void MoveSelectionDisplayMoveType(u32 battler)
             type = ItemId_GetSecondaryId(itemId);
         else
             type = gBattleMoves[MOVE_IVY_CUDGEL].type;
+        StringCopy(txtPtr, gTypeNames[type]);
     }
-    else
+    else 
+    {
         type = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
+        StringCopy(txtPtr, gTypeNames[type]);
+    }
 
-    StringCopy(txtPtr, gTypeNames[type]);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
     MoveSelectionDisplaySplitIcon(battler);
 }
