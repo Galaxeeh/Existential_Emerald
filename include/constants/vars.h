@@ -266,7 +266,7 @@
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
 #define VAR_BUGSY_GYM                                    0x40F7 // Bugsy Gym Trainers
 #define VAR_GET_REPELLANT                                0x40F8 // Repellant trigger in woods
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
+#define VAR_MIAGINA                                      0x40F9 // 104 Doubles
 #define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var

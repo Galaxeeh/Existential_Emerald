@@ -24097,7 +24097,7 @@ RazorWindSetUp:
 	createsprite gRazorWindTornadoSpriteTemplate, ANIM_ATTACKER, 2, 32, 0, 16, 16, 170, 7, 40
 	waitforvisualfinish
 	playsewithpan SE_M_GUST2, SOUND_PAN_ATTACKER
-	goto RazorWindEnd
+	goto RazorWindUnleash
 
 RazorWindUnleash:
 	loadspritegfx ANIM_TAG_AIR_WAVE_2

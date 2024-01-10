@@ -2,6 +2,8 @@
 @  These are labeled in DewfordTown/scripts.inc
 .set LOCALID_RIVAL, 32
 .set LOCALID_GRUNT, 33
+.set LOCALID_GINA, 23
+.set LOCALID_MIA, 24
 
 Route104_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route104_OnFrame
@@ -986,7 +988,7 @@ Route104_EventScript_RematchCindy::
 	end
 
 Route104_EventScript_Gina::
-	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
+	trainerbattle_single TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route104_Text_GinaPostBattle, MSGBOX_DEFAULT
 	release
@@ -998,6 +1000,66 @@ Route104_EventScript_Mia::
 	msgbox Route104_Text_MiaPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+MiaGina1_Trigger::
+	lockall
+	playse SE_PIN
+	setvar VAR_MIAGINA, 1
+	applymovement LOCALID_MIA, Mia1Movement
+	applymovement LOCALID_GINA, Mia1Movement
+	delay 10
+	end
+
+MiaGina2_Trigger::
+	lockall
+	playse SE_PIN
+	setvar VAR_MIAGINA, 2
+	applymovement LOCALID_MIA, Mia2Movement
+	applymovement LOCALID_GINA, Mia2Movement
+	delay 10
+	end
+
+MiaGina3_Trigger::
+	lockall
+	playse SE_PIN
+	setvar VAR_MIAGINA, 3
+	applymovement LOCALID_MIA, Mia3Movement
+	applymovement LOCALID_GINA, Mia3Movement
+	delay 20
+	end
+
+MiaGina4_Trigger::
+	lockall
+	playse SE_PIN
+	setvar VAR_MIAGINA, 4
+	applymovement LOCALID_MIA, Mia4Movement
+	applymovement LOCALID_GINA, Mia4Movement
+	delay 30
+	end
+
+
+Mia1Movement:
+	walk_fast_down
+	step_end
+
+Mia2Movement:
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Mia3Movement:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Mia4Movement:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
 
 Route104_EventScript_Darian::
 	trainerbattle_single TRAINER_DARIAN, Route104_Text_DarianIntro, Route104_Text_DarianDefeat

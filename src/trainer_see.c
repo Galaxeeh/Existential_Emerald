@@ -313,8 +313,8 @@ static u8 CheckTrainer(u8 objectEventId)
             || scriptPtr[1] == TRAINER_BATTLE_REMATCH_DOUBLE
             || scriptPtr[1] == TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE)
         {
-            if (GetMonsStateToDoubles_2() != PLAYER_HAS_TWO_USABLE_MONS)
-                return 0;
+            /*if (GetMonsStateToDoubles_2() != PLAYER_HAS_TWO_USABLE_MONS)
+                return 0;*/
 
             numTrainers = 2;
         }
