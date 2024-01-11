@@ -125,6 +125,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glacia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Drake;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roxanne;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bugsy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PlasmaGruntM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PlasmaGruntF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giovanni;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brawly;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wattson;
@@ -492,6 +494,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BUGSY] =                    &gObjectEventGraphicsInfo_Bugsy,
     [OBJ_EVENT_GFX_MACHOKE] =                  &gObjectEventGraphicsInfo_Machoke,
     [OBJ_EVENT_GFX_BAYLEEF] =                  &gObjectEventGraphicsInfo_Bayleef,
+    [OBJ_EVENT_GFX_PLASMA_GRUNT_M] =           &gObjectEventGraphicsInfo_PlasmaGruntM,
+    [OBJ_EVENT_GFX_PLASMA_GRUNT_F] =           &gObjectEventGraphicsInfo_PlasmaGruntF,
 
 };
 

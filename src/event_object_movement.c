@@ -444,6 +444,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_MACHOKE                 0x1126
 #define OBJ_EVENT_PAL_TAG_BAYLEEF                 0x1127
 #define OBJ_EVENT_PAL_TAG_TREEDISGUISE            0x1128
+#define OBJ_EVENT_PAL_TAG_PLASMAGRUNT             0x1129
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 
@@ -496,6 +497,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Machoke,               OBJ_EVENT_PAL_TAG_MACHOKE},
     {gObjectEventPal_Bayleef,               OBJ_EVENT_PAL_TAG_BAYLEEF},
     {gObjectEventPal_TreeDisguise,          OBJ_EVENT_PAL_TAG_TREEDISGUISE},
+    {gObjectEventPal_PlasmaGruntM,          OBJ_EVENT_PAL_TAG_PLASMAGRUNT},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

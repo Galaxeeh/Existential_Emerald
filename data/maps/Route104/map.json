@@ -447,7 +447,7 @@
       "flag": "FLAG_HIDE_ROUTE_104_RIVAL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_PLASMA_GRUNT_M",
       "x": 17,
       "y": 73,
       "elevation": 0,
@@ -460,7 +460,7 @@
       "flag": "FLAG_HIDE_CAVEGRUNTS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "graphics_id": "OBJ_EVENT_GFX_PLASMA_GRUNT_F",
       "x": 16,
       "y": 73,
       "elevation": 0,

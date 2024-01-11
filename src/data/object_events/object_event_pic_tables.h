@@ -1263,6 +1263,30 @@ static const struct SpriteFrameImage sPicTable_Bugsy[] = {
     overworld_frame(gObjectEventPic_Bugsy, 4, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_PlasmaGruntM[] = {
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 0),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 1),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 2),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 3),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 4),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 5),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 6),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 7),
+    overworld_frame(gObjectEventPic_PlasmaGruntM, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_PlasmaGruntF[] = {
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 0),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 1),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 2),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 3),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 4),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 5),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 6),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 7),
+    overworld_frame(gObjectEventPic_PlasmaGruntF, 4, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_Giovanni[] = {
     overworld_frame(gObjectEventPic_Giovanni, 4, 4, 0),
     overworld_frame(gObjectEventPic_Giovanni, 4, 4, 1),
