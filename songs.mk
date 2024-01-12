@@ -1861,7 +1861,7 @@ $(MID_SUBDIR)/mus_hg_vs_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V111
 
 $(MID_SUBDIR)/mus_hg_vs_gym_leader.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V108
+	$(MID) $< $@ -E -R0 -G229 -V080
 
 $(MID_SUBDIR)/mus_hg_vs_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V084
@@ -2470,7 +2470,7 @@ $(MID_SUBDIR)/mus_bw_encounter_rich.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G274 -V096
 
 $(MID_SUBDIR)/mus_bw_encounter_plasma.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G274 -V088
+	$(MID) $< $@ -E -R0 -G274 -V086
 
 $(MID_SUBDIR)/mus_bw_vs_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G274 -V094
@@ -2491,7 +2491,7 @@ $(MID_SUBDIR)/mus_bw_vs_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G274 -V079
 
 $(MID_SUBDIR)/mus_bw_vs_plasma.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G274 -V120
+	$(MID) $< $@ -E -R0 -G274 -V080
 
 $(MID_SUBDIR)/mus_bw_vs_elite_four.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G274 -V090
