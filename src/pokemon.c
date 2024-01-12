@@ -5014,7 +5014,7 @@ u16 GetBattleBGM(void)
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
             if (gTrainerBattleOpponent_A == TRAINER_ROXANNE_1)
-                return MUS_HG_GYM;
+                return MUS_HG_VS_GYM_LEADER;
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
