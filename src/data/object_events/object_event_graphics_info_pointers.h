@@ -125,6 +125,13 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glacia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Drake;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roxanne;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bugsy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Roxie;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nessa;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jupiter;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mars;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Saturn;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_N;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PlasmaGruntM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PlasmaGruntF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giovanni;
@@ -496,6 +503,13 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BAYLEEF] =                  &gObjectEventGraphicsInfo_Bayleef,
     [OBJ_EVENT_GFX_PLASMA_GRUNT_M] =           &gObjectEventGraphicsInfo_PlasmaGruntM,
     [OBJ_EVENT_GFX_PLASMA_GRUNT_F] =           &gObjectEventGraphicsInfo_PlasmaGruntF,
+    [OBJ_EVENT_GFX_ROXIE] =                    &gObjectEventGraphicsInfo_Roxie,
+    [OBJ_EVENT_GFX_NESSA] =                    &gObjectEventGraphicsInfo_Nessa,
+    [OBJ_EVENT_GFX_JUPITER] =                  &gObjectEventGraphicsInfo_Jupiter,
+    [OBJ_EVENT_GFX_MARS] =                     &gObjectEventGraphicsInfo_Mars,
+    [OBJ_EVENT_GFX_SATURN] =                   &gObjectEventGraphicsInfo_Saturn,
+    [OBJ_EVENT_GFX_CYRUS] =                    &gObjectEventGraphicsInfo_Cyrus,
+    [OBJ_EVENT_GFX_N] =                        &gObjectEventGraphicsInfo_N,
 
 };
 

@@ -445,6 +445,13 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_BAYLEEF                 0x1127
 #define OBJ_EVENT_PAL_TAG_TREEDISGUISE            0x1128
 #define OBJ_EVENT_PAL_TAG_PLASMAGRUNT             0x1129
+#define OBJ_EVENT_PAL_TAG_ROXIE                   0x112A
+#define OBJ_EVENT_PAL_TAG_NESSA                   0x112B
+#define OBJ_EVENT_PAL_TAG_JUPITER                 0x112C
+#define OBJ_EVENT_PAL_TAG_MARS                    0x112D
+#define OBJ_EVENT_PAL_TAG_SATURN                  0x112E
+#define OBJ_EVENT_PAL_TAG_CYRUS                   0x112F
+#define OBJ_EVENT_PAL_TAG_N                       0x1130
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 
@@ -498,6 +505,13 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Bayleef,               OBJ_EVENT_PAL_TAG_BAYLEEF},
     {gObjectEventPal_TreeDisguise,          OBJ_EVENT_PAL_TAG_TREEDISGUISE},
     {gObjectEventPal_PlasmaGruntM,          OBJ_EVENT_PAL_TAG_PLASMAGRUNT},
+    {gObjectEventPal_Roxie,                 OBJ_EVENT_PAL_TAG_ROXIE},
+    {gObjectEventPal_Nessa,                 OBJ_EVENT_PAL_TAG_NESSA},
+    {gObjectEventPal_Jupiter,               OBJ_EVENT_PAL_TAG_JUPITER},
+    {gObjectEventPal_Mars,                  OBJ_EVENT_PAL_TAG_MARS},
+    {gObjectEventPal_Saturn,                OBJ_EVENT_PAL_TAG_SATURN},
+    {gObjectEventPal_Cyrus,                 OBJ_EVENT_PAL_TAG_CYRUS},
+    {gObjectEventPal_N,                     OBJ_EVENT_PAL_TAG_N},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

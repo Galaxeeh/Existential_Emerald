@@ -120,11 +120,23 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_Gabrielle1),
     },
 
-    [TRAINER_GRUNT_PETALBURG_WOODS] =
+    /*[TRAINER_GRUNT_PETALBURG_WOODS] =
     {
         .trainerClass = TRAINER_CLASS_TEAM_PLASMA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_PLASMA_M,
+        .trainerName = _("Grunt"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .party = TRAINER_PARTY(sParty_GruntPetalburgWoods),
+    },*/
+
+    [TRAINER_GRUNT_PETALBURG_WOODS] =
+    {
+        .trainerClass = TRAINER_CLASS_TEAM_PLASMA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_LEADER_ROXIE,
         .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
@@ -3188,7 +3200,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Bugsy"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Roxanne1),
     },
 
@@ -5804,7 +5816,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Gina & Mia"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_HELP_PARTNER | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_GinaAndMia1),
     },
 

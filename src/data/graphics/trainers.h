@@ -124,6 +124,9 @@ const u32 gTrainerPalette_LeaderRoxanne[] = INCBIN_U32("graphics/trainers/front_
 const u32 gTrainerFrontPic_LeaderBugsy[] = INCBIN_U32("graphics/trainers/front_pics/leader_bugsy.4bpp.lz");
 const u32 gTrainerPalette_LeaderBugsy[] = INCBIN_U32("graphics/trainers/palettes/leader_bugsy.gbapal.lz");
 
+const u32 gTrainerFrontPic_LeaderRoxie[] = INCBIN_U32("graphics/trainers/front_pics/leader_roxie.4bpp.lz");
+const u32 gTrainerPalette_LeaderRoxie[] = INCBIN_U32("graphics/trainers/palettes/leader_roxie.gbapal.lz");
+
 const u32 gTrainerFrontPic_PlasmaM[] = INCBIN_U32("graphics/trainers/front_pics/plasma_m.4bpp.lz");
 const u32 gTrainerPalette_PlasmaM[] = INCBIN_U32("graphics/trainers/palettes/plasma_m.gbapal.lz");
 
