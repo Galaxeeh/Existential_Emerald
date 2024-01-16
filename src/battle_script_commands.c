@@ -4115,14 +4115,15 @@ double GetPkmnExpMultiplier(u8 level)
     for (i = 0; i < NUM_SOFT_CAPS; i++)
     {
         if (!FlagGet(sLevelCapFlags[i]) && level >= sLevelCaps[i])
-        {
+        /*{
             levelDiff = sLevelCaps[i] - level ;
             if (levelDiff > 6)
                 levelDiff = 6;
             else
             lvlCapMultiplier = sLevelCapReduction[levelDiff];
             break;
-        }
+        }*/
+        return 0;
     }
 
     // multiply the usual exp yield by the party level multiplier

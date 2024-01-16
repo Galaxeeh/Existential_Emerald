@@ -452,6 +452,13 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SATURN                  0x112E
 #define OBJ_EVENT_PAL_TAG_CYRUS                   0x112F
 #define OBJ_EVENT_PAL_TAG_N                       0x1130
+#define OBJ_EVENT_PAL_TAG_NORMAN                  0x1131
+#define OBJ_EVENT_PAL_TAG_COLRESS                 0x1132
+#define OBJ_EVENT_PAL_TAG_GHETSIS                 0x1133
+#define OBJ_EVENT_PAL_TAG_ZINZOLIN                0x1134
+#define OBJ_EVENT_PAL_TAG_GALACTIC                0x1135
+#define OBJ_EVENT_PAL_TAG_ROCKETM                 0x1136
+#define OBJ_EVENT_PAL_TAG_ROCKETF                 0x1137
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 
@@ -512,6 +519,13 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Saturn,                OBJ_EVENT_PAL_TAG_SATURN},
     {gObjectEventPal_Cyrus,                 OBJ_EVENT_PAL_TAG_CYRUS},
     {gObjectEventPal_N,                     OBJ_EVENT_PAL_TAG_N},
+    {gObjectEventPal_Norman,                OBJ_EVENT_PAL_TAG_NORMAN},
+    {gObjectEventPal_Colress,               OBJ_EVENT_PAL_TAG_COLRESS},
+    {gObjectEventPal_Ghetsis,               OBJ_EVENT_PAL_TAG_GHETSIS},
+    {gObjectEventPal_Zinzolin,              OBJ_EVENT_PAL_TAG_ZINZOLIN},
+    {gObjectEventPal_Galactic,              OBJ_EVENT_PAL_TAG_GALACTIC},
+    {gObjectEventPal_RocketM,               OBJ_EVENT_PAL_TAG_ROCKETM},
+    {gObjectEventPal_RocketF,               OBJ_EVENT_PAL_TAG_ROCKETF},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

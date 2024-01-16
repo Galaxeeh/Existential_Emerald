@@ -7980,7 +7980,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_BUG_BITE] =
     {
         .effect = EFFECT_BUG_BITE,
-        .power = 65,
+        .power = 60,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,

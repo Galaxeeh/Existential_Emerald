@@ -256,6 +256,13 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giddy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan1;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bayleef;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Colress;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ghetsis;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zinzolin;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketF;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -510,6 +517,13 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SATURN] =                   &gObjectEventGraphicsInfo_Saturn,
     [OBJ_EVENT_GFX_CYRUS] =                    &gObjectEventGraphicsInfo_Cyrus,
     [OBJ_EVENT_GFX_N] =                        &gObjectEventGraphicsInfo_N,
+    [OBJ_EVENT_GFX_COLRESS] =                  &gObjectEventGraphicsInfo_Colress,
+    [OBJ_EVENT_GFX_GHETSIS] =                  &gObjectEventGraphicsInfo_Ghetsis,
+    [OBJ_EVENT_GFX_ZINZOLIN] =                 &gObjectEventGraphicsInfo_Zinzolin,
+    [OBJ_EVENT_GFX_GALACTIC_M] =               &gObjectEventGraphicsInfo_GalacticM,
+    [OBJ_EVENT_GFX_GALACTIC_F] =               &gObjectEventGraphicsInfo_GalacticF,
+    [OBJ_EVENT_GFX_ROCKET_M] =                 &gObjectEventGraphicsInfo_RocketM,
+    [OBJ_EVENT_GFX_ROCKET_F] =                 &gObjectEventGraphicsInfo_RocketF,
 
 };
 

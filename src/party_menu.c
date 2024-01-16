@@ -5604,7 +5604,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     bool8 cannotUseEffect;
     u8 holdEffectParam = ItemId_GetHoldEffectParam(*itemPtr);
     u32 i;
-    u32 CandyCap = 11;
+    u32 CandyCap = 100;
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
     
     for (i = 0; i < NUM_SOFT_CAPS; i++)

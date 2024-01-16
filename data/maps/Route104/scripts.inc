@@ -988,7 +988,7 @@ Route104_EventScript_RematchCindy::
 	end
 
 Route104_EventScript_Gina::
-	trainerbattle_single TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route104_Text_GinaPostBattle, MSGBOX_DEFAULT
 	release
@@ -1008,6 +1008,7 @@ MiaGina1_Trigger::
 	applymovement LOCALID_MIA, Mia1Movement
 	applymovement LOCALID_GINA, Mia1Movement
 	delay 10
+	release
 	end
 
 MiaGina2_Trigger::
@@ -1017,6 +1018,7 @@ MiaGina2_Trigger::
 	applymovement LOCALID_MIA, Mia2Movement
 	applymovement LOCALID_GINA, Mia2Movement
 	delay 10
+	release
 	end
 
 MiaGina3_Trigger::
@@ -1026,6 +1028,7 @@ MiaGina3_Trigger::
 	applymovement LOCALID_MIA, Mia3Movement
 	applymovement LOCALID_GINA, Mia3Movement
 	delay 20
+	release
 	end
 
 MiaGina4_Trigger::
@@ -1035,6 +1038,7 @@ MiaGina4_Trigger::
 	applymovement LOCALID_MIA, Mia4Movement
 	applymovement LOCALID_GINA, Mia4Movement
 	delay 30
+	release
 	end
 
 
