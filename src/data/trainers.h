@@ -124,18 +124,6 @@ const struct Trainer gTrainers[] = {
     {
         .trainerClass = TRAINER_CLASS_TEAM_PLASMA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ROCKET_M,
-        .trainerName = _("Grunt"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = TRAINER_PARTY(sParty_GruntPetalburgWoods),
-    },
-
-/*    [TRAINER_GRUNT_PETALBURG_WOODS] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_PLASMA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_PLASMA_M,
         .trainerName = _("Grunt"),
         .items = {},
@@ -143,7 +131,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_GruntPetalburgWoods),
     },
-*/
+
 
     [TRAINER_MARCEL] =
     {
