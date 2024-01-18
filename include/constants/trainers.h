@@ -114,6 +114,15 @@
 #define TRAINER_PIC_LEADER_GIOVANNI       94
 #define TRAINER_PIC_PLASMA_M              95
 #define TRAINER_PIC_LEADER_ROXIE          96
+#define TRAINER_PIC_JUPITER               97
+#define TRAINER_PIC_MARS                  98
+#define TRAINER_PIC_SATURN                99
+#define TRAINER_PIC_CYRUS                 100
+#define TRAINER_PIC_PLASMA_F              101
+#define TRAINER_PIC_GALACTIC_M            102
+#define TRAINER_PIC_GALACTIC_F            103
+#define TRAINER_PIC_ROCKET_M              104
+#define TRAINER_PIC_ROCKET_F              105
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

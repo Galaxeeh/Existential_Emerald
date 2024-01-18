@@ -127,8 +127,35 @@ const u32 gTrainerPalette_LeaderBugsy[] = INCBIN_U32("graphics/trainers/palettes
 const u32 gTrainerFrontPic_LeaderRoxie[] = INCBIN_U32("graphics/trainers/front_pics/leader_roxie.4bpp.lz");
 const u32 gTrainerPalette_LeaderRoxie[] = INCBIN_U32("graphics/trainers/palettes/leader_roxie.gbapal.lz");
 
+const u32 gTrainerFrontPic_Jupiter[] = INCBIN_U32("graphics/trainers/front_pics/jupiter.4bpp.lz");
+const u32 gTrainerPalette_Jupiter[] = INCBIN_U32("graphics/trainers/palettes/jupiter.gbapal.lz");
+
+const u32 gTrainerFrontPic_Mars[] = INCBIN_U32("graphics/trainers/front_pics/mars.4bpp.lz");
+const u32 gTrainerPalette_Mars[] = INCBIN_U32("graphics/trainers/palettes/mars.gbapal.lz");
+
+const u32 gTrainerFrontPic_Saturn[] = INCBIN_U32("graphics/trainers/front_pics/saturn.4bpp.lz");
+const u32 gTrainerPalette_Saturn[] = INCBIN_U32("graphics/trainers/palettes/saturn.gbapal.lz");
+
+const u32 gTrainerFrontPic_Cyrus[] = INCBIN_U32("graphics/trainers/front_pics/cyrus.4bpp.lz");
+const u32 gTrainerPalette_Cyrus[] = INCBIN_U32("graphics/trainers/palettes/cyrus.gbapal.lz");
+
 const u32 gTrainerFrontPic_PlasmaM[] = INCBIN_U32("graphics/trainers/front_pics/plasma_m.4bpp.lz");
 const u32 gTrainerPalette_PlasmaM[] = INCBIN_U32("graphics/trainers/palettes/plasma_m.gbapal.lz");
+
+const u32 gTrainerFrontPic_PlasmaF[] = INCBIN_U32("graphics/trainers/front_pics/plasma_f.4bpp.lz");
+const u32 gTrainerPalette_PlasmaF[] = INCBIN_U32("graphics/trainers/palettes/plasma_f.gbapal.lz");
+
+const u32 gTrainerFrontPic_GalacticM[] = INCBIN_U32("graphics/trainers/front_pics/galactic_m.4bpp.lz");
+const u32 gTrainerPalette_GalacticM[] = INCBIN_U32("graphics/trainers/palettes/galactic_m.gbapal.lz");
+
+const u32 gTrainerFrontPic_GalacticF[] = INCBIN_U32("graphics/trainers/front_pics/galactic_f.4bpp.lz");
+const u32 gTrainerPalette_GalacticF[] = INCBIN_U32("graphics/trainers/palettes/galactic_f.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketM[] = INCBIN_U32("graphics/trainers/front_pics/rocket_m.4bpp.lz");
+const u32 gTrainerPalette_RocketM[] = INCBIN_U32("graphics/trainers/palettes/rocket_m.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketF[] = INCBIN_U32("graphics/trainers/front_pics/rocket_f.4bpp.lz");
+const u32 gTrainerPalette_RocketF[] = INCBIN_U32("graphics/trainers/palettes/rocket_f.gbapal.lz");
 
 const u32 gTrainerFrontPic_LeaderBrawly[] = INCBIN_U32("graphics/trainers/front_pics/leader_brawly.4bpp.lz");
 const u32 gTrainerPalette_LeaderBrawly[] = INCBIN_U32("graphics/trainers/front_pics/leader_brawly.gbapal.lz");

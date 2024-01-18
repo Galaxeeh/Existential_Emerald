@@ -170,7 +170,43 @@ static const union AnimCmd *const sAnims_LeaderRoxie[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_Jupiter[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Mars[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Saturn[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Cyrus[] ={
+    sAnim_GeneralFrame0,
+};
+
 static const union AnimCmd *const sAnims_PlasmaM[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_PlasmaF[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticM[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticF[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_RocketM[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_RocketF[] ={
     sAnim_GeneralFrame0,
 };
 
@@ -486,4 +522,13 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RS_BRENDAN] = sAnims_RubySapphireBrendan,
     [TRAINER_PIC_RS_MAY] = sAnims_RubySapphireMay,
     [TRAINER_PIC_LEADER_ROXIE] = sAnims_LeaderRoxie,
+    [TRAINER_PIC_JUPITER] = sAnims_Jupiter,
+    [TRAINER_PIC_MARS] = sAnims_Mars,
+    [TRAINER_PIC_SATURN] = sAnims_Saturn,
+    [TRAINER_PIC_CYRUS] = sAnims_Cyrus,
+    [TRAINER_PIC_PLASMA_F] = sAnims_PlasmaF,
+    [TRAINER_PIC_GALACTIC_M] = sAnims_GalacticM,
+    [TRAINER_PIC_GALACTIC_F] = sAnims_GalacticF,
+    [TRAINER_PIC_ROCKET_M] = sAnims_RocketM,
+    [TRAINER_PIC_ROCKET_F] = sAnims_RocketF,
 };

@@ -97,6 +97,15 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_RS_BRENDAN] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_RS_MAY] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LEADER_ROXIE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_JUPITER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_MARS] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_SATURN] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_CYRUS] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_PLASMA_F] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_GALACTIC_M] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_GALACTIC_F] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ROCKET_M] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ROCKET_F] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -200,6 +209,15 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(RS_MAY, gTrainerFrontPic_RubySapphireMay, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(LEADER_ROXIE, gTrainerFrontPic_LeaderRoxie, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(JUPITER, gTrainerFrontPic_Jupiter, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(MARS, gTrainerFrontPic_Mars, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(SATURN, gTrainerFrontPic_Saturn, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(CYRUS, gTrainerFrontPic_Cyrus, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(PLASMA_F, gTrainerFrontPic_PlasmaF, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(GALACTIC_M, gTrainerFrontPic_GalacticM, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(GALACTIC_F, gTrainerFrontPic_GalacticF, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(ROCKET_M, gTrainerFrontPic_RocketM, TRAINER_PIC_SIZE),
+    TRAINER_SPRITE(ROCKET_F, gTrainerFrontPic_RocketF, TRAINER_PIC_SIZE),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -303,4 +321,13 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(RS_BRENDAN, gTrainerPalette_RubySapphireBrendan),
     TRAINER_PAL(RS_MAY, gTrainerPalette_RubySapphireMay),
     TRAINER_PAL(LEADER_ROXIE, gTrainerPalette_LeaderRoxie),
+    TRAINER_PAL(JUPITER, gTrainerPalette_Jupiter),
+    TRAINER_PAL(MARS, gTrainerPalette_Mars),
+    TRAINER_PAL(SATURN, gTrainerPalette_Saturn),
+    TRAINER_PAL(CYRUS, gTrainerPalette_Cyrus),
+    TRAINER_PAL(PLASMA_F, gTrainerPalette_PlasmaF),
+    TRAINER_PAL(GALACTIC_M, gTrainerPalette_GalacticM),
+    TRAINER_PAL(GALACTIC_F, gTrainerPalette_GalacticF),
+    TRAINER_PAL(ROCKET_M, gTrainerPalette_RocketM),
+    TRAINER_PAL(ROCKET_F, gTrainerPalette_RocketF),
 };
