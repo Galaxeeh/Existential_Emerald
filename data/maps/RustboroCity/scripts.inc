@@ -15,10 +15,15 @@ RustboroCity_MapScripts::
 RustboroCity_OnTransition:
 	setflag FLAG_VISITED_RUSTBORO_CITY
 	call Common_EventScript_SetupRivalGfxId
+	call_if_eq VAR_RUSTBORO_CITY_STATE, 11, RustboroCity_EventScript_SetRivalPos
 	call_if_eq VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_HideMapNamePopup
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	goto_if_eq VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_PositionScientistForExit
+	goto_if_eq VAR_RUSTBORO_CITY_STATE, 10, RustboroCity_EventScript_PositionScientistForExit
 	end
+
+RustboroCity_EventScript_SetRivalPos::
+	setobjectxyperm LOCALID_RIVAL, 21, 26
+	return
 
 RustboroCity_StayTuned::
 	msgbox RustboroCity_StaytunedText, MSGBOX_DEFAULT
@@ -434,7 +439,7 @@ RustboroCity_EventScript_StolenGoodsTrigger4::
 RustboroCity_EventScript_StolenGoodsScene::
 	msgbox RustboroCity_Text_OutOfTheWay, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_ENCOUNTER_AQUA, FALSE
+	playbgm MUS_BW_ENCOUNTER_PLASMA, FALSE
 	addobject LOCALID_GRUNT
 	addobject LOCALID_DEVON_EMPLOYEE
 	applymovement LOCALID_GRUNT, RustboroCity_Movement_GruntEscape
@@ -841,131 +846,138 @@ RustboroCity_EventScript_PlayBrendanMusic::
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	return
 
+PlayerWalkBack:
+	walk_left
+	walk_left
+	step_end
+
+
 RustboroCity_EventScript_RivalTrigger0::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer0
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	msgbox RustboroCity_Text_RivalStop, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkBack
 	waitmovement 0
-	goto RustboroCity_EventScript_RivalEncounter
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalReturn0
+	waitmovement 0
+	call RustboroCity_EventScript_RestoreBgm
+	releaseall
+	end
+
 
 RustboroCity_EventScript_RivalTrigger1::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer1
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	msgbox RustboroCity_Text_RivalStop, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkBack
 	waitmovement 0
-	goto RustboroCity_EventScript_RivalEncounter
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalReturn1
+	waitmovement 0
+	call RustboroCity_EventScript_RestoreBgm
+	releaseall
+	end
 
 RustboroCity_EventScript_RivalTrigger2::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer2
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	msgbox RustboroCity_Text_RivalStop, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkBack
 	waitmovement 0
-	goto RustboroCity_EventScript_RivalEncounter
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalReturn2
+	waitmovement 0
+	call RustboroCity_EventScript_RestoreBgm
+	releaseall
+	end
 
 RustboroCity_EventScript_RivalTrigger3::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer3
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	msgbox RustboroCity_Text_RivalStop, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkBack
 	waitmovement 0
-	goto RustboroCity_EventScript_RivalEncounter
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalReturn3
+	waitmovement 0
+	call RustboroCity_EventScript_RestoreBgm
+	releaseall
+	end
 
 RustboroCity_EventScript_RivalTrigger4::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer4
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	msgbox RustboroCity_Text_RivalStop, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkBack
 	waitmovement 0
-	goto RustboroCity_EventScript_RivalEncounter
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalReturn4
+	waitmovement 0
+	call RustboroCity_EventScript_RestoreBgm
+	releaseall
+	end
 
 RustboroCity_EventScript_RivalTrigger5::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer5
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger6::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer6
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger7::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
-	waitmovement 0
+	call RustboroCity_EventScript_PlayRivalMusic
 	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer7
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	goto RustboroCity_EventScript_RivalEncounter
+
+RustboroCity_EventScript_RivalTrigger8::
+	lockall
+	playse SE_PIN
+	call RustboroCity_EventScript_PlayRivalMusic
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer8
+	waitmovement 0
+	goto RustboroCity_EventScript_RivalEncounter
+
+RustboroCity_EventScript_RivalTrigger9::
+	lockall
+	playse SE_PIN
+	call RustboroCity_EventScript_PlayRivalMusic
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer9
+	waitmovement 0
+	goto RustboroCity_EventScript_RivalEncounter
+
+RustboroCity_EventScript_RivalTrigger10::
+	lockall
+	playse SE_PIN
+	call RustboroCity_EventScript_PlayRivalMusic
+	applymovement LOCALID_RIVAL, RustboroCity_Movement_RivalApproachPlayer10
 	waitmovement 0
 	goto RustboroCity_EventScript_RivalEncounter
 
@@ -982,19 +994,9 @@ RustboroCity_EventScript_MayEncounter::
 	msgbox RustboroCity_Text_MayHiLetsRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox RustboroCity_Text_RegisteredMay, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
-	setvar VAR_RUSTBORO_CITY_STATE, 8
 	setvar VAR_ROUTE104_STATE, 2
 	setvar VAR_0x8008, 0
-	msgbox RustboroCity_Text_MayPassedBrineyWantToBattle, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, RustboroCity_EventScript_BattleMay
-	msgbox RustboroCity_Text_MayOhHaventRaisedPokemonEnough, MSGBOX_DEFAULT
-	call RustboroCity_EventScript_RestoreBgm
+	goto RustboroCity_EventScript_BattleMay
 	releaseall
 	end
 
@@ -1028,18 +1030,21 @@ RustboroCity_EventScript_RestoreBgm::
 RustboroCity_EventScript_BattleMayTreecko::
 	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_TREECKO, RustboroCity_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
 	goto RustboroCity_EventScript_MayBrineyHint
 	end
 
 RustboroCity_EventScript_BattleMayTorchic::
 	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_TORCHIC, RustboroCity_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
 	goto RustboroCity_EventScript_MayBrineyHint
 	end
 
 RustboroCity_EventScript_BattleMayMudkip::
 	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_MUDKIP, RustboroCity_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
 	goto RustboroCity_EventScript_MayBrineyHint
 	end
 
@@ -1050,18 +1055,9 @@ RustboroCity_EventScript_BrendanEncounter::
 	msgbox RustboroCity_Text_BrendanHiLetsRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox RustboroCity_Text_RegisteredBrendan, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
-	setvar VAR_RUSTBORO_CITY_STATE, 8
 	setvar VAR_ROUTE104_STATE, 2
-	msgbox RustboroCity_Text_BrendanPassedBrineyWantToBattle, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, RustboroCity_EventScript_BattleBrendan
-	msgbox RustboroCity_Text_BrendanNoConfidenceInPokemon, MSGBOX_DEFAULT
-	call RustboroCity_EventScript_RestoreBgm
+	setvar VAR_0x8008, 0
+	goto RustboroCity_EventScript_BattleBrendan
 	releaseall
 	end
 
@@ -1089,76 +1085,115 @@ RustboroCity_EventScript_BrendanBrineyHint::
 RustboroCity_EventScript_BattleBrendanTreecko::
 	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TREECKO, RustboroCity_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
 	goto RustboroCity_EventScript_BrendanBrineyHint
 	end
 
 RustboroCity_EventScript_BattleBrendanTorchic::
 	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TORCHIC, RustboroCity_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
 	goto RustboroCity_EventScript_BrendanBrineyHint
 	end
 
 RustboroCity_EventScript_BattleBrendanMudkip::
 	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_MUDKIP, RustboroCity_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
 	goto RustboroCity_EventScript_BrendanBrineyHint
 	end
 
 RustboroCity_Movement_RivalApproachPlayer0:
-	walk_down
+	walk_fast_up
+	walk_fast_up
 	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_down
+	step_end
+
+RustboroCity_Movement_RivalReturn0:
+	walk_right
+	walk_fast_down
+	walk_fast_down
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer1:
-	walk_down
+	walk_fast_up
 	walk_left
-	walk_left
-	walk_left
-	walk_down
+	step_end
+
+RustboroCity_Movement_RivalReturn1:
+	walk_right
+	walk_fast_down
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer2:
-	walk_down
 	walk_left
-	walk_left
-	walk_down
+	step_end
+
+RustboroCity_Movement_RivalReturn2:
+	walk_right
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer3:
-	walk_down
+	walk_fast_down
 	walk_left
-	walk_down
+	step_end
+
+RustboroCity_Movement_RivalReturn3:
+	walk_right
+	walk_fast_up
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer4:
-	walk_down
-	walk_down
+	walk_fast_down
+	walk_fast_down
+	walk_left
+	step_end
+
+RustboroCity_Movement_RivalReturn4:
+	walk_right
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer5:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	walk_down
-	walk_right
 	walk_down
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer6:
+	walk_fast_left
+	walk_fast_left
 	walk_down
-	walk_right
-	walk_right
 	walk_down
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer7:
+	walk_fast_left
 	walk_down
-	walk_right
-	walk_right
-	walk_right
 	walk_down
 	step_end
+
+RustboroCity_Movement_RivalApproachPlayer8:
+	walk_down
+	walk_down
+	step_end
+
+RustboroCity_Movement_RivalApproachPlayer9:
+	walk_fast_right
+	walk_down
+	walk_down
+	step_end
+
+RustboroCity_Movement_RivalApproachPlayer10:
+	walk_fast_right
+	walk_fast_right
+	walk_down
+	walk_down
+	step_end
+
 
 RustboroCity_EventScript_Boy1::
 	msgbox RustboroCity_Text_YouCanHave2On2Battle, MSGBOX_NPC
@@ -1183,6 +1218,13 @@ RustboroCity_EventScript_Flannery::
 RustboroCity_EventScript_Winona::
 	msgbox RustboroCity_Text_Winona, MSGBOX_NPC
 	end
+
+RustboroCity_Text_RivalStop:
+	.string "Hey {PLAYER}!\p"
+	.string "Not to be rude,\n"
+	.string "but I think you should challenge\l"
+	.string "Bugsy before you trek any farther.\p"
+	.string "Hurry up! I'm itching for a battle!$"
 
 RustboroCity_Text_Roxanne:
 	.string "I'm gonna!$"
@@ -1282,14 +1324,14 @@ RustboroCity_Text_OutOfTheWay:
 
 RustboroCity_Text_WaitDontTakeMyGoods:
 	.string "Wait! Pleeeaaase!\p"
-	.string "Don't take my GOODS!$"
+	.string "Don't take my goods!$"
 
 RustboroCity_Text_HelpMeIWasRobbed:
 	.string "Oh, it's you!\p"
-	.string "You're that fantastic TRAINER who\n"
-	.string "helped me in PETALBURG WOODS!\p"
-	.string "Help me! I was robbed by TEAM AQUA!\n"
-	.string "I have to get the DEVON GOODS back!\p"
+	.string "You're that fantastic trainer who\n"
+	.string "helped me in Petalburg Woods!\p"
+	.string "Help me! I was robbed by Team Plasma!\n"
+	.string "I have to get the Devon Goods back!\p"
 	.string "If I don't…\n"
 	.string "I'm going to be in serious trouble.$"
 
@@ -1299,16 +1341,16 @@ RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel:
 
 RustboroCity_Text_YouGotItThankYou:
 	.string "Oh! How did it go?\n"
-	.string "The DEVON GOODS?\p"
+	.string "The Devon Goods?\p"
 	.string "You did!\n"
 	.string "You got them back!\p"
-	.string "You really are a great TRAINER!\p"
+	.string "You really are a great trainer!\p"
 	.string "I know! As my thanks, I'll give you\n"
-	.string "another GREAT BALL!$"
+	.string "another Great Ball!$"
 
 RustboroCity_Text_YoureLoadedWithItems:
 	.string "You're loaded with items.\n"
-	.string "I can't give you this GREAT BALL.$"
+	.string "I can't give you this Great Ball.$"
 
 RustboroCity_Text_PleaseComeWithMe:
 	.string "Excuse me, please!\n"
@@ -1316,10 +1358,8 @@ RustboroCity_Text_PleaseComeWithMe:
 
 RustboroCity_Text_MayHiLetsRegister:
 	.string "MAY: Oh, hi, {PLAYER}{KUN}!\p"
-	.string "You had a MATCH CALL feature put\n"
-	.string "on your POKéNAV!\p"
-	.string "Let's register each other so we can\n"
-	.string "contact one another anytime!\p"
+	.string "Looks like you beat Bugsy!\p"
+	.string "I never had any doubt.\p"
 	.string "… … … … … …$"
 
 RustboroCity_Text_RegisteredMay:
@@ -1343,30 +1383,30 @@ RustboroCity_Text_MayOhHaventRaisedPokemonEnough:
 	.string "That's not very good for a TRAINER!$"
 
 RustboroCity_Text_MayWantToBattle:
-	.string "MAY: So, what do you think?\n"
+	.string "May: So, what do you think?\n"
 	.string "How about a little battle here?$"
 
 RustboroCity_Text_MayImNotGoingToLose:
-	.string "MAY: You just became a TRAINER,\n"
-	.string "{PLAYER}{KUN}. I'm not going to lose!$"
+	.string "May: So, what do you think?\n"
+	.string "How about a little battle here?$"
 
 RustboroCity_Text_MayDefeat:
 	.string "Yikes!\n"
 	.string "You're better than I expected!$"
 
 RustboroCity_Text_MayMrBrineyHint:
-	.string "MAY: Oh, by the way, MR. BRINEY, who\n"
-	.string "I just passed…\p"
-	.string "{PLAYER}{KUN}, you just moved here so you\n"
-	.string "might not know this, but MR. BRINEY\l"
-	.string "was once a revered seafarer.$"
+	.string "May: What a battle! That\n"
+	.string "was exhilarating!\p"
+	.string "Great job, {PLAYER}{KUN}, keep honing your\n"
+	.string "skills.\p"
+	.string "You should head on to Mauville City.\n"
+	.string "I heard the gym leader there, Roxie,\l"
+	.string "knows how to get a party going.$"
 
 RustboroCity_Text_BrendanHiLetsRegister:
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
-	.string "You had a MATCH CALL feature put\n"
-	.string "on your POKéNAV! Cool!\p"
-	.string "Let's register each other so we can\n"
-	.string "get in touch anytime!\p"
+	.string "Brendan: Oh, hey, {PLAYER}!\p"
+	.string "Looks like Bugsy was a breeze!\p"
+	.string "Color me impressed.\p"
 	.string "… … … … … …$"
 
 RustboroCity_Text_RegisteredBrendan:
@@ -1389,23 +1429,25 @@ RustboroCity_Text_BrendanNoConfidenceInPokemon:
 	.string "any confidence in your POKéMON?$"
 
 RustboroCity_Text_BrendanWantToBattle:
-	.string "BRENDAN: What's up?\n"
+	.string "Brendan: So...\n"
 	.string "Want to have a battle with me?$"
 
 RustboroCity_Text_BrendanIWontGoEasy:
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "Brendan: So...\n"
+	.string "Want to have a battle with me?$"
 
 RustboroCity_Text_BrendanDefeat:
 	.string "Hmm…\n"
 	.string "You're pretty good.$"
 
 RustboroCity_Text_BrendanMrBrineyHint:
-	.string "BRENDAN: By the way, you know\n"
-	.string "MR. BRINEY? The guy I just passed?\p"
-	.string "I bet you didn't know this, since you\n"
-	.string "just moved here, {PLAYER}, but\l"
-	.string "MR. BRINEY was once a great sailor.$"
+	.string "Brendan: That battle got me\n"
+	.string "fired up!\p"
+	.string "Slick moves, {PLAYER}{KUN}, keep\n"
+	.string "at it.\p"
+	.string "You should head on to Mauville City.\n"
+	.string "I heard the next gym leader, Roxie,\l"
+	.string "has a rocking presence in battle.$"
 
 RustboroCity_Text_TunnelNearingCompletion:
 	.string "“Timesaving tunnel nearing\n"

@@ -5005,9 +5005,9 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_LEADER:
             return MUS_VS_AQUA_MAGMA_LEADER;
-        case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_PLASMA:
-            return MUS_BW_VS_PLASMA;
+            return MUS_BW_VS_PLASMA;        
+        case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_MAGMA_ADMIN:

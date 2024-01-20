@@ -752,7 +752,7 @@ PetalburgCity_Text_WallyHouseSign:
 PetalburgCity_Text_AreYouATrainer:
 	.string "Excuse me!\p"
 	.string "Let me guess, from the way you're\n"
-	.string "dressed, are you a POKéMON TRAINER?$"
+	.string "dressed, are you a Pokémon Trainer?$"
 
 PetalburgCity_Text_WellMaybeNot:
 	.string "… … … … … …\p"
@@ -762,6 +762,10 @@ PetalburgCity_Text_WellMaybeNot:
 	.string "or maybe you're just an ordinary kid.$"
 
 PetalburgCity_Text_ImLookingForTalentedTrainers:
-	.string "I'm roaming the land in search of\n"
-	.string "talented TRAINERS.\p"
+	.string "Either way I have to ask, does it\n"
+	.string "feel like something's off to you?\p"
+	.string "I can't really explain it, but\n"
+	.string "something is different.\p"
+	.string "… … … … … …\p"
+	.string "Anyways,\n"
 	.string "I'm sorry to have taken your time.$"

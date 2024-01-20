@@ -304,7 +304,7 @@ RusturfTunnel_EventScript_Peeko::
 RusturfTunnel_EventScript_Grunt::
 	lock
 	faceplayer
-	playbgm MUS_ENCOUNTER_AQUA, FALSE
+	playbgm MUS_BW_ENCOUNTER_PLASMA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
 	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
@@ -424,20 +424,21 @@ RusturfTunnel_EventScript_Mike::
 	end
 
 RusturfTunnel_Text_ComeAndGetSome:
-	.string "What, are you coming?\n"
+	.string "OH? You're approaching me?!\n"
 	.string "Come and get some, then!$"
 
 RusturfTunnel_Text_Peeko:
 	.string "PEEKO: Pii pihyoh!$"
 
 RusturfTunnel_Text_GruntIntro:
-	.string "Grah, keelhaul it all!\p"
-	.string "That hostage POKéMON turned out to\n"
+	.string "Dagnabbit!!\p"
+	.string "That hostage Pokémon turned out to\n"
 	.string "be worthless!\p"
 	.string "And to think I made a getaway…\n"
 	.string "In this tunnel to nowhere!\p"
-	.string "Hey! You!\n"
-	.string "So you want to battle me?$"
+	.string "I don't know what you think\n"
+	.string "you're gonna accomplish here.\p"
+	.string "I'll strike you down!!$"
 
 RusturfTunnel_Text_GruntDefeat:
 	.string "Urrrggh! My career in crime comes to\n"
@@ -445,10 +446,10 @@ RusturfTunnel_Text_GruntDefeat:
 
 RusturfTunnel_Text_GruntTakePackage:
 	.string "This is plain not right…\p"
-	.string "The BOSS told me this would be a\n"
+	.string "The Boss told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
 	.string "All I had to do was steal some package\n"
-	.string "from DEVON.\p"
+	.string "from Devon Corp.\p"
 	.string "Tch!\n"
 	.string "You want it back that badly, take it!$"
 
@@ -457,8 +458,8 @@ RusturfTunnel_Text_PeekoGladToSeeYouSafe:
 	.string "Am I glad to see you're safe!$"
 
 RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
-	.string "PEEKO owes her life to you!\p"
-	.string "They call me MR. BRINEY.\n"
+	.string "Peeko owes her life to you!\p"
+	.string "They call me Mr. Briney.\n"
 	.string "And, you are?\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
@@ -467,10 +468,13 @@ RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
 	.string "Now, if there's anything that troubles\n"
 	.string "you, don't hesitate to tell me!\p"
 	.string "You can usually find me in my cottage\n"
-	.string "by the sea near PETALBURG WOODS.\p"
-	.string "Come, PEEKO, we should make our way\n"
+	.string "by the sea near Petalburg Woods.\p"
+	.string "I'll be on a trip for a while though.\p"
+	.string "I have some business to attend to in\n"
+	.string "Slateport City.\p"
+	.string "Come, Peeko, we should make our way\n"
 	.string "home.\p"
-	.string "PEEKO: Pihyoh!$"
+	.string "Peeko: Pihyoh!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging:
 	.string "… …\p"

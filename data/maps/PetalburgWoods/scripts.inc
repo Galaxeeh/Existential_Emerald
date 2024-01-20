@@ -215,6 +215,7 @@ PetalburgWoods_EventScript_DevonResearcherFinish::
 	waitmovement 0
 	msgbox PetalburgWoods_Text_ICantBeWastingTime, MSGBOX_DEFAULT
 	closemessage
+	clearflag FLAG_HIDE_RUSTBORO_CITY_RIVAL
 	return
 
 PetalburgWoods_EventScript_RemoveDevonResearcher::
@@ -670,7 +671,7 @@ PetalburgWoods_Gym_EventScript_BugsyDefeated::
 	msgbox PetalburgWoods_Gym_Text_HiveBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_RUSTBORO_GYM
 	setflag FLAG_BADGE01_GET
-	setvar VAR_RUSTBORO_CITY_STATE, 1
+	setvar VAR_RUSTBORO_CITY_STATE, 11
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers
