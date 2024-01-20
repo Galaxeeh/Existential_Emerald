@@ -69,6 +69,8 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	setvar VAR_BRINEY_LOCATION, 1
 	setvar VAR_DEVON_CORP_3F_STATE, 1
 	setvar VAR_RUSTBORO_CITY_STATE, 6
+	setflag FLAG_HAS_MATCH_CALL
+	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
 	releaseall
 	end
 

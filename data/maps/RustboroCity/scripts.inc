@@ -49,7 +49,7 @@ RustboroCity_EventScript_HideMapNamePopup::
 	return
 
 RustboroCity_OnFrame:
-	map_script_2 VAR_RUSTBORO_CITY_STATE, 6, RustboroCity_EventScript_ScientistAddMatchCall
+	map_script_2 VAR_RUSTBORO_CITY_STATE, 10, RustboroCity_EventScript_ScientistAddMatchCall
 	.2byte 0
 
 
@@ -398,7 +398,8 @@ RustboroCity_EventScript_Man2::
 
 RustboroCity_EventScript_StolenGoodsTrigger0::
 	lockall
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 14, 21
+	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 13, 17
+	setobjectxyperm LOCALID_GRUNT, 13, 17
 	setobjectmovementtype LOCALID_DEVON_EMPLOYEE, MOVEMENT_TYPE_FACE_RIGHT
 	setvar VAR_0x8004, 0
 	goto RustboroCity_EventScript_StolenGoodsScene
@@ -406,7 +407,8 @@ RustboroCity_EventScript_StolenGoodsTrigger0::
 
 RustboroCity_EventScript_StolenGoodsTrigger1::
 	lockall
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 14, 21
+	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 13, 17
+	setobjectxyperm LOCALID_GRUNT, 13, 17
 	setobjectmovementtype LOCALID_DEVON_EMPLOYEE, MOVEMENT_TYPE_FACE_RIGHT
 	setvar VAR_0x8004, 1
 	goto RustboroCity_EventScript_StolenGoodsScene
@@ -414,7 +416,8 @@ RustboroCity_EventScript_StolenGoodsTrigger1::
 
 RustboroCity_EventScript_StolenGoodsTrigger2::
 	lockall
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 14, 21
+	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 13, 17
+	setobjectxyperm LOCALID_GRUNT, 13, 17
 	setobjectmovementtype LOCALID_DEVON_EMPLOYEE, MOVEMENT_TYPE_FACE_RIGHT
 	setvar VAR_0x8004, 2
 	goto RustboroCity_EventScript_StolenGoodsScene
@@ -422,7 +425,8 @@ RustboroCity_EventScript_StolenGoodsTrigger2::
 
 RustboroCity_EventScript_StolenGoodsTrigger3::
 	lockall
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 14, 21
+	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 13, 17
+	setobjectxyperm LOCALID_GRUNT, 13, 17
 	setobjectmovementtype LOCALID_DEVON_EMPLOYEE, MOVEMENT_TYPE_FACE_RIGHT
 	setvar VAR_0x8004, 3
 	goto RustboroCity_EventScript_StolenGoodsScene
@@ -430,7 +434,8 @@ RustboroCity_EventScript_StolenGoodsTrigger3::
 
 RustboroCity_EventScript_StolenGoodsTrigger4::
 	lockall
-	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 14, 21
+	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 13, 17
+	setobjectxyperm LOCALID_GRUNT, 13, 17
 	setobjectmovementtype LOCALID_DEVON_EMPLOYEE, MOVEMENT_TYPE_FACE_RIGHT
 	setvar VAR_0x8004, 4
 	goto RustboroCity_EventScript_StolenGoodsScene
@@ -511,6 +516,10 @@ RustboroCity_EventScript_EmployeeApproachPlayerFar::
 
 @ Unused
 RustboroCity_Movement_GruntEscapeExtended:
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	walk_faster_right
 	walk_faster_right
 	walk_fast_right
@@ -531,6 +540,10 @@ RustboroCity_Movement_GruntEscapeExtended:
 	step_end
 
 RustboroCity_Movement_GruntEscape:
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	walk_faster_right
 	walk_faster_right
 	walk_fast_right
@@ -550,6 +563,11 @@ RustboroCity_Movement_GruntEscape:
 	step_end
 
 RustboroCity_Movement_EmployeeChaseGrunt1:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -1199,48 +1217,12 @@ RustboroCity_EventScript_Boy1::
 	msgbox RustboroCity_Text_YouCanHave2On2Battle, MSGBOX_NPC
 	end
 
-RustboroCity_EventScript_Roxanne::
-	msgbox RustboroCity_Text_Roxanne, MSGBOX_NPC
-	end
-
-RustboroCity_EventScript_Brawly::
-	msgbox RustboroCity_Text_Brawly, MSGBOX_NPC
-	end
-
-RustboroCity_EventScript_Wattson::
-	msgbox RustboroCity_Text_Wattson, MSGBOX_NPC
-	end
-
-RustboroCity_EventScript_Flannery::
-	msgbox RustboroCity_Text_Flannery, MSGBOX_NPC
-	end
-
-RustboroCity_EventScript_Winona::
-	msgbox RustboroCity_Text_Winona, MSGBOX_NPC
-	end
-
 RustboroCity_Text_RivalStop:
 	.string "Hey {PLAYER}!\p"
 	.string "Not to be rude,\n"
 	.string "but I think you should challenge\l"
 	.string "Bugsy before you trek any farther.\p"
 	.string "Hurry up! I'm itching for a battle!$"
-
-RustboroCity_Text_Roxanne:
-	.string "I'm gonna!$"
-
-RustboroCity_Text_Brawly:
-	.string "WHAT THAT SMELL LIKE?!$"
-
-RustboroCity_Text_Wattson:
-	.string "You should calc your life in\n"
-	.string "singles and get a girlfriend.$"
-
-RustboroCity_Text_Flannery:
-	.string "And then I sucked him off!$"
-
-RustboroCity_Text_Winona:
-	.string "Merda!$"
 
 
 RustboroCity_Text_WeShortenItToDevon:
@@ -1395,8 +1377,8 @@ RustboroCity_Text_MayDefeat:
 	.string "You're better than I expected!$"
 
 RustboroCity_Text_MayMrBrineyHint:
-	.string "May: What a battle! That\n"
-	.string "was exhilarating!\p"
+	.string "May: What a battle!\n"
+	.string "That was exhilarating!\p"
 	.string "Great job, {PLAYER}{KUN}, keep honing your\n"
 	.string "skills.\p"
 	.string "You should head on to Mauville City.\n"
@@ -1441,10 +1423,9 @@ RustboroCity_Text_BrendanDefeat:
 	.string "You're pretty good.$"
 
 RustboroCity_Text_BrendanMrBrineyHint:
-	.string "Brendan: That battle got me\n"
-	.string "fired up!\p"
-	.string "Slick moves, {PLAYER}{KUN}, keep\n"
-	.string "at it.\p"
+	.string "Brendan: Wow!\n"
+	.string "That battle got me fired up!\p"
+	.string "Slick moves, {PLAYER}{KUN}, keep at it.\p"
 	.string "You should head on to Mauville City.\n"
 	.string "I heard the next gym leader, Roxie,\l"
 	.string "has a rocking presence in battle.$"
