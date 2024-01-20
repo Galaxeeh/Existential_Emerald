@@ -1,6 +1,7 @@
-.set LOCALID_BRINEY, 11
+.set LOCALID_BRINEY, 10
 .set LOCALID_WANDAS_BF_OUTSIDE, 18
-.set LOCALID_JOSE, 6
+.set LOCALID_JERRY, 15
+.set LOCALID_JANICE, 13
 
 Route116_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route116_OnTransition
@@ -231,17 +232,10 @@ Route116_Movement_GlassesManExitEast:
 	step_end
 
 Route116_EventScript_Joey::
-	trainerbattle_single TRAINER_JOEY, Route116_Text_JoeyIntro, Route116_Text_JoeyDefeat, Route116_EventScript_Jose
+	trainerbattle_single TRAINER_JOEY, Route116_Text_JoeyIntro, Route116_Text_JoeyDefeat
 	msgbox Route116_Text_JoeyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route116_JOSEWALK::
-	applymovement LOCALID_JOSE, Route116_Movement_Jose
-	end
-
-Route116_Movement_Jose:
-	walk_down
-	step_end
 
 Route116_EventScript_Jose::
 	trainerbattle_single TRAINER_JOSE, Route116_Text_JoseIntro, Route116_Text_JoseDefeat
@@ -249,7 +243,7 @@ Route116_EventScript_Jose::
 	return
 
 Route116_EventScript_Jerry::
-	trainerbattle_single TRAINER_JERRY_1, Route116_Text_JerryIntro, Route116_Text_JerryDefeat, Route116_EventScript_TryRegisterJerryAfterBattle
+	trainerbattle_single TRAINER_JERRY_1, Route116_Text_JerryIntro, Route116_Text_JerryDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_RematchJerry
 	setvar VAR_0x8004, TRAINER_JERRY_1
@@ -300,7 +294,7 @@ Route116_EventScript_Janice::
 	end
 
 Route116_EventScript_Karen::
-	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat, Route116_EventScript_TryRegisterKarenAfterBattle
+	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat, Route116_JerryWalk
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_RematchKaren
 	setvar VAR_0x8004, TRAINER_KAREN_1
@@ -309,6 +303,15 @@ Route116_EventScript_Karen::
 	msgbox Route116_Text_KarenPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+Route116_JerryWalk::
+	applymovement LOCALID_JERRY, Route116_Movement_Jerry
+	end
+
+Route116_Movement_Jerry:
+	walk_up
+	step_end
+
 
 Route116_EventScript_TryRegisterKarenAfterBattle::
 	goto_if_set FLAG_HAS_MATCH_CALL, Route116_EventScript_RegisterKarenAfterBattle
@@ -341,9 +344,17 @@ Route116_EventScript_RematchKaren::
 	end
 
 Route116_EventScript_Sarah::
-	trainerbattle_single TRAINER_SARAH, Route116_Text_SarahIntro, Route116_Text_SarahDefeat
+	trainerbattle_single TRAINER_SARAH, Route116_Text_SarahIntro, Route116_Text_SarahDefeat, Route116_JaniceWalk
 	msgbox Route116_Text_SarahPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route116_JaniceWalk::
+	applymovement LOCALID_JANICE, Route116_Movement_Janice
+	end
+
+Route116_Movement_Janice:
+	walk_right
+	step_end
 
 Route116_EventScript_Dawson::
 	trainerbattle_single TRAINER_DAWSON, Route116_Text_DawsonIntro, Route116_Text_DawsonDefeat
