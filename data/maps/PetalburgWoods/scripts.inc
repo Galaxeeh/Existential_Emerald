@@ -704,16 +704,16 @@ PetalburgWoods_Text_GymClosed:
 	.string "Sorry, Bugsy's not here at the moment.\p"
 	.string "I think he might still be packing up\n"
 	.string "at the gym in Rustboro.\p"
-	.string "You should try back later!$"
+	.string "Come back later!$"
 
 PetalburgWoods_Text_GymOpen:
-	.string "Bugsy, the GYM LEADER, is a user\n"
-	.string "of bug type POKéMON.\p"
+	.string "Bugsy, the Gym Leader, is a user\n"
+	.string "of bug type Pokémon.\p"
 	.string "The bug type is very strong, but\n"
 	.string "a little fire and a lot of spirit\l"
 	.string "could help you tame the swarm!\p"
 	.string "Come see me afterwards, if you beat\n"
-	.string "the GYM LEADER.\p"
+	.string "the Gym Leader.\p"
 	.string "Well, go for it!$"
 
 PetalburgWoods_Gym_Text_GymGuidePostVictory:
@@ -721,11 +721,11 @@ PetalburgWoods_Gym_Text_GymGuidePostVictory:
 	.string "My advice must've worked!\p"
 	.string "Great!\n"
 	.string "Check your Trainer Card.\p"
-	.string "The HIVE BADGE you got should be\n"
+	.string "The Hive Badge you got should be\n"
 	.string "properly recorded on it.\p"
 	.string "In other words…\p"
 	.string "You've climbed the first step on\n"
-	.string "the stairs to the CHAMPIONSHIP!\p"
+	.string "the stairs to the Championship!\p"
 	.string "That's got to feel awesome!$"
 
 PetalburgWoods_Text_NotAOneToBeFound:
@@ -733,13 +733,13 @@ PetalburgWoods_Text_NotAOneToBeFound:
 	.string "Not a one to be found…$"
 
 PetalburgWoods_Text_HaveYouSeenShroomish:
-	.string "Hello, have you seen any POKéMON\n"
-	.string "called SHROOMISH around here?\p"
-	.string "I really love that POKéMON.$"
+	.string "Hello, have you seen any Pokémon\n"
+	.string "called Shroomish around here?\p"
+	.string "I really love that Pokémon.$"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou:
 	.string "I was going to ambush you, but you\n"
-	.string "had to dawdle in PETALBURG WOODS\l"
+	.string "had to dawdle in Petalburg Woods\l"
 	.string "forever, didn't you?\p"
 	.string "I got sick of waiting, so here I am!$"
 
@@ -749,7 +749,7 @@ PetalburgWoods_Text_HandOverThosePapers:
 
 PetalburgWoods_Text_YouHaveToHelpMe:
 	.string "Aiyeeeh!\p"
-	.string "You're a POKéMON TRAINER, aren't you?\n"
+	.string "You're a Pokémon trainer, aren't you?\n"
 	.string "You've got to help me, please!$"
 
 PetalburgWoods_Text_NoOneCrossesTeamAqua:
@@ -767,9 +767,9 @@ PetalburgWoods_Text_YouveGotSomeNerve:
 	.string "meddling with Team Plasma!\l"
 	.string "Come on and battle me again!\p"
 	.string "I wish I could say that, but I'm out of\n"
-	.string "POKéMON…\p"
+	.string "Pokémon…\p"
 	.string "And, hey, we of Team Plasma are also\n"
-	.string "after something in RUSTBORO.\p"
+	.string "after something in Rustboro.\p"
 	.string "I'll let you go today!$"
 
 PetalburgWoods_Text_ThatWasAwfullyClose:
@@ -777,13 +777,13 @@ PetalburgWoods_Text_ThatWasAwfullyClose:
 	.string "That was awfully close!\p"
 	.string "Thanks to you, he didn't rob me of\n"
 	.string "these important papers.\p"
-	.string "I know, I'll give you a GREAT BALL as\n"
+	.string "I know, I'll give you a Great Ball as\n"
 	.string "my thanks!$"
 
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro:
 	.string "Didn't that Team Plasma thug say\n"
 	.string "they were after something in\l"
-	.string "RUSTBORO, too?$"
+	.string "Rustboro, too?$"
 
 PetalburgWoods_Text_ICantBeWastingTime:
 	.string "Uh-oh! It's a crisis!\n"
@@ -791,44 +791,44 @@ PetalburgWoods_Text_ICantBeWastingTime:
 
 PetalburgWoods_Text_YoureLoadedWithItems:
 	.string "You're loaded with items.\n"
-	.string "I can't give you this GREAT BALL.$"
+	.string "I can't give you this Great Ball.$"
 
 PetalburgWoods_Text_GoBugPokemonTeam:
 	.string "I caught a whole bunch of POKéMON!\p"
 	.string "Go, go, go!\n"
-	.string "My BUG POKéMON team!$"
+	.string "My Bug Pokémon team!$"
 
 PetalburgWoods_Text_ICouldntWin:
-	.string "I have all these POKéMON,\n"
+	.string "I have all these Pokémon,\n"
 	.string "but I couldn't win…$"
 
 PetalburgWoods_Text_ImOutOfPokeBalls:
-	.string "I caught a bunch of POKéMON.\n"
-	.string "Now I'm out of POKé BALLS.$"
+	.string "I caught a bunch of Pokémon.\n"
+	.string "Now I'm out of Poké Balls.$"
 
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
-	.string "If you take BUG POKéMON to school,\n"
+	.string "If you take Bug Pokémon to school,\n"
 	.string "you get to be instantly popular!$"
 
 PetalburgWoods_Text_CantBePopularIfILose:
 	.string "I can't be popular if I lose.$"
 
 PetalburgWoods_Text_PeopleRespectYou:
-	.string "If you have a big BUG POKéMON,\n"
+	.string "If you have a big Bug Pokémon,\n"
 	.string "people respect you for it.$"
 
 PetalburgWoods_Text_IWantRematch1:
-	.string "I want a rematch when my BUG\n"
-	.string "POKéMON grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "I want a rematch when my Bug\n"
+	.string "Pokémon grow up!\p"
+	.string "I'm registering you in my Pokénav!$"
 
 PetalburgWoods_Text_IWantRematch2:
-	.string "I want a rematch when my BUG \n"
-	.string "POKéMON grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "I want a rematch when my Bug \n"
+	.string "Pokémon grow up!\p"
+	.string "I'm registering you in my Pokénav!$"
 
 PetalburgWoods_Text_MyPokemonHaveGrown:
-	.string "My BUG POKéMON have grown.\n"
+	.string "My Bug Pokémon have grown.\n"
 	.string "I'll be popular again.$"
 
 PetalburgWoods_Text_CantBePopularIfLose:
@@ -836,7 +836,7 @@ PetalburgWoods_Text_CantBePopularIfLose:
 
 PetalburgWoods_Text_IveBeenTrainingHard:
 	.string "You get to be popular if you have\n"
-	.string "strong POKéMON, right?\l"
+	.string "strong Pokémon, right?\l"
 	.string "So, I've been training hard.$"
 
 PetalburgWoods_Text_StayOutOfTallGrass:
@@ -860,22 +860,22 @@ PetalburgWoods_Text_HiddenItemsExplanation:
 
 PetalburgWoods_Text_TryUsingThisItem:
 	.string "Oh, hey!\n"
-	.string "You must be a TRAINER!\p"
+	.string "You must be a trainer!\p"
 	.string "You should try using this item.$"
 
 PetalburgWoods_Text_MiracleSeedExplanation:
-	.string "It's a MIRACLE SEED.\n"
-	.string "If a POKéMON holds that item, its\l"
-	.string "GRASS-type moves become stronger.\p"
-	.string "Besides MIRACLE SEED, I think there are\n"
-	.string "other convenient items for POKéMON\l"
+	.string "It's a Miracle Seed.\n"
+	.string "If a Pokémon holds that item, its\l"
+	.string "Grass-type moves become stronger.\p"
+	.string "Besides Miracle Seed, I think there are\n"
+	.string "other convenient items for Pokémon\l"
 	.string "to hold.$"
 
 PetalburgWoods_Text_TrainerTipsExperience:
 	.string "TRAINER TIPS\p"
-	.string "Any POKéMON that appears even once\n"
+	.string "Any Pokémon that appears even once\n"
 	.string "in a battle is awarded EXP Points.\p"
-	.string "To raise a weak POKéMON, put it at the\n"
+	.string "To raise a weak Pokémon, put it at the\n"
 	.string "left of the team list.\p"
 	.string "As soon as a battle starts, switch it\n"
 	.string "out. It will earn EXP Points without\l"
@@ -883,19 +883,19 @@ PetalburgWoods_Text_TrainerTipsExperience:
 
 PetalburgWoods_Text_TrainerTipsPP:
 	.string "TRAINER TIPS\p"
-	.string "In addition to Hit Points (HP), POKéMON\n"
+	.string "In addition to Hit Points (HP), Pokémon\n"
 	.string "have Power Points (PP) that are used to\l"
 	.string "make moves during battle.\p"
-	.string "If a POKéMON runs out of PP, it must be\n"
-	.string "taken to a POKéMON CENTER.$"
+	.string "If a Pokémon runs out of PP, it must be\n"
+	.string "taken to a Pokémon Center.$"
 
 PetalburgWoods_Text_GymSign:
-	.string "Petalburg Woods POKéMON GYM\n"
-	.string "LEADER: BUGSY\l"
+	.string "Petalburg Woods Pokémon Gym\n"
+	.string "Leader: Bugsy\l"
 	.string "“A bug type prodigy!”$"
 
 PetalburgWoods_Gym_Text_JoshIntro:
-	.string "Don't take us GYM TRAINERS lightly!\n"
+	.string "Don't take us Gym trainers lightly!\n"
 	.string "I'll show you why we're better!$"
 
 PetalburgWoods_Gym_Text_JoshDefeat:
@@ -919,7 +919,7 @@ PetalburgWoods_Gym_Text_TommyPostBattle:
 
 PetalburgWoods_Gym_Text_MarcIntro:
 	.string "I love that we moved to the woods,\p"
-	.string "Now my bug POKéMON have room to\n"
+	.string "Now my bug Pokémon have room to\n"
 	.string "rampage!$"
 
 PetalburgWoods_Gym_Text_MarcDefeat:
@@ -933,12 +933,12 @@ PetalburgWoods_Gym_Text_MarcPostBattle:
 	
 PetalburgWoods_Gym_Text_BugsyIntro:
 	.string "We meet again, I'm Bugsy, the\n"
-	.string "Petalburg Woods POKéMON GYM LEADER.\p"
-	.string "I became a GYM LEADER so that I might\n"
-	.string "apply what I learned at the POKéMON\l"
+	.string "Petalburg Woods Pokémon Gym Leader.\p"
+	.string "I became a Gym Leader so that I might\n"
+	.string "apply what I learned at the Pokémon\l"
 	.string "Trainer's School in battle.\p"
 	.string "It's gonna take a lot to quell my bug\n"
-	.string "type POKéMON!$"
+	.string "type Pokémon!$"
 
 PetalburgWoods_Gym_Text_BugsyDefeat:
 	.string "So…\n"
@@ -946,40 +946,40 @@ PetalburgWoods_Gym_Text_BugsyDefeat:
 	.string "It seems that I still have much more\n"
 	.string "to learn…\p"
 	.string "I understand.\p"
-	.string "The POKéMON LEAGUE's rules state\n"
-	.string "that TRAINERS are to be given this\l"
-	.string "if they defeat a GYM LEADER.\p"
-	.string "Please accept the official POKéMON\n"
-	.string "LEAGUE HIVE BADGE.$"
+	.string "The Pokémon League's rules state\n"
+	.string "that trainers are to be given this\l"
+	.string "if they defeat a Gym Leader.\p"
+	.string "Please accept the official Pokémon\n"
+	.string "League Hive Badge.$"
 
 PetalburgWoods_Gym_Text_ReceivedHiveBadge:
-	.string "{PLAYER} received the HIVE BADGE\n"
+	.string "{PLAYER} received the Hive Badge\n"
 	.string "from Bugsy.$"
 
 PetalburgWoods_Gym_Text_HiveBadgeInfoTakeThis:
-	.string "The HIVE BADGE increased the power\n"
-	.string "ceilling of your POKéMON to level 22.\p"
+	.string "The Hive Badge increased the power\n"
+	.string "ceilling of your Pokémon to level 22.\p"
 	.string "It also enables them to use the HM move\n"
 	.string "CUT outside of battle.\p"
 	.string "Please take this with you, too.$"
 
 PetalburgWoods_Gym_Text_ExplainTM:
-	.string "That TECHNICAL MACHINE, TM04,\n"
-	.string "contains BUG BITE.\p"
+	.string "That Technical Machine, TM04,\n"
+	.string "contains Bug Bite.\p"
 	.string "It not only inflicts damage by biting\n"
-	.string "the enemy, it also steals their\n"
-	.string "held berry and uses consumes it.\p"
+	.string "the enemy, it also steals their\l"
+	.string "held berry and consumes it.\p"
 	.string "If you use a TM, it instantly teaches\n"
-	.string "the move to a POKéMON.\p"
+	.string "the move to a Pokémon.\p"
 
 
 PetalburgWoods_Gym_Text_BugsyPostBattle:
 	.string "Since you are so strong, you should\n"
-	.string "challenge other GYM LEADERS.\p"
-	.string "By battling many TRAINERS, you should\n"
+	.string "challenge other Gym Leaders.\p"
+	.string "By battling many trainers, you should\n"
 	.string "learn many things.$"
 
 PetalburgWoods_BugsyNotReady_Text::
-	.string "You'll have to defeat my peers\l"
+	.string "You'll have to defeat my peers\n"
 	.string "before I'll accept your challenge!$"	
 

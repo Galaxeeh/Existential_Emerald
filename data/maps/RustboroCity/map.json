@@ -422,8 +422,8 @@
     },
     {
       "type": "trigger",
-      "x": 30,
-      "y": 9,
+      "x": 29,
+      "y": 6,
       "elevation": 3,
       "var": "VAR_RUSTBORO_CITY_STATE",
       "var_value": "4",
@@ -431,8 +431,8 @@
     },
     {
       "type": "trigger",
-      "x": 31,
-      "y": 10,
+      "x": 32,
+      "y": 6,
       "elevation": 3,
       "var": "VAR_RUSTBORO_CITY_STATE",
       "var_value": "4",
@@ -441,7 +441,7 @@
     {
       "type": "trigger",
       "x": 30,
-      "y": 11,
+      "y": 6,
       "elevation": 3,
       "var": "VAR_RUSTBORO_CITY_STATE",
       "var_value": "4",
@@ -449,8 +449,8 @@
     },
     {
       "type": "trigger",
-      "x": 30,
-      "y": 12,
+      "x": 31,
+      "y": 6,
       "elevation": 3,
       "var": "VAR_RUSTBORO_CITY_STATE",
       "var_value": "4",

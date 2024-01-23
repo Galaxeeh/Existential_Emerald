@@ -761,6 +761,12 @@ RustboroCity_EventScript_ReturnGoodsTrigger3::
 	goto RustboroCity_EventScript_ReturnGoods
 	end
 
+RustboroCity_EventScript_ReturnGoodsTrigger4::
+	lockall
+	setvar VAR_TEMP_1, 4
+	goto RustboroCity_EventScript_ReturnGoods
+	end
+
 RustboroCity_EventScript_ReturnGoods::
 	call_if_eq VAR_TEMP_1, 0, RustboroCity_EventScript_EmployeeFacePlayerUp2
 	call_if_eq VAR_TEMP_1, 1, RustboroCity_EventScript_EmployeeFacePlayerLeft2
@@ -1034,6 +1040,7 @@ RustboroCity_EventScript_BattleMay::
 	case 0, RustboroCity_EventScript_BattleMayTreecko
 	case 1, RustboroCity_EventScript_BattleMayTorchic
 	case 2, RustboroCity_EventScript_BattleMayMudkip
+	case 3, RustboroCity_EventScript_BattleMayRattata
 	end
 
 RustboroCity_EventScript_MayBrineyHint::
@@ -1068,6 +1075,13 @@ RustboroCity_EventScript_BattleMayMudkip::
 	goto RustboroCity_EventScript_MayBrineyHint
 	end
 
+RustboroCity_EventScript_BattleMayRattata::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_RATTATA, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+
 RustboroCity_EventScript_BrendanEncounter::
 	goto_if_set FLAG_DEFEATED_RIVAL_RUSTBORO, RustboroCity_EventScript_BrendanBrineyHint
 	goto_if_set FLAG_MET_RIVAL_RUSTBORO, RustboroCity_EventScript_BrendanAskToBattle
@@ -1094,6 +1108,7 @@ RustboroCity_EventScript_BattleBrendan::
 	case 0, RustboroCity_EventScript_BattleBrendanTreecko
 	case 1, RustboroCity_EventScript_BattleBrendanTorchic
 	case 2, RustboroCity_EventScript_BattleBrendanMudkip
+	case 3, RustboroCity_EventScript_BattleBrendanRattata
 	end
 
 RustboroCity_EventScript_BrendanBrineyHint::
@@ -1118,6 +1133,13 @@ RustboroCity_EventScript_BattleBrendanTorchic::
 
 RustboroCity_EventScript_BattleBrendanMudkip::
 	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_MUDKIP, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	setvar VAR_RUSTBORO_CITY_STATE, 1
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+
+RustboroCity_EventScript_BattleBrendanRattata::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_RATTATA, RustboroCity_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
 	setvar VAR_RUSTBORO_CITY_STATE, 1
 	goto RustboroCity_EventScript_BrendanBrineyHint

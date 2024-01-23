@@ -285,7 +285,7 @@ Verdanturf_ScottEntrance::
 	end
 
 Verdanturf_Scott0::
-	applymovement LOCALID_SCOTT, WallyApproach0
+	applymovement LOCALID_SCOTT, ScottApproach0
 	waitmovement 0
 	msgbox Verdanturf_Text_ScottYouDidntHoldBack, MSGBOX_DEFAULT
 	closemessage
@@ -297,7 +297,7 @@ Verdanturf_Scott0::
 	end
 
 Verdanturf_Scott1::
-	applymovement LOCALID_SCOTT, WallyApproach1
+	applymovement LOCALID_SCOTT, ScottApproach1
 	waitmovement 0
 	msgbox Verdanturf_Text_ScottYouDidntHoldBack, MSGBOX_DEFAULT
 	closemessage
@@ -309,7 +309,7 @@ Verdanturf_Scott1::
 	end
 
 Verdanturf_Scott2::
-	applymovement LOCALID_SCOTT, WallyApproach2
+	applymovement LOCALID_SCOTT, ScottApproach2
 	waitmovement 0
 	msgbox Verdanturf_Text_ScottYouDidntHoldBack, MSGBOX_DEFAULT
 	closemessage
@@ -321,7 +321,7 @@ Verdanturf_Scott2::
 	end
 
 Verdanturf_Scott3::
-	applymovement LOCALID_SCOTT, WallyApproach3
+	applymovement LOCALID_SCOTT, ScottApproach3
 	waitmovement 0
 	msgbox Verdanturf_Text_ScottYouDidntHoldBack, MSGBOX_DEFAULT
 	closemessage
@@ -333,7 +333,7 @@ Verdanturf_Scott3::
 	end
 
 Verdanturf_Scott4::
-	applymovement LOCALID_SCOTT, WallyApproach4
+	applymovement LOCALID_SCOTT, ScottApproach4
 	waitmovement 0
 	msgbox Verdanturf_Text_ScottYouDidntHoldBack, MSGBOX_DEFAULT
 	closemessage
@@ -345,7 +345,7 @@ Verdanturf_Scott4::
 	end
 
 Verdanturf_Scott5::
-	applymovement LOCALID_SCOTT, WallyApproach5
+	applymovement LOCALID_SCOTT, ScottApproach5
 	waitmovement 0
 	msgbox Verdanturf_Text_ScottYouDidntHoldBack, MSGBOX_DEFAULT
 	closemessage
@@ -355,6 +355,75 @@ Verdanturf_Scott5::
 	removeobject LOCALID_SCOTT
 	releaseall
 	end
+
+ScottApproach0:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	step_end
+
+ScottApproach1:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_right
+	step_end
+
+ScottApproach2:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+ScottApproach3:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	step_end
+
+ScottApproach4:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+ScottApproach5:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	step_end
 
 ScottExit0:
 	walk_down

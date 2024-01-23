@@ -1304,7 +1304,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Pidove, 0),
         .footprint = gMonFootprint_Pidove,
         LEARNSETS(Pidove),
-        .evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_TRANQUILL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_TRANQUILL}),
     },
 
     [SPECIES_TRANQUILL] =

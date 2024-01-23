@@ -367,11 +367,11 @@ Route103_Text_ShortcutToOldale:
 	.string "Fufufu, that's useful, isn't it?$"
 
 Route103_Text_RouteSign:
-	.string "ROUTE 103\n"
-	.string "{DOWN_ARROW} OLDALE TOWN$"
+	.string "Route 103\n"
+	.string "{DOWN_ARROW} Oldale Town$"
 
 Route103_Text_Truck:
 	.string "Sorry, but the bridge isn't finished yet.\p"
-	.string "but once it is, you'll have easy\n"
+	.string "But once it is, you'll have easy\n"
 	.string "access to Slateport City!$"
 

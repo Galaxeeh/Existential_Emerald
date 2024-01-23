@@ -2,6 +2,7 @@
 .set LOCALID_WANDAS_BF_OUTSIDE, 18
 .set LOCALID_JERRY, 15
 .set LOCALID_JANICE, 13
+.set LOCALID_DEVON_EMPLOYEE, 16
 
 Route116_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route116_OnTransition
@@ -370,6 +371,116 @@ Route116_EventScript_Johnson::
 	trainerbattle_single TRAINER_JOHNSON, Route116_Text_JohnsonIntro, Route116_Text_JohnsonDefeat
 	msgbox Route116_Text_JohnsonPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route116_EventScript_ReturnGoodsTrigger0::
+	lockall
+	setvar VAR_TEMP_1, 0
+	goto Route116_EventScript_ReturnGoods
+	end
+
+Route116_EventScript_ReturnGoodsTrigger1::
+	lockall
+	setvar VAR_TEMP_1, 1
+	goto Route116_EventScript_ReturnGoods
+	end
+
+Route116_EventScript_ReturnGoodsTrigger2::
+	lockall
+	setvar VAR_TEMP_1, 2
+	goto Route116_EventScript_ReturnGoods
+	end
+
+Route116_EventScript_ReturnGoodsTrigger3::
+	lockall
+	setvar VAR_TEMP_1, 3
+	goto Route116_EventScript_ReturnGoods
+	end
+
+Route116_EventScript_ReturnGoodsTrigger4::
+	lockall
+	setvar VAR_TEMP_1, 4
+	goto Route116_EventScript_ReturnGoods
+	end
+
+Route116_EventScript_ReturnGoods::
+	call_if_eq VAR_TEMP_1, 0, Route116_EventScript_EmployeeFacePlayerUp2
+	call_if_eq VAR_TEMP_1, 1, Route116_EventScript_EmployeeFacePlayerLeft2
+	call_if_eq VAR_TEMP_1, 2, Route116_EventScript_EmployeeFacePlayerDown2
+	call_if_eq VAR_TEMP_1, 3, Route116_EventScript_EmployeeApproachPlayerDown2
+	call_if_eq VAR_TEMP_1, 4, Route116_EventScript_EmployeeFacePlayerRight
+	msgbox RustboroCity_Text_YouGotItThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_GREAT_BALL
+	call_if_eq VAR_RESULT, FALSE, RustboroCity_EventScript_BagFull
+	msgbox RustboroCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_RETURNED_DEVON_GOODS
+	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
+	setvar VAR_RUSTBORO_CITY_STATE, 5
+	delay 30
+	warp MAP_RUSTBORO_CITY_DEVON_CORP_3F, 2, 2
+	waitstate
+	releaseall
+	end
+
+Route116_EventScript_EmployeeFacePlayerUp2::
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	return
+
+Route116_EventScript_EmployeeFacePlayerLeft2::
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_WalkInPlaceFasterRight
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	return
+
+Route116_EventScript_EmployeeFacePlayerDown2::
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	return
+
+Route116_EventScript_EmployeeApproachPlayerDown2::
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_Movement_EmployeeApproachPlayerDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	return
+
+Route116_EventScript_EmployeeFacePlayerRight::
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
+	waitmovement 0
+	return
 
 Route116_Text_ScoundrelMadeOffWithPeeko:
 	.string "Ohhh, what am I to do?\p"

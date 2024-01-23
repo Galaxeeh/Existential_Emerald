@@ -64,13 +64,12 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	setflag FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDA
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	setvar VAR_BRINEY_LOCATION, 1
 	setvar VAR_DEVON_CORP_3F_STATE, 1
 	setvar VAR_RUSTBORO_CITY_STATE, 6
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
+	setflag FLAG_HIDE_ROUTE_116_DEVON_EMPLOYEE
 	releaseall
 	end
 
@@ -233,7 +232,7 @@ RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
 	.string "You can check the locations of\n"
 	.string "Mauville and Slateport easily!\p"
 	.string "By the way, I've heard that sinister\n"
-	.string "criminals--Galactic and Plasma, I believe--\l"
+	.string "criminals-Galactic and Plasma, I believe-\l"
 	.string "have been making trouble far and wide.\p"
 	.string "I think it would be best if you rested\n"
 	.string "up before you go on your way.$"

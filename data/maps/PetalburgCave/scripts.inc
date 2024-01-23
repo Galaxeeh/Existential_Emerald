@@ -29,5 +29,5 @@ PetalburgCave_Text_RockBlast:
 	.string "Rock Blast packs some power!$"
 
 PetalburgCave_Text_IWonder:
-	.string "Those grunts went further into the cave.\n"
+	.string "Those grunts went farther into the cave.\n"
 	.string "I wonder what they're doing down there?$"

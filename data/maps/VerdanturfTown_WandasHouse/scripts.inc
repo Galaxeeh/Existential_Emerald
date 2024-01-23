@@ -44,7 +44,6 @@ VerdanturfTown_WandasHouse_EventScript_Wanda::
 	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, VerdanturfTown_WandasHouse_EventScript_WandaDontWorry
 	goto_if_set FLAG_DEFEATED_WALLY_MAUVILLE, VerdanturfTown_WandasHouse_EventScript_MeetWanda
 	msgbox VerdanturfTown_WandasHouse_Text_DontWorryAboutWally, MSGBOX_DEFAULT
-	setflag FLAG_HIDE_VERDANTURF_TOWN_HIDE_WALLY
 	release
 	end
 
@@ -129,10 +128,9 @@ VerdanturfTown_WandasHouse_Text_MeetWanda:
 	.string "and healthy since he came here.$"
 
 VerdanturfTown_WandasHouse_Text_DontWorryAboutWally:
-	.string "WANDA: Don't worry about WALLY.\n"
-	.string "He'll be just fine.\p"
-	.string "I know my little cousin, and he has\n"
-	.string "POKéMON with him, too.$"
+	.string "Wanda: Once that goon left, my boyfriend\n"
+	.string "was able to finish clearing the tunnel.\p"
+	.string "Now we can spend all our time together!$"
 
 VerdanturfTown_WandasHouse_Text_CanSeeGirlfriendEveryDay:
 	.string "Thanks to you, I can see my girlfriend\n"

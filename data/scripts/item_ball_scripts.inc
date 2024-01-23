@@ -125,24 +125,24 @@ Route115_EventScript_ItemPPUp::
 	finditem ITEM_PP_UP
 	end
 
-Route116_EventScript_ItemXSpecial::
-	finditem ITEM_X_SP_ATK
+Route116_EventScript_ItemAerialAce::
+	finditem ITEM_TM_AERIAL_ACE
 	end
 
-Route116_EventScript_ItemEther::
-	finditem ITEM_ETHER
+Route116_EventScript_ItemMentalHerb::
+	finditem ITEM_MENTAL_HERB
 	end
 
-Route116_EventScript_ItemRepel::
-	finditem ITEM_REPEL
+Route116_EventScript_ItemBigMushroom::
+	finditem ITEM_BIG_MUSHROOM
 	end
 
-Route116_EventScript_ItemHPUp::
-	finditem ITEM_HP_UP
+Route116_EventScript_ItemRockGem::
+	finditem ITEM_ROCK_GEM
 	end
 
-Route116_EventScript_ItemPotion::
-	finditem ITEM_POTION
+Route116_EventScript_ItemSitrus::
+	finditem ITEM_SITRUS_BERRY
 	end
 
 Route117_EventScript_ItemGreatBall::

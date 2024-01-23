@@ -100,20 +100,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route116_EventScript_ItemEther",
+      "script": "Route116_EventScript_ItemMentalHerb",
       "flag": "FLAG_ITEM_ROUTE_116_ETHER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 10,
-      "y": 17,
+      "x": 13,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route116_EventScript_ItemRepel",
+      "script": "Route116_EventScript_ItemBigMushroom",
       "flag": "FLAG_ITEM_ROUTE_116_REPEL"
     },
     {
@@ -178,7 +178,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route116_EventScript_ItemHPUp",
+      "script": "Route116_EventScript_ItemRockGem",
       "flag": "FLAG_ITEM_ROUTE_116_HP_UP"
     },
     {
@@ -222,7 +222,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 46,
+      "x": 45,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -234,16 +234,16 @@
       "flag": "FLAG_HIDE_ROUTE_116_DEVON_EMPLOYEE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 55,
-      "y": 12,
+      "graphics_id": "OBJ_EVENT_GFX_GOLD_ITEM_BALL",
+      "x": 60,
+      "y": 15,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route116_EventScript_ItemXSpecial",
+      "script": "Route116_EventScript_ItemAerialAce",
       "flag": "FLAG_ITEM_ROUTE_116_X_SPECIAL"
     },
     {
@@ -308,7 +308,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route116_EventScript_ItemPotion",
+      "script": "Route116_EventScript_ItemSitrus",
       "flag": "FLAG_ITEM_ROUTE_116_POTION"
     },
     {
@@ -411,6 +411,51 @@
       "var": "VAR_ROUTE116_STATE",
       "var_value": "1",
       "script": "Route116_EventScript_BrineyTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_RUSTBORO_CITY_STATE",
+      "var_value": "4",
+      "script": "Route116_EventScript_ReturnGoodsTrigger0"
+    },
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_RUSTBORO_CITY_STATE",
+      "var_value": "4",
+      "script": "Route116_EventScript_ReturnGoodsTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_RUSTBORO_CITY_STATE",
+      "var_value": "4",
+      "script": "Route116_EventScript_ReturnGoodsTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_RUSTBORO_CITY_STATE",
+      "var_value": "4",
+      "script": "Route116_EventScript_ReturnGoodsTrigger1"
+    },
+    {
+      "type": "trigger",
+      "x": 44,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_RUSTBORO_CITY_STATE",
+      "var_value": "4",
+      "script": "Route116_EventScript_ReturnGoodsTrigger4"
     }
   ],
   "bg_events": [
@@ -424,7 +469,7 @@
     },
     {
       "type": "sign",
-      "x": 48,
+      "x": 45,
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
