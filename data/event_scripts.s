@@ -1065,3 +1065,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/FortreeGate/scripts.inc"
 
 	.include "data/maps/RustboroGrotto/scripts.inc"
+
+	.include "data/maps/MauvillePatch/scripts.inc"

@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/RustboroGrotto/border.bin",
       "blockdata_filepath": "data/layouts/RustboroGrotto/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAUVILLE_PATCH",
+      "name": "MauvillePatch_Layout",
+      "width": 8,
+      "height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/MauvillePatch/border.bin",
+      "blockdata_filepath": "data/layouts/MauvillePatch/map.bin"
     }
   ]
 }

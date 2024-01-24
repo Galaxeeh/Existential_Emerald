@@ -32,6 +32,11 @@
       "map": "MAP_ROUTE118",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_MAUVILLE_PATCH",
+      "offset": 37,
+      "direction": "up"
     }
   ],
   "object_events": [
