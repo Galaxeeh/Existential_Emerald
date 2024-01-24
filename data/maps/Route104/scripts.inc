@@ -991,7 +991,6 @@ Route104_EventScript_Gina::
 	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route104_Text_GinaPostBattle, MSGBOX_DEFAULT
-	clearflag FLAG_HIDE_RESOURCE_NPC
 	release
 	end
 
@@ -1001,6 +1000,11 @@ Route104_EventScript_Mia::
 	msgbox Route104_Text_MiaPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+Route104_EventScript_ResourceNPC::
+	clearflag FLAG_HIDE_RESOURCE_NPC
+	end
+	
 
 MiaGina1_Trigger::
 	lockall
