@@ -23,6 +23,7 @@ Route117_EventScript_LittleBoy::
 	end
 
 Route117_EventScript_Girl::
+	giveegg SPECIES_SHELLDER
 	msgbox Route117_Text_DayCarePokemonHadNewMove, MSGBOX_NPC
 	end
 

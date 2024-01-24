@@ -18,8 +18,6 @@ Route117_EventScript_DaycareEggWaiting::
 	msgbox Route117_Text_IWillKeepDoYouWantIt, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route117_EventScript_DaycareAcceptEgg
 	msgbox Route117_Text_IllKeepIt, MSGBOX_DEFAULT
-	clearflag FLAG_PENDING_DAYCARE_EGG
-	special RejectEggFromDayCare
 	release
 	end
 
@@ -36,8 +34,48 @@ Route117_EventScript_DaycareReceiveEgg::
 	waitfanfare
 	waitbuttonpress
 	msgbox Route117_Text_TakeGoodCareOfIt, MSGBOX_DEFAULT
-	special GiveEggFromDaycare
-	clearflag FLAG_PENDING_DAYCARE_EGG
+	random 6
+	switch VAR_RESULT
+	case 0, Egg0
+	case 1, Egg1
+	case 2, Egg2
+	case 3, Egg3
+	case 4, Egg4
+	case 5, Egg5	
+
+Egg0::
+	giveegg SPECIES_MAGBY
+	setflag FLAG_PENDING_DAYCARE_EGG
+	release
+	end
+
+Egg1::
+	giveegg SPECIES_ELEKID
+	setflag FLAG_PENDING_DAYCARE_EGG
+	release
+	end
+
+Egg2::
+	giveegg SPECIES_SMOOCHUM
+	setflag FLAG_PENDING_DAYCARE_EGG
+	release
+	end
+
+Egg3::
+	giveegg SPECIES_RIOLU
+	setflag FLAG_PENDING_DAYCARE_EGG
+	release
+	end
+
+Egg4::
+	giveegg SPECIES_TOGEPI
+	setflag FLAG_PENDING_DAYCARE_EGG
+	release
+	end
+
+Egg5::
+	giveegg SPECIES_MIME_JR
+	setflag FLAG_PENDING_DAYCARE_EGG
 	release
 	end
 
@@ -75,12 +113,7 @@ Route117_EventScript_CheckOnTwoMons::
 Route117_PokemonDayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
-	specialvar VAR_RESULT, GetDaycareState
-	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route117_PokemonDayCare_EventScript_EggWaiting
-	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route117_PokemonDayCare_EventScript_OneMonInDaycare
-	goto_if_eq VAR_RESULT, DAYCARE_TWO_MONS, Route117_PokemonDayCare_EventScript_TwoMonsInDaycare
-	msgbox Route117_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Route117_PokemonDayCare_EventScript_GiveMonToRaise
+	goto_if_unset FLAG_PENDING_DAYCARE_EGG, Route117_EventScript_DaycareEggWaiting
 	msgbox Route117_PokemonDayCare_Text_FineThenComeAgain, MSGBOX_DEFAULT
 	release
 	end
