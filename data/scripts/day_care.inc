@@ -5,10 +5,9 @@ Route117_EventScript_DaycareMan::
 	faceplayer
 	special GetDaycareMonNicknames
 	specialvar VAR_RESULT, GetDaycareState
-	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route117_EventScript_DaycareEggWaiting
-	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route117_EventScript_CheckOnOneMon
-	goto_if_eq VAR_RESULT, DAYCARE_TWO_MONS, Route117_EventScript_CheckOnTwoMons
-	msgbox Route117_Text_SeeWifeIfYoudLikeMeToRaiseMon, MSGBOX_DEFAULT
+	goto_if_unset FLAG_PENDING_DAYCARE_EGG, Route117_EventScript_DaycareManEgg
+	msgbox Route117_Text_GoodEgg, MSGBOX_DEFAULT
+	
 	release
 	end
 
@@ -20,6 +19,12 @@ Route117_EventScript_DaycareEggWaiting::
 	msgbox Route117_Text_IllKeepIt, MSGBOX_DEFAULT
 	release
 	end
+
+Route117_EventScript_DaycareManEgg::
+	msgbox Route117_Text_SeeWifeIfYoudLikeMeToRaiseMon, MSGBOX_DEFAULT
+	release
+	end
+
 
 Route117_EventScript_DaycareAcceptEgg::
 	specialvar VAR_RESULT, CalculatePlayerPartyCount
@@ -306,20 +311,28 @@ EventScript_EggHatch::
 	end
 
 Route117_Text_SeeWifeIfYoudLikeMeToRaiseMon:
-	.string "I'm the DAY-CARE MAN.\p"
+	.string "I'm the Day-Care Man.\p"
 	.string "I help take care of the precious\n"
-	.string "POKéMON of TRAINERS.\p"
-	.string "If you'd like me to raise your POKéMON,\n"
-	.string "have a word with my wife.$"
+	.string "Pokémon of trainers.\p"
+	.string "Unfortunately we have a lot on our\n"
+	.string "hands right now and can't accept new\l"
+	.string "customers.\p"
+	.string "But my wife has been giving out free\n"
+	.string "eggs inside, you should go get one!$"
+
+Route117_Text_GoodEgg:
+	.string "Day-Care Man: Boy these big Pokémon\n"
+	.string "have really been a handful.\p"
+	.string "I hope you got a good Pokémon from\n"
+	.string "your egg!$"
 
 Route117_Text_DoYouWantEgg:
-	.string "Ah, it's you!\p"
-	.string "We were raising your POKéMON,\n"
-	.string "and my goodness, were we surprised!\p"
-	.string "Your POKéMON had an EGG!\p"
-	.string "We don't know how it got there,\n"
-	.string "but your POKéMON had it.\p"
-	.string "You do want it, yes?$"
+	.string "Hello young trainer!\p"
+	.string "We may be closed right now, but it's\n"
+	.string "your lucky day, we're giving away\l"
+	.string "free eggs to travelling trainers!\p"
+	.string "So, what do you say?\p"
+	.string "Would you like one?$"
 
 Route117_Text_YourMonIsDoingFine:
 	.string "Ah, it's you! Good to see you.\n"
@@ -327,7 +340,7 @@ Route117_Text_YourMonIsDoingFine:
 
 Route117_Text_IllKeepIt:
 	.string "Well then, I'll keep it.\n"
-	.string "Thanks!$"
+	.string "Come back if you change your mind!$"
 
 Route117_Text_YouHaveNoRoomForIt:
 	.string "You have no room for it…\n"
@@ -335,7 +348,7 @@ Route117_Text_YouHaveNoRoomForIt:
 
 Route117_Text_ReceivedEgg:
 	.string "{PLAYER} received the EGG from\n"
-	.string "the DAY-CARE MAN.$"
+	.string "the Day-Care Woman.$"
 
 Route117_Text_TakeGoodCareOfIt:
 	.string "Take good care of it.$"
@@ -357,8 +370,8 @@ Route117_Text_YourMonsAreDoingFine:
 	.string "{STR_VAR_2} are doing fine.$"
 
 Route117_Text_IWillKeepDoYouWantIt:
-	.string "I really will keep it.\n"
-	.string "You do want this, yes?$"
+	.string "Are you sure you don't want one?\p"
+	.string "-Take the egg?-$"
 
 Route117_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon:
 	.string "I'm the DAY-CARE LADY.\p"
@@ -382,8 +395,7 @@ Route117_PokemonDayCare_Text_HusbandWasLookingForYou:
 	.string "My husband was looking for you.$"
 
 Route117_PokemonDayCare_Text_FineThenComeAgain:
-	.string "Oh, fine, then.\n"
-	.string "Come again.$"
+	.string "Still so many eggs to give away!$"
 
 Route117_PokemonDayCare_Text_NotEnoughMoney:
 	.string "You don't have enough money…$"

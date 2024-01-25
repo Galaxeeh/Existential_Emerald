@@ -1,18 +1,9 @@
 .set LOCALID_DAYCARE_MAN, 3
+.set LOCALID_GIRL, 19
 
 Route117_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route117_OnTransition
 	.byte 0
 
-Route117_OnTransition:
-	call Route117_EventScript_TryMoveDayCareMan
-	end
-
-Route117_EventScript_TryMoveDayCareMan::
-	goto_if_unset FLAG_PENDING_DAYCARE_EGG, Route117_EventScript_StopMoveDayCareMan
-	setobjectxyperm LOCALID_DAYCARE_MAN, 47, 6
-Route117_EventScript_StopMoveDayCareMan::
-	return
 
 Route117_EventScript_Woman::
 	msgbox Route117_Text_ArentTheseFlowersPretty, MSGBOX_NPC
@@ -23,9 +14,14 @@ Route117_EventScript_LittleBoy::
 	end
 
 Route117_EventScript_Girl::
-	giveegg SPECIES_SHELLDER
 	msgbox Route117_Text_DayCarePokemonHadNewMove, MSGBOX_NPC
+	waitmessage
+	applymovement LOCALID_GIRL, GirlMovement
 	end
+
+GirlMovement:
+	face_left
+	step_end
 
 Route117_EventScript_RouteSignVerdanturf::
 	msgbox Route117_Text_RouteSignVerdanturf, MSGBOX_SIGN
@@ -182,10 +178,9 @@ Route117_EventScript_Aisha::
 	end
 
 Route117_Text_DayCarePokemonHadNewMove:
-	.string "I left my POKéMON at the DAY CARE.\p"
-	.string "When I got it back, it had a new move\n"
-	.string "that I didn't teach it.\l"
-	.string "I was really, really surprised.$"
+	.string "Can you believe it?\p"
+	.string "Its a real life Venusaur!$"
+
 
 Route117_Text_ArentTheseFlowersPretty:
 	.string "What do you think?\n"

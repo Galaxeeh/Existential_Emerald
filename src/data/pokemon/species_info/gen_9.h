@@ -1408,7 +1408,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         ICON(Nacli, 2),
         //.footprint = gMonFootprint_Nacli,
         LEARNSETS(Nacli),
-        .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_NACLSTACK}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_NACLSTACK}),
     },
 
     [SPECIES_NACLSTACK] =

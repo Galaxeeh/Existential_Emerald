@@ -218,7 +218,8 @@
 #define MAPSEC_LITTLEROOT_LAB               0xD6
 #define MAPSEC_FORTREE_GATE                 0xD7
 #define MAPSEC_RUSTBORO_GROTTO              0xD8
-#define MAPSEC_NONE                         0xD9
+#define MAPSEC_DAYCARE                      0xD9
+#define MAPSEC_NONE                         0xDA
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
