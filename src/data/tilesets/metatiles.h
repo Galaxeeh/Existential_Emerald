@@ -212,3 +212,12 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_Snowy[] = INCBIN_U16("data/tilesets/primary/snowy/metatiles.bin");
 const u16 gMetatileAttributes_Snowy[] = INCBIN_U16("data/tilesets/primary/snowy/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatile_attributes.bin");
+
+const u16 gMetatiles_RoxieGym[] = INCBIN_U16("data/tilesets/secondary/roxie_gym/metatiles.bin");
+const u16 gMetatileAttributes_RoxieGym[] = INCBIN_U16("data/tilesets/secondary/roxie_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_RoxieGymMain[] = INCBIN_U16("data/tilesets/primary/roxie_gym_main/metatiles.bin");
+const u16 gMetatileAttributes_RoxieGymMain[] = INCBIN_U16("data/tilesets/primary/roxie_gym_main/metatile_attributes.bin");

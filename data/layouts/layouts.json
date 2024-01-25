@@ -884,10 +884,10 @@
     {
       "id": "LAYOUT_MAUVILLE_CITY_GYM",
       "name": "MauvilleCity_Gym_Layout",
-      "width": 10,
-      "height": 21,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_MauvilleGym",
+      "width": 18,
+      "height": 20,
+      "primary_tileset": "gTileset_RoxieGymMain",
+      "secondary_tileset": "gTileset_BattleArena",
       "border_filepath": "data/layouts/MauvilleCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity_Gym/map.bin"
     },
@@ -3346,7 +3346,7 @@
       "name": "BattleFrontier_BattleDomeBattleRoom_Layout",
       "width": 20,
       "height": 10,
-      "primary_tileset": "gTileset_Building",
+      "primary_tileset": "gTileset_RoxieGymMain",
       "secondary_tileset": "gTileset_BattleDome",
       "border_filepath": "data/layouts/BattleFrontier_BattleDomeBattleRoom/border.bin",
       "blockdata_filepath": "data/layouts/BattleFrontier_BattleDomeBattleRoom/map.bin"
@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/MauvillePatch/border.bin",
       "blockdata_filepath": "data/layouts/MauvillePatch/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORYTILES_TEST_MAP",
+      "name": "PorytilesTestMap_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
+      "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
     }
   ]
 }
