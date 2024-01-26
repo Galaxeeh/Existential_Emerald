@@ -273,5 +273,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_HIDE_RESOURCE_NPC
+	setflag FLAG_HIDE_VERDANTURF_TOWN_HIDE_WALLY
+	setflag FLAG_BAG_USE
 	call EventScript_ResetAllBerries
 	end
