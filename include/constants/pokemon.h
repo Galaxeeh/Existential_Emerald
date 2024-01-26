@@ -205,7 +205,7 @@
 #else
 #define STANDARD_FRIENDSHIP 70
 #endif
-
+//test
 #define MAX_FRIENDSHIP  255
 #define MAX_SHEEN       255
 #define MAX_CONDITION   255
