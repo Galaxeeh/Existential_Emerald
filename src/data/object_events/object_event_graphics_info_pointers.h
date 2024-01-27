@@ -264,6 +264,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldItemBall;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Loudred;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -525,7 +526,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GALACTIC_F] =               &gObjectEventGraphicsInfo_GalacticF,
     [OBJ_EVENT_GFX_ROCKET_M] =                 &gObjectEventGraphicsInfo_RocketM,
     [OBJ_EVENT_GFX_ROCKET_F] =                 &gObjectEventGraphicsInfo_RocketF,
-    [OBJ_EVENT_GFX_GOLD_ITEM_BALL] =                &gObjectEventGraphicsInfo_GoldItemBall,
+    [OBJ_EVENT_GFX_GOLD_ITEM_BALL] =           &gObjectEventGraphicsInfo_GoldItemBall,
+    [OBJ_EVENT_GFX_LOUDRED] =                  &gObjectEventGraphicsInfo_Loudred,
 
 };
 

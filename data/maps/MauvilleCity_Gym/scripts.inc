@@ -230,7 +230,7 @@ MauvilleCity_Gym_EventScript_Ben2::
 	end
 
 BenViv0::
-	setvar VAR_BENVIV, 0
+	setvar VAR_BENVIV, 2
 	end
 
 BenViv1::
@@ -246,6 +246,7 @@ Ben0:
 	step_end
 
 Vivian:
+	walk_left
 	walk_in_place_right
 	step_end
 
@@ -253,9 +254,23 @@ Vivian0:
 	walk_in_place_down
 	step_end
 
+Vivian2:
+	walk_in_place_right
+	step_end
+
 MauvilleCity_Gym_EventScript_Vivian::
-	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianIntro, MauvilleCity_Gym_Text_VivianDefeat
+	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianIntro, MauvilleCity_Gym_Text_VivianDefeat, VivDefeat
 	msgbox MauvilleCity_Gym_Text_VivianPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VivDefeat::
+	goto_if_eq VAR_BENVIV, 1, VivWalk 
+	end
+
+VivWalk::
+	lockall
+	applymovement LOCALID_VIVIAN, Vivian
+	releaseall
 	end
 
 DontTalkToMe::
@@ -264,7 +279,7 @@ DontTalkToMe::
 	waitmovement 0
 	msgbox MauvilleCity_Gym_Text_VivianPreBattle, MSGBOX_DEFAULT
 	waitmessage
-	applymovement LOCALID_VIVIAN, Vivian
+	applymovement LOCALID_VIVIAN, Vivian2
 	waitmovement 0
 	releaseall
 	end

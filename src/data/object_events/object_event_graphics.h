@@ -422,3 +422,5 @@ const u16 gObjectEventPal_RocketF[] = INCBIN_U16("graphics/object_events/palette
 const u16 gObjectEventPal_Scott[] = INCBIN_U16("graphics/object_events/palettes/scott.gbapal");
 const u32 gObjectEventPic_GoldItemBall[] = INCBIN_U32("graphics/object_events/pics/misc/gold_item_ball.4bpp");
 const u16 gObjectEventPal_GoldItemBall[] = INCBIN_U16("graphics/object_events/palettes/gold_item_ball.gbapal");
+const u32 gObjectEventPic_Loudred[] = INCBIN_U32("graphics/object_events/pics/pokemon/loudred.4bpp");
+const u16 gObjectEventPal_Loudred[] = INCBIN_U16("graphics/object_events/palettes/loudred.gbapal");
