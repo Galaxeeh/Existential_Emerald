@@ -884,10 +884,10 @@
     {
       "id": "LAYOUT_MAUVILLE_CITY_GYM",
       "name": "MauvilleCity_Gym_Layout",
-      "width": 18,
-      "height": 20,
+      "width": 16,
+      "height": 21,
       "primary_tileset": "gTileset_RoxieGymMain",
-      "secondary_tileset": "gTileset_BattleArena",
+      "secondary_tileset": "gTileset_BattleDome",
       "border_filepath": "data/layouts/MauvilleCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity_Gym/map.bin"
     },
