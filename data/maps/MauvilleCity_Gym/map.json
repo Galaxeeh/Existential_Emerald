@@ -177,8 +177,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": -4,
-      "y": 6,
+      "x": 0,
+      "y": 0,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -186,8 +186,8 @@
     },
     {
       "type": "trigger",
-      "x": -4,
-      "y": 8,
+      "x": 2,
+      "y": 0,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -195,8 +195,8 @@
     },
     {
       "type": "trigger",
-      "x": -4,
-      "y": 7,
+      "x": 1,
+      "y": 0,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -204,8 +204,8 @@
     },
     {
       "type": "trigger",
-      "x": -4,
-      "y": 9,
+      "x": 3,
+      "y": 0,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -216,45 +216,45 @@
       "x": 1,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_BENVIV",
       "var_value": "0",
-      "script": "NULL"
+      "script": "BenViv1"
     },
     {
       "type": "trigger",
       "x": 2,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_BENVIV",
       "var_value": "0",
-      "script": "NULL"
+      "script": "BenViv1"
     },
     {
       "type": "trigger",
       "x": 0,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_BENVIV",
+      "var_value": "1",
+      "script": "BenViv0"
     },
     {
       "type": "trigger",
       "x": 1,
       "y": 19,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_BENVIV",
+      "var_value": "1",
+      "script": "BenViv0"
     },
     {
       "type": "trigger",
       "x": 2,
       "y": 19,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_BENVIV",
+      "var_value": "1",
+      "script": "BenViv0"
     },
     {
       "type": "trigger",
@@ -345,24 +345,41 @@
       "var": "VAR_TEMP_MIXED_RECORDS",
       "var_value": "0",
       "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_BENVIV",
+      "var_value": "1",
+      "script": "BenViv0"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": -7,
-      "y": 18,
+      "x": 0,
+      "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_Gym_EventScript_LeftGymStatue"
     },
     {
       "type": "sign",
-      "x": -5,
-      "y": 18,
+      "x": 1,
+      "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MauvilleCity_Gym_EventScript_RightGymStatue"
+    },
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 17,
+      "elevation": 4,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DontTalkToMe"
     }
   ]
 }

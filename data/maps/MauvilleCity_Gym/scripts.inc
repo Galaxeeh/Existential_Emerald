@@ -1,5 +1,15 @@
+.set LOCALID_BEN, 4
+.set LOCALID_VIVIAN, 3
+.set LOCALID_SHAWN, 2
+.set LOCALID_KIRK, 5
+.set LOCALID_ROXIE, 1
+.set LOCALID_SECURITY1, 8
+.set LOCALID_SECURITY2, 9
+
+
+
+
 MauvilleCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, MauvilleCity_Gym_OnLoad
 	.byte 0
 
 MauvilleCity_Gym_OnLoad:
@@ -211,9 +221,52 @@ MauvilleCity_Gym_EventScript_Ben::
 	msgbox MauvilleCity_Gym_Text_BenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+MauvilleCity_Gym_EventScript_Ben2::
+	applymovement LOCALID_BEN, Ben0
+	waitmovement 0
+	msgbox MauvilleCity_Gym_Text_BenPreBattle, MSGBOX_DEFAULT
+	waitmessage
+	applymovement LOCALID_BEN, Ben
+	end
+
+BenViv0::
+	setvar VAR_BENVIV, 0
+	end
+
+BenViv1::
+	setvar VAR_BENVIV, 1
+	end
+
+Ben:
+	walk_in_place_left
+	step_end
+
+Ben0:
+	faceplayer
+	step_end
+
+Vivian:
+	walk_in_place_right
+	step_end
+
+Vivian0:
+	walk_in_place_down
+	step_end
+
 MauvilleCity_Gym_EventScript_Vivian::
 	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianIntro, MauvilleCity_Gym_Text_VivianDefeat
 	msgbox MauvilleCity_Gym_Text_VivianPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DontTalkToMe::
+	lockall
+	applymovement LOCALID_VIVIAN, Vivian0
+	waitmovement 0
+	msgbox MauvilleCity_Gym_Text_VivianPreBattle, MSGBOX_DEFAULT
+	waitmessage
+	applymovement LOCALID_VIVIAN, Vivian
+	waitmovement 0
+	releaseall
 	end
 
 MauvilleCity_Gym_EventScript_Angelo::
@@ -307,6 +360,10 @@ MauvilleCity_Gym_Text_BenPostBattle:
 	.string "WATTSON says he likes setting up\n"
 	.string "little traps with switches.$"
 
+MauvilleCity_Gym_Text_BenPreBattle:
+	.string "WATTSON says he likes setting up\n"
+	.string "little traps with switches.$"
+
 MauvilleCity_Gym_Text_VivianIntro:
 	.string "With my charm and my POKéMON's moves,\n"
 	.string "you'll be shocked!$"
@@ -320,6 +377,9 @@ MauvilleCity_Gym_Text_VivianPostBattle:
 	.string "He was a TRAINER long before we\n"
 	.string "became TRAINERS.\l"
 	.string "He must know all sorts of things!$"
+
+MauvilleCity_Gym_Text_VivianPreBattle:
+	.string "PISS OFF!$"
 
 MauvilleCity_Gym_Text_AngeloIntro:
 	.string "I love shiny things!$"
