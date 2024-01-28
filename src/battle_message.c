@@ -3424,6 +3424,8 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 break;
             case B_TXT_TRAINER1_NAME: // trainer1 name
                 toCpy = BattleStringGetOpponentNameByTrainerId(gTrainerBattleOpponent_A, text, multiplayerId, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+                if (toCpy[0] == B_BUFF_PLACEHOLDER_BEGIN && toCpy[1] == B_TXT_RIVAL_NAME)
+                    toCpy = GetExpandedPlaceholder(PLACEHOLDER_ID_RIVAL);
                 break;
             case B_TXT_LINK_PLAYER_NAME: // link player name
                 toCpy = gLinkPlayers[multiplayerId].name;
@@ -3574,6 +3576,23 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 break;
             case B_TXT_PARTNER_NAME:
                 toCpy = BattleStringGetPlayerName(text, GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT));
+                #ifdef BATTLE_ENGINE
+                    if (gPartnerSpriteId == TRAINER_BACK_PIC_BRENDAN
+                      || gPartnerSpriteId == TRAINER_BACK_PIC_MAY)
+                    {
+                        toCpy = gSaveBlock2Ptr->rivalName;
+                    }
+                    else
+                    {
+                        GetFrontierTrainerName(text, gPartnerTrainerId);
+                        toCpy = text;
+                    }
+                #else
+                    toCpy = gTrainers[TRAINER_MAY_ROUTE_103_MUDKIP].trainerName;
+                #endif
+                break;
+            case B_TXT_RIVAL_NAME:
+                toCpy = gSaveBlock2Ptr->rivalName;
                 break;
             case B_TXT_ATK_TRAINER_NAME:
                 toCpy = BattleStringGetTrainerName(text, multiplayerId, gBattlerAttacker);
