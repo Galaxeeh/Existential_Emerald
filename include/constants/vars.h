@@ -117,8 +117,8 @@
 #define VAR_BENVIV                                       0x4061 // Ben and Vivian Mauville Gym variable
 #define VAR_KIRKSHAWN                                    0x4062 // Kirk and Shawn Mauville Gym variable
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_ROUTE105_STATE                               0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                               0x4065 // Unused Var
+#define VAR_ROXIE_STAGE                                  0x4064 // RoxieTrigger
+#define VAR_SECURITY                                     0x4065 // Roxie Security Guards
 #define VAR_ROUTE107_STATE                               0x4066 // Unused Var
 #define VAR_ROUTE108_STATE                               0x4067 // Unused Var
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var

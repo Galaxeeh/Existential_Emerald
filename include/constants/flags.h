@@ -44,14 +44,14 @@
 
 #define FLAG_PARTY_MOVES     0x20 // Party Move Relearner
 #define FLAG_BUGSY_GYM_CLOSED   0x21 // Block Bugsy Gym
-#define FLAG_BUGSY_GYM_OPEN    0x22 // Open Bugsy Gym
-#define FLAG_RUSTBORO_BUGSY    0x23 // Make Bugsy dissappear
+#define FLAG_BUGSY_GYM_OPEN  0x22 // Open Bugsy Gym
+#define FLAG_RUSTBORO_BUGSY  0x23 // Make Bugsy dissappear
 #define FLAG_WOODSGRUNT      0x24 // Unused Flag
 #define FLAG_NO_COLLISION    0x25 // Unused Flag
-#define FLAG_TRAINER_SIGHT    0x26 // Unused Flag
-#define FLAG_BAG_USE    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_TRAINER_SIGHT   0x26 // Unused Flag
+#define FLAG_BAG_USE         0x27 // Unused Flag
+#define FLAG_VIV             0x28 // Unused Flag
+#define FLAG_KIRKSHAWN       0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag

@@ -1,11 +1,15 @@
 .set LOCALID_BEN, 4
 .set LOCALID_VIVIAN, 3
+.set LOCALID_VIVIAN2, 12
 .set LOCALID_SHAWN, 2
 .set LOCALID_KIRK, 5
+.set LOCALID_SHAWN2, 13
+.set LOCALID_KIRK2, 14
 .set LOCALID_ROXIE, 1
 .set LOCALID_SECURITY1, 8
 .set LOCALID_SECURITY2, 9
-
+.set LOCALID_LOUDRED1, 11
+.set LOCALID_LOUDRED2, 10
 
 
 
@@ -83,6 +87,96 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	special MauvilleGymDeactivatePuzzle
 	end
 
+Loudred1::
+	playmoncry SPECIES_LOUDRED, 0
+	msgbox Loudred1Cry, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+Loudred2::
+	playmoncry SPECIES_LOUDRED, 0
+	msgbox Loudred2Cry, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+Security::
+	lock
+	applymovement LOCALID_SECURITY1, Common_Movement_FacePlayer
+	applymovement LOCALID_SECURITY2, Common_Movement_FacePlayer
+	msgbox SecurityOnly, MSGBOX_DEFAULT
+	waitmessage
+	applymovement OBJ_EVENT_ID_PLAYER, SecurityDown
+	waitmovement 0
+	applymovement LOCALID_SECURITY1, SecurityDown1
+	applymovement LOCALID_SECURITY2, SecurityDown1
+	waitmovement 0	
+	release
+	end
+
+SecurityGuards_Script::
+	goto_if_eq VAR_SECURITY, 1, SecurityGuardsPostRoxie
+	msgbox SecurityGuards, MSGBOX_NPC
+	end
+
+SecurityGuardsPostRoxie::
+	msgbox SecurityGuards2, MSGBOX_NPC
+	end
+
+SecurityDown:
+	walk_down
+	step_end
+
+SecurityDown1:
+	walk_in_place_down
+	step_end
+
+RoxieStart::
+	lock
+	setvar VAR_ROXIE_STAGE, 1
+	applymovement OBJ_EVENT_ID_PLAYER, WalkToRoxie
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_ROXIE, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_ROXIE, RoxieFace
+	waitmovement 0
+	msgbox Roxie_Intro, MSGBOX_DEFAULT
+	waitmessage
+	applymovement LOCALID_ROXIE, RoxieWalkBack
+	applymovement OBJ_EVENT_ID_PLAYER, WalkBack
+	waitmovement 0
+	release
+	goto MauvilleCity_Gym_EventScript_Wattson
+	end	
+
+RoxieFace:
+	walk_in_place_right
+	step_end
+
+WalkBack:
+	walk_right
+	walk_right
+	walk_in_place_left
+	step_end
+
+RoxieWalkBack:
+	walk_left
+	walk_left
+	walk_in_place_right
+	step_end
+
+WalkToRoxie:
+	walk_left
+	walk_left
+	step_end
+
+RoxieToPlayer:
+	walk_right
+	walk_right
+	step_end
+
 MauvilleCity_Gym_EventScript_Wattson::
 	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -93,31 +187,35 @@ MauvilleCity_Gym_EventScript_Wattson::
 	release
 	end
 
+RoxiePostBattle::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
 MauvilleCity_Gym_EventScript_WattsonDefeated::
+	applymovement OBJ_EVENT_ID_PLAYER, WalkToRoxie
+	applymovement LOCALID_ROXIE, RoxieToPlayer
+	waitmovement 0
 	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis, MSGBOX_DEFAULT
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
-	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 	setflag FLAG_BADGE03_GET
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
 	call Common_EventScript_SetGymTrainers
-	special MauvilleGymDeactivatePuzzle
-	special DrawWholeMapView
 	playse SE_UNLOCK
 	call MauvilleCity_Gym_EventScript_GiveShockWave
 	closemessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox MauvilleCity_Gym_Text_RegisteredWattson, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
 	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
+	setvar VAR_SECURITY, 1
+	setvar VAR_KIRKSHAWN, 2
+	setvar VAR_BENVIV, 2
 	release
 	end
 
@@ -207,7 +305,7 @@ MauvilleCity_Gym_EventScript_ClearBarriersAltState::
 	end
 
 MauvilleCity_Gym_EventScript_Kirk::
-	trainerbattle_single TRAINER_KIRK, MauvilleCity_Gym_Text_KirkIntro, MauvilleCity_Gym_Text_KirkDefeat
+	trainerbattle_single TRAINER_KIRK, MauvilleCity_Gym_Text_KirkIntro, MauvilleCity_Gym_Text_KirkDefeat, KirkShawn
 	msgbox MauvilleCity_Gym_Text_KirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -216,39 +314,70 @@ MauvilleCity_Gym_EventScript_Shawn::
 	msgbox MauvilleCity_Gym_Text_ShawnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+MauvilleCity_Gym_EventScript_Kirk2::
+	lockall
+	applymovement LOCALID_KIRK2, Kirk0
+	waitmovement 30
+	msgbox MauvilleCity_Gym_Text_KirkPreBattle, MSGBOX_DEFAULT
+	applymovement LOCALID_KIRK2, Kirk2
+	waitmovement 60
+	releaseall
+	end
+	
+
+MauvilleCity_Gym_EventScript_Shawn2::
+	lockall
+	applymovement LOCALID_SHAWN2, Shawn0
+	waitmovement 30
+	msgbox MauvilleCity_Gym_Text_ShawnPreBattle, MSGBOX_DEFAULT
+	applymovement LOCALID_SHAWN2, Shawn2
+	waitmovement 60
+	releaseall
+	end
+
 MauvilleCity_Gym_EventScript_Ben::
-	trainerbattle_single TRAINER_BEN, MauvilleCity_Gym_Text_BenIntro, MauvilleCity_Gym_Text_BenDefeat
+	trainerbattle_single TRAINER_BEN, MauvilleCity_Gym_Text_BenIntro, MauvilleCity_Gym_Text_BenDefeat, BenViv
 	msgbox MauvilleCity_Gym_Text_BenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MauvilleCity_Gym_EventScript_Ben2::
-	applymovement LOCALID_BEN, Ben0
-	waitmovement 0
-	msgbox MauvilleCity_Gym_Text_BenPreBattle, MSGBOX_DEFAULT
-	waitmessage
-	applymovement LOCALID_BEN, Ben
-	end
 
-BenViv0::
-	setvar VAR_BENVIV, 2
-	end
-
-BenViv1::
+VivDissappear::
+	addobject LOCALID_VIVIAN2
+	hideobjectat LOCALID_VIVIAN, MAP_MAUVILLE_CITY_GYM
+	setobjectxy LOCALID_VIVIAN, 0, 14 
 	setvar VAR_BENVIV, 1
 	end
 
-Ben:
-	walk_in_place_left
-	step_end
+VivAppear::
+	setobjectxy LOCALID_VIVIAN, 0, 17
+	showobjectat LOCALID_VIVIAN, MAP_MAUVILLE_CITY_GYM
+	removeobject LOCALID_VIVIAN2
+	setvar VAR_BENVIV, 0
+	end
 
-Ben0:
-	faceplayer
-	step_end
+ShawnDissappear::
+	addobject LOCALID_KIRK2
+	removeobject LOCALID_KIRK
+	addobject LOCALID_SHAWN2
+	removeobject LOCALID_SHAWN
+	setvar VAR_KIRKSHAWN, 1
+	end
 
-Vivian:
-	walk_left
-	walk_in_place_right
-	step_end
+ShawnAppear::
+	addobject LOCALID_KIRK
+	removeobject LOCALID_KIRK2
+	addobject LOCALID_SHAWN
+	removeobject LOCALID_SHAWN2
+	setvar VAR_KIRKSHAWN, 0
+	end
+
+BenViv::
+	setvar VAR_BENVIV, 2
+	end
+
+KirkShawn::
+	setvar VAR_BENVIV, 2
+	end
 
 Vivian0:
 	walk_in_place_down
@@ -258,20 +387,37 @@ Vivian2:
 	walk_in_place_right
 	step_end
 
+Kirk0:
+	walk_in_place_left
+	step_end
+
+Kirk2:
+	walk_in_place_up
+	step_end
+
+Shawn0:
+	walk_in_place_left
+	step_end
+
+Shawn2:
+	walk_in_place_down
+	step_end
+
 MauvilleCity_Gym_EventScript_Vivian::
-	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianIntro, MauvilleCity_Gym_Text_VivianDefeat, VivDefeat
+	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianIntro, MauvilleCity_Gym_Text_VivianDefeat
 	msgbox MauvilleCity_Gym_Text_VivianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-VivDefeat::
-	goto_if_eq VAR_BENVIV, 1, VivWalk 
-	end
-
-VivWalk::
+MauvilleCity_Gym_EventScript_Vivian2::
 	lockall
-	applymovement LOCALID_VIVIAN, Vivian
+	applymovement LOCALID_VIVIAN2, Vivian0
+	waitmovement 30
+	msgbox MauvilleCity_Gym_Text_VivianPreBattle, MSGBOX_DEFAULT
+	applymovement LOCALID_VIVIAN2, Vivian2
+	waitmovement 60
 	releaseall
 	end
+
 
 DontTalkToMe::
 	lockall
@@ -325,121 +471,119 @@ MauvilleCity_Gym_EventScript_GymStatue::
 	end
 
 MauvilleCity_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "WATTSON, the LEADER of MAUVILLE\n"
-	.string "GYM, uses ELECTRIC-type POKéMON.\p"
-	.string "If you challenge him with WATER-type\n"
-	.string "POKéMON, he'll zap them! Bzzt!\p"
-	.string "And, he's put in switch-controlled\n"
-	.string "doors all over his GYM! Eccentric!\p"
-	.string "Hey, go for it!$"
+	.string "Roxie, the Leader of Mauville\n"
+	.string "Gym, uses Poison-type POKéMON.\p"
+	.string "If you challenge her with Grass-type\n"
+	.string "Pokémon, she'll disintegrate them!\p"
+	.string "She's also mandated all battles to\n"
+	.string "be doubles, so everyone can rock\l"
+	.string "out together!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
-	.string "Whoa, you're electrifying!\n"
-	.string "You've powered the door open!$"
+	.string "Whoa, you've got some rhythym!$"
 
 MauvilleCity_Gym_Text_KirkIntro:
-	.string "My electric soul, it'll shatter your\n"
-	.string "dreams whole, whoa-yeahah!$"
+	.string "My venomous vibe, will leave you\n"
+	.string "stupified, whoa-yeahah!$"
 
 MauvilleCity_Gym_Text_KirkDefeat:
-	.string "That was plugged in, amped up,\n"
-	.string "over-driven electric, man!$"
+	.string "I think I blew my speakers!$"
 
 MauvilleCity_Gym_Text_KirkPostBattle:
-	.string "POKéMON and rock, it's all about heart,\n"
+	.string "Pokémon and rock, it's all about heart,\n"
 	.string "whoa-yeah!$"
 
 MauvilleCity_Gym_Text_ShawnIntro:
-	.string "I trained under WATTSON!\n"
+	.string "I trained under Roxie!\n"
 	.string "There ain't no way I'll lose easily!$"
 
 MauvilleCity_Gym_Text_ShawnDefeat:
 	.string "Unplugged and turned off…$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle:
-	.string "WATTSON, our GYM LEADER, has been\n"
-	.string "around for a long, long time.\p"
-	.string "He was battling even before your\n"
-	.string "daddy was born, that tough coot.$"
+	.string "Roxie, our Gym Leader, has been rocking\n"
+	.string "since she could hold a bass.\p"
+	.string "It's hard even for me to keep up\n"
+	.string "with her tempo.$"
 
 MauvilleCity_Gym_Text_BenIntro:
-	.string "This GYM's got puzzles!\n"
+	.string "This Gym is jammin'!\n"
 	.string "Isn't it fun?$"
 
 MauvilleCity_Gym_Text_BenDefeat:
 	.string "It's no fun to lose…$"
 
 MauvilleCity_Gym_Text_BenPostBattle:
-	.string "WATTSON says he likes setting up\n"
-	.string "little traps with switches.$"
-
-MauvilleCity_Gym_Text_BenPreBattle:
-	.string "WATTSON says he likes setting up\n"
-	.string "little traps with switches.$"
+	.string "Roxie says she loves when people\n"
+	.string "jam together.$"
 
 MauvilleCity_Gym_Text_VivianIntro:
-	.string "With my charm and my POKéMON's moves,\n"
-	.string "you'll be shocked!$"
+	.string "With my charm and my pokémon's moves,\n"
+	.string "you'll be begging for an antidote!$"
 
 MauvilleCity_Gym_Text_VivianDefeat:
-	.string "I'm shocked by your power!$"
+	.string "Your power is sick dude!$"
 
 MauvilleCity_Gym_Text_VivianPostBattle:
-	.string "I've heard that MAUVILLE was founded\n"
-	.string "by WATTSON.\p"
-	.string "He was a TRAINER long before we\n"
-	.string "became TRAINERS.\l"
-	.string "He must know all sorts of things!$"
+	.string "I've heard that Mauville has become\n"
+	.string "an attraction for people tuning in to\l"
+	.string "Roxie's performances.\p"
+	.string "She know's how to rock the crowd!$"
 
 MauvilleCity_Gym_Text_VivianPreBattle:
-	.string "PISS OFF!$"
+	.string "Roxie said only double battles!$"
+
+MauvilleCity_Gym_Text_KirkPreBattle:
+	.string "I'm not jamming without my band!$"
+
+MauvilleCity_Gym_Text_ShawnPreBattle:
+	.string "Kirk would be mad if I started a solo\n"
+	.string "sesh!$"
 
 MauvilleCity_Gym_Text_AngeloIntro:
-	.string "I love shiny things!$"
+	.string "These sound waves are off the charts!$"
 
 MauvilleCity_Gym_Text_AngeloDefeat:
 	.string "Oh…\n"
-	.string "My eyes are frazzled…$"
+	.string "My ears are ringing…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
-	.string "MAUVILLE GYM's WATTSON has a shiny\n"
-	.string "forehead. It makes me happy!$"
+	.string "Mauville Gym's Roxie has a killer\n"
+	.string "tune. She's an anomaly!$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
-	.string "I've given up on my plans to convert\n"
-	.string "the city, I have.\p"
-	.string "And so, I put my time into making\n"
-	.string "door traps in my GYM.\p"
-	.string "Oh? Now, what are you doing here?\p"
-	.string "What's that? You say you've gotten\n"
-	.string "past all my rigged doors?\p"
-	.string "Wahahahah!\n"
-	.string "Now, that is amusing!\p"
-	.string "Then, I, WATTSON, the LEADER of\n"
-	.string "MAUVILLE GYM, shall electrify you!$"
+	.string "Well strap in, cause I'm the best around,\n"
+	.string "and this is my stage!$"
+
+Roxie_Intro:
+	.string "Music is what I live for, but battling\n"
+	.string "is wicked too!\p"
+	.string "I'm Roxie, the leader of Mauville Gym.\p"
+	.string "So you want to challenge me to a battle\n"
+	.string "of the beats huh?$"
+
+
 
 MauvilleCity_Gym_Text_WattsonDefeat:
-	.string "Wahahahah!\n"
-	.string "Fine, I lost!\p"
-	.string "You ended up giving me a thrill!\n"
-	.string "Take this BADGE!$"
+	.string "Wow!\n"
+	.string "I guess I've got some competition!\p"
+	.string "Your tune gave me the goosebumps!\n"
+	.string "Take this badge!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
-	.string "{PLAYER} received the DYNAMO BADGE\n"
-	.string "from WATTSON.$"
+	.string "{PLAYER} received the Toxic Badge\n"
+	.string "from Roxie.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
-	.string "With the DYNAMO BADGE, POKéMON can\n"
-	.string "use ROCK SMASH out of battle.\p"
-	.string "And, it will make your POKéMON a little\n"
-	.string "bit faster, too.\p"
+	.string "With the Toxic Badge, pokémon can\n"
+	.string "use Rock Smash out of battle.\p"
 	.string "Hmm…\n"
 	.string "You should take this, too!$"
 
 MauvilleCity_Gym_Text_ExplainShockWave:
-	.string "That TM34 there contains SHOCK WAVE.\p"
+	.string "That TM there contains -----.\p"
 	.string "It's a trustworthy move that never\n"
 	.string "misses! You can count on it!\p"
 	.string "… … … … … …$"
@@ -449,12 +593,12 @@ MauvilleCity_Gym_Text_RegisteredWattson:
 	.string "in the POKéNAV.$"
 
 MauvilleCity_Gym_Text_WattsonPostBattle:
-	.string "I swell with optimism, seeing a promising\n"
-	.string "young TRAINER like you!$"
+	.string "I can't wait to jam with you again!$"
 
 MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
-	.string "Wahahahah!\n"
-	.string "Go forth and endeavor, youngster!$"
+	.string "YEAH!\p"
+	.string "Get out there and show 'em what you're\n"
+	.string "made of!$"
 
 MauvilleCity_Gym_Text_GymStatue:
 	.string "MAUVILLE CITY POKéMON GYM$"
@@ -494,3 +638,17 @@ MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons:
 	.string "Come see me with two or more\n"
 	.string "POKéMON, all right?$"
 
+SecurityOnly:
+	.string "Only security allowed past this point.$"
+
+SecurityGuards:
+	.string "Enjoy the show.$"
+
+SecurityGuards2:
+	.string "What a performance!$"
+
+Loudred1Cry:
+	.string "LOU LOU LOUDRED!!!!$"
+
+Loudred2Cry:
+	.string "LOUUUUUUUUDRED!!!!$"
