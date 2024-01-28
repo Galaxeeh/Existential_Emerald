@@ -139,6 +139,7 @@ PetalburgWoods_EventScript_DevonResearcherFarRight::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox PetalburgWoods_Text_NoOneCrossesTeamAqua, MSGBOX_DEFAULT
+	setvar VAR_MUGSHOT_ID, MUGSHOT_PLASMAGRUNT
 	trainerbattle_no_intro TRAINER_GRUNT_PETALBURG_WOODS, PetalburgWoods_Text_YoureKiddingMe
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaBackOff
 	waitmovement 0
@@ -650,6 +651,7 @@ PetalburgWoods_Gym_EventScript_MarcDefeated::
 PetalburgWoods_Gym_EventScript_BugsyStart::
 	lock
 	faceplayer
+	setvar VAR_MUGSHOT_ID, MUGSHOT_BUGSY
 	goto_if_eq VAR_BUGSY_GYM, 4, PetalburgWoods_Gym_EventScript_Bugsy
 	msgbox PetalburgWoods_BugsyNotReady_Text, MSGBOX_DEFAULT
 	release

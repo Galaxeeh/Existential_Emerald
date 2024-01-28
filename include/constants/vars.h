@@ -267,7 +267,7 @@
 #define VAR_BUGSY_GYM                                    0x40F7 // Bugsy Gym Trainers
 #define VAR_GET_REPELLANT                                0x40F8 // Repellant trigger in woods
 #define VAR_MIAGINA                                      0x40F9 // 104 Doubles
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
+#define VAR_MUGSHOT_ID                                   0x40FA // Mugshots
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var

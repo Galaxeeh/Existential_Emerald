@@ -176,6 +176,7 @@ VerdanTurf_EventScript_WallyEncounter::
 	lockall
 	msgbox VerdanTurf_Text_WallyIntro, MSGBOX_DEFAULT
 	closemessage
+	setvar VAR_MUGSHOT_ID, MUGSHOT_WALLY
 	trainerbattle_no_intro TRAINER_WALLY_MAUVILLE, VerdanturfTown_Text_WallyDefeat
 	applymovement LOCALID_WALLY, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0

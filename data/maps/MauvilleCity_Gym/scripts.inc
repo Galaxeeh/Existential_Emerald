@@ -135,6 +135,7 @@ SecurityDown1:
 RoxieStart::
 	lock
 	setvar VAR_ROXIE_STAGE, 1
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ROXIE
 	applymovement OBJ_EVENT_ID_PLAYER, WalkToRoxie
 	waitmovement 0
 	playse SE_PIN
