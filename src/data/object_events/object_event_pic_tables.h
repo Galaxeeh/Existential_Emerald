@@ -2342,6 +2342,42 @@ static const struct SpriteFrameImage sPicTable_Loudred[] = {
     overworld_frame(gObjectEventPic_Loudred, 4, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_Venusaur[] = {
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_Charizard[] = {
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Charizard, 4, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_Blastoise[] = {
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Blastoise, 4, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_Colress[] = {
     overworld_frame(gObjectEventPic_Colress, 4, 4, 0),
     overworld_frame(gObjectEventPic_Colress, 4, 4, 1),

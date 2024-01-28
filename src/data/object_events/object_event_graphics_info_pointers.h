@@ -265,6 +265,9 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldItemBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Loudred;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Charizard;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blastoise;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -528,6 +531,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ROCKET_F] =                 &gObjectEventGraphicsInfo_RocketF,
     [OBJ_EVENT_GFX_GOLD_ITEM_BALL] =           &gObjectEventGraphicsInfo_GoldItemBall,
     [OBJ_EVENT_GFX_LOUDRED] =                  &gObjectEventGraphicsInfo_Loudred,
+    [OBJ_EVENT_GFX_VENUSAUR] =                 &gObjectEventGraphicsInfo_Venusaur,
+    [OBJ_EVENT_GFX_CHARIZARD] =                &gObjectEventGraphicsInfo_Charizard,
+    [OBJ_EVENT_GFX_BLASTOISE] =                &gObjectEventGraphicsInfo_Blastoise,
 
 };
 
