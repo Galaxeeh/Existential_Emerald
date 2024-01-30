@@ -3,6 +3,8 @@
 .set LOCALID_VIVI, 3
 .set LOCALID_VICKY, 4
 .set LOCALID_ROCK_SMASH_MAN, 46
+.set LOCALID_CELINA, 49
+.set LOCALID_TYRON, 50
 
 @ Note: LOCALID_ROUTE111_PLAYER_FALLING is a local id for this map used elsewhere. It's defined in event_objects.h
 
@@ -287,13 +289,20 @@ Route111_EventScript_SandstormTrigger::
 	doweather
 	end
 
+
 Route111_EventScript_Victor::
 	lock
 	faceplayer
+	goto_if_set FLAG_UNLOCK_WINSTRATES, Route111_EventScript_Victor2
 	setflag FLAG_LANDMARK_WINSTRATE_FAMILY
 	msgbox Route111_Text_BattleOurFamily, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route111_EventScript_BattleWinstrates
 	msgbox Route111_Text_IsThatSo, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_EventScript_Victor2::
+	msgbox Route111_Victor, MSGBOX_DEFAULT
 	release
 	end
 
@@ -562,6 +571,10 @@ Route111_EventScript_Hayden::
 	msgbox Route111_Text_HaydenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route111_EventScript_Hayden2::
+	msgbox Route111_Text_HaydenPreBattle, MSGBOX_NPC
+	end
+
 Route111_EventScript_Bianca::
 	trainerbattle_single TRAINER_BIANCA, Route111_Text_BiancaIntro, Route111_Text_BiancaDefeat
 	msgbox Route111_Text_BiancaPostBattle, MSGBOX_AUTOCLOSE
@@ -572,10 +585,28 @@ Route111_EventScript_Tyron::
 	msgbox Route111_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route111_EventScript_Tyron2::
+	msgbox Route111_Text_TyronPreBattle, MSGBOX_NPC
+	applymovement LOCALID_TYRON, Tyron1
+	end
+
+Tyron1:
+	walk_in_place_left
+	step_end
+
 Route111_EventScript_Celina::
 	trainerbattle_single TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat
 	msgbox Route111_Text_CelinaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route111_EventScript_Celina2::
+	msgbox Route111_Text_CelinaPreBattle, MSGBOX_NPC
+	applymovement LOCALID_CELINA, Celina1
+	end
+
+Celina1:
+	walk_in_place_right
+	step_end
 
 Route111_EventScript_Celia::
 	trainerbattle_single TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat
@@ -600,7 +631,7 @@ Route111_Text_BattleOurFamily:
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
 	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "pokémon battles?$"
 
 Route111_Text_IsThatSo:
 	.string "Is that so?\n"
@@ -749,4 +780,22 @@ Route111_Text_TrainerHillSign:
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
+
+Route111_Victor:
+	.string "Hello! I take it you're a traveler.\p"
+	.string "How's this? What do you say to taking\n"
+	.string "on our family of four in a series of\l"
+	.string "pokémon battles?\p"
+	.string "Wait... You should come back once you\n"
+	.string "have the Toxic Badge.\n"
+
+Route111_Text_HaydenPreBattle:
+	.string "Hey kid, wanna light something on\n"
+	.string "fire?$"
+
+Route111_Text_TyronPreBattle:
+	.string "You're seriously stepping on my toes, kid.$"
+
+Route111_Text_CelinaPreBattle:
+	.string "Leave us alone we're busy!$"
 

@@ -183,16 +183,16 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 16,
-      "y": 18,
+      "x": 43,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route117_EventScript_ItemGreatBall",
-      "flag": "FLAG_ITEM_ROUTE_117_GREAT_BALL"
+      "script": "Route117_EventScript_ItemRareCandy",
+      "flag": "FLAG_ITEM_ROUTE_117_RARE_CANDY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -204,8 +204,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route117_EventScript_ItemRevive",
-      "flag": "FLAG_ITEM_ROUTE_117_REVIVE"
+      "script": "Route117_EventScript_ItemPoisonBarb",
+      "flag": "FLAG_ITEM_ROUTE_117_POISON_BARB"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",
@@ -390,11 +390,11 @@
     },
     {
       "type": "hidden_item",
-      "x": 3,
+      "x": 20,
       "y": 18,
       "elevation": 3,
-      "item": "ITEM_REPEL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_117_REPEL"
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_117_HEART_SCALE"
     }
   ]
 }

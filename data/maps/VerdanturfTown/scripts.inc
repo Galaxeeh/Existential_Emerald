@@ -277,6 +277,7 @@ Verdanturf_WallyExit5::
 	end
 
 Verdanturf_ScottEntrance::
+	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	goto_if_eq VAR_VERDANTURF_WALLY_POS, 0, Verdanturf_Scott0
 	goto_if_eq VAR_VERDANTURF_WALLY_POS, 1, Verdanturf_Scott1
 	goto_if_eq VAR_VERDANTURF_WALLY_POS, 2, Verdanturf_Scott2

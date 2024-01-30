@@ -84,6 +84,27 @@ Route110_EventScript_OldMan::
 	msgbox Route110_Text_TwoRoads, MSGBOX_NPC
 	end
 
+Route110_EventScript_Shuckle::
+	lock
+	faceplayer
+	goto_if_set FLAG_SHUCKLE, Route110_EventScript_Shuckle2
+	playmoncry SPECIES_SHUCKLE, 0
+	msgbox Route110_Text_Shuckle, MSGBOX_DEFAULT
+	waitmoncry
+	giveitem ITEM_BERRY_JUICE, 50
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SHUCKLE
+	msgbox Route110_Text_Shuckle2, MSGBOX_DEFAULT
+	release
+	end
+
+Route110_EventScript_Shuckle2::
+	playmoncry SPECIES_SHUCKLE, 0
+	msgbox Route110_Text_Shuckle2, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
 Route110_EventScript_OldWoman::
 	msgbox Route110_Text_WalkOnTheLowRoad, MSGBOX_NPC
 	end
@@ -175,6 +196,10 @@ Route110_EventScript_Jaclyn::
 	msgbox Route110_Text_JaclynPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route110_EventScript_Jaclyn2::
+	msgbox Route110_Text_JaclynPreBattle, MSGBOX_NPC
+	end
+
 Route110_EventScript_Edwin::
 	trainerbattle_single TRAINER_EDWIN_1, Route110_Text_EdwinIntro, Route110_Text_EdwinDefeated, Route110_EventScript_EdwinRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -199,6 +224,10 @@ Route110_EventScript_EdwinRematch::
 Route110_EventScript_Dale::
 	trainerbattle_single TRAINER_DALE, Route110_Text_DaleIntro, Route110_Text_DaleDefeated
 	msgbox Route110_Text_DalePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route110_EventScript_Dale2::
+	msgbox Route110_Text_DalePreBattle, MSGBOX_NPC
 	end
 
 Route110_EventScript_Jacob::
@@ -838,9 +867,9 @@ Route110_Text_YouGotBikeFromRydel:
 	.string "the place--it's good advertising!$"
 
 Route110_Text_TwoRoads:
-	.string "The two roads, one above, one below…\p"
-	.string "A road each for people and POKéMON.\n"
-	.string "Perhaps that is right and fair.$"
+	.string "My dear Shuckle and I needed to stop\n"
+	.string "and take a rest.\p"
+	.string "I'm just not as young as I once was.$"
 
 Route110_Text_WalkOnTheLowRoad:
 	.string "I don't have a BIKE, so I'll take\n"
@@ -991,4 +1020,17 @@ Route110_Text_KeepAnEyeOutForRival:
 	.string "… … … … … …\p"
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
+
+Route110_Text_JaclynPreBattle:
+	.string "I wish I had a surf pokémon so\n"
+	.string "I could visit Slateport City.$"
+
+Route110_Text_DalePreBattle:
+	.string "The fish just aren't biting today.$"
+
+Route110_Text_Shuckle:
+	.string "SHUCK-$"
+
+Route110_Text_Shuckle2:
+	.string "SHUCKLE!!$"
 

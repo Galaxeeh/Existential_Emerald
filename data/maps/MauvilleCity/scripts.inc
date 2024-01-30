@@ -59,7 +59,11 @@ MauvilleCity_EventScript_SchoolKidM::
 	faceplayer
 	goto_if_set FLAG_TV_EXPLAINED, MauvilleCity_EventScript_TVExplained
 	msgbox MauvilleCity_Text_ExplainTV, MSGBOX_DEFAULT
+	waitmessage
+	giveitem ITEM_WISE_GLASSES
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_TV_EXPLAINED
+	msgbox MauvilleCity_Text_ExplainTV2, MSGBOX_DEFAULT
 	release
 	end
 
@@ -651,16 +655,14 @@ MauvilleCity_Text_GameCornerSign:
 	.string "MAUVILLE GAME CORNER$"
 
 MauvilleCity_Text_ExplainTV:
-	.string "Hi, do you check out TV at all?\p"
-	.string "They've added a bunch of cool new\n"
-	.string "shows recently.\p"
-	.string "TV is so cool. I've seen my friends on\n"
-	.string "TV just out of the blue.\p"
-	.string "And, sometimes, they even put you on TV\n"
-	.string "without telling you.\p"
-	.string "I wish I would be on TV sometime.\p"
-	.string "That's why I think you should check\n"
-	.string "out TVs whenever you can.$"
+	.string "Hey! Aren't my glasses rad!?\p"
+	.string "I love my glasses, I think everyone\n"
+	.string "should have a pair!\p"
+	.string "Here, I have an extra set, you\n"
+	.string "should take them.$"
+
+MauvilleCity_Text_ExplainTV2:
+	.string "Now you can look fly like me!$"
 
 MauvilleCity_Text_BeenCheckingOutTV:
-	.string "Hi, have you been checking out TVs?$"
+	.string "How them glasses treatin' ya?$"

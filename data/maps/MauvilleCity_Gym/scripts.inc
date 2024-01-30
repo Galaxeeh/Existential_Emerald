@@ -206,6 +206,9 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 	setflag FLAG_BADGE03_GET
+	clearflag FLAG_UNLOCK_WINSTRATES
+	clearflag FLAG_HIDE_111_TRAINERS
+	setflag FLAG_SHOW_111_TRAINERS
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3

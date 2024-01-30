@@ -611,7 +611,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_120_RARE_CANDY_2              (FLAG_HIDDEN_ITEMS_START + 0x45)
 #define FLAG_HIDDEN_ITEM_ROUTE_120_ZINC                      (FLAG_HIDDEN_ITEMS_START + 0x46)
 #define FLAG_HIDDEN_ITEM_ROUTE_120_RARE_CANDY_1              (FLAG_HIDDEN_ITEMS_START + 0x47)
-#define FLAG_HIDDEN_ITEM_ROUTE_117_REPEL                     (FLAG_HIDDEN_ITEMS_START + 0x48)
+#define FLAG_HIDDEN_ITEM_ROUTE_117_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x48)
 #define FLAG_HIDDEN_ITEM_ROUTE_121_FULL_HEAL                 (FLAG_HIDDEN_ITEMS_START + 0x49)
 #define FLAG_HIDDEN_ITEM_ROUTE_123_HYPER_POTION              (FLAG_HIDDEN_ITEMS_START + 0x4A)
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_POKE_BALL             (FLAG_HIDDEN_ITEMS_START + 0x4B)
@@ -1069,8 +1069,8 @@
 #define FLAG_ITEM_ROUTE_116_ETHER                                   0x3FB
 #define FLAG_ITEM_ROUTE_116_REPEL                                   0x3FC
 #define FLAG_ITEM_ROUTE_116_HP_UP                                   0x3FD
-#define FLAG_ITEM_ROUTE_117_GREAT_BALL                              0x3FE
-#define FLAG_ITEM_ROUTE_117_REVIVE                                  0x3FF
+#define FLAG_ITEM_ROUTE_117_RARE_CANDY                              0x3FE
+#define FLAG_ITEM_ROUTE_117_POISON_BARB                             0x3FF
 #define FLAG_ITEM_ROUTE_119_SUPER_REPEL                             0x400
 #define FLAG_ITEM_ROUTE_119_ZINC                                    0x401
 #define FLAG_ITEM_ROUTE_119_ELIXIR_1                                0x402
@@ -1095,8 +1095,8 @@
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL                      0x415
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_PP_UP                          0x417
-#define FLAG_ITEM_RUSTURF_TUNNEL_POKE_BALL                          0x418
-#define FLAG_ITEM_RUSTURF_TUNNEL_MAX_ETHER                          0x419
+#define FLAG_ITEM_RUSTURF_TUNNEL_DUSK_BALL                          0x418
+#define FLAG_ITEM_RUSTURF_TUNNEL_SOFT_SAND                          0x419
 #define FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE                       0x41A
 #define FLAG_ITEM_GRANITE_CAVE_B1F_POKE_BALL                        0x41B
 #define FLAG_ITEM_MT_PYRE_5F_LAX_INCENSE                            0x41C
@@ -1163,7 +1163,7 @@
 #define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_NEVER_MELT_ICE                0x459
 #define FLAG_ITEM_ROUTE_103_GUARD_SPEC                              0x45A
 #define FLAG_ITEM_ROUTE_104_X_ACCURACY                              0x45B
-#define FLAG_ITEM_MAUVILLE_CITY_X_SPEED                             0x45C
+#define FLAG_ITEM_MAUVILLE_CITY_MUSCLE_BAND                         0x45C
 #define FLAG_ITEM_PETALBURG_WOODS_SILVER_POWDER                     0x45D
 #define FLAG_ITEM_ROUTE_115_GREAT_BALL                              0x45E
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_CALCIUM                         0x45F
@@ -1219,16 +1219,16 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_HIDE_110GAMEBOYS                                       0x493 // Unused Flag
-#define FLAG_HIDE_103BRIDGE                                         0x494 // Unused Flag
-#define FLAG_RECEIVED_TM_ROCK_BLAST                                 0x495 // Unused Flag
-#define FLAG_HIDE_CAVEGRUNTS                                        0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
+#define FLAG_HIDE_110GAMEBOYS                                       0x493 // 110 block water
+#define FLAG_HIDE_103BRIDGE                                         0x494 // Bridge block
+#define FLAG_RECEIVED_TM_ROCK_BLAST                                 0x495 // Unused TM Rockblast
+#define FLAG_HIDE_CAVEGRUNTS                                        0x496 // Unused Petalburg Cave Grunts
+#define FLAG_HIDE_110_TRAINERS                                      0x497 // 110 trainers post CR
+#define FLAG_SHUCKLE                                                0x498 // 110 Shuckle
+#define FLAG_SHOW_110_TRAINERS                                      0x499 // 110 trainers pre CR
+#define FLAG_UNLOCK_WINSTRATES                                      0x49A // Unlock winstrates when cleared
+#define FLAG_HIDE_111_TRAINERS                                      0x49B // Hide 111 trainers pre Roxie
+#define FLAG_SHOW_111_TRAINERS                                      0x49C // Show 111 trainers post Roxie
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag

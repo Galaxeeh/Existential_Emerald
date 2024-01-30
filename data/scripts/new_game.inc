@@ -275,5 +275,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_RESOURCE_NPC
 	setflag FLAG_HIDE_VERDANTURF_TOWN_HIDE_WALLY
 	setflag FLAG_BAG_USE
+	setflag FLAG_HIDE_110_TRAINERS
+	setflag FLAG_HIDE_111_TRAINERS
 	call EventScript_ResetAllBerries
 	end

@@ -460,30 +460,30 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 20,
-      "y": 136,
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 26,
+      "y": 130,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "7",
+      "trainer_sight_or_berry_tree_id": "6",
       "script": "Route111_EventScript_Tyron",
-      "flag": "0"
+      "flag": "FLAG_HIDE_111_TRAINERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 12,
-      "y": 136,
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 19,
+      "y": 130,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "7",
+      "trainer_sight_or_berry_tree_id": "6",
       "script": "Route111_EventScript_Celina",
-      "flag": "0"
+      "flag": "FLAG_HIDE_111_TRAINERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
@@ -500,16 +500,16 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 25,
-      "y": 127,
+      "x": 20,
+      "y": 123,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route111_EventScript_Hayden",
-      "flag": "0"
+      "flag": "FLAG_HIDE_111_TRAINERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
@@ -652,6 +652,45 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 24,
+      "y": 131,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route111_EventScript_Celina2",
+      "flag": "FLAG_SHOW_111_TRAINERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 25,
+      "y": 131,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route111_EventScript_Tyron2",
+      "flag": "FLAG_SHOW_111_TRAINERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 22,
+      "y": 119,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "FLAG_SHOW_111_TRAINERS",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route111_EventScript_Hayden2",
       "flag": "0"
     }
   ],

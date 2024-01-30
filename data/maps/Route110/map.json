@@ -84,10 +84,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 10,
+      "x": 6,
       "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -197,7 +197,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route110_EventScript_Jaclyn",
-      "flag": "0"
+      "flag": "FLAG_HIDE_110_TRAINERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
@@ -223,12 +223,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route110_EventScript_Dale",
-      "flag": "0"
+      "flag": "FLAG_HIDE_110_TRAINERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 5,
-      "y": 11,
+      "x": 4,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -240,8 +240,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 6,
-      "y": 11,
+      "x": 5,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -253,8 +253,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 7,
-      "y": 11,
+      "x": 6,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -302,71 +302,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route110_EventScript_ChallengeGuy",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 23,
-      "y": 68,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_AquaGrunt1",
-      "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 24,
-      "y": 68,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_AquaGrunt2",
-      "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 25,
-      "y": 68,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_AquaGrunt3",
-      "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 26,
-      "y": 68,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_AquaGrunt4",
-      "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 24,
-      "y": 67,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CYCLING_TRIATHLETE_M",
@@ -486,19 +421,6 @@
       "flag": "FLAG_ITEM_ROUTE_110_ELIXIR"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 24,
-      "y": 64,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_ROUTE_110_BIRCH"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
       "x": 10,
       "y": 38,
@@ -523,6 +445,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_110GAMEBOYS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 12,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_Dale2",
+      "flag": "FLAG_SHOW_110_TRAINERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 5,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_Jaclyn2",
+      "flag": "FLAG_SHOW_110_TRAINERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SHUCKLE",
+      "x": 5,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route110_EventScript_Shuckle",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -614,42 +575,6 @@
       "var": "VAR_ROUTE110_STATE",
       "var_value": "0",
       "script": "Route110_EventScript_RivalTrigger3"
-    },
-    {
-      "type": "trigger",
-      "x": 22,
-      "y": 65,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene1"
-    },
-    {
-      "type": "trigger",
-      "x": 23,
-      "y": 65,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene2"
-    },
-    {
-      "type": "trigger",
-      "x": 24,
-      "y": 65,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene3"
-    },
-    {
-      "type": "trigger",
-      "x": 25,
-      "y": 65,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene4"
     }
   ],
   "bg_events": [

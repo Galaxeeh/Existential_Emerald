@@ -465,6 +465,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_VENUSAUR                0x113B
 #define OBJ_EVENT_PAL_TAG_CHARIZARD               0x113C
 #define OBJ_EVENT_PAL_TAG_BLASTOISE               0x113D
+#define OBJ_EVENT_PAL_TAG_SHUCKLE                 0x113E
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 
@@ -538,6 +539,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Venusaur,              OBJ_EVENT_PAL_TAG_VENUSAUR},
     {gObjectEventPal_Charizard,             OBJ_EVENT_PAL_TAG_CHARIZARD},
     {gObjectEventPal_Blastoise,             OBJ_EVENT_PAL_TAG_BLASTOISE},
+    {gObjectEventPal_Shuckle,               OBJ_EVENT_PAL_TAG_SHUCKLE},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

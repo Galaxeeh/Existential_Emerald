@@ -145,12 +145,12 @@ Route116_EventScript_ItemSitrus::
 	finditem ITEM_SITRUS_BERRY
 	end
 
-Route117_EventScript_ItemGreatBall::
-	finditem ITEM_GREAT_BALL
+Route117_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
 	end
 
-Route117_EventScript_ItemRevive::
-	finditem ITEM_REVIVE
+Route117_EventScript_ItemPoisonBarb::
+	finditem ITEM_POISON_BARB
 	end
 
 Route118_EventScript_ItemHyperPotion::
@@ -309,8 +309,8 @@ PetalburgCity_EventScript_ItemEther::
 	finditem ITEM_ETHER
 	end
 
-MauvilleCity_EventScript_ItemXSpeed::
-	finditem ITEM_X_SPEED
+MauvilleCity_EventScript_MuscleBand::
+	finditem ITEM_MUSCLE_BAND
 	end
 
 RustboroCity_EventScript_ItemRareCandy::
@@ -341,12 +341,12 @@ PetalburgWoods_EventScript_ItemSilverPowder::
 	finditem ITEM_SILVER_POWDER
 	end
 
-RusturfTunnel_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
+RusturfTunnel_EventScript_ItemDuskBall::
+	finditem ITEM_DUSK_BALL
 	end
 
-RusturfTunnel_EventScript_ItemMaxEther::
-	finditem ITEM_MAX_ETHER
+RusturfTunnel_EventScript_ItemSoftSand::
+	finditem ITEM_SOFT_SAND
 	end
 
 GraniteCave_1F_EventScript_ItemEscapeRope::

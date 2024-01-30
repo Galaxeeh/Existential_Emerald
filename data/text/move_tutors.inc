@@ -48,23 +48,23 @@ MoveTutor_Text_RolloutTaught:
 	.string "happy. Come on, let's roll!$"
 
 MoveTutor_Text_FuryCutterTeach:
-	.string "There's a move that gets stronger\n"
-	.string "when you keep using it in a row.\p"
-	.string "It's a BUG-type move, and it is\n"
+	.string "There's a move that pulverizes the\n"
+	.string "field and lowers pokémon's speed.\p"
+	.string "It's a Ground-type move, and it is\n"
 	.string "wickedly cool.\p"
-	.string "It's called FURY CUTTER.\n"
-	.string "Want me to teach it to a POKéMON?$"
+	.string "It's called Bulldoze.\n"
+	.string "Want me to teach it to a pokémon?$"
 
 MoveTutor_Text_FuryCutterDeclined:
 	.string "We're not on the same wavelength.$"
 
 MoveTutor_Text_FuryCutterWhichMon:
 	.string "Yay!\n"
-	.string "Show me which POKéMON I should teach.$"
+	.string "Show me which pokémon I should teach.$"
 
 MoveTutor_Text_FuryCutterTaught:
-	.string "I get a thrill watching to see if\n"
-	.string "the move keeps hitting in succession!$"
+	.string "I get a thrill watching my pokemon\n"
+	.string "flatten the competition!$"
 
 MoveTutor_MimicTeach:
 	.string "Ah, young one!\p"

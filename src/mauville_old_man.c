@@ -117,7 +117,7 @@ void SetMauvilleOldMan(void)
 
 
     // Determine man based on the last digit of the player's trainer ID.
-    switch ((trainerId % 10) / 2)
+    /*switch ((trainerId % 10) / 2)
     {
     case MAUVILLE_MAN_BARD:
         SetupBard();
@@ -134,7 +134,8 @@ void SetMauvilleOldMan(void)
     case MAUVILLE_MAN_GIDDY:
         SetupGiddy();
         break;
-    }
+    }*/
+    SetupBard();
     SetMauvilleOldManObjEventGfx();
 }
 
