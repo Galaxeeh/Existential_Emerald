@@ -1855,6 +1855,7 @@ static bool8 Fishing_CheckForBite(struct Task *task)
 
 static bool8 Fishing_GotBite(struct Task *task)
 {
+    StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFishingBiteDirectionAnimNum(GetPlayerFacingDirection()));
     AlignFishingAnimationFrames();
     AddTextPrinterParameterized(0, FONT_NORMAL, gText_OhABite, 0, 17, 0, NULL);
     task->tStep++;
