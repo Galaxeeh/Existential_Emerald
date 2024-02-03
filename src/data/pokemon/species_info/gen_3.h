@@ -5215,7 +5215,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Barboach, 0),
         .footprint = gMonFootprint_Barboach,
         LEARNSETS(Barboach),
-        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_WHISCASH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_WHISCASH}),
     },
 
     [SPECIES_WHISCASH] =

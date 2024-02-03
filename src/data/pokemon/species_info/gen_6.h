@@ -1100,7 +1100,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         ICON(Litleo, 2),
         .footprint = gMonFootprint_Litleo,
         LEARNSETS(Litleo),
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_PYROAR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_PYROAR}),
     },
 
     [SPECIES_PYROAR] =

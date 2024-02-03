@@ -593,7 +593,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_SHEER_FORCE, ABILITY_SKILL_LINK },
+        .abilities = { ABILITY_SKILL_LINK, ABILITY_SHEER_FORCE, ABILITY_KEEN_EYE },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Toucannon"),
         .cryId = CRY_TOUCANNON,
@@ -1986,7 +1986,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         ICON(Salandit, 2),
         .footprint = gMonFootprint_Salandit,
         LEARNSETS(Salandit),
-        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_SALAZZLE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_SALAZZLE}),
     },
 
     [SPECIES_SALAZZLE] =
