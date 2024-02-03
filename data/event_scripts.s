@@ -1070,3 +1070,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MauvillePatch/scripts.inc"
 
 	.include "data/maps/PorytilesTestMap/scripts.inc"
+
+	.include "data/maps/PetalburgCaveB1F/scripts.inc"

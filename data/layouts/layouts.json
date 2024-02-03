@@ -4460,6 +4460,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_CAVE_B1F",
+      "name": "PetalburgCaveB1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/PetalburgCaveB1F/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgCaveB1F/map.bin"
     }
   ]
 }
