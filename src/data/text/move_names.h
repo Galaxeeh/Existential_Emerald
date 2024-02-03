@@ -1757,6 +1757,7 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_PSYCHIC_NOISE] = _("PsychicNoise"),
     [MOVE_UPPER_HAND] = _("Upper Hand"),
     [MOVE_MALIGNANT_CHAIN] = _("MalignntChan"),
+    [MOVE_AQUA_PUNCH] = _("Aqua Punch"),
     // Max Moves
     [MOVE_MAX_GUARD] = _("M-Guard"),
     [MOVE_MAX_STRIKE] = _("M-Strike"),

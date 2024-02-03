@@ -3332,6 +3332,10 @@ static const u8 sMalignantChainDescription[] = _(
     "A corrosive chain attack\n"
     "that may badly poison.");
 
+static const u8 sAquaPunchDescription[] = _(
+    "A liquefied punch that\n"
+    "may lower speed.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4190,4 +4194,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PSYCHIC_NOISE - 1] = sPsychicNoiseDescription,
     [MOVE_UPPER_HAND - 1] = sUpperHandDescription,
     [MOVE_MALIGNANT_CHAIN - 1] = sMalignantChainDescription,
+    [MOVE_AQUA_PUNCH - 1] = sAquaPunchDescription,
 };

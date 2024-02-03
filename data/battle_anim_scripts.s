@@ -875,6 +875,7 @@ gBattleAnims_Moves::
 	.4byte Move_PSYCHIC_NOISE
 	.4byte Move_UPPER_HAND
 	.4byte Move_MALIGNANT_CHAIN
+	.4byte Move_AQUA_PUNCH
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -21425,6 +21426,28 @@ Move_THUNDER_PUNCH:
 	clearmonbg ANIM_TARGET
 	blendoff
 	end
+
+Move_AQUA_PUNCH:
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
+	loadspritegfx ANIM_TAG_WATER_IMPACT
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 0x4, 0x4
+	delay 0x6
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 4, 0, 0, 8, 1, 0
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 1
+	delay 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	waitforvisualfinish
+	call RisingWaterHitEffect
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
 
 Move_SACRED_FIRE:
 	loadspritegfx ANIM_TAG_FIRE
