@@ -4199,4 +4199,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_HIDDEN_POWER_WATER - 1] = sHiddenPowerDescription,
     [MOVE_HIDDEN_POWER_ICE - 1] = sHiddenPowerDescription,
     [MOVE_HIDDEN_POWER_FIRE - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_GROUND - 1] = sHiddenPowerDescription,
 };
