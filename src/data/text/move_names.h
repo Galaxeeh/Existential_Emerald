@@ -1758,6 +1758,9 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_UPPER_HAND] = _("Upper Hand"),
     [MOVE_MALIGNANT_CHAIN] = _("MalignntChan"),
     [MOVE_AQUA_PUNCH] = _("Aqua Punch"),
+    [MOVE_HIDDEN_POWER_WATER] = _("Hidden Power"),
+    [MOVE_HIDDEN_POWER_ICE] = _("Hidden Power"),
+    [MOVE_HIDDEN_POWER_FIRE] = _("Hidden Power"),
     // Max Moves
     [MOVE_MAX_GUARD] = _("M-Guard"),
     [MOVE_MAX_STRIKE] = _("M-Strike"),

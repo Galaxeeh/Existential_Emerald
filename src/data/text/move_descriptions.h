@@ -3336,6 +3336,7 @@ static const u8 sAquaPunchDescription[] = _(
     "A liquefied punch that\n"
     "may lower speed.");
 
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4195,4 +4196,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_UPPER_HAND - 1] = sUpperHandDescription,
     [MOVE_MALIGNANT_CHAIN - 1] = sMalignantChainDescription,
     [MOVE_AQUA_PUNCH - 1] = sAquaPunchDescription,
+    [MOVE_HIDDEN_POWER_WATER - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_ICE - 1] = sHiddenPowerDescription,
+    [MOVE_HIDDEN_POWER_FIRE - 1] = sHiddenPowerDescription,
 };
