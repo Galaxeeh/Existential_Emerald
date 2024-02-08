@@ -3689,7 +3689,7 @@ static const struct LevelUpMove sSeadraLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-#if P_GEN_4_CROSS_EVOS
+#if P_GEN_2_CROSS_EVOS
 static const struct LevelUpMove sKingdraLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_LIQUIDATION),
     LEVEL_UP_MOVE( 1, MOVE_MUDDY_WATER),
@@ -3711,7 +3711,7 @@ static const struct LevelUpMove sKingdraLevelUpLearnset[] = {
     LEVEL_UP_MOVE(67, MOVE_WAVE_CRASH),
     LEVEL_UP_END
 };
-#endif //P_GEN_4_CROSS_EVOS
+#endif //P_GEN_2_CROSS_EVOS
 #endif //P_FAMILY_HORSEA
 
 #if P_FAMILY_GOLDEEN
