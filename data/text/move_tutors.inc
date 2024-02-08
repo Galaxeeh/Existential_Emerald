@@ -49,7 +49,9 @@ MoveTutor_Text_RolloutTaught:
 
 MoveTutor_Text_FuryCutterTeach:
 	.string "There's a move that pulverizes the\n"
-	.string "field and lowers pokémon's speed.\p"
+	.string "enemy straight into the ground!\p"
+	.string "If your pokémon isn't performing\n"
+	.string "well, it does double damage too!\p"
 	.string "It's a Ground-type move, and it is\n"
 	.string "wickedly cool.\p"
 	.string "It's called Bulldoze.\n"
