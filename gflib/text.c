@@ -938,6 +938,7 @@ static u16 RenderText(struct TextPrinter *textPrinter)
     s32 width;
     s32 widthHelper;
     u8 repeats;
+    repeats = 0;
 
     switch (textPrinter->state)
     {

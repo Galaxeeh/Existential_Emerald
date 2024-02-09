@@ -157,7 +157,7 @@ static void TxRegItemsMenu_InitMenuFunctions(u8 taskId)
 
 static void TxRegItemsMenu_ClearAndInitData(u8 taskId)
 {
-    u16 *data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
     u8 offset = 0;
     u8 cursorStart = gSaveBlock1Ptr->registeredItemLastSelected;
     u8 count = TxRegItemsMenu_CountUsedRegisteredItemSlots();
@@ -589,7 +589,7 @@ static void TxRegItemsMenu_RemoveRegisteredItemIndex(u8 index)
 void TxRegItemsMenu_RemoveRegisteredItem(u16 itemId)
 {
     u8 i;
-    for (i = i ; i < REGISTERED_ITEMS_MAX; i++)
+    for (i = 0 ; i < REGISTERED_ITEMS_MAX; i++)
         {
             if (gSaveBlock1Ptr->registeredItems[i].itemId == itemId)
             {
@@ -708,7 +708,7 @@ void TxRegItemsMenu_RegisteredItemsMenuNewGame(void)
 {
     u8 i;
     struct RegisteredItemSlot *newItems;
-    for (i = i ; i < REGISTERED_ITEMS_MAX; i++)
+    for (i = 0 ; i < REGISTERED_ITEMS_MAX; i++)
     {
         gSaveBlock1Ptr->registeredItems[i].itemId = ITEM_NONE;
     }

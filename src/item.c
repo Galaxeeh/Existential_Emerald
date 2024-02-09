@@ -1101,6 +1101,8 @@ static void ShowItemIconSprite(u16 item, bool8 firstTime, bool8 flash)
     s16 x, y;
     u8 iconSpriteId;   
     u8 spriteId2 = MAX_SPRITES;
+    x = 0;
+    y = 0;
 
     if (flash)
     {

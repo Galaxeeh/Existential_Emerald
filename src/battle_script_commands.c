@@ -4117,7 +4117,7 @@ double GetPkmnExpMultiplier(u8 level)
 {
     u8 i;
     double lvlCapMultiplier = 1.0;
-    u8 levelDiff;
+    //u8 levelDiff;
     s8 avgDiff;
 
     // multiply the usual exp yield by the soft cap multiplier
@@ -15875,15 +15875,17 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
         value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
         //*expAmount = value + 1;
-        if (!FlagGet(sLevelCapFlags[i]) && expGetterLevel >= sLevelCaps[i])
+        for (i = 0; i < NUM_SOFT_CAPS; i++)
         {
-            *expAmount = 0;
-        }
-        else
-        {
-            *expAmount = value;
-        }
-        
+            if (!FlagGet(sLevelCapFlags[i]) && expGetterLevel >= sLevelCaps[i])
+            {
+                *expAmount = 0;
+            }
+            else
+            {
+                *expAmount = value;
+            }
+        }    
             
     }
 }

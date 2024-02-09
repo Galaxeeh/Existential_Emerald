@@ -3518,6 +3518,7 @@ static void BufferIvOrEvStats(u8 mode)
     u16 hp, hp2, atk, def, spA, spD, spe;
     u8 *currHPString = Alloc(20);
     const s8 *natureMod = gNatureStatTable[sMonSummaryScreen->summary.nature];
+    hp2 = 0;
 
     switch (mode)
     {
