@@ -1864,6 +1864,14 @@ const u8 gText_NPCSpAtk[] = _("Sp.Atk");
 const u8 gText_NPCSpDef[] = _("Sp.Def");
 const u8 gText_NPCSpd[] = _("Speed");
 
+//SteveStones
+const u8 gText_FireStone[] = _("Fire Stone");
+const u8 gText_LeafStone[] = _("Leaf Stone");
+const u8 gText_ThunderStone[] = _("Thunder Stone");
+const u8 gText_WaterStone[] = _("Water Stone");
+
+
+
 const u8 gMenuText_Move[] = _("Move");
 const u8 gText_MoveItemWhere[] = _("Move item to where?");
 const u8 gText_XsYAnd[] = _("{STR_VAR_1}'s {STR_VAR_2} and\n");

@@ -467,6 +467,120 @@ MauvilleCity_EventScript_RegisterWallyCall::
 	releaseall
 	end
 
+MauvilleCity_SteveStones::
+	lock
+	faceplayer
+	message SteveStones_Text
+	goto SteveStones_Select
+
+SteveStones_ComeAgain::
+	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
+	waitmessage
+	release
+	end
+
+SteveStones_Select::
+	multichoice 0, 0, MULTI_STEVE_STONES, 0
+	closemessage
+	switch VAR_RESULT
+	case 0, SteveStones_FireStone
+	case 1, SteveStones_LeafStone
+	case 2, SteveStones_ThunderStone
+	case 3, SteveStones_WaterStone
+	case MULTI_B_PRESSED, SteveStones_ComeAgain
+
+SteveStones_Select2::
+	closemessage
+	msgbox SteveStones_SteveStones, MSGBOX_DEFAULT
+	multichoice 0, 0, MULTI_STEVE_STONES, 0
+	closemessage
+	switch VAR_RESULT
+	case 0, SteveStones_FireStone
+	case 1, SteveStones_LeafStone
+	case 2, SteveStones_ThunderStone
+	case 3, SteveStones_WaterStone
+	case MULTI_B_PRESSED, SteveStones_ComeAgain
+
+
+SteveStones_FireStone::
+	msgbox SteveStones_ConfirmFire, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
+	checkitem ITEM_HEART_SCALE, 2
+	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
+	giveitem ITEM_FIRE_STONE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removeitem ITEM_HEART_SCALE, 2
+	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
+	waitmessage
+	release	
+	end
+
+SteveStones_LeafStone::
+	msgbox SteveStones_ConfirmLeaf, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
+	checkitem ITEM_HEART_SCALE, 2
+	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
+	giveitem ITEM_LEAF_STONE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removeitem ITEM_HEART_SCALE, 2
+	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
+	waitmessage
+	release	
+	end
+
+SteveStones_ThunderStone::
+	msgbox SteveStones_ConfirmThunder, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
+	checkitem ITEM_HEART_SCALE, 2
+	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
+	giveitem ITEM_THUNDER_STONE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removeitem ITEM_HEART_SCALE, 2
+	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
+	waitmessage
+	release	
+	end
+
+SteveStones_WaterStone::
+	msgbox SteveStones_ConfirmWater, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
+	checkitem ITEM_HEART_SCALE, 2
+	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
+	giveitem ITEM_WATER_STONE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removeitem ITEM_HEART_SCALE, 2
+	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
+	waitmessage
+	release	
+	end
+
+SteveStones_SteveStones:
+	.string "Steve Stones: C'mon, buy a stone!$"
+
+SteveStones_Text:
+	.string "Steve Stones: Hey guy,\n"
+	.string "want to buy some stones??\p"
+	.string "They're only 2 heart scales!!$"
+
+SteveStones_ComeAgain_Text:
+	.string "LET'S GO DUDE!!$"
+
+SteveStones_ConfirmFire:
+	.string "You want a sizzle stone?\n"
+	.string "Only 2 heart scales!$"
+
+SteveStones_ConfirmLeaf:
+	.string "You want an herb stone?\n"
+	.string "Only 2 heart scales!$"
+
+SteveStones_ConfirmThunder:
+	.string "You want a circuit stone?\n"
+	.string "Only 2 heart scales!$"
+
+SteveStones_ConfirmWater:
+	.string "You want a gushy stone?\n"
+	.string "Only 2 heart scales!$"
+
 MauvilleCity_Text_UncleHesTooPeppy:
 	.string "UNCLE: It's because of POKéMON that\n"
 	.string "this boy's got more pep, I suppose…\l"

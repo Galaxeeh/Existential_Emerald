@@ -802,6 +802,14 @@ static const struct MenuAction MultichoiceList_ResourceNPC_IVS[] =
     {gText_NPCSpd},
 };
 
+static const struct MenuAction MultichoiceList_SteveStones[] =
+{
+    {gText_FireStone},
+    {gText_LeafStone},
+    {gText_ThunderStone},
+    {gText_WaterStone},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -927,6 +935,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_RESOURCE_NPC]               = MULTICHOICE(MultichoiceList_ResourceNPC),
     [MULTI_PRESTATUS]                  = MULTICHOICE(MultichoiceList_ResourceNPC_Status),
     [MULTI_IVS]                        = MULTICHOICE(MultichoiceList_ResourceNPC_IVS),
+    [MULTI_STEVE_STONES]               = MULTICHOICE(MultichoiceList_SteveStones),
 };
 
 const u8 *const gStdStrings[] =

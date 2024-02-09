@@ -3077,6 +3077,12 @@ extern const u8 gText_NPCSpAtk[];
 extern const u8 gText_NPCSpDef[];
 extern const u8 gText_NPCSpd[];
 
+//SteveStones
+extern const u8 gText_FireStone[];
+extern const u8 gText_LeafStone[];
+extern const u8 gText_ThunderStone[];
+extern const u8 gText_WaterStone[];
+
 
 extern const u8 gMenuText_Move[];
 extern const u8 gText_MoveItemWhere[];

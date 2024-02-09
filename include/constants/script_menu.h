@@ -125,6 +125,7 @@
 #define MULTI_RESOURCE_NPC                 114
 #define MULTI_PRESTATUS                    115
 #define MULTI_IVS                          116
+#define MULTI_STEVE_STONES                 117
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
