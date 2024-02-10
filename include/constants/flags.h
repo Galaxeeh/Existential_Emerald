@@ -1229,7 +1229,7 @@
 #define FLAG_UNLOCK_WINSTRATES                                      0x49A // Unlock winstrates when cleared
 #define FLAG_HIDE_111_TRAINERS                                      0x49B // Hide 111 trainers pre Roxie
 #define FLAG_SHOW_111_TRAINERS                                      0x49C // Show 111 trainers post Roxie
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
+#define FLAG_BEAT_WALLY_V                                           0x49D // Beat Wally Verdanturf
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
