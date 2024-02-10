@@ -54,7 +54,7 @@ MoveTutor_Text_FuryCutterTeach:
 	.string "well, it does double damage too!\p"
 	.string "It's a Ground-type move, and it is\n"
 	.string "wickedly cool.\p"
-	.string "It's called Bulldoze.\n"
+	.string "It's called Stomping Tantrum.\n"
 	.string "Want me to teach it to a pokémon?$"
 
 MoveTutor_Text_FuryCutterDeclined:

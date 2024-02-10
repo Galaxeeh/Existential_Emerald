@@ -559,8 +559,8 @@ SteveStones_SteveStones:
 
 SteveStones_Text:
 	.string "Steve Stones: Hey guy,\n"
-	.string "want to buy some stones??\p"
-	.string "They're only 2 heart scales!!$"
+	.string "want to buy some stones??$"
+
 
 SteveStones_ComeAgain_Text:
 	.string "LET'S GO DUDE!!$"
