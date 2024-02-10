@@ -2690,6 +2690,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .catchRate = 190,
         .expYield = 58,
         .evYield_Speed = 1,
+        .itemRare = ITEM_SUN_STONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,

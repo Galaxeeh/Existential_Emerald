@@ -37,6 +37,7 @@ PetalburgCity_OnFrame:
 
 PetalburgCity_EventScript_WallyTutorial::
 	lockall
+	clearflag FLAG_BAG_USE
 	special SavePlayerParty
 	special LoadWallyZigzagoon
 	applymovement LOCALID_WALLY, PetalburgCity_Movement_WallyTutorialWally
@@ -58,6 +59,7 @@ PetalburgCity_EventScript_WallyTutorial::
 	setvar VAR_PETALBURG_GYM_STATE, 1
 	warp MAP_PETALBURG_CITY_GYM, 4, 108
 	waitstate
+	setflag FLAG_BAG_USE
 	releaseall
 	end
 
