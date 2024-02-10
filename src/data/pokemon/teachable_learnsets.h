@@ -36639,6 +36639,7 @@ static const u16 sToedscoolTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_TRICK_ROOM,
     MOVE_VENOSHOCK,
+    MOVE_TOXIC,
     MOVE_UNAVAILABLE,
 };
 
@@ -36681,6 +36682,7 @@ static const u16 sToedscruelTeachableLearnset[] = {
     MOVE_TRAILBLAZE,
     MOVE_TRICK_ROOM,
     MOVE_VENOSHOCK,
+    MOVE_TOXIC,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_TOEDSCOOL
