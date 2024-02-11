@@ -188,6 +188,7 @@ VerdanTurf_EventScript_WallyEncounter::
 	waitmovement 0
 	msgbox VerdanturfTown_Text_UncleNoNeedToBeDown, MSGBOX_DEFAULT
 	closemessage
+	setflag FLAG_BEAT_WALLY_V
 	switch VAR_VERDANTURF_WALLY_POS
 	case 0, Verdanturf_WallyExit0
 	case 1, Verdanturf_WallyExit1 
