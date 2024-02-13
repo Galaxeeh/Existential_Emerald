@@ -3357,10 +3357,10 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 15,
     .species = SPECIES_KABUTO,
-    .heldItem = ITEM_LOADED_DICE,
+    .heldItem = ITEM_MUSCLE_BAND,
     .ability = ABILITY_BATTLE_ARMOR,
     .nature = TRAINER_PARTY_NATURE(NATURE_HASTY),
-    .moves = {MOVE_LEECH_LIFE, MOVE_ROCK_BLAST, MOVE_WHIRLPOOL, MOVE_STEALTH_ROCK}
+    .moves = {MOVE_LEECH_LIFE, MOVE_ROCK_BLAST, MOVE_RAZOR_SHELL, MOVE_STEALTH_ROCK}
     }
 };
 

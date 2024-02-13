@@ -5885,7 +5885,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_PLUS, ABILITY_MINUS, ABILITY_CLEAR_BODY },
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_PLUS },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
         .speciesName = _("Klink"),
@@ -5915,7 +5915,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Klink, 0),
         .footprint = gMonFootprint_Klink,
         LEARNSETS(Klink),
-        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_KLANG}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_KLANG}),
     },
 
     [SPECIES_KLANG] =
@@ -5935,7 +5935,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_PLUS, ABILITY_MINUS, ABILITY_CLEAR_BODY },
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_PLUS },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
         .speciesName = _("Klang"),
@@ -5965,7 +5965,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Klang, 0),
         .footprint = gMonFootprint_Klang,
         LEARNSETS(Klang),
-        .evolutions = EVOLUTION({EVO_LEVEL, 49, SPECIES_KLINKLANG}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_KLINKLANG}),
     },
 
     [SPECIES_KLINKLANG] =
@@ -5985,7 +5985,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_PLUS, ABILITY_MINUS, ABILITY_CLEAR_BODY },
+        .abilities = { ABILITY_CLEAR_BODY, ABILITY_CLEAR_BODY, ABILITY_PLUS },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
         .speciesName = _("Klinklang"),

@@ -3815,7 +3815,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 35,
         .baseSpDefense = 45,
         .types = { TYPE_GROUND, TYPE_STEEL },
-        .abilities = { ABILITY_SAND_VEIL, ABILITY_TANGLING_HAIR, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_SAND_FORCE, ABILITY_TANGLING_HAIR, ABILITY_SAND_VEIL },
         .weight = 10,
         .description = COMPOUND_STRING(
             "The metal-rich geology of its habitat\n"
@@ -3846,7 +3846,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 70,
         .types = { TYPE_GROUND, TYPE_STEEL },
-        .abilities = { ABILITY_SAND_VEIL, ABILITY_TANGLING_HAIR, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_SAND_FORCE, ABILITY_TANGLING_HAIR, ABILITY_SAND_VEIL },
         .noFlip = TRUE,
         .weight = 666,
         .description = COMPOUND_STRING(
@@ -4229,7 +4229,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Psyduck, 1),
         .footprint = gMonFootprint_Psyduck,
         LEARNSETS(Psyduck),
-        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_GOLDUCK}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_GOLDUCK}),
     },
 
     [SPECIES_GOLDUCK] =
@@ -4654,7 +4654,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Poliwag, 0),
         .footprint = gMonFootprint_Poliwag,
         LEARNSETS(Poliwag),
-        .evolutions = EVOLUTION({EVO_LEVEL, 23, SPECIES_POLIWHIRL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_POLIWHIRL}),
     },
 
     [SPECIES_POLIWHIRL] =
