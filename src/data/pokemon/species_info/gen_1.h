@@ -3753,7 +3753,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 35,
         .baseSpDefense = 45,
         .types = { TYPE_GROUND, TYPE_GROUND },
-        .abilities = { ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_SAND_FORCE, ABILITY_ARENA_TRAP, ABILITY_SAND_VEIL },
         .weight = 8,
         .description = COMPOUND_STRING(
             "Diglett are raised in most farms.\n"
@@ -3784,7 +3784,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 50,
         .baseSpDefense = 70,
         .types = { TYPE_GROUND, TYPE_GROUND },
-        .abilities = { ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_SAND_FORCE, ABILITY_ARENA_TRAP, ABILITY_SAND_VEIL },
         .weight = 333,
         .description = COMPOUND_STRING(
             "Because the triplets originally split from\n"
