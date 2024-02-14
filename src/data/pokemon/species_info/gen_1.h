@@ -4375,7 +4375,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Primeape, 2),
         .footprint = gMonFootprint_Primeape,
         LEARNSETS(Primeape),
-        .evolutions = EVOLUTION({EVO_MOVE, MOVE_RAGE_FIST, SPECIES_ANNIHILAPE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 48, SPECIES_ANNIHILAPE}),
     },
 
 #if P_GEN_9_CROSS_EVOS

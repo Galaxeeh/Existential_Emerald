@@ -2056,7 +2056,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Shroomish, 1),
         .footprint = gMonFootprint_Shroomish,
         LEARNSETS(Shroomish),
-        .evolutions = EVOLUTION({EVO_LEVEL, 23, SPECIES_BRELOOM}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_BRELOOM}),
     },
 
     [SPECIES_BRELOOM] =

@@ -14168,8 +14168,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_RAGE_FIST] =
     {
-        .effect = EFFECT_RAGE_FIST,
-        .power = 50,
+        //.effect = EFFECT_RAGE_FIST,
+        .effect = EFFECT_HIT,
+        .power = 100,
         .type = TYPE_GHOST,
         .accuracy = 100,
         .pp = 10,

@@ -3218,8 +3218,8 @@ static const u8 sTwinBeamDescription[] = _(
     "the target twice in a row.");
 
 static const u8 sRageFistDescription[] = _(
-    "The more the user has been\n"
-    "hit, the stronger the move.");
+    "The user's punch is powered\n"
+    "by the rage of its ancestors.");
 
 static const u8 sArmorCannonDescription[] = _(
     "A strong attack but lowers\n"
