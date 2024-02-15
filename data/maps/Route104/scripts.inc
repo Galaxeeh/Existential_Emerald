@@ -988,7 +988,7 @@ Route104_EventScript_RematchCindy::
 	end
 
 Route104_EventScript_Gina::
-	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_GINA_AND_MIA_1, Route104_Text_GinaIntro, Route104_Text_GinaDefeat, Route104_Text_GinaNotEnoughMons, MiaGina0_Trigger
 	special GetPlayerBigGuyGirlString
 	msgbox Route104_Text_GinaPostBattle, MSGBOX_DEFAULT
 	release
@@ -1005,6 +1005,9 @@ Route104_EventScript_ResourceNPC::
 	clearflag FLAG_HIDE_RESOURCE_NPC
 	end
 	
+MiaGina0_Trigger::
+	setvar VAR_MIAGINA, 1
+	end
 
 MiaGina1_Trigger::
 	lockall
@@ -1019,7 +1022,7 @@ MiaGina1_Trigger::
 MiaGina2_Trigger::
 	lockall
 	playse SE_PIN
-	setvar VAR_MIAGINA, 2
+	setvar VAR_MIAGINA, 1
 	applymovement LOCALID_MIA, Mia2Movement
 	applymovement LOCALID_GINA, Mia2Movement
 	delay 10
@@ -1029,7 +1032,7 @@ MiaGina2_Trigger::
 MiaGina3_Trigger::
 	lockall
 	playse SE_PIN
-	setvar VAR_MIAGINA, 3
+	setvar VAR_MIAGINA, 1
 	applymovement LOCALID_MIA, Mia3Movement
 	applymovement LOCALID_GINA, Mia3Movement
 	delay 20
@@ -1039,7 +1042,7 @@ MiaGina3_Trigger::
 MiaGina4_Trigger::
 	lockall
 	playse SE_PIN
-	setvar VAR_MIAGINA, 4
+	setvar VAR_MIAGINA, 1
 	applymovement LOCALID_MIA, Mia4Movement
 	applymovement LOCALID_GINA, Mia4Movement
 	delay 30

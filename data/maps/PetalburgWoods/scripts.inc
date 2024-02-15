@@ -30,6 +30,7 @@ PetalburgWoods_EventScript_DevonResearcherFarLeft::
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaApproachPlayer
 	waitmovement 0
 	msgbox PetalburgWoods_Text_NoOneCrossesTeamAqua, MSGBOX_DEFAULT
+	setvar VAR_MUGSHOT_ID, MUGSHOT_PLASMAGRUNT
 	trainerbattle_no_intro TRAINER_GRUNT_PETALBURG_WOODS, PetalburgWoods_Text_YoureKiddingMe
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaBackOff
 	waitmovement 0
@@ -65,6 +66,7 @@ PetalburgWoods_EventScript_DevonResearcherLeft::
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaApproachPlayer
 	waitmovement 0
 	msgbox PetalburgWoods_Text_NoOneCrossesTeamAqua, MSGBOX_DEFAULT
+	setvar VAR_MUGSHOT_ID, MUGSHOT_PLASMAGRUNT
 	trainerbattle_no_intro TRAINER_GRUNT_PETALBURG_WOODS, PetalburgWoods_Text_YoureKiddingMe
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaBackOff
 	waitmovement 0
@@ -100,6 +102,7 @@ PetalburgWoods_EventScript_DevonResearcherRight::
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaApproachPlayer
 	waitmovement 0	
 	msgbox PetalburgWoods_Text_NoOneCrossesTeamAqua, MSGBOX_DEFAULT
+	setvar VAR_MUGSHOT_ID, MUGSHOT_PLASMAGRUNT
 	trainerbattle_no_intro TRAINER_GRUNT_PETALBURG_WOODS, PetalburgWoods_Text_YoureKiddingMe
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaBackOff
 	waitmovement 0

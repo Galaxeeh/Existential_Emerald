@@ -619,6 +619,15 @@
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "Route104_EventScript_ResourceNPC"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_MIAGINA",
+      "var_value": "0",
+      "script": "MiaGina0_Trigger"
     }
   ],
   "bg_events": [
