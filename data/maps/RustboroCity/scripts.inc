@@ -48,7 +48,7 @@ RustboroCity_EventScript_PositionScientistLeftExit::
 	end
 
 RustboroCity_EventScript_HideMapNamePopup::
-	setflag FLAG_HIDE_MAP_NAME_POPUP
+	@setflag FLAG_HIDE_MAP_NAME_POPUP
 	return
 
 RustboroCity_OnFrame:
