@@ -4134,7 +4134,7 @@ static void HandleTurnActionSelectionState(void)
                     }
                     break;
                 case B_ACTION_USE_ITEM:
-                    if (FlagGet(B_FLAG_NO_BAG_USE))
+                    if (FlagGet(B_FLAG_NO_BAG_USE) && gBattleTypeFlags & BATTLE_TYPE_TRAINER)
                     {
                         RecordedBattle_ClearBattlerAction(battler, 1);
                         gSelectionBattleScripts[battler] = BattleScript_ActionSelectionItemsCantBeUsed;
@@ -4144,7 +4144,7 @@ static void HandleTurnActionSelectionState(void)
                         return;
                     }
 
-                    if (((FlagGet(B_FLAG_NO_BAG_USE) || gBattleTypeFlags & (BATTLE_TYPE_LINK
+                    /*if (((FlagGet(B_FLAG_NO_BAG_USE) || gBattleTypeFlags & (BATTLE_TYPE_LINK
                                             | BATTLE_TYPE_FRONTIER_NO_PYRAMID
                                             | BATTLE_TYPE_EREADER_TRAINER
                                             | BATTLE_TYPE_RECORDED_LINK))
@@ -4158,7 +4158,7 @@ static void HandleTurnActionSelectionState(void)
                         *(gBattleStruct->selectionScriptFinished + battler) = FALSE;
                         *(gBattleStruct->stateIdAfterSelScript + battler) = STATE_BEFORE_ACTION_CHOSEN;
                         return;
-                    }
+                    }*/
                     else
                     {
                         BtlController_EmitChooseItem(battler, BUFFER_A, gBattleStruct->battlerPartyOrders[battler]);

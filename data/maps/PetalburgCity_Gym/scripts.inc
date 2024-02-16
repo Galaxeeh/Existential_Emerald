@@ -94,6 +94,7 @@ PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial::
 	msgbox PetalburgCity_Gym_Text_DadGoCollectBadges, MSGBOX_DEFAULT
 	setvar VAR_PETALBURG_GYM_STATE, 2
 	setflag FLAG_BUGSY_GYM_CLOSED
+	setflag FLAG_BAG_USE
 	setvar VAR_BUGSY_GYM, 0
 	releaseall
 	end
@@ -1224,7 +1225,7 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 	.string "town.\p"
 	.string "There, you should challenge\n"
 	.string "the GYM LEADER, Bugsy.\p"
-	.string "After hhim, go on to other POKéMON\n"
+	.string "After him, go on to other POKéMON\n"
 	.string "GYMS and defeat their LEADERS.\p"
 	.string "Collect BADGES from them,\n"
 	.string "understood?\p"
