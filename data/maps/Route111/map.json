@@ -447,11 +447,11 @@
       "flag": "FLAG_HIDE_ROUTE_111_SECRET_POWER_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "x": 20,
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_M",
+      "x": 31,
       "y": 114,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -604,8 +604,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 19,
-      "y": 101,
+      "x": 23,
+      "y": 112,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -762,7 +762,7 @@
     {
       "type": "trigger",
       "x": 13,
-      "y": 61,
+      "y": 62,
       "elevation": 3,
       "var": "VAR_TEMP_3",
       "var_value": "0",
@@ -771,7 +771,7 @@
     {
       "type": "trigger",
       "x": 7,
-      "y": 63,
+      "y": 64,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -816,7 +816,7 @@
     {
       "type": "trigger",
       "x": 14,
-      "y": 61,
+      "y": 62,
       "elevation": 3,
       "var": "VAR_TEMP_3",
       "var_value": "0",
@@ -1150,6 +1150,33 @@
       "type": "trigger",
       "x": 15,
       "y": 109,
+      "elevation": 0,
+      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 115,
+      "elevation": 0,
+      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 118,
+      "elevation": 0,
+      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 106,
       "elevation": 0,
       "var": "VAR_TEMP_MIXED_RECORDS",
       "var_value": "0",
