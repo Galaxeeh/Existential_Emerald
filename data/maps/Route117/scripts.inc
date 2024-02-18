@@ -1,5 +1,7 @@
 .set LOCALID_DAYCARE_MAN, 3
 .set LOCALID_GIRL, 19
+.set LOCALID_ANNA, 18
+.set LOCALID_MEG, 17
 
 Route117_MapScripts::
 	.byte 0
@@ -125,7 +127,7 @@ Route117_EventScript_Derek::
 	end
 
 Route117_EventScript_Anna::
-	trainerbattle_double TRAINER_ANNA_AND_MEG_1, Route117_Text_AnnaIntro, Route117_Text_AnnaDefeat, Route117_Text_AnnaNotEnoughMons
+	trainerbattle_double TRAINER_ANNA_AND_MEG_1, Route117_Text_AnnaIntro, Route117_Text_AnnaDefeat, Route117_Text_AnnaNotEnoughMons, AnnaMeg0_Trigger
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route117_EventScript_RematchAnna
 	msgbox Route117_Text_AnnaPostBattle, MSGBOX_DEFAULT
@@ -144,7 +146,7 @@ Route117_EventScript_RematchAnna::
 	end
 
 Route117_EventScript_Meg::
-	trainerbattle_double TRAINER_ANNA_AND_MEG_1, Route117_Text_MegIntro, Route117_Text_MegDefeat, Route117_Text_MegNotEnoughMons
+	trainerbattle_double TRAINER_ANNA_AND_MEG_1, Route117_Text_MegIntro, Route117_Text_MegDefeat, Route117_Text_MegNotEnoughMons, AnnaMeg0_Trigger
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route117_EventScript_RematchMeg
 	msgbox Route117_Text_MegPostBattle, MSGBOX_DEFAULT
@@ -160,6 +162,30 @@ Route117_EventScript_RegisterMeg::
 Route117_EventScript_RematchMeg::
 	trainerbattle_rematch_double TRAINER_ANNA_AND_MEG_1, Route117_Text_MegRematchIntro, Route117_Text_MegRematchDefeat, Route117_Text_MegRematchNotEnoughMons
 	msgbox Route117_Text_MegPostRematch, MSGBOX_AUTOCLOSE
+	end
+
+AnnaMeg0_Trigger::
+	setvar VAR_ANNAMEG, 1
+	end
+
+AnnaMeg1_Trigger::
+	lockall
+	playse SE_PIN
+	setvar VAR_ANNAMEG, 1
+	applymovement LOCALID_ANNA, Mia1Movement
+	applymovement LOCALID_MEG, Mia1Movement
+	delay 10
+	release
+	end
+
+AnnaMeg2_Trigger::
+	lockall
+	playse SE_PIN
+	setvar VAR_ANNAMEG, 1
+	applymovement LOCALID_ANNA, Mia2Movement
+	applymovement LOCALID_MEG, Mia2Movement
+	delay 10
+	release
 	end
 
 Route117_EventScript_Melina::

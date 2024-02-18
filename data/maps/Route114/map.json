@@ -197,7 +197,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 17,
-      "y": 35,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,

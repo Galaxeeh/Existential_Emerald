@@ -74,6 +74,7 @@ Route111_EventScript_ItemElixir::
 	end
 
 Route112_EventScript_ItemNugget::
+	setflag FLAG_112_BOULDER
 	finditem ITEM_NUGGET
 	end
 
