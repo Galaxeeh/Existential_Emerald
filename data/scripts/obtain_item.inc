@@ -23,10 +23,10 @@ EventScript_BufferPocketNameAndTryFanfare::
 	case POCKET_POKE_BALLS,   EventScript_BufferPokeballsPocket
 	case POCKET_BATTLE_ITEMS, EventScript_BufferBattleItemsPocket
 	case POCKET_BERRIES,      EventScript_BufferBerriesPocket
-	case POCKET_POWER_UP,     EventScript_BufferPowerUpPocket
+	@case POCKET_POWER_UP,     EventScript_BufferPowerUpPocket
 	case POCKET_TM_HM,        EventScript_BufferTMHMsPocket
 	case POCKET_MEGA_STONES,  EventScript_BufferMegaStonesPocket
-	case POCKET_Z_CRYSTALS,   EventScript_BufferZCrystalsPocket
+	@case POCKET_Z_CRYSTALS,   EventScript_BufferZCrystalsPocket
 	case POCKET_KEY_ITEMS,    EventScript_BufferKeyItemsPocket
 	end
 

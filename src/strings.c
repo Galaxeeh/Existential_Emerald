@@ -282,15 +282,15 @@ const u8 *const gPyramidBagMenu_ReturnToStrings[] =
 };
 
 const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
-const u8 gText_ItemsPocket[] = _("ITEMS");
-const u8 gText_PokeBallsPocket[] = _("POKé BALLS");
+const u8 gText_ItemsPocket[] = _("Items");
+const u8 gText_PokeBallsPocket[] = _("Poké Balls");
 const u8 gText_TMHMPocket[] = _("TMs & HMs");
-const u8 gText_BerriesPocket[] = _("BERRIES");
-const u8 gText_KeyItemsPocket[] = _("KEY ITEMS");
-const u8 gText_MedicinePocket[] = _("MEDICINE");
-const u8 gText_BattleItemsPocket[] = _("BATTLE ITEM");
+const u8 gText_BerriesPocket[] = _("Berries");
+const u8 gText_KeyItemsPocket[] = _("Key Items");
+const u8 gText_MedicinePocket[] = _("Medicine");
+const u8 gText_BattleItemsPocket[] = _("Held Items");
 const u8 gText_PowerUpPocket[] = _("POWER-UP");
-const u8 gText_MegaStonesPocket[] = _("MEGA STONES");
+const u8 gText_MegaStonesPocket[] = _("Mega Stones");
 const u8 gText_ZCrystalsPocket[] = _("Z-CRYSTALS");
 
 const u8 *const gPocketNamesStringsTable[] =
@@ -300,9 +300,9 @@ const u8 *const gPocketNamesStringsTable[] =
     [BALLS_POCKET] = gText_PokeBallsPocket,
     [BATTLEITEMS_POCKET] = gText_BattleItemsPocket,
     [BERRIES_POCKET] = gText_BerriesPocket,
-    [POWERUP_POCKET] = gText_PowerUpPocket,
+    //[POWERUP_POCKET] = gText_PowerUpPocket,
     [MEGASTONES_POCKET] = gText_MegaStonesPocket,
-    [ZCRYSTALS_POCKET] = gText_ZCrystalsPocket,
+    //[ZCRYSTALS_POCKET] = gText_ZCrystalsPocket,
     [TMHM_POCKET]  = gText_TMHMPocket,
     [KEYITEMS_POCKET] = gText_KeyItemsPocket
 };
