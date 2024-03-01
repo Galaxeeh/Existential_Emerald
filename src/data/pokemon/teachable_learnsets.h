@@ -1,7 +1,7 @@
 static const u16 sNoneTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
-
+//this is a test
 #if P_FAMILY_BULBASAUR
 static const u16 sBulbasaurTeachableLearnset[] = {
     MOVE_ATTRACT,
