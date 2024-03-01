@@ -521,7 +521,8 @@ const u8 *const gItemEffectTable[ITEMS_COUNT] =
     [ITEM_BERRY_JUICE]        = gItemEffect_BerryJuice,
     [ITEM_SACRED_ASH]         = gItemEffect_SacredAsh,
     [ITEM_SWEET_HEART]        = gItemEffect_Potion,
-    [ITEM_MAX_HONEY]          = gItemEffect_MaxRevive,
+    [ITEM_MAX_HONEY]          = gItemEffect_EvoItem,
+    [ITEM_HONEY]              = gItemEffect_EvoItem,
 
     // Regional Specialties
     [ITEM_PEWTER_CRUNCHIES]   = gItemEffect_FullHeal,

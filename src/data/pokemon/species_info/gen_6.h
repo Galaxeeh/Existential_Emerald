@@ -1829,8 +1829,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         ICON(Espurr, 2),
         .footprint = gMonFootprint_Espurr,
         LEARNSETS(Espurr),
-        .evolutions = EVOLUTION({EVO_LEVEL_MALE, 25, SPECIES_MEOWSTIC_MALE},
-                                {EVO_LEVEL_FEMALE, 25, SPECIES_MEOWSTIC_FEMALE}),
+        .evolutions = EVOLUTION({EVO_LEVEL_MALE, 22, SPECIES_MEOWSTIC_MALE},
+                                {EVO_LEVEL_FEMALE, 22, SPECIES_MEOWSTIC_FEMALE}),
     },
 
 #define MEOWSTIC_MISC_INFO                                  \

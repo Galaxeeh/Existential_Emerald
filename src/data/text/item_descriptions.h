@@ -303,9 +303,9 @@ static const u8 sSweetHeartDesc[] = _(
     "by 20 points.");
 
 static const u8 sMaxHoneyDesc[] = _(
-    "Revives a fainted\n"
-    "Pokémon with all\n"
-    "its HP.");
+    "Sweet honey that\n"
+    "is loved by a\n"
+    "certain Pokémon.");
 
 static const u8 sPewterCrunchiesDesc[] = _(
     "Heals all the\n"
@@ -838,8 +838,8 @@ static const u8 sHeartScaleDesc[] = _(
 
 static const u8 sHoneyDesc[] = _(
     "Sweet honey that\n"
-    "attracts wild\n"
-    "Pokémon when used.");
+    "is loved by a\n"
+    "certain Pokémon.");
 
 static const u8 sRareBoneDesc[] = _(
     "A very rare bone.\n"

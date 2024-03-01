@@ -687,12 +687,11 @@ const struct Item gItems[] =
     [ITEM_MAX_HONEY] =
     {
         .name = _("Max Honey"),
-        .price = 8000,
+        .price = 3000,
         .description = sMaxHoneyDesc,
-        .pocket = POCKET_MEDICINE,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
-        .battleUsage = EFFECT_ITEM_REVIVE,
+        .pocket = POCKET_ITEMS, //evo
+        .type = EVO_HELD_ITEM_TYPE,
+        .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .flingPower = 30,
     },
 
@@ -1844,11 +1843,11 @@ const struct Item gItems[] =
     [ITEM_HONEY] =
     {
         .name = _("Honey"),
-        .price = 300,
+        .price = 3000,
         .description = sHoneyDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_Honey,
+        .pocket = POCKET_ITEMS, //evo
+        .type = EVO_HELD_ITEM_TYPE,
+        .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
         .flingPower = 30,
     },
 
