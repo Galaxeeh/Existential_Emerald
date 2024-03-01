@@ -779,6 +779,7 @@ static const struct MenuAction MultichoiceList_Exit[] =
 static const struct MenuAction MultichoiceList_ResourceNPC[] =
 {
     {gText_NPCStatus},
+    {gText_NPCDamage},
     {gText_NPCIV},
     {gText_NPCNature},
     {gText_NPCNickname},
@@ -790,6 +791,8 @@ static const struct MenuAction MultichoiceList_ResourceNPC_Status[] =
     {gText_NPCBurn},
     {gText_NPCFreeze},
     {gText_NPCPoison},
+    {gText_NPCParalysis},
+    {gText_NPCSleep},
 };
 
 static const struct MenuAction MultichoiceList_ResourceNPC_IVS[] =

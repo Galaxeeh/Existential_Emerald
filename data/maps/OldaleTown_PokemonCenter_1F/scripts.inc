@@ -47,10 +47,11 @@ OldaleTown_ResourceNPC::
 	closemessage
 	switch VAR_RESULT
 	case 0, OldaleTown_ResourceNPC_PreStatus
-	case 1, OldaleTown_ResourceNPC_IV
-	case 2, OldaleTown_ResourceNPC_Nature
-	case 3, OldaleTown_ResourceNPC_Nickname
-	case 4, OldaleTown_ResourceNPC_Information
+	case 1, OldaleTown_ResourceNPC_PreDamage
+	case 2, OldaleTown_ResourceNPC_IV
+	case 3, OldaleTown_ResourceNPC_Nature
+	case 4, OldaleTown_ResourceNPC_Nickname
+	case 5, OldaleTown_ResourceNPC_Information
 	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
 
 OldaleTown_ResourceNPC_PreStatus::
@@ -61,7 +62,15 @@ OldaleTown_ResourceNPC_PreStatus::
 	case 0, OldaleTown_ResourceNPC_Burn
 	case 1, OldaleTown_ResourceNPC_Freeze
 	case 2, OldaleTown_ResourceNPC_Poison
+	case 3, OldaleTown_ResourceNPC_Paralysis
+	case 4, OldaleTown_ResourceNPC_Sleep
 	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
+
+OldaleTown_ResourceNPC_PreDamage::
+	predamage
+	release
+	end
+
 
 OldaleTown_ResourceNPC_IV::
 	checkitem ITEM_HEART_SCALE
@@ -204,6 +213,22 @@ OldaleTown_ResourceNPC_Poison::
 	release
 	end
 
+OldaleTown_ResourceNPC_Paralysis::
+	setmonstatus STATUS1_PARALYSIS
+	playse SE_M_THUNDER_WAVE
+	msgbox Para, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+OldaleTown_ResourceNPC_Sleep::
+	setmonstatus STATUS1_SLEEP
+	playse SE_M_YAWN
+	msgbox Sleep, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
 OldaleTown_ResourceNPC_ComeAgain::
 	msgbox OldaleTown_ResourceNPC_ComeAgain_Text, MSGBOX_DEFAULT
 	waitmessage
@@ -252,6 +277,12 @@ Cold:
 
 Toxic:
 	.string "Don't you know that you're Toxic?$"
+
+Para:
+	.string "Shocking!$"
+
+Sleep:
+	.string "Sleep well, sweet prince.$"
 
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
 	.string "That PC in the corner there is\n"

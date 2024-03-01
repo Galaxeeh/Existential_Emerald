@@ -557,3 +557,4 @@ gSpecials::
 	def_special ScriptGetPartyMonSpDef
 	@def_special SetNature
 	def_special NameRival
+	def_special PreDamage

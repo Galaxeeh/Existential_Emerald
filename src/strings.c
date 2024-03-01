@@ -1865,6 +1865,7 @@ const u8 gText_Moves_Menu[] = _("Change Moves");
 
 //ResourceNPC
 const u8 gText_NPCStatus[] = _("Status");
+const u8 gText_NPCDamage[] = _("PreDamage");
 const u8 gText_NPCIV[] = _("Maximize IV");
 const u8 gText_NPCNature[] = _("Change Nature");
 const u8 gText_NPCNickname[] = _("Nickname");
@@ -1872,6 +1873,8 @@ const u8 gText_NPCInformation[] = _("Information");
 const u8 gText_NPCBurn[] = _("Burn");
 const u8 gText_NPCFreeze[] = _("Freeze");
 const u8 gText_NPCPoison[] = _("Poison");
+const u8 gText_NPCParalysis[] = _("Paralysis");
+const u8 gText_NPCSleep[] = _("Sleep");
 const u8 gText_NPCHp[] = _("HP");
 const u8 gText_NPCAtk[] = _("Attack");
 const u8 gText_NPCDef[] = _("Defense");

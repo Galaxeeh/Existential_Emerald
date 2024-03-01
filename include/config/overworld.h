@@ -13,7 +13,7 @@
 #define OW_PC_JAPAN_WALDA_ICONS     TRUE       // In the US release of Emerald, the Cross, Bolt, and Plusle icons for Walda's wallpapers were left blank from the Japan release. Setting this to TRUE will restore them.
 
 // Out-of-battle Ability effects
-#define OW_SYNCHRONIZE_NATURE       GEN_LATEST // In Gen8, if a Pokémon with Synchronize is leading the party, it's 100% guaranteed that wild Pokémon will have the same Nature, as opposed to 50% previously. Stationary Pokémon are excluded in Gen3. In Gen6, all No Eggs Discovered gift Pokémon will have the same Nature, while in Gen7 all gift Pokémon will, regardless of Egg Group - In Gen 8, no gift Pokémon are affected. In Gen9, this ability has no out-of-battle effect.
+#define OW_SYNCHRONIZE_NATURE       GEN_3 // In Gen8, if a Pokémon with Synchronize is leading the party, it's 100% guaranteed that wild Pokémon will have the same Nature, as opposed to 50% previously. Stationary Pokémon are excluded in Gen3. In Gen6, all No Eggs Discovered gift Pokémon will have the same Nature, while in Gen7 all gift Pokémon will, regardless of Egg Group - In Gen 8, no gift Pokémon are affected. In Gen9, this ability has no out-of-battle effect.
 #define OW_COMPOUND_EYES            GEN_LATEST // Prior to Gen9, if a Pokémon with Compound Eyes is leading the party, the wild held item rate is increased to 60%/20%.
 #define OW_SUPER_LUCK               GEN_LATEST // In Gen8, if a Pokémon with Super Luck is leading the party, the wild held item rate is increased to 60%/20%.
 #define OW_CUTE_CHARM               GEN_LATEST // Prior to Gen9, if a Pokémon with Cute Charm is leading the party, wild encounters have a 66.7% chance to be forced to be of the opposite gender.

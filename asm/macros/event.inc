@@ -2059,3 +2059,10 @@
     @setvar VAR_TEMP_1, \nature
     @special SetMonNature
     @.endm	
+
+    @ Changes the status of a selected Pokémon
+    .macro predamage
+    special ChoosePartyMon
+    waitstate
+    special PreDamage
+    .endm

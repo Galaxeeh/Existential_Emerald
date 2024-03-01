@@ -4277,12 +4277,18 @@ void SetMonStatus(void)
 		    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &curStatus);
 	}
 
-    if (status == STATUS1_FREEZE)
+    else if (status == STATUS1_FREEZE || STATUS1_PARALYSIS || STATUS1_SLEEP)
 	{
 	    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
 	}
+
 }
 
+void PreDamage(void)
+{
+
+
+}
 
 
 // Maximizes the HP IV of the Pokémon in gSpecialVar_0x8004 
