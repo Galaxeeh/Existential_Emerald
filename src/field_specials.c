@@ -1,5 +1,5 @@
 #include "global.h"
-#include "debug.h"
+//#include "debug.h"
 #include "malloc.h"
 #include "battle.h"
 #include "battle_tower.h"
@@ -7,6 +7,7 @@
 #include "data.h"
 #include "decoration.h"
 #include "diploma.h"
+#include "debug.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "fieldmap.h"
@@ -140,6 +141,8 @@ static u8 DidPlayerGetFirstFans(void);
 static void SetInitialFansOfPlayer(void);
 static u16 PlayerGainRandomTrainerFan(void);
 static void BufferFanClubTrainerName_(struct LinkBattleRecords *, u8, u8);
+
+//extern void PreDamage(void);
 
 void Special_ShowDiploma(void)
 {
@@ -4284,11 +4287,10 @@ void SetMonStatus(void)
 
 }
 
-void PreDamage(void)
-{
-
-
-}
+//void Pre_Damage(void)
+//{
+    //PreDamage();
+//}
 
 
 // Maximizes the HP IV of the Pokémon in gSpecialVar_0x8004 

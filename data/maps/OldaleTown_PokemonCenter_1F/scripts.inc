@@ -68,6 +68,7 @@ OldaleTown_ResourceNPC_PreStatus::
 
 OldaleTown_ResourceNPC_PreDamage::
 	predamage
+	waitstate
 	release
 	end
 
