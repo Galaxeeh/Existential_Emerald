@@ -3726,8 +3726,6 @@ static void DebugAction_Give_Pokemon_ComplexCreateMon(u8 taskId) //https://githu
     DebugAction_DestroyExtraWindow(taskId); //return sentToPc;
 }
 
-//static const u8 sPreDamText[] =                _("Set HP:"); "Species: {STR_VAR_3}\n{STR_VAR_1}{CLEAR_TO 90}\n\n{STR_VAR_2}{CLEAR_TO 90}"
-//static const u8 sPreDamText[] =                _("Set HP: {STR_VAR_3}\n{STR_VAR_1}{CLEAR_TO 90}\n\n{STR_VAR_2}{CLEAR_TO 90}");
 static const u8 sPreDamText[] =                _("Set HP: {STR_VAR_3}\n{STR_VAR_1}{CLEAR_TO 90}\n\n{STR_VAR_2}{CLEAR_TO 90}");
 void PreDamage(void)
 {
@@ -3737,15 +3735,10 @@ void PreDamage(void)
     u32 HP = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP);
     u32 MaxHP = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MAX_HP);
 
-    taskId = 0;
-    
-    //Mon data struct
-    //sDebugMonData = AllocZeroed(sizeof(struct DebugMonData));
-    //ResetMonDataStruct(sDebugMonData);
+    GetMonNickname(&gPlayerParty[gSpecialVar_0x8004], gStringVar1);
 
-    //Window initialization
-    //ClearStdWindowAndFrame(gTasks[taskId].tWindowId, TRUE);
-    //RemoveWindow(gTasks[taskId].tWindowId);
+    taskId = 2;
+    
 
     HideMapNamePopUpWindow();
     LoadMessageBoxAndBorderGfx();
@@ -3758,7 +3751,6 @@ void PreDamage(void)
     // Display initial Pokémon
     StringCopy(gStringVar2, gText_DigitIndicator[0]);
     ConvertIntToDecimalStringN(gStringVar3, gTasks[taskId].tInput, STR_CONV_MODE_LEADING_ZEROS, 3);
-    StringCopy(gStringVar1, GetSpeciesName(species));
     StringCopyPadded(gStringVar1, gStringVar1, CHAR_SPACE, 15);
     StringExpandPlaceholders(gStringVar4, sPreDamText);
     AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 1, 1, 0, NULL);
@@ -3812,50 +3804,27 @@ static void PreDam_SelectHP(u8 taskId)
 
         StringCopy(gStringVar2, gText_DigitIndicator[gTasks[taskId].tDigit]);
         ConvertIntToDecimalStringN(gStringVar3, gTasks[taskId].tInput, STR_CONV_MODE_LEADING_ZEROS, 3);
-        //StringCopy(gStringVar1, GetSpeciesName(species));
         StringCopyPadded(gStringVar1, gStringVar1, CHAR_SPACE, 15);
         StringExpandPlaceholders(gStringVar4, sPreDamText);
         AddTextPrinterParameterized(gTasks[taskId].tSubWindowId, DEBUG_MENU_FONT, gStringVar4, 1, 1, 0, NULL);
-        //AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 1, 1, 0, NULL);
-
-        //FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
-        //FreeMonIconPalettes();
-        //LoadMonIconPalette(gTasks[taskId].tInput);
-        //gTasks[taskId].tSpriteId = CreateMonIcon(gTasks[taskId].tInput, SpriteCB_MonIcon, DEBUG_NUMBER_ICON_X, DEBUG_NUMBER_ICON_Y, 4, 0);
-        //gSprites[gTasks[taskId].tSpriteId].oam.priority = 0;
     }
 
     if (JOY_NEW(A_BUTTON))
     {
-        //sDebugMonData->species = gTasks[taskId].tInput;
-        //gTasks[taskId].tInput = 1;
-        //gTasks[taskId].tDigit = 0;
         SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP, &gTasks[taskId].tInput);
-
-        //StringCopy(gStringVar2, gText_DigitIndicator[gTasks[taskId].tDigit]);
-        //ConvertIntToDecimalStringN(gStringVar1, gTasks[taskId].tInput, STR_CONV_MODE_LEADING_ZEROS, 3);
-        //StringCopyPadded(gStringVar1, gStringVar1, CHAR_SPACE, 15);
-        //StringExpandPlaceholders(gStringVar4, sDebugText_PokemonLevel);
-        //AddTextPrinterParameterized(gTasks[taskId].tSubWindowId, DEBUG_MENU_FONT, gStringVar4, 1, 1, 0, NULL);
-
-        //gTasks[taskId].func = DebugAction_Give_Pokemon_SelectLevel;
         PlaySE(SE_SELECT);
-        Free(sDebugMonData);
         FreeMonIconPalettes();
         FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
-        //DebugAction_DestroyExtraWindow(taskId);
-        //Debug_DestroyMenu_Full(taskId);
         DebugAction_Cancel(taskId);
+
     }
     else if (JOY_NEW(B_BUTTON))
     {
         PlaySE(SE_SELECT);
-        Free(sDebugMonData);
         FreeMonIconPalettes();
         FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].tSpriteId]);
-        //DebugAction_DestroyExtraWindow(taskId);
-        //Debug_DestroyMenu_Full(taskId);
         DebugAction_Cancel(taskId);
+
     }
 }
 

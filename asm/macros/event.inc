@@ -2046,8 +2046,8 @@
 
     @ Changes the status of a selected Pokémon
     .macro setmonstatus status:req
-    special ChoosePartyMon
-    waitstate
+    @special ChoosePartyMon
+    @waitstate
     setvar VAR_TEMP_1, \status
     special SetMonStatus
     .endm	
@@ -2061,8 +2061,8 @@
     @.endm	
 
     @ Changes the status of a selected Pokémon
-    .macro predamage
-    special ChoosePartyMon
-    waitstate
-    special PreDamage
-    .endm
+    @.macro predamage
+    @special ChoosePartyMon
+    @waitstate
+    @special PreDamage
+    @.endm

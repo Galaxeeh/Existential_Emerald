@@ -67,9 +67,12 @@ OldaleTown_ResourceNPC_PreStatus::
 	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
 
 OldaleTown_ResourceNPC_PreDamage::
-	predamage
+	special ChoosePartyMon
 	waitstate
-	release
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC
+	special PreDamage
+	waitstate
+	releaseall
 	end
 
 
@@ -78,6 +81,7 @@ OldaleTown_ResourceNPC_IV::
 	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
 	special ChoosePartyMon
 	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC
 	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_ChooseIV
 	end
 
@@ -181,16 +185,21 @@ OldaleTown_ResourceNPC_Nature::
 OldaleTown_ResourceNPC_Nickname::
 	special ChoosePartyMon
 	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC
 	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_NameRatersHouse_EventScript_RateMonNickname
 	end
 
 OldaleTown_ResourceNPC_Information::
 	msgbox OldaleTown_Info, MSGBOX_DEFAULT
 	waitmessage
+	goto OldaleTown_ResourceNPC
 	release
 	end
 
 OldaleTown_ResourceNPC_Burn::
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_PreStatus
 	setmonstatus STATUS1_BURN
 	playse SE_M_EMBER
 	msgbox BurnHeal, MSGBOX_DEFAULT
@@ -199,6 +208,9 @@ OldaleTown_ResourceNPC_Burn::
 	end
 
 OldaleTown_ResourceNPC_Freeze::
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_PreStatus
 	setmonstatus STATUS1_FREEZE
 	playse SE_M_ICY_WIND
 	msgbox Cold, MSGBOX_DEFAULT
@@ -207,6 +219,9 @@ OldaleTown_ResourceNPC_Freeze::
 	end
 
 OldaleTown_ResourceNPC_Poison::
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_PreStatus
 	setmonstatus STATUS1_POISON
 	playse SE_M_TOXIC
 	msgbox Toxic, MSGBOX_DEFAULT
@@ -215,6 +230,9 @@ OldaleTown_ResourceNPC_Poison::
 	end
 
 OldaleTown_ResourceNPC_Paralysis::
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_PreStatus
 	setmonstatus STATUS1_PARALYSIS
 	playse SE_M_THUNDER_WAVE
 	msgbox Para, MSGBOX_DEFAULT
@@ -223,6 +241,9 @@ OldaleTown_ResourceNPC_Paralysis::
 	end
 
 OldaleTown_ResourceNPC_Sleep::
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_ResourceNPC_PreStatus
 	setmonstatus STATUS1_SLEEP
 	playse SE_M_YAWN
 	msgbox Sleep, MSGBOX_DEFAULT
