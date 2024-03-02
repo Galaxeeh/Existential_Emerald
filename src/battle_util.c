@@ -8133,7 +8133,8 @@ static bool32 IsBattlerModernFatefulEncounter(u32 battler)
 
 u8 IsMonDisobedient(void)
 {
-    s32 rnd;
+    return 0;
+    /*s32 rnd;
     s32 calc;
     u8 obedienceLevel = 0;
     u8 levelReferenced;
@@ -8261,7 +8262,7 @@ u8 IsMonDisobedient(void)
             gBattlescriptCurrInstr = BattleScript_MoveUsedLoafingAround;
             return 1;
         }
-    }
+    }*/
 }
 
 u32 GetBattlerHoldEffect(u32 battler, bool32 checkNegating)
