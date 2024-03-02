@@ -10986,11 +10986,11 @@ void TrySaveExchangedItem(u32 battler, u16 stolenItem)
     if (B_TRAINERS_KNOCK_OFF_ITEMS == FALSE)
         return;
     // If regular trainer battle and mon's original item matches what is being stolen, save it to be restored at end of battle
-    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER
+    /*if (gBattleTypeFlags & BATTLE_TYPE_TRAINER
       && !(gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
       && GetBattlerSide(battler) == B_SIDE_PLAYER
       && stolenItem == gBattleStruct->itemLost[gBattlerPartyIndexes[battler]].originalItem)
-        gBattleStruct->itemLost[gBattlerPartyIndexes[battler]].stolen = TRUE;
+        gBattleStruct->itemLost[gBattlerPartyIndexes[battler]].stolen = TRUE;*/
 }
 
 bool32 IsBattlerAffectedByHazards(u32 battler, bool32 toxicSpikes)
