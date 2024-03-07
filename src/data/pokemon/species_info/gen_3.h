@@ -1643,6 +1643,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .catchRate = 235,
         .expYield = 40,
         .evYield_SpAttack = 1,
+        .itemRare = ITEM_DAWN_STONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = 35,
@@ -1725,7 +1726,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .footprint = gMonFootprint_Kirlia,
         LEARNSETS(Kirlia),
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_GARDEVOIR},
-                                {EVO_ITEM_MALE, ITEM_DAWN_STONE, SPECIES_GALLADE}),
+                                {EVO_ITEM, ITEM_DAWN_STONE, SPECIES_GALLADE}),
     },
 
 #define GARDEVOIR_MISC_INFO                                 \
@@ -4023,7 +4024,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Carvanha, 0),
         .footprint = gMonFootprint_Carvanha,
         LEARNSETS(Carvanha),
-        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_SHARPEDO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_SHARPEDO}),
     },
 
 #define SHARPEDO_MISC_INFO                                      \
@@ -4428,7 +4429,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_THICK_FAT, ABILITY_OWN_TEMPO, ABILITY_GLUTTONY },
+        .abilities = { ABILITY_THICK_FAT, ABILITY_THICK_FAT, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Spoink"),
         .cryId = CRY_SPOINK,
@@ -4456,7 +4457,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Spoink, 0),
         .footprint = gMonFootprint_Spoink,
         LEARNSETS(Spoink),
-        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_GRUMPIG}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_GRUMPIG}),
     },
 
     [SPECIES_GRUMPIG] =
@@ -4476,7 +4477,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_THICK_FAT, ABILITY_OWN_TEMPO, ABILITY_GLUTTONY },
+        .abilities = { ABILITY_THICK_FAT, ABILITY_THICK_FAT, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Grumpig"),
         .cryId = CRY_GRUMPIG,

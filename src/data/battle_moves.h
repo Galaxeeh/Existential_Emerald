@@ -9337,12 +9337,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HEART_STAMP] =
     {
-        .effect = EFFECT_FLINCH_HIT,
-        .power = 60,
+        .effect = EFFECT_DEFENSE_DOWN_HIT,
+        .power = 70,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
-        .pp = 25,
-        .secondaryEffectChance = 30,
+        .pp = 15,
+        .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
