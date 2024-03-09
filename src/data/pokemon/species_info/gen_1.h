@@ -2773,7 +2773,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 25,
         .expYield = 217,
         .evYield_HP = 3,
-        .itemRare = ITEM_MOON_STONE,
+        .itemCommon = ITEM_MOON_STONE,
         .genderRatio = PERCENT_FEMALE(75),
         .eggCycles = 10,
         .friendship = 140,
@@ -5931,7 +5931,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         LEARNSETS(Slowpoke),
         .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_SLOWBRO},
                                 {EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING},
-                                {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_SLOWKING}),
+                                {EVO_ITEM, ITEM_WATER_STONE, SPECIES_SLOWKING}),
     },
 
     [SPECIES_SLOWBRO] =
@@ -6088,7 +6088,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_POISON, TYPE_PSYCHIC },
         .expYield = 172,
         .evYield_Attack = 2,
-        .abilities = { ABILITY_QUICK_DRAW, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
+        .abilities = { ABILITY_CUD_CHEW, ABILITY_FILTER, ABILITY_QUICK_DRAW },
         .height = 16,
         .weight = 705,
         .description = COMPOUND_STRING(
@@ -6125,7 +6125,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 110,
         .types = { TYPE_POISON, TYPE_PSYCHIC },
         .evYield_SpDefense = 2,
-        .abilities = { ABILITY_CURIOUS_MEDICINE, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
+        .abilities = { ABILITY_CURIOUS_MEDICINE, ABILITY_FILTER, ABILITY_REGENERATOR },
         .categoryName = _("Hexpert"),
         .height = 18,
         .description = COMPOUND_STRING(

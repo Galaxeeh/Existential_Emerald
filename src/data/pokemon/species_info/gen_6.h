@@ -2303,7 +2303,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_WATER_2 },
-        .abilities = { ABILITY_CONTRARY, ABILITY_SUCTION_CUPS, ABILITY_INFILTRATOR },
+        .abilities = { ABILITY_INFILTRATOR, ABILITY_INFILTRATOR, ABILITY_CONTRARY },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Inkay"),
         .cryId = CRY_INKAY,
@@ -2332,7 +2332,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         ICON(Inkay, 0),
         .footprint = gMonFootprint_Inkay,
         LEARNSETS(Inkay),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_MALAMAR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_MALAMAR}),
     },
 
     [SPECIES_MALAMAR] =
@@ -2352,7 +2352,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_WATER_2 },
-        .abilities = { ABILITY_CONTRARY, ABILITY_SUCTION_CUPS, ABILITY_INFILTRATOR },
+        .abilities = { ABILITY_INFILTRATOR, ABILITY_INFILTRATOR, ABILITY_CONTRARY },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Malamar"),
         .cryId = CRY_MALAMAR,
