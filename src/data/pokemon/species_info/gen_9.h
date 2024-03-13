@@ -713,7 +713,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         ICON(Nymble, 0),
         //.footprint = gMonFootprint_Nymble,
         LEARNSETS(Nymble),
-        .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_LOKIX}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_LOKIX}),
     },
 
     [SPECIES_LOKIX] =
@@ -3207,7 +3207,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_TOXIC_DEBRIS, ABILITY_NONE, ABILITY_CORROSION },
+        .abilities = { ABILITY_CORROSION, ABILITY_CORROSION, ABILITY_TOXIC_DEBRIS },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Glimmet"),
         .cryId = CRY_GLIMMET,
@@ -3256,7 +3256,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_TOXIC_DEBRIS, ABILITY_NONE, ABILITY_CORROSION },
+        .abilities = { ABILITY_CORROSION, ABILITY_CORROSION, ABILITY_TOXIC_DEBRIS },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Glimmora"),
         .cryId = CRY_GLIMMORA,

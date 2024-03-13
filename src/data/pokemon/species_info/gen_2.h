@@ -3129,7 +3129,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_SERENE_GRACE, ABILITY_RUN_AWAY, ABILITY_RATTLED },
+        .abilities = { ABILITY_SERENE_GRACE, ABILITY_RATTLED, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Dunsparce"),
         .cryId = CRY_DUNSPARCE,
@@ -3179,7 +3179,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,                                          \
         .growthRate = GROWTH_MEDIUM_FAST,                                           \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },                          \
-        .abilities = { ABILITY_SERENE_GRACE, ABILITY_RUN_AWAY, ABILITY_RATTLED },   \
+        .abilities = { ABILITY_SERENE_GRACE, ABILITY_SCRAPPY, ABILITY_RATTLED },   \
         .bodyColor = BODY_COLOR_YELLOW,                                             \
         .speciesName = _("Dudunsprce"),                                             \
         .cryId = CRY_DUDUNSPARCE,                                                   \
@@ -3246,7 +3246,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
-        .abilities = { ABILITY_HYPER_CUTTER, ABILITY_SAND_VEIL, ABILITY_IMMUNITY },
+        .abilities = { ABILITY_HYPER_CUTTER, ABILITY_HYPER_CUTTER, ABILITY_IMMUNITY },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Gligar"),
         .cryId = CRY_GLIGAR,
@@ -3278,7 +3278,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .footprint = gMonFootprint_Gligar,
         LEARNSETS(Gligar),
         .evolutions = EVOLUTION({EVO_ITEM_HOLD_NIGHT, ITEM_RAZOR_FANG, SPECIES_GLISCOR},
-                                {EVO_ITEM_NIGHT, ITEM_RAZOR_FANG, SPECIES_GLISCOR}),
+                                {EVO_ITEM, ITEM_RAZOR_FANG, SPECIES_GLISCOR}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -3299,7 +3299,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
-        .abilities = { ABILITY_HYPER_CUTTER, ABILITY_SAND_VEIL, ABILITY_POISON_HEAL },
+        .abilities = { ABILITY_HYPER_CUTTER, ABILITY_HYPER_CUTTER, ABILITY_POISON_HEAL },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Gliscor"),
         .cryId = CRY_GLISCOR,

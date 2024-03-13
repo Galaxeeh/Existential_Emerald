@@ -3991,7 +3991,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Speed = 1,
         .types = { TYPE_DARK, TYPE_DARK },
         .itemRare = ITEM_QUICK_CLAW,
-        .abilities = { ABILITY_PICKUP, ABILITY_TECHNICIAN, ABILITY_RATTLED },
+        .abilities = { ABILITY_TECHNICIAN, ABILITY_TECHNICIAN, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_GRAY,
         .height = 4,
         .weight = 42,
@@ -4015,7 +4015,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(MeowthAlolan, 2),
         LEARNSETS(MeowthAlolan),
         .isAlolanForm = TRUE,
-        .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_PERSIAN_ALOLAN}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_PERSIAN_ALOLAN}),
     },
 
     [SPECIES_PERSIAN_ALOLAN] =

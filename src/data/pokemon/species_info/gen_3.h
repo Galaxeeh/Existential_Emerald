@@ -631,7 +631,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_QUICK_FEET, ABILITY_MOXIE },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_MOXIE },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Mightyena"),
         .cryId = CRY_MIGHTYENA,
@@ -678,7 +678,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,                                      \
         .growthRate = GROWTH_MEDIUM_FAST,                                       \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },                      \
-        .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },  \
+        .abilities = { ABILITY_GLUTTONY, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },  \
         .speciesName = _("Zigzagoon"),                                          \
         .cryId = CRY_ZIGZAGOON,                                                 \
         .natDexNum = NATIONAL_DEX_ZIGZAGOON,                                    \
@@ -707,7 +707,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,                                      \
         .growthRate = GROWTH_MEDIUM_FAST,                                       \
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },                      \
-        .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },  \
+        .abilities = { ABILITY_GLUTTONY, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },  \
         .bodyColor = BODY_COLOR_WHITE,                                          \
         .speciesName = _("Linoone"),                                            \
         .cryId = CRY_LINOONE,                                                   \
@@ -815,7 +815,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(LinooneGalarian, 0),
         LEARNSETS(LinooneGalarian),
         .isGalarianForm = TRUE,
-        .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 35, SPECIES_OBSTAGOON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_OBSTAGOON}),
     },
 
     [SPECIES_OBSTAGOON] =
@@ -2497,7 +2497,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Loudred, 2),
         .footprint = gMonFootprint_Loudred,
         LEARNSETS(Loudred),
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_EXPLOUD}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_EXPLOUD}),
     },
 
     [SPECIES_EXPLOUD] =
@@ -4610,7 +4610,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Trapinch, 0),
         .footprint = gMonFootprint_Trapinch,
         LEARNSETS(Trapinch),
-        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_VIBRAVA}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_VIBRAVA}),
     },
 
     [SPECIES_VIBRAVA] =
@@ -4663,7 +4663,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Vibrava, 1),
         .footprint = gMonFootprint_Vibrava,
         LEARNSETS(Vibrava),
-        .evolutions = EVOLUTION({EVO_LEVEL, 45, SPECIES_FLYGON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 46, SPECIES_FLYGON}),
     },
 
     [SPECIES_FLYGON] =
