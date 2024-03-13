@@ -3643,7 +3643,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Venonat, 2),
         .footprint = gMonFootprint_Venonat,
         LEARNSETS(Venonat),
-        .evolutions = EVOLUTION({EVO_LEVEL, 31, SPECIES_VENOMOTH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_VENOMOTH}),
     },
 
     [SPECIES_VENOMOTH] =
