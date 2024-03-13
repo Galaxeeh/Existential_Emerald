@@ -1406,7 +1406,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         RATTATA_MISC_INFO,
         .types = { TYPE_DARK, TYPE_NORMAL },
         .itemRare = ITEM_PECHA_BERRY,
-        .abilities = { ABILITY_GLUTTONY, ABILITY_HUSTLE, ABILITY_THICK_FAT },
+        .abilities = { ABILITY_GUTS, ABILITY_STRONG_JAW, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_BLACK,
         .height = 3,
         .weight = 38,
@@ -1445,7 +1445,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 80,
         .types = { TYPE_DARK, TYPE_NORMAL },
         .itemRare = ITEM_PECHA_BERRY,
-        .abilities = { ABILITY_GLUTTONY, ABILITY_HUSTLE, ABILITY_THICK_FAT },
+        .abilities = { ABILITY_GUTS, ABILITY_STRONG_JAW, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_BLACK,
         .weight = 255,
         .description = COMPOUND_STRING(

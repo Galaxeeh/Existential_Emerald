@@ -1865,7 +1865,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_RUN_AWAY, ABILITY_STAKEOUT },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_STAKEOUT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Maschiff"),
         .cryId = CRY_MASCHIFF,
@@ -1893,7 +1893,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         ICON(Maschiff, 3),
         //.footprint = gMonFootprint_Maschiff,
         LEARNSETS(Maschiff),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_MABOSSTIFF}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_MABOSSTIFF}),
     },
 
     [SPECIES_MABOSSTIFF] =
@@ -1913,7 +1913,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_GUARD_DOG, ABILITY_STAKEOUT },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_INTIMIDATE, ABILITY_GUARD_DOG },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Mabosstiff"),
         .cryId = CRY_MABOSSTIFF,
