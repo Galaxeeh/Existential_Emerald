@@ -126,6 +126,8 @@ static const struct LevelUpMove sCharizardLevelUpLearnset[] = {
 };
 #endif //P_FAMILY_CHARMANDER
 
+//test
+
 #if P_FAMILY_SQUIRTLE
 static const struct LevelUpMove sSquirtleLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
