@@ -584,8 +584,8 @@ EWRAM_DATA u16 gSpecialVar_ItemId = 0;
 static EWRAM_DATA struct TempWallyBag *sTempWallyBag = 0;
 
 //tx_registered_items_menu
-static EWRAM_DATA bool8 sRegisterSubMenu = FALSE;
-static EWRAM_DATA u8 sRegisteredItemsMenuIcon = 0xFF;
+static EWRAM_INIT bool8 sRegisterSubMenu = FALSE;
+static EWRAM_INIT u8 sRegisteredItemsMenuIcon = 0xFF;
 extern const u8 EventScript_SelectWithoutRegisteredItem[];
 
 void ResetBagScrollPositions(void)

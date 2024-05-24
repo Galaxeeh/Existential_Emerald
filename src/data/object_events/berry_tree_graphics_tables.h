@@ -861,5 +861,5 @@ const u16 *const gBerryTreePaletteTagTablePointers[] = {
     [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] = gBerryTreeObjectEventGraphicsIdTable,
 #else
     [ITEM_ENIGMA_BERRY - FIRST_BERRY_INDEX] = gBerryTreeObjectEventGraphicsIdTable,
-#endif*/
-};
+#endif
+};*/

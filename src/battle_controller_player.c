@@ -1741,7 +1741,7 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     *(txtPtr)++ = EXT_CTRL_CODE_FONT;
     *(txtPtr)++ = FONT_NORMAL;
 
-    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
+    /*if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_ATK_IV) & 1) << 1)
@@ -1754,9 +1754,9 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         if (type >= TYPE_MYSTERY)
             type++;
         type |= 0xC0;
-        StringCopy(txtPtr, gTypeNames[type & 0x3F]);
-    }
-    else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
+        StringCopy(txtPtr, gTypesInfo[type & 0x3F]);
+    }*/
+    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
     {
         mon = &GetSideParty(GetBattlerSide(battler))[gBattlerPartyIndexes[battler]];
         speciesId = GetMonData(mon, MON_DATA_SPECIES);
@@ -2345,7 +2345,7 @@ static void MoveSelectionDisplaySplitIcon(u32 battler)
 	int icon;
 
 	moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[battler][4]);
-	icon = GetBattleMoveSplit(moveInfo->moves[gMoveSelectionCursor[battler]]);
+	icon = GetBattleMoveCategory(moveInfo->moves[gMoveSelectionCursor[battler]]);
 	LoadPalette(sSplitIcons_Pal, 10 * 0x10, 0x20);
 	BlitBitmapToWindow(B_WIN_DUMMY, sSplitIcons_Gfx + 0x80 * icon, 0, 0, 16, 16);
 	PutWindowTilemap(B_WIN_DUMMY);
