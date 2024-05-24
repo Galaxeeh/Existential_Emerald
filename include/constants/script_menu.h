@@ -126,6 +126,7 @@
 #define MULTI_PRESTATUS                    115
 #define MULTI_IVS                          116
 #define MULTI_STEVE_STONES                 117
+#define MULTI_BERRY_PLOT                   118
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
@@ -174,5 +175,10 @@
 #define STDSTRING_POWERUP          32
 #define STDSTRING_MEGASTONES       33
 #define STDSTRING_ZCRYSTALS        34
+// Dynamic Multichoice Callbacks
+
+#define DYN_MULTICHOICE_CB_DEBUG      0
+#define DYN_MULTICHOICE_CB_SHOW_ITEM  1
+#define DYN_MULTICHOICE_CB_NONE       255
 
 #endif //GUARD_SCRIPT_MENU_CONSTANTS_H

@@ -788,7 +788,7 @@ const u16 *const gBerryTreePaletteTagTablePointers[] = {
 #endif
 };
 
-const u16 *const gBerryTreeObjectEventGraphicsIdTablePointers[] = {
+/*const u16 *const gBerryTreeObjectEventGraphicsIdTablePointers[] = {
     [ITEM_CHERI_BERRY - FIRST_BERRY_INDEX] = gBerryTreeObjectEventGraphicsIdTable,
     [ITEM_CHESTO_BERRY - FIRST_BERRY_INDEX] = gBerryTreeObjectEventGraphicsIdTable,
     [ITEM_PECHA_BERRY - FIRST_BERRY_INDEX] = gBerryTreeObjectEventGraphicsIdTable,
@@ -861,5 +861,5 @@ const u16 *const gBerryTreeObjectEventGraphicsIdTablePointers[] = {
     [ITEM_ENIGMA_BERRY_E_READER - FIRST_BERRY_INDEX] = gBerryTreeObjectEventGraphicsIdTable,
 #else
     [ITEM_ENIGMA_BERRY - FIRST_BERRY_INDEX] = gBerryTreeObjectEventGraphicsIdTable,
-#endif
+#endif*/
 };
