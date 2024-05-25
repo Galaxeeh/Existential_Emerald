@@ -820,6 +820,8 @@ static const struct MenuAction MultichoiceList_SteveStones[] =
     {gText_WaterStone},
 };
 
+
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;

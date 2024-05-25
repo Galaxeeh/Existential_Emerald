@@ -128,6 +128,8 @@
 #define MULTI_STEVE_STONES                 117
 #define MULTI_BERRY_PLOT                   118
 
+
+
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
 #define SSTIDAL_SELECTION_BATTLE_FRONTIER  1

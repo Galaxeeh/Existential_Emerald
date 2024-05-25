@@ -1893,6 +1893,9 @@ const u8 gText_NPCSpAtk[] = _("Sp.Atk");
 const u8 gText_NPCSpDef[] = _("Sp.Def");
 const u8 gText_NPCSpd[] = _("Speed");
 
+
+
+
 //SteveStones
 const u8 gText_FireStone[] = _("Fire Stone");
 const u8 gText_LeafStone[] = _("Leaf Stone");

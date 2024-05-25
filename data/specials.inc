@@ -555,7 +555,8 @@ gSpecials::
 	def_special ScriptGetPartyMonSpd
 	def_special ScriptGetPartyMonSpAtk
 	def_special ScriptGetPartyMonSpDef
-	@def_special SetNature
+	def_special SetMonNature
+	def_special ScriptCheckPartyMonNature
 	def_special NameRival
 	def_special PreDamage
 	def_special PlayerHasMulch

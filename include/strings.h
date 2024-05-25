@@ -3088,6 +3088,8 @@ extern const u8 gText_NPCSpAtk[];
 extern const u8 gText_NPCSpDef[];
 extern const u8 gText_NPCSpd[];
 
+
+
 //SteveStones
 extern const u8 gText_FireStone[];
 extern const u8 gText_LeafStone[];

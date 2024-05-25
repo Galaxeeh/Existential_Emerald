@@ -2124,28 +2124,17 @@
 
     @ Changes the status of a selected Pokémon
     .macro setmonstatus status:req
-    @special ChoosePartyMon
-    @waitstate
     setvar VAR_TEMP_1, \status
     special SetMonStatus
     .endm	
 
     @ Changes the nature of a selected Pokémon
-    @.macro setmonnature status:req
-    @special ChoosePartyMon
-    @waitstate
-    @setvar VAR_TEMP_1, \nature
-    @special SetMonNature
-    @.endm	
+    .macro setmonnature nature:req
+    setvar VAR_TEMP_1, \nature
+    special SetMonNature
+    .endm	
 
-    @ Changes the status of a selected Pokémon
-    @.macro predamage
-    @special ChoosePartyMon
-    @waitstate
-    @special PreDamage
-    @.endm
-	@ Sets VAR_RESULT to TRUE if stat can be hyper trained, or to
-	@ FALSE otherwise.
+
 	.macro canhypertrain stat:req, slot:req
 	callnative CanHyperTrain
 	.byte \stat
@@ -2211,4 +2200,14 @@
 	callnative Script_SetStatus1
 	.2byte \status1
 	.2byte \slot
+	.endm
+
+	.macro scrollingmultichoice id:req, x:req, y:req, show:req, b:req
+	setvar VAR_0x800B, \id,
+	setvar VAR_0x8005, \x,
+	setvar VAR_0x8006, \y,
+	setvar VAR_0x8007, \show,
+	setvar VAR_0x8008, \b,
+	callnative ScriptMenu_ScrollingMultichoice
+	waitstate
 	.endm
