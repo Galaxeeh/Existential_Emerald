@@ -287,7 +287,7 @@ OldaleTown_ResourceNPC_Nature::
 	case 22, OldaleTown_ResourceNPC_Sassy
 	case 23, OldaleTown_ResourceNPC_Careful
 	case 24, OldaleTown_ResourceNPC_Quirky
-	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_ComeAgain
+	case MULTI_B_PRESSED, OldaleTown_ResourceNPC_Nature
 
 
 OldaleTown_ResourceNPC_Hardy::
@@ -297,7 +297,7 @@ OldaleTown_ResourceNPC_Hardy::
 	msgbox OldaleTown_ConfirmHardy, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_HARDY
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -311,7 +311,7 @@ OldaleTown_ResourceNPC_Lonely::
 	msgbox OldaleTown_ConfirmLonely, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_LONELY
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -325,7 +325,7 @@ OldaleTown_ResourceNPC_Brave::
 	msgbox OldaleTown_ConfirmBrave, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_BRAVE
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -339,7 +339,7 @@ OldaleTown_ResourceNPC_Adamant::
 	msgbox OldaleTown_ConfirmAdamant, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_ADAMANT
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -353,7 +353,7 @@ OldaleTown_ResourceNPC_Naughty::
 	msgbox OldaleTown_ConfirmNaughty, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_NAUGHTY
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -367,7 +367,7 @@ OldaleTown_ResourceNPC_Bold::
 	msgbox OldaleTown_ConfirmBold, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_BOLD
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -381,7 +381,7 @@ OldaleTown_ResourceNPC_Docile::
 	msgbox OldaleTown_ConfirmDocile, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_DOCILE
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -395,7 +395,7 @@ OldaleTown_ResourceNPC_Relaxed::
 	msgbox OldaleTown_ConfirmRelaxed, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_RELAXED
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -409,7 +409,7 @@ OldaleTown_ResourceNPC_Impish::
 	msgbox OldaleTown_ConfirmImpish, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_IMPISH
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -423,7 +423,7 @@ OldaleTown_ResourceNPC_Lax::
 	msgbox OldaleTown_ConfirmLax, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_LAX
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -437,7 +437,7 @@ OldaleTown_ResourceNPC_Timid::
 	msgbox OldaleTown_ConfirmTimid, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_TIMID
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -451,7 +451,7 @@ OldaleTown_ResourceNPC_Hasty::
 	msgbox OldaleTown_ConfirmHasty, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_HASTY
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -465,7 +465,7 @@ OldaleTown_ResourceNPC_Serious::
 	msgbox OldaleTown_ConfirmSerious, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_SERIOUS
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -479,7 +479,7 @@ OldaleTown_ResourceNPC_Jolly::
 	msgbox OldaleTown_ConfirmJolly, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_JOLLY
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -493,7 +493,7 @@ OldaleTown_ResourceNPC_Naive::
 	msgbox OldaleTown_ConfirmNaive, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_NAIVE
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -507,7 +507,7 @@ OldaleTown_ResourceNPC_Modest::
 	msgbox OldaleTown_ConfirmModest, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_MODEST
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -521,7 +521,7 @@ OldaleTown_ResourceNPC_Mild::
 	msgbox OldaleTown_ConfirmMild, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_MILD
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -535,7 +535,7 @@ OldaleTown_ResourceNPC_Quiet::
 	msgbox OldaleTown_ConfirmQuiet, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_QUIET
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -549,7 +549,7 @@ OldaleTown_ResourceNPC_Bashful::
 	msgbox OldaleTown_ConfirmBashful, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_BASHFUL
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -563,7 +563,7 @@ OldaleTown_ResourceNPC_Rash::
 	msgbox OldaleTown_ConfirmRash, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_RASH
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -577,7 +577,7 @@ OldaleTown_ResourceNPC_Calm::
 	msgbox OldaleTown_ConfirmCalm, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_CALM
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -591,7 +591,7 @@ OldaleTown_ResourceNPC_Gentle::
 	msgbox OldaleTown_ConfirmGentle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_GENTLE
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -605,7 +605,7 @@ OldaleTown_ResourceNPC_Sassy::
 	msgbox OldaleTown_ConfirmSassy, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_SASSY
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -619,7 +619,7 @@ OldaleTown_ResourceNPC_Careful::
 	msgbox OldaleTown_ConfirmCareful, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_CAREFUL
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
@@ -633,7 +633,7 @@ OldaleTown_ResourceNPC_Quirky::
 	msgbox OldaleTown_ConfirmQuirky, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OldaleTown_ResourceNPC_Nature
 	setmonnature NATURE_QUIRKY
-	removeitem ITEM_HEART_SCALE, 3
+	removeitem ITEM_HEART_SCALE, 2
 	playse SE_SAVE
 	msgbox Done, MSGBOX_DEFAULT
 	closemessage
