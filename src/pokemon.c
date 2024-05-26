@@ -906,7 +906,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
 
     if (gSpeciesInfo[species].isStarter)
     {
-        value = MAPSEC_LITTLEROOT_LAB;   
+        value = MAPSEC_LITTLEROOT_LAB;  
     }
     else
     { 

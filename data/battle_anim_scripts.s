@@ -25119,7 +25119,15 @@ SpiderWebThread:
 	return
 
 Move_RAZOR_WIND:
-	choosetwoturnanim RazorWindSetUp, RazorWindUnleash
+	@choosetwoturnanim RazorWindSetUp, RazorWindUnleash
+	loadspritegfx ANIM_TAG_GUST
+	playsewithpan SE_M_GUST, SOUND_PAN_ATTACKER
+	createsprite gRazorWindTornadoSpriteTemplate, ANIM_ATTACKER, 2, 32, 0, 16, 16, 0, 7, 40
+	createsprite gRazorWindTornadoSpriteTemplate, ANIM_ATTACKER, 2, 32, 0, 16, 16, 85, 7, 40
+	createsprite gRazorWindTornadoSpriteTemplate, ANIM_ATTACKER, 2, 32, 0, 16, 16, 170, 7, 40
+	waitforvisualfinish
+	playsewithpan SE_M_GUST2, SOUND_PAN_ATTACKER
+	goto RazorWindUnleash
 RazorWindEnd:
 	waitforvisualfinish
 	end

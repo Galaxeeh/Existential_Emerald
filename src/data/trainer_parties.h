@@ -3617,16 +3617,16 @@ static const struct TrainerMon sParty_Juan1[] = {
 static const struct TrainerMon sParty_Jerry1[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 18,
+    .lvl = 17,
     .species = SPECIES_FRAXURE,
-    .heldItem = ITEM_MUSCLE_BAND,
+    .heldItem = ITEM_LUM_BERRY,
     .ability = ABILITY_MOLD_BREAKER,
     .nature = NATURE_JOLLY,
     .moves = {MOVE_BREAKING_SWIPE, MOVE_X_SCISSOR, MOVE_TRAILBLAZE, MOVE_STOMPING_TANTRUM}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_GRIMER,
     .heldItem = ITEM_QUICK_CLAW,
     .ability = ABILITY_POISON_TOUCH,
@@ -3635,7 +3635,7 @@ static const struct TrainerMon sParty_Jerry1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_VOLTORB_HISUIAN,
     .heldItem = ITEM_LIECHI_BERRY,
     .ability = ABILITY_AFTERMATH,
@@ -3730,7 +3730,7 @@ static const struct TrainerMon sParty_Jerry5[] = {
 static const struct TrainerMon sParty_Karen1[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 18,
+    .lvl = 17,
     .species = SPECIES_TANGELA,
     .heldItem = ITEM_EVIOLITE,
     .ability = ABILITY_LEAF_GUARD,
@@ -3739,7 +3739,7 @@ static const struct TrainerMon sParty_Karen1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_GROWLITHE_HISUIAN,
     .heldItem = ITEM_FOCUS_SASH,
     .ability = ABILITY_INTIMIDATE,
@@ -8477,7 +8477,7 @@ static const struct TrainerMon sParty_Haley1[] = {
 static const struct TrainerMon sParty_Janice[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_GLIMMET,
     .heldItem = ITEM_AIR_BALLOON,
     .ability = ABILITY_TOXIC_DEBRIS,
@@ -8486,7 +8486,7 @@ static const struct TrainerMon sParty_Janice[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_BIBAREL,
     .heldItem = ITEM_LEFTOVERS,
     .ability = ABILITY_SIMPLE,
@@ -8495,7 +8495,7 @@ static const struct TrainerMon sParty_Janice[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_SLIGGOO_HISUIAN,
     .heldItem = ITEM_EVIOLITE,
     .ability = ABILITY_SHELL_ARMOR,
@@ -10001,7 +10001,7 @@ static const struct TrainerMon sParty_Dawson[] = {
 static const struct TrainerMon sParty_Sarah[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_FLAAFFY,
     .heldItem = ITEM_SHUCA_BERRY,
     .ability = ABILITY_STATIC,
@@ -10019,7 +10019,7 @@ static const struct TrainerMon sParty_Sarah[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_DOLLIV,
     .heldItem = ITEM_STARF_BERRY,
     .ability = ABILITY_HARVEST,

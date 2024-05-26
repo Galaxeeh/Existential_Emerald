@@ -253,7 +253,7 @@ OldaleTown_ResourceNPC_Sleep::
 	end
 
 OldaleTown_ResourceNPC_Nature::
-	checkitem ITEM_HEART_SCALE, 3
+	checkitem ITEM_HEART_SCALE, 2
 	goto_if_eq VAR_RESULT, FALSE, NotEnoughHeartScale
 	special ChoosePartyMon
 	waitstate

@@ -418,7 +418,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "A 2-turn move that strikes\n"
             "the foe on the 2nd turn."),
-        .effect = EFFECT_TWO_TURNS_ATTACK,
+        .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_FLYING,
         .accuracy = 100,

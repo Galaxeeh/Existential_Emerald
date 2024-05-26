@@ -365,6 +365,12 @@ u32 ScriptGiveMonParameterized(u16 species, u8 level, u16 item, u8 ball, u8 natu
             abilityNum = Random() % NUM_ABILITY_SLOTS; // includes hidden abilities
         } while (GetAbilityBySpecies(species, abilityNum) == ABILITY_NONE);
     }
+
+    if (gSpeciesInfo[species].isStarter)
+    {
+        abilityNum = 3;
+    }
+
     SetMonData(&mon, MON_DATA_ABILITY_NUM, &abilityNum);
 
     // ball
