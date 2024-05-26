@@ -440,6 +440,19 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(LEAF, Leaf),
     TRAINER_SPRITE(RS_BRENDAN, RubySapphireBrendan),
     TRAINER_SPRITE(RS_MAY, RubySapphireMay),
+    TRAINER_SPRITE(LEADER_BUGSY, LeaderBugsy),
+    TRAINER_SPRITE(LEADER_GIOVANNI, LeaderGiovanni),
+    TRAINER_SPRITE(PLASMA_M, PlasmaM),
+    TRAINER_SPRITE(PLASMA_F, PlasmaF),
+    TRAINER_SPRITE(LEADER_ROXIE, LeaderRoxie),
+    TRAINER_SPRITE(JUPITER, Jupiter),
+    TRAINER_SPRITE(MARS, Mars),
+    TRAINER_SPRITE(SATURN, Saturn),
+    TRAINER_SPRITE(CYRUS, Cyrus),
+    TRAINER_SPRITE(GALACTIC_M, GalacticM),
+    TRAINER_SPRITE(GALACTIC_F, GalacticF),
+    TRAINER_SPRITE(ROCKET_M, RocketM),
+    TRAINER_SPRITE(ROCKET_F, RocketF),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

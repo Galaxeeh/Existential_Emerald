@@ -58,7 +58,7 @@ RustboroCity_OnFrame:
 
 RustboroCity_Bugsy1::
 	lockall
-	playse SE_BANG
+	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Face1
 	applymovement LOCALID_BUGSY, Bugsy_Face1
 	setvar VAR_BUGSY_GYM, 1
@@ -100,7 +100,7 @@ Face1:
 
 RustboroCity_Bugsy2::
 	lockall
-	playse SE_BANG
+	playse SE_PIN
 	setvar VAR_BUGSY_GYM, 1
 	applymovement OBJ_EVENT_ID_PLAYER, Face2
 	applymovement LOCALID_BUGSY, Bugsy_Face2
@@ -142,7 +142,7 @@ Face2:
 
 RustboroCity_Bugsy3::
 	lockall
-	playse SE_BANG
+	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Face3
 	applymovement LOCALID_BUGSY, Bugsy_Face3
 	setvar VAR_BUGSY_GYM, 1
