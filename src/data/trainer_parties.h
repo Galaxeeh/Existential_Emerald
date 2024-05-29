@@ -1681,7 +1681,7 @@ static const struct TrainerMon sParty_Winston1[] = {
     .heldItem = ITEM_MUSCLE_BAND,
     .ability = ABILITY_INTIMIDATE,
     .nature = NATURE_JOLLY,
-    .moves = {MOVE_CRUNCH, MOVE_Covet, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_CRUNCH, MOVE_COVET, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
