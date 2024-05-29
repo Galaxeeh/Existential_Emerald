@@ -2705,7 +2705,7 @@ static const struct TrainerMon sParty_Jeffrey1[] = {
 static const struct TrainerMon sParty_Derek[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 25,
+    .lvl = 23,
     .species = SPECIES_WORMADAM_SANDY_CLOAK,
     .heldItem = ITEM_ROCKY_HELMET,
     .ability = ABILITY_OVERCOAT,
@@ -2714,7 +2714,7 @@ static const struct TrainerMon sParty_Derek[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 25,
+    .lvl = 24,
     .species = SPECIES_WORMADAM_PLANT_CLOAK,
     .heldItem = ITEM_WHITE_HERB,
     .ability = ABILITY_OVERCOAT,
@@ -2723,7 +2723,7 @@ static const struct TrainerMon sParty_Derek[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 25,
+    .lvl = 24,
     .species = SPECIES_WORMADAM_TRASH_CLOAK,
     .heldItem = ITEM_ASSAULT_VEST,
     .ability = ABILITY_OVERCOAT,
