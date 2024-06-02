@@ -150,6 +150,10 @@ Route117_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
 
+Mauville_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
+	end
+
 Route117_EventScript_ItemPoisonBarb::
 	finditem ITEM_POISON_BARB
 	end

@@ -505,11 +505,11 @@ SteveStones_Select2::
 SteveStones_FireStone::
 	msgbox SteveStones_ConfirmFire, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
-	checkitem ITEM_HEART_SCALE, 2
+	checkitem ITEM_HEART_SCALE, 1
 	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
 	giveitem ITEM_FIRE_STONE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	removeitem ITEM_HEART_SCALE, 2
+	removeitem ITEM_HEART_SCALE, 1
 	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
 	waitmessage
 	release	
@@ -518,11 +518,11 @@ SteveStones_FireStone::
 SteveStones_LeafStone::
 	msgbox SteveStones_ConfirmLeaf, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
-	checkitem ITEM_HEART_SCALE, 2
+	checkitem ITEM_HEART_SCALE, 1
 	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
 	giveitem ITEM_LEAF_STONE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	removeitem ITEM_HEART_SCALE, 2
+	removeitem ITEM_HEART_SCALE, 1
 	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
 	waitmessage
 	release	
@@ -531,11 +531,11 @@ SteveStones_LeafStone::
 SteveStones_ThunderStone::
 	msgbox SteveStones_ConfirmThunder, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
-	checkitem ITEM_HEART_SCALE, 2
+	checkitem ITEM_HEART_SCALE, 1
 	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
 	giveitem ITEM_THUNDER_STONE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	removeitem ITEM_HEART_SCALE, 2
+	removeitem ITEM_HEART_SCALE, 1
 	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
 	waitmessage
 	release	
@@ -544,11 +544,11 @@ SteveStones_ThunderStone::
 SteveStones_WaterStone::
 	msgbox SteveStones_ConfirmWater, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SteveStones_Select2
-	checkitem ITEM_HEART_SCALE, 2
+	checkitem ITEM_HEART_SCALE, 1
 	goto_if_eq VAR_RESULT, FALSE, NoHeartScale
 	giveitem ITEM_WATER_STONE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	removeitem ITEM_HEART_SCALE, 2
+	removeitem ITEM_HEART_SCALE, 1
 	msgbox SteveStones_ComeAgain_Text, MSGBOX_DEFAULT
 	waitmessage
 	release	
@@ -567,19 +567,19 @@ SteveStones_ComeAgain_Text:
 
 SteveStones_ConfirmFire:
 	.string "You want a sizzle stone?\n"
-	.string "Only 2 heart scales!$"
+	.string "Only 1 heart scale!$"
 
 SteveStones_ConfirmLeaf:
 	.string "You want an herb stone?\n"
-	.string "Only 2 heart scales!$"
+	.string "Only 1 heart scale!$"
 
 SteveStones_ConfirmThunder:
 	.string "You want a circuit stone?\n"
-	.string "Only 2 heart scales!$"
+	.string "Only 1 heart scale!$"
 
 SteveStones_ConfirmWater:
 	.string "You want a gushy stone?\n"
-	.string "Only 2 heart scales!$"
+	.string "Only 1 heart scale!$"
 
 MauvilleCity_Text_UncleHesTooPeppy:
 	.string "UNCLE: It's because of POKéMON that\n"
