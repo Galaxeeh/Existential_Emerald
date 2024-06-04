@@ -19899,7 +19899,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Aqua Punch"),
         .description = COMPOUND_STRING(
-            "An liquified punch that\n"
+            "A liquified punch that\n"
             "may lower speed."),
         .effect = EFFECT_HIT,
         .power = 75,

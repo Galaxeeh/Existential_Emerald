@@ -8,7 +8,7 @@
     F(BUG_BITE) \
     F(ROAR) \
     F(TOXIC) \
-    F(HAIL) \
+    F(POISON_JAB) \
     F(BULK_UP) \
     F(BULLET_SEED) \
     F(HIDDEN_POWER) \

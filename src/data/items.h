@@ -3215,9 +3215,9 @@ static const u8 sTM06Desc[] = _(
     "gradually worsens.");
 
 static const u8 sTM07Desc[] = _(
-    "Creates a hailstorm\n"
-    "that damages all\n"
-    "types except Ice.");
+    "Stabs the foe with\n"
+    "a posioned limb.\n"
+    "May cause poison.");
 
 static const u8 sTM08Desc[] = _(
     "Bulks up the body\n"
@@ -13118,7 +13118,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_TOXIC,
     },
 
-    [ITEM_TM_HAIL] =
+    [ITEM_TM_POISON_JAB] =
     {
         .name = _("TM07"),
         .price = 3000,
@@ -13127,7 +13127,7 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_HAIL,
+        .secondaryId = MOVE_POISON_JAB,
     },
 
     [ITEM_TM_BULK_UP] =

@@ -205,7 +205,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	msgbox MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis, MSGBOX_DEFAULT
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
-	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE02_GET
 	clearflag FLAG_UNLOCK_WINSTRATES
 	clearflag FLAG_HIDE_111_TRAINERS
 	setflag FLAG_SHOW_111_TRAINERS
@@ -232,7 +232,7 @@ MauvilleCity_Gym_EventScript_GiveShockWave2::
 	end
 
 MauvilleCity_Gym_EventScript_GiveShockWave::
-	giveitem ITEM_TM_SHOCK_WAVE
+	giveitem ITEM_TM_POISON_JAB
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	msgbox MauvilleCity_Gym_Text_ExplainShockWave, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_SHOCK_WAVE
@@ -587,10 +587,13 @@ MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "You should take this, too!$"
 
 MauvilleCity_Gym_Text_ExplainShockWave:
-	.string "That TM there contains -----.\p"
-	.string "It's a trustworthy move that never\n"
-	.string "misses! You can count on it!\p"
-	.string "… … … … … …$"
+	.string "That TM there contains Poison Jab.\p"
+	.string "It's a hard hitting move\n"
+	.string "that can really corrode your enemies!\p"
+	.string "You should head towards Lavaridge.\n"
+	.string "Kiawe is eager to fight anyone that\p"
+	.string "can best me!$"
+
 
 MauvilleCity_Gym_Text_RegisteredWattson:
 	.string "Registered GYM LEADER WATTSON\n"
