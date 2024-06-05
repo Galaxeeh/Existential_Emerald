@@ -3514,26 +3514,26 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     {
         .name = COMPOUND_STRING("Sky Attack"),
         .description = COMPOUND_STRING(
-            "Searches out weak spots,\n"
-            "then strikes the next turn."),
-        .effect = EFFECT_TWO_TURNS_ATTACK,
+            "A flying charge. If it\n"
+            "misses, the user is hurt."),
+        .effect = EFFECT_RECOIL_IF_MISS,
         .power = 140,
         .type = TYPE_FLYING,
         .accuracy = 90,
-        .pp = 5,
+        .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .criticalHitStage = B_UPDATED_MOVE_DATA >= GEN_3,
-        .sleepTalkBanned = TRUE,
-        .instructBanned = TRUE,
-        .argument = TWO_TURN_ARG(B_UPDATED_MOVE_DATA >= GEN_4 ? STRINGID_CLOAKEDINAHARSHLIGHT : STRINGID_PKMNISGLOWING),
-    #if B_UPDATED_MOVE_DATA >= GEN_3
+        .sleepTalkBanned = FALSE,
+        .instructBanned = FALSE,
+        //.argument = TWO_TURN_ARG(B_UPDATED_MOVE_DATA >= GEN_4 ? STRINGID_CLOAKEDINAHARSHLIGHT : STRINGID_PKMNISGLOWING),
+    /*#if B_UPDATED_MOVE_DATA >= GEN_3
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_FLINCH,
             .chance = 30,
         }),
-    #endif
+    #endif*/
         .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -9448,11 +9448,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "Forms a veil of water\n"
             "that restores HP."),
-        .effect = EFFECT_AQUA_RING,
+        .effect = EFFECT_RESTORE_HP,
         .power = 0,
         .type = TYPE_WATER,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 3,
         .target = MOVE_TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,

@@ -20398,7 +20398,12 @@ Move_BARRAGE:
 	end
 
 Move_SKY_ATTACK:
-	choosetwoturnanim SkyAttackSetUp, SkyAttackUnleash
+	@choosetwoturnanim SkyAttackSetUp, SkyAttackUnleash
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 11
+	createvisualtask AnimTask_GetTargetIsAttackerPartner, 5, ARG_RET_ID
+	jumpretfalse SkyAttackSetUpAgainstOpponent
+	goto SkyAttackSetUpAgainstPartner
 SkyAttackEnd:
 	end
 SkyAttackSetUp:
