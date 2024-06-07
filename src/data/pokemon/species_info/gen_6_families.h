@@ -2780,7 +2780,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_POISON_POINT, ABILITY_POISON_TOUCH, ABILITY_ADAPTABILITY },
+        .abilities = { ABILITY_POISON_POINT, ABILITY_POISON_POINT, ABILITY_POISON_TOUCH },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Skrelp"),
         .cryId = CRY_SKRELP,
@@ -2813,7 +2813,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         FOOTPRINT(Skrelp)
         .levelUpLearnset = sSkrelpLevelUpLearnset,
         .teachableLearnset = sSkrelpTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 48, SPECIES_DRAGALGE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_DRAGALGE}),
     },
 
     [SPECIES_DRAGALGE] =
@@ -2833,7 +2833,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_POISON_POINT, ABILITY_POISON_TOUCH, ABILITY_ADAPTABILITY },
+        .abilities = { ABILITY_POISON_POINT, ABILITY_ADAPTABILITY, ABILITY_POISON_TOUCH },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Dragalge"),
         .cryId = CRY_DRAGALGE,
