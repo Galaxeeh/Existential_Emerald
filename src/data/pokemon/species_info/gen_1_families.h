@@ -11994,7 +11994,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_SOUNDPROOF, ABILITY_FILTER, ABILITY_TECHNICIAN },
+        .abilities = { ABILITY_SOUNDPROOF, ABILITY_TECHNICIAN, ABILITY_FILTER },
         .bodyColor = BODY_COLOR_PINK,
         .isEggGift = TRUE,
         .speciesName = _("Mime Jr."),
@@ -12028,7 +12028,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         FOOTPRINT(MimeJr)
         .levelUpLearnset = sMimeJrLevelUpLearnset,
         .teachableLearnset = sMimeJrTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_MOVE, MOVE_MIMIC, SPECIES_MR_MIME},
+        .evolutions = EVOLUTION({EVO_MOVE, MOVE_ROLE_PLAY, SPECIES_MR_MIME},
                                 {EVO_NONE, 0, SPECIES_MR_MIME_GALARIAN}),
     },
 #endif //P_GEN_4_CROSS_EVOS
@@ -12050,7 +12050,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_SOUNDPROOF, ABILITY_FILTER, ABILITY_TECHNICIAN },
+        .abilities = { ABILITY_SOUNDPROOF, ABILITY_TECHNICIAN, ABILITY_FILTER },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Mr. Mime"),
         .cryId = CRY_MR_MIME,

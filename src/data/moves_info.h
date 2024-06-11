@@ -5125,7 +5125,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "An attack that intensifies\n"
             "on each successive hit."),
         #if B_UPDATED_MOVE_DATA >= GEN_6
-            .power = 40,
+            .power = 25,
         #elif B_UPDATED_MOVE_DATA >= GEN_5
             .power = 20,
         #else

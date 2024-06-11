@@ -1151,7 +1151,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_HUSTLE, ABILITY_SERENE_GRACE, ABILITY_SUPER_LUCK },
+        .abilities = { ABILITY_SUPER_LUCK, ABILITY_SERENE_GRACE, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_WHITE,
         .isEggGift = TRUE,
         .speciesName = _("Togepi"),
@@ -1185,7 +1185,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         FOOTPRINT(Togepi)
         .levelUpLearnset = sTogepiLevelUpLearnset,
         .teachableLearnset = sTogepiTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_FRIENDSHIP, 0, SPECIES_TOGETIC}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_TOGETIC}),
     },
 
     [SPECIES_TOGETIC] =
@@ -1205,7 +1205,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_FAIRY),
-        .abilities = { ABILITY_HUSTLE, ABILITY_SERENE_GRACE, ABILITY_SUPER_LUCK },
+        .abilities = { ABILITY_SUPER_LUCK, ABILITY_SERENE_GRACE, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Togetic"),
         .cryId = CRY_TOGETIC,
@@ -1266,7 +1266,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING, EGG_GROUP_FAIRY),
-        .abilities = { ABILITY_HUSTLE, ABILITY_SERENE_GRACE, ABILITY_SUPER_LUCK },
+        .abilities = { ABILITY_SUPER_LUCK, ABILITY_SERENE_GRACE, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = TRUE,
         .speciesName = _("Togekiss"),
