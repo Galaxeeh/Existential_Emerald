@@ -3156,7 +3156,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         FOOTPRINT(Sizzlipede)
         .levelUpLearnset = sSizzlipedeLevelUpLearnset,
         .teachableLearnset = sSizzlipedeTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_CENTISKORCH}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 27, SPECIES_CENTISKORCH}),
     },
 
     [SPECIES_CENTISKORCH] =

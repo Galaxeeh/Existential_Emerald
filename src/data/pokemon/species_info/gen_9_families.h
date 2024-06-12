@@ -1711,7 +1711,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         //FOOTPRINT(Nacli)
         .levelUpLearnset = sNacliLevelUpLearnset,
         .teachableLearnset = sNacliTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_NACLSTACK}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 17, SPECIES_NACLSTACK}),
     },
 
     [SPECIES_NACLSTACK] =

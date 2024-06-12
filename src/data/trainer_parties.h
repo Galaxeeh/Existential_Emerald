@@ -9994,7 +9994,7 @@ static const struct TrainerMon sParty_Dawson[] = {
     .heldItem = ITEM_SAFETY_GOGGLES,
     .ability = ABILITY_STATIC,
     .nature = NATURE_LAX,
-    .moves = {MOVE_DUAL_WINGBEAT, MOVE_VOLT_SWITCH, MOVE_U_TURN, MOVE_KNOCK_OFF}
+    .moves = {MOVE_DUAL_WINGBEAT, MOVE_RISING_VOLTAGE, MOVE_U_TURN, MOVE_KNOCK_OFF}
     }
 };
 
