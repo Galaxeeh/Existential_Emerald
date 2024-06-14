@@ -1145,7 +1145,7 @@ RustboroCity_EventScript_BattleMay::
 
 RustboroCity_EventScript_MayBrineyHint::
 	msgbox RustboroCity_Text_MayMrBrineyHint, MSGBOX_DEFAULT
-	call_if_eq VAR_0x8008, 0, RustboroCity_EventScript_RestoreBgm
+	call RustboroCity_EventScript_RestoreBgm
 	releaseall
 	end
 
@@ -1230,7 +1230,7 @@ RustboroCity_EventScript_BattleBrendan::
 
 RustboroCity_EventScript_BrendanBrineyHint::
 	msgbox RustboroCity_Text_BrendanMrBrineyHint, MSGBOX_DEFAULT
-	call_if_eq VAR_0x8008, 0, RustboroCity_EventScript_RestoreBgm
+	call RustboroCity_EventScript_RestoreBgm
 	releaseall
 	end
 
@@ -1518,8 +1518,8 @@ RustboroCity_Text_MayWantToBattle:
 	.string "How about a little battle here?$"
 
 RustboroCity_Text_MayImNotGoingToLose:
-	.string "So, what do you think?\n"
-	.string "How about a little battle here?$"
+	.string "Okay!\n"
+	.string "I'm not going to lose!$"
 
 RustboroCity_Text_MayDefeat:
 	.string "Yikes!\n"

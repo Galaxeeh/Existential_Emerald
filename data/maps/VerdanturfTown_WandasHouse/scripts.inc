@@ -41,6 +41,7 @@ VerdanturfTown_WandasHouse_EventScript_WandasBoyfriend::
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	giveitem ITEM_HM_ROCK_SMASH
 	msgbox ExplainRockSmash, MSGBOX_DEFAULT
+	release
 	end
 
 VerdanturfTown_WandasHouse_EventScript_WandasBoyfriend2:
@@ -147,15 +148,16 @@ VerdanturfTown_WandasHouse_Text_CanSeeGirlfriendEveryDay:
 	.string "Happy? You bet I am!$"
 
 VerdanturfTown_WandasHouse_Text_RockSmash:
-	.string "I really appreciate you dealing with that\n"
-	.string "plasma goon.\p"
+	.string "I really appreciate you dealing\n"
+	.string "with that plasma goon.\p"
 	.string "You inspired me to push myself further!\n"
-	.string "Because of that I was able to clear the rocks\l"
-	.string "in Rusturf Tunnel with this new technique!$"
+	.string "Because of that I was able to clear\l"
+	.string "the rocks in Rusturf Tunnel.\p"
+	.string "I'll show you my technique!$"
 
 ExplainRockSmash:
-	.string "Teach that to a pokemon and they'll be bustin\n"
-	.string "up rocks just like me!$"
+	.string "Teach that to a pokemon and they'll be\n"
+	.string "bustin' up rocks just like me!$"
 
 VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendDriven:
 	.string "My daughter's boyfriend is a very\n"
