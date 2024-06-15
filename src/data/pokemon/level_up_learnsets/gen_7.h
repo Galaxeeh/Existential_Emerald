@@ -22476,6 +22476,7 @@ static const struct LevelUpMove sPawmoLevelUpLearnset[] = {
 static const struct LevelUpMove sPawmotLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_LOW_SWEEP),
     LEVEL_UP_MOVE( 1, MOVE_FIRE_PUNCH),
+    LEVEL_UP_MOVE( 1, MOVE_ICE_PUNCH),
     LEVEL_UP_MOVE( 1, MOVE_THROAT_CHOP),
     LEVEL_UP_MOVE( 1, MOVE_ARM_THRUST),
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
