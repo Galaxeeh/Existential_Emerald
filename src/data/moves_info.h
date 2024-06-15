@@ -17394,7 +17394,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Gliding on ground, hits. Goes\n"
             "first on Grassy Terrain."),
         .effect = EFFECT_GRASSY_GLIDE,
-        .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 55 : 70,
+        .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 60 : 70,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 20,
