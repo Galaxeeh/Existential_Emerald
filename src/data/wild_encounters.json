@@ -553,27 +553,22 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_HORSEA"
+                "species": "SPECIES_KABUTO"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_HORSEA"
+                "species": "SPECIES_OMANYTE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CARVANHA"
+                "species": "SPECIES_TIRTOUGA"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CARVANHA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_CARVANHA"
+                "species": "SPECIES_TIRTOUGA"
               },
               {
                 "min_level": 5,
@@ -598,7 +593,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_BUIZEL"
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_HORSEA"
               }
             ]
           }
@@ -11731,6 +11731,11 @@
               {
                 "min_level": 2,
                 "max_level": 3,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 2,
+                "max_level": 3,
                 "species": "SPECIES_KRABBY"
               },
               {
@@ -11741,17 +11746,12 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_LOTAD"
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_LOTAD"
-              },
-              {
-                "min_level": 2,
-                "max_level": 3,
-                "species": "SPECIES_LOTAD"
+                "species": "SPECIES_BINACLE"
               },
               {
                 "min_level": 2,
