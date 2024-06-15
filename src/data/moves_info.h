@@ -1064,7 +1064,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "A toxic attack with barbs,\n"
             "etc., that may poison."),
         .effect = EFFECT_HIT,
-        .power = 35,
+        .power = 45,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 35,
@@ -17304,7 +17304,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_MULTI_HIT,
         .power = 25,
         .type = TYPE_DRAGON,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
