@@ -8516,9 +8516,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_SARAH] =
     {
-        .trainerClass = TRAINER_CLASS_LADY,
+        .trainerClass = TRAINER_CLASS_BEAUTY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_LADY,
+        .trainerPic = TRAINER_PIC_BEAUTY,
         .trainerName = _("Sarah"),
         .items = {},
         .doubleBattle = FALSE,
@@ -9818,9 +9818,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ANGELO] =
     {
-        .trainerClass = TRAINER_CLASS_POKEMANIAC,
+        .trainerClass = TRAINER_CLASS_COLLECTOR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_POKEMANIAC,
+        .trainerPic = TRAINER_PIC_COLLECTOR,
         .trainerName = _("Angelo"),
         .items = {},
         .doubleBattle = TRUE,

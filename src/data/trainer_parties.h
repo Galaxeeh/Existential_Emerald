@@ -3838,16 +3838,16 @@ static const struct TrainerMon sParty_KateAndJoy[] = {
 static const struct TrainerMon sParty_AnnaAndMeg1[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 25,
+    .lvl = 24,
     .species = SPECIES_PLUSLE,
     .heldItem = ITEM_LIFE_ORB,
     .ability = ABILITY_PLUS,
     .nature = NATURE_MODEST,
-    .moves = {MOVE_THUNDERBOLT, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER_FIRE, MOVE_ALLURING_VOICE}
+    .moves = {MOVE_THUNDERBOLT, MOVE_GRASS_KNOT, MOVE_HIDDEN_POWER_FIRE, MOVE_SIGNAL_BEAM}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 25,
+    .lvl = 24,
     .species = SPECIES_MINUN,
     .heldItem = ITEM_ROCKY_HELMET,
     .ability = ABILITY_MINUS,
@@ -3856,16 +3856,16 @@ static const struct TrainerMon sParty_AnnaAndMeg1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 24,
+    .lvl = 23,
     .species = SPECIES_PURUGLY,
     .heldItem = ITEM_CHOPLE_BERRY,
     .ability = ABILITY_DEFIANT,
     .nature = NATURE_JOLLY,
-    .moves = {MOVE_BODY_SLAM, MOVE_KNOCK_OFF, MOVE_PLAY_ROUGH, MOVE_HONE_CLAWS}
+    .moves = {MOVE_BODY_SLAM, MOVE_KNOCK_OFF, MOVE_PLAY_ROUGH, MOVE_FAKE_TEARS}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 24,
+    .lvl = 23,
     .species = SPECIES_THIEVUL,
     .heldItem = ITEM_RED_CARD,
     .ability = ABILITY_STAKEOUT,
@@ -9319,7 +9319,7 @@ static const struct TrainerMon sParty_WallyMauville[] = {
     .heldItem = ITEM_LIFE_ORB,
     .ability = ABILITY_MOLD_BREAKER,
     .nature = NATURE_JOLLY,
-    .moves = {MOVE_PLAY_ROUGH, MOVE_FOUL_PLAY, MOVE_ICE_HAMMER, MOVE_SUBMISSION}
+    .moves = {MOVE_PLAY_ROUGH, MOVE_KNOCK_OFF, MOVE_ICE_HAMMER, MOVE_SUBMISSION}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -10698,7 +10698,7 @@ static const struct TrainerMon sParty_Melina[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 23,
+    .lvl = 24,
     .species = SPECIES_SPINDA,
     .heldItem = ITEM_BERSERK_GENE,
     .ability = ABILITY_TANGLED_FEET,
@@ -10758,7 +10758,7 @@ static const struct TrainerMon sParty_Aisha[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 23,
+    .lvl = 24,
     .species = SPECIES_PAWMO,
     .heldItem = ITEM_PUNCHING_GLOVE,
     .ability = ABILITY_IRON_FIST,
