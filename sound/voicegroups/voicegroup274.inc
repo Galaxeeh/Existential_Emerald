@@ -18,7 +18,7 @@ voicegroup274:: @ BW basic
 	voice_keysplit voicegroup248, KeySplitTable41	@ folk guitar
 	voice_keysplit voicegroup249, KeySplitTable32	@ distortion guitar
 	voice_keysplit voicegroupInst17, KeySplitTable73	@ marschall guitar
-	voice_keysplit voicegroup251, KeySplitTable41	@ clean guitar
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_organ2, 255, 0, 255, 127	@voice_keysplit voicegroup251, KeySplitTable41	@ clean guitar
 	voice_keysplit voicegroup252, KeySplitTable42	@ upright bass
 	voice_keysplit voicegroup253, KeySplitTable43	@ fingered bass
 	voice_directsound 60, 0, DirectSoundWaveData_dp_slapbass_c1_16, 255, 0, 255, 197	@ 127/127/127/118/ 64
@@ -33,31 +33,31 @@ voicegroup274:: @ BW basic
 	voice_keysplit voicegroup249, KeySplitTable32	@ distortion guitar
 	voice_keysplit voicegroup264, KeySplitTable78	@ french horns
 	voice_directsound 60, 0, DirectSoundWaveData_bw_electric_bass_e2, 255, 233, 191, 197	@ 127/110/110/118/ 64
-	voice_keysplit voicegroup265, KeySplitTable51	@ oboe
-	voice_keysplit voicegroup266, KeySplitTable52	@ clarinet
+	voice_keysplit voicegroup253, KeySplitTable43	@ fingered bass	@voice_keysplit voicegroup265, KeySplitTable51	@ oboe
+	voice_directsound 60, 0, DirectSoundWaveData_bw_electric_bass_e2, 255, 233, 191, 197	@ 127/110/110/118/ 64	@voice_keysplit voicegroup266, KeySplitTable52	@ clarinet
 	voice_keysplit voicegroup267, KeySplitTable53	@ flute 1
 	voice_keysplit voicegroupInst37, KeySplitTable88	@ flute 2
 	voice_directsound 60, 0, DirectSoundWaveData_bw_orch_hit_c5, 255, 250, 2, 208	@ 127/ 70/ 10/116/ 64
-	voice_keysplit voicegroupInst27, KeySplitTable115	@ harp 2
+	voice_keysplit voicegroup254, KeySplitTable44	@ synth bass	@voice_keysplit voicegroupInst27, KeySplitTable115	@ harp 2
 	voice_keysplit_all voicegroupDrum1				@ standard kit
-	voice_keysplit_all voicegroupDrum2				@ tr-909 kit
+	voice_keysplit voicegroup213, KeySplitTable24	@ violin	@voice_keysplit_all voicegroupDrum2				@ tr-909 kit
 	voice_keysplit_all voicegroupDrum3				@ room kit
 	voice_directsound 60, 0, DirectSoundWaveData_bw_french_horn_ensemble_c3, 255, 216, 219, 208	@ 127/117/118/116/ 64
 	voice_keysplit voicegroupInst34, KeySplitTable22	@ tuba
 	voice_keysplit voicegroup265, KeySplitTable101	@ oboe 2
-	voice_keysplit voicegroupInst22, KeySplitTable95	@ slap bass
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_pizzicato_strings, 255, 216, 0, 165	@voice_keysplit voicegroupInst22, KeySplitTable95	@ slap bass
 	voice_directsound 60, 0, DirectSoundWaveData_bw_orchestra_strings_f2, 255, 242, 191, 208	@ 127/100/110/116/ 64
 	voice_keysplit voicegroup260, KeySplitTable40	@ timpani
 	voice_keysplit voicegroup255, KeySplitTable45	@ strings
 	voice_keysplit voicegroupInst24, KeySplitTable96	@ strings 2
 	voice_keysplit voicegroupInst40, KeySplitTable93	@ saxophone
 	voice_directsound 60, 0, DirectSoundWaveData_bw_trombone_stab_cs2, 255, 197, 227, 208	@ 127/120/120/116/ 64
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
+	voice_directsound 60, 0, DirectSoundWaveData_bw_choir_aahs_a3, 255, 242, 191, 197	@ 127/100/110/118/ 64
 	voice_directsound 60, 0, DirectSoundWaveData_purenoise, 255, 0, 255, 178	@ 125/127/127/120/ 64
 	voice_directsound 60, 0, DirectSoundWaveData_bw_ocean_waves_sfx_c4, 255, 0, 255, 0	@ 127/127/127/127/ 64
 	voice_keysplit voicegroupInst24, KeySplitTable96	@ strings 2
 	voice_keysplit voicegroupInst57, KeySplitTable80	@ underwater sfx
-	voice_keysplit voicegroupInst44, KeySplitTable35	@ piano 2
+	voice_keysplit voicegroup220, KeySplitTable30	@ trombone	@voice_keysplit voicegroupInst44, KeySplitTable35	@ piano 2
 	voice_keysplit voicegroup247, KeySplitTable41	@ nylon guitar 2
 	voice_directsound 60, 0, DirectSoundWaveData_bw_electronic_organ_c5, 255, 0, 255, 208	@ 127/127/127/116/ 64
 	voice_keysplit voicegroup264, KeySplitTable78	@ french horns
@@ -71,9 +71,9 @@ voicegroup274:: @ BW basic
 	voice_keysplit voicegroupInst6, KeySplitTable100	@ vibraphone 2
 	voice_directsound 60, 0, DirectSoundWaveData_bw_vibraphone_soft_c5, 255, 249, 2, 208	@ 127/ 80/ 10/116/ 64
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gong1_c4, 255, 252, 0, 237	@ 127/ 45/  1/100/ 64
+	voice_keysplit voicegroupInst36, KeySplitTable52	@ clarinet
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
+	voice_keysplit voicegroup267, KeySplitTable53	@ flute 1	@voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_keysplit voicegroupInst37, KeySplitTable88	@ flute 2
 	voice_keysplit voicegroup267, KeySplitTable53	@ flute 1
 	voice_directsound 60, 0, DirectSoundWaveData_bw_steel_drum_g4, 255, 252, 0, 208	@ 127/ 50/  1/116/ 64
@@ -99,7 +99,7 @@ voicegroup274:: @ BW basic
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
+	voice_keysplit voicegroup208, KeySplitTable19	@ acoustic guitar	@voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_keysplit voicegroupInst48, KeySplitTable62	@ male choir
 	voice_keysplit voicegroupInst62, KeySplitTable38	@ resonant synth
@@ -114,7 +114,7 @@ voicegroup274:: @ BW basic
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
+	voice_directsound 60, 0, DirectSoundWaveData_bw_steel_drum_g4, 255, 252, 0, 208	@ 127/ 50/  1/116/ 64	@ steel drum
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0	@ dummy

@@ -78189,6 +78189,7 @@
       "MOVE_TERA_BLAST",
       "MOVE_SMACK_DOWN",
       "MOVE_METEOR_BEAM",
+      "MOVE_ROCK_BLAST",
       "MOVE_CURSE"
     ],
     "EggMoves": [
@@ -78298,6 +78299,7 @@
       "MOVE_SMACK_DOWN",
       "MOVE_DOUBLE_EDGE",
       "MOVE_METEOR_BEAM",
+      "MOVE_ROCK_BLAST",
       "MOVE_CURSE"
     ],
     "EggMoves": [
@@ -78433,6 +78435,7 @@
       "MOVE_FOCUS_PUNCH",
       "MOVE_DOUBLE_EDGE",
       "MOVE_METEOR_BEAM",
+      "MOVE_ROCK_BLAST",
       "MOVE_CURSE",
       "MOVE_HARD_PRESS"
     ],
