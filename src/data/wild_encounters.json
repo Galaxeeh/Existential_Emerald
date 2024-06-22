@@ -12319,27 +12319,12 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_INKAY"
-              },
-              {
-                "min_level": 14,
-                "max_level": 16,
-                "species": "SPECIES_INKAY"
-              },
-              {
-                "min_level": 14,
-                "max_level": 16,
-                "species": "SPECIES_INKAY"
-              },
-              {
-                "min_level": 14,
-                "max_level": 16,
-                "species": "SPECIES_VELUZA"
-              },
-              {
-                "min_level": 14,
-                "max_level": 16,
                 "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE_GALARIAN"
               },
               {
                 "min_level": 14,
@@ -12354,7 +12339,7 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_BRUXISH"
+                "species": "SPECIES_VELUZA"
               },
               {
                 "min_level": 14,
@@ -12364,7 +12349,22 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_BRUXISH"
+                "species": "SPECIES_INKAY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_INKAY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_INKAY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_INKAY"
               }
             ]
           }
