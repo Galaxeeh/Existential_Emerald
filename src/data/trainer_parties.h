@@ -9323,7 +9323,7 @@ static const struct TrainerMon sParty_WallyMauville[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 21,
+    .lvl = 22,
     .species = SPECIES_GALLADE,
     .heldItem = ITEM_ROCKY_HELMET,
     .ability = ABILITY_SHARPNESS,
