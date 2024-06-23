@@ -7202,7 +7202,7 @@ static const struct TrainerMon sParty_MayRoute119Rattata[] = {
 static const struct TrainerMon sParty_Isaac1[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_ARROKUDA,
     .heldItem = ITEM_MYSTIC_WATER,
     .ability = ABILITY_SWIFT_SWIM,
@@ -7211,7 +7211,7 @@ static const struct TrainerMon sParty_Isaac1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_CHARCADET,
     .heldItem = ITEM_FOCUS_SASH,
     .ability = ABILITY_FLAME_BODY,
@@ -7220,7 +7220,7 @@ static const struct TrainerMon sParty_Isaac1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_FOMANTIS,
     .heldItem = ITEM_BRIGHT_POWDER,
     .ability = ABILITY_CONTRARY,
@@ -7229,7 +7229,7 @@ static const struct TrainerMon sParty_Isaac1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_WATTREL,
     .heldItem = ITEM_WIKI_BERRY,
     .ability = ABILITY_VOLT_ABSORB,
@@ -7238,7 +7238,7 @@ static const struct TrainerMon sParty_Isaac1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_EKANS,
     .heldItem = ITEM_AIR_BALLOON,
     .ability = ABILITY_INTIMIDATE,
@@ -7411,7 +7411,7 @@ static const struct TrainerMon sParty_Isaac5[] = {
 static const struct TrainerMon sParty_Lydia1[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_WIMPOD,
     .heldItem = ITEM_FOCUS_SASH,
     .ability = ABILITY_WIMP_OUT,
@@ -7420,7 +7420,7 @@ static const struct TrainerMon sParty_Lydia1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 32,
+    .lvl = 29,
     .species = SPECIES_TOXEL,
     .heldItem = ITEM_SITRUS_BERRY,
     .ability = ABILITY_STATIC,
@@ -7429,7 +7429,7 @@ static const struct TrainerMon sParty_Lydia1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_GOSSIFLEUR,
     .heldItem = ITEM_BERRY_JUICE,
     .ability = ABILITY_COTTON_DOWN,
@@ -7438,7 +7438,7 @@ static const struct TrainerMon sParty_Lydia1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_VULPIX,
     .heldItem = ITEM_GHOST_GEM,
     .ability = ABILITY_FLASH_FIRE,
@@ -7456,7 +7456,7 @@ static const struct TrainerMon sParty_Lydia1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 30,
+    .lvl = 29,
     .species = SPECIES_SMOOCHUM,
     .heldItem = ITEM_WISE_GLASSES,
     .ability = ABILITY_OBLIVIOUS,
