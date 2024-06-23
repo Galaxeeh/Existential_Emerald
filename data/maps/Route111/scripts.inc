@@ -627,6 +627,10 @@ Route111_EventScript_TrainerHillSign::
 	msgbox Route111_Text_TrainerHillSign, MSGBOX_SIGN
 	end
 
+Route111_ThankYou_Man::
+	msgbox Route111_ThankYou, MSGBOX_NPC
+	end
+
 Route111_Text_BattleOurFamily:
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
@@ -697,9 +701,9 @@ Route111_Text_ToughToKeepWinningUpTheRanks:
 	.string "any GYM LEADER.$"
 
 Route111_Text_WinstrateFamilyDestroyedMe:
-	.string "I challenged the WINSTRATE family,\n"
-	.string "but four matches in a row is tough\l"
-	.string "going… They destroyed me.$"
+	.string "No one is allowed inside the\n"
+	.string "headquarters right now.\l"
+	.string "Get lost punk.$"
 
 Route111_Text_RouteSignMauville:
 	.string "ROUTE 111\n"
@@ -798,4 +802,11 @@ Route111_Text_TyronPreBattle:
 
 Route111_Text_CelinaPreBattle:
 	.string "Leave us alone we're busy!$"
+
+Route111_ThankYou:
+	.string "Thank you for playing\n"
+	.string "Existential Emerald!\p"
+	.string "The full game will be released\n"
+	.string "whenever I feel like finishing.\l"
+	.string "HOHOHOHOHOHOHO!$"
 
