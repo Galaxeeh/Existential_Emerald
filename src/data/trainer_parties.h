@@ -1699,7 +1699,7 @@ static const struct TrainerMon sParty_Winston1[] = {
     .heldItem = ITEM_ORAN_BERRY,
     .ability = ABILITY_STATIC,
     .nature = NATURE_CALM,
-    .moves = {MOVE_CHARGE, MOVE_CHARGE_BEAM, MOVE_BODY_SLAM, MOVE_NONE}
+    .moves = {MOVE_CHARGE_BEAM, MOVE_SWIFT, MOVE_BODY_SLAM, MOVE_NONE}
     }
 };
 
@@ -8753,16 +8753,16 @@ static const struct TrainerMon sParty_Kent[] = {
 static const struct TrainerMon sParty_James1[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_BUTTERFREE,
     .heldItem = ITEM_FOCUS_SASH,
     .ability = ABILITY_COMPOUND_EYES,
     .nature = NATURE_TIMID,
-    .moves = {MOVE_SLEEP_POWDER, MOVE_CONFUSION, MOVE_GUST, MOVE_NONE}
+    .moves = {MOVE_SLEEP_POWDER, MOVE_CONFUSION, MOVE_GUST, MOVE_MEGA_DRAIN}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 12,
+    .lvl = 13,
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_COBA_BERRY,
     .ability = ABILITY_SWARM,
