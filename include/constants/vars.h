@@ -120,7 +120,7 @@
 #define VAR_ROXIE_STAGE                                  0x4064 // RoxieTrigger
 #define VAR_SECURITY                                     0x4065 // Roxie Security Guards
 #define VAR_RIVAL_TRIGGER                                0x4066 // Rustboro Rival Position Trigger
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
+#define VAR_MASTERBALL                                   0x4067 // Masterball Clause
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_ROUTE111_STATE                               0x406A // Unused Var

@@ -16,12 +16,18 @@ InsideOfTruck_OnResume:
 InsideOfTruck_EventScript_SetIntroFlags::
 	lockall
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-	checkplayergender
 	special NameRival
 	waitstate
+	msgbox MasterBallz_Text, MSGBOX_YESNO
+	call_if_eq VAR_RESULT, TRUE, MasterBallz
+	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_SetIntroFlagsMale
 	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_SetIntroFlagsFemale
 	end
+
+MasterBallz::
+	setvar VAR_MASTERBALL, 1
+	return
 
 InsideOfTruck_EventScript_SetIntroFlagsMale::
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
@@ -57,4 +63,8 @@ InsideOfTruck_Text_BoxPrintedWithMonLogo:
 	.string "The box is printed with a POKéMON logo.\p"
 	.string "It's a POKéMON brand moving and\n"
 	.string "delivery service.$"
+
+MasterBallz_Text:
+	.string "Would you like to play with\n"
+	.string "Masterball clause?$"
 
