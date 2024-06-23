@@ -422,7 +422,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .power = 65,
         .type = TYPE_FLYING,
         .accuracy = 100,
-        .criticalHitStage = 1,
         .pp = 10,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
