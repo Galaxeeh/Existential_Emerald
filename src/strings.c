@@ -1312,7 +1312,7 @@ const u8 gText_SavingDontTurnOff_Chat[] = _("SAVING…\nDON'T TURN OFF THE POWER
 const u8 gText_PlayerSavedGame_Chat[] = _("{DYNAMIC 0} saved the game.");
 const u8 gText_IfLeaderLeavesChatEnds[] = _("If the LEADER leaves, the chat\nwill end. Is that okay?");
 const u8 gText_Hello[] = _("HELLO");
-const u8 gText_Pokemon2[] = _("POKéMON");
+const u8 gText_Pokemon2[] = _("Pokémon");
 const u8 gText_Trade[] = _("TRADE");
 const u8 gText_Battle[] = _("BATTLE");
 const u8 gText_Lets[] = _("LET'S");
@@ -1594,7 +1594,7 @@ const u8 gText_XSentOverY[] = _("{STR_VAR_1} sent over {STR_VAR_3}.");
 const u8 gText_TakeGoodCareOfX[] = _("Take good care of {STR_VAR_3}!");
 
 // Easy chat group names
-const u8 gEasyChatGroupName_Pokemon[] = _("POKéMON");
+const u8 gEasyChatGroupName_Pokemon[] = _("Pokémon");
 const u8 gEasyChatGroupName_Trainer[] = _("TRAINER");
 const u8 gEasyChatGroupName_Status[] = _("STATUS");
 const u8 gEasyChatGroupName_Battle[] = _("BATTLE");
