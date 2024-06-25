@@ -76,6 +76,7 @@ Route102_EventScript_Allen::
 Route102_EventScript_OldRodFisherman::
 	lock
 	faceplayer
+	goto_if_unset FLAG_UNLOCK_ROD, Route102_NoBites
 	goto_if_set FLAG_RECEIVED_OLD_ROD, Route102_EventScript_HowsFishing
 	msgbox Route102_Text_GettingItchToFish, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route102_EventScript_GiveOldRod
@@ -92,6 +93,11 @@ Route102_EventScript_GiveOldRod::
 
 Route102_EventScript_NotGettingItchToFish::
 	msgbox Route102_Text_ThatsTooBadThen, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_NoBites::
+	msgbox Route102_Text_NoBites, MSGBOX_DEFAULT
 	release
 	end
 
@@ -113,6 +119,21 @@ Route102_EventScript_FishingNotSoGood::
 	release
 	end
 
+Route102_Azurill::
+	lock
+	faceplayer
+	playmoncry SPECIES_AZURILL, 0
+	msgbox AzurillCry, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+Route102_Text_NoBites:
+	.string "…\n"
+	.string "The fish just aren't bitin'.$"
+
+AzurillCry:
+	.string "AZUUUU!$"
 
 Route102_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"
@@ -150,7 +171,7 @@ Route102_Text_RouteSignPetalburg:
 	.string "{LEFT_ARROW} PETALBURG CITY$"
 
 Route102_Text_GettingItchToFish:
-	.string "This is a renowned fishing spot.\n"
+	.string "The fish are finally bitin'!\n"
 	.string "Are you getting the itch to fish?$"
 
 Route102_Text_HowsYourFishing:

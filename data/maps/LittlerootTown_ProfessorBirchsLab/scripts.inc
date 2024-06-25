@@ -540,6 +540,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 0
+	setflag FLAG_UNLOCK_ROD
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
@@ -549,6 +550,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 1
+	setflag FLAG_UNLOCK_ROD
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayGiveMasterBalls::
@@ -557,6 +559,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGiveMasterBalls::
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 0
+	setflag FLAG_UNLOCK_ROD
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGiveMasterBalls::
@@ -565,6 +568,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGiveMasterBalls::
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 1
+	setflag FLAG_UNLOCK_ROD
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
