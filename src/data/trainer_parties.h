@@ -4038,7 +4038,7 @@ static const struct TrainerMon sParty_Victoria[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 31,
-    .species = SPECIES_COMFY,
+    .species = SPECIES_COMFEY,
     .heldItem = ITEM_SHELL_BELL,
     .ability = ABILITY_TRIAGE,
     .nature = NATURE_MODEST,
