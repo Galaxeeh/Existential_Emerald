@@ -3337,12 +3337,12 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 16,
-    .species = SPECIES_SCYTHER,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .ability = ABILITY_TECHNICIAN,
-    .nature = NATURE_BRAVE,
-    .moves = {MOVE_RAZOR_WIND, MOVE_BUG_BITE, MOVE_LEAFAGE, MOVE_QUICK_ATTACK}
+    .lvl = 15,
+    .species = SPECIES_KABUTO,
+    .heldItem = ITEM_MUSCLE_BAND,
+    .ability = ABILITY_BATTLE_ARMOR,
+    .nature = NATURE_HASTY,
+    .moves = {MOVE_LEECH_LIFE, MOVE_ROCK_BLAST, MOVE_RAZOR_SHELL, MOVE_STEALTH_ROCK}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -3355,12 +3355,12 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 15,
-    .species = SPECIES_KABUTO,
-    .heldItem = ITEM_MUSCLE_BAND,
-    .ability = ABILITY_BATTLE_ARMOR,
-    .nature = NATURE_HASTY,
-    .moves = {MOVE_LEECH_LIFE, MOVE_ROCK_BLAST, MOVE_RAZOR_SHELL, MOVE_STEALTH_ROCK}
+    .lvl = 16,
+    .species = SPECIES_SCYTHER,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .ability = ABILITY_TECHNICIAN,
+    .nature = NATURE_BRAVE,
+    .moves = {MOVE_RAZOR_WIND, MOVE_BUG_BITE, MOVE_LEAFAGE, MOVE_QUICK_ATTACK}
     }
 };
 
@@ -3409,12 +3409,12 @@ static const struct TrainerMon sParty_Wattson1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 27,
-    .species = SPECIES_SCOLIPEDE,
-    .heldItem = ITEM_ASSAULT_VEST,
-    .ability = ABILITY_SPEED_BOOST,
-    .nature = NATURE_HARDY,
-    .moves = {MOVE_THROAT_CHOP, MOVE_STEAMROLLER, MOVE_POISON_JAB, MOVE_STOMPING_TANTRUM}
+    .lvl = 26,
+    .species = SPECIES_TREVENANT,
+    .heldItem = ITEM_IAPAPA_BERRY,
+    .ability = ABILITY_HARVEST,
+    .nature = NATURE_RELAXED,
+    .moves = {MOVE_POISON_JAB, MOVE_HORN_LEECH, MOVE_HEX, MOVE_FORESTS_CURSE}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -3436,12 +3436,12 @@ static const struct TrainerMon sParty_Wattson1[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 26,
-    .species = SPECIES_TREVENANT,
-    .heldItem = ITEM_IAPAPA_BERRY,
-    .ability = ABILITY_HARVEST,
-    .nature = NATURE_RELAXED,
-    .moves = {MOVE_POISON_JAB, MOVE_HORN_LEECH, MOVE_HEX, MOVE_FORESTS_CURSE}
+    .lvl = 27,
+    .species = SPECIES_SCOLIPEDE,
+    .heldItem = ITEM_ASSAULT_VEST,
+    .ability = ABILITY_SPEED_BOOST,
+    .nature = NATURE_HARDY,
+    .moves = {MOVE_THROAT_CHOP, MOVE_STEAMROLLER, MOVE_POISON_JAB, MOVE_STOMPING_TANTRUM}
     }
 };
 
@@ -4325,7 +4325,7 @@ static const struct TrainerMon sParty_Billy[] = {
     .heldItem = ITEM_SILK_SCARF,
     .ability = ABILITY_GUTS,
     .nature = NATURE_CAREFUL,
-    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_BITE, MOVE_NONE}
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_BITE, MOVE_TACKLE}
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -4580,7 +4580,7 @@ static const struct TrainerMon sParty_Allen[] = {
     .heldItem = ITEM_MIRACLE_SEED,
     .ability = ABILITY_OVERGROW,
     .nature = NATURE_QUIET,
-    .moves = {MOVE_TACKLE, MOVE_LEAFAGE, MOVE_CURSE, MOVE_NONE}
+    .moves = {MOVE_HEADBUTT, MOVE_LEAFAGE, MOVE_CURSE, MOVE_NONE}
     }
 };
 
@@ -6879,6 +6879,8 @@ static const struct TrainerMon sParty_BrendanRoute103Froakie[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 5,
+    .ability = ABILITY_OVERGROW,
+    .nature = NATURE_QUIRKY,
     .species = SPECIES_CHESPIN,
     }
 };
@@ -6923,6 +6925,8 @@ static const struct TrainerMon sParty_BrendanRoute103Chespin[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 5,
+    .ability = ABILITY_BLAZE,
+    .nature = NATURE_QUIRKY,
     .species = SPECIES_FENNEKIN,
     }
 };
@@ -6967,6 +6971,8 @@ static const struct TrainerMon sParty_BrendanRoute103Fennekin[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 5,
+    .ability = ABILITY_TORRENT,
+    .nature = NATURE_QUIRKY,
     .species = SPECIES_FROAKIE,
     }
 };
@@ -7011,6 +7017,8 @@ static const struct TrainerMon sParty_BrendanRoute103Rattata[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 5,
+    .ability = ABILITY_PRANKSTER,
+    .nature = NATURE_QUIRKY,
     .species = SPECIES_RIOLU,
     .moves = {MOVE_VACUUM_WAVE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE}
     }
