@@ -143,13 +143,13 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         input->dpadDirection = DIR_EAST;
 
 //comment out this #if section to disable debug
-/*#if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == FALSE
+#if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == FALSE
     if ((heldKeys & DEBUG_OVERWORLD_HELD_KEYS) && input->DEBUG_OVERWORLD_TRIGGER_EVENT)
     {
         input->input_field_1_2 = TRUE;
         input->DEBUG_OVERWORLD_TRIGGER_EVENT = FALSE;
     }
-#endif*/
+#endif
 }
 
 int ProcessPlayerFieldInput(struct FieldInput *input)
