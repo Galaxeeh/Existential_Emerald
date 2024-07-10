@@ -13,7 +13,9 @@ PetalburgCave_EventScript_Boy::
 	release
 	end
 
-
+PetalburgCave_EventScript_PlasmaCuck::
+	msgbox PetalburgCave_Plasma, MSGBOX_NPC
+	end
 
 PetalburgCave_EventScript_ReceivedRockBlast::
 	msgbox PetalburgCave_Text_IWonder, MSGBOX_DEFAULT
@@ -31,3 +33,6 @@ PetalburgCave_Text_RockBlast:
 PetalburgCave_Text_IWonder:
 	.string "Those grunts went farther into the cave.\n"
 	.string "I wonder what they're doing down there?$"
+
+PetalburgCave_Plasma:
+	.string "Get out of here nerd!$"

@@ -11810,22 +11810,22 @@
               {
                 "min_level": 4,
                 "max_level": 5,
-                "species": "SPECIES_GROWLITHE"
-              },
-              {
-                "min_level": 4,
-                "max_level": 5,
                 "species": "SPECIES_SALANDIT"
               },
               {
                 "min_level": 4,
                 "max_level": 5,
-                "species": "SPECIES_LARVESTA"
+                "species": "SPECIES_GROWLITHE"
               },
               {
                 "min_level": 4,
                 "max_level": 5,
                 "species": "SPECIES_GROWLITHE"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_SLUGMA"
               },
               {
                 "min_level": 4,
