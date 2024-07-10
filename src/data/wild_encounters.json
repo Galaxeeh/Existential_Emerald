@@ -3384,12 +3384,12 @@
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_SHELLDER"
+                "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_STARYU"
+                "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 7,
@@ -9235,12 +9235,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_PSYDUCK"
+                "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_PSYDUCK"
+                "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 5,
@@ -9260,17 +9260,17 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_PSYDUCK"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_PSYDUCK"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SQUIRTLE"
+                "species": "SPECIES_PSYDUCK"
               }
             ]
           }
