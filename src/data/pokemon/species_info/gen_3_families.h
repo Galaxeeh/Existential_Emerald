@@ -5530,7 +5530,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         FOOTPRINT(Vibrava)
         .levelUpLearnset = sVibravaLevelUpLearnset,
         .teachableLearnset = sVibravaTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 46, SPECIES_FLYGON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_FLYGON}),
     },
 
     [SPECIES_FLYGON] =

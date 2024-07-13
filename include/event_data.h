@@ -1,6 +1,6 @@
 #ifndef GUARD_EVENT_DATA_H
 #define GUARD_EVENT_DATA_H
-#define NUM_SOFT_CAPS 10
+#define NUM_SOFT_CAPS 11
 //#define NUM_SOFT_CAPS 18
 
 void InitEventData(void);

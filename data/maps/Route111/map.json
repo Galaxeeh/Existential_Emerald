@@ -917,7 +917,7 @@
       "type": "trigger",
       "x": 12,
       "y": 40,
-      "elevation": 3,
+      "elevation": 4,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "Route111_EventScript_SunTrigger"
@@ -926,7 +926,7 @@
       "type": "trigger",
       "x": 11,
       "y": 39,
-      "elevation": 3,
+      "elevation": 4,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "Route111_EventScript_SunTrigger"
@@ -935,7 +935,7 @@
       "type": "trigger",
       "x": 9,
       "y": 40,
-      "elevation": 3,
+      "elevation": 4,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "Route111_EventScript_SunTrigger"
@@ -944,7 +944,7 @@
       "type": "trigger",
       "x": 10,
       "y": 39,
-      "elevation": 3,
+      "elevation": 4,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "Route111_EventScript_SunTrigger"
@@ -1087,25 +1087,16 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 42,
-      "elevation": 3,
+      "y": 40,
+      "elevation": 4,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "Route111_EventScript_SandstormTrigger"
     },
     {
       "type": "trigger",
-      "x": 9,
-      "y": 43,
-      "elevation": 3,
-      "var": "TRIGGER_RUN_IMMEDIATELY",
-      "var_value": "0",
-      "script": "Route111_EventScript_SandstormTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 42,
+      "x": -1,
+      "y": 34,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -1114,7 +1105,16 @@
     {
       "type": "trigger",
       "x": 11,
-      "y": 43,
+      "y": 40,
+      "elevation": 4,
+      "var": "TRIGGER_RUN_IMMEDIATELY",
+      "var_value": "0",
+      "script": "Route111_EventScript_SandstormTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": -1,
+      "y": 34,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -1122,8 +1122,8 @@
     },
     {
       "type": "trigger",
-      "x": 10,
-      "y": 43,
+      "x": -1,
+      "y": 34,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -1152,126 +1152,126 @@
       "x": 13,
       "y": 117,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 12,
       "y": 117,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 13,
       "y": 105,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 12,
       "y": 105,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 30,
       "y": 39,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111__EncounterOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 31,
       "y": 39,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111__EncounterOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 32,
       "y": 39,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111__EncounterOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 29,
       "y": 38,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111__EncounterOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 29,
       "y": 37,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111__EncounterOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 29,
       "y": 36,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route111__EncounterOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 15,
       "y": 109,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 10,
       "y": 115,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 14,
       "y": 118,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     },
     {
       "type": "trigger",
       "x": 14,
       "y": 106,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_ROUTE_111_OASIS_SWITCH",
+      "var_value": "1",
+      "script": "Route111_EncounterNotOasisTrigger"
     }
   ],
   "bg_events": [

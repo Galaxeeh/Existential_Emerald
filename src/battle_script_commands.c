@@ -626,11 +626,11 @@ static void Cmd_callnative(void);
 
 const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 {
-    FLAG_WOODSGRUNT, FLAG_BADGE01_GET, FLAG_BEAT_WALLY_V, FLAG_BADGE02_GET, FLAG_BADGE03_GET, FLAG_BADGE04_GET,
+    FLAG_WOODSGRUNT, FLAG_BADGE01_GET, FLAG_BEAT_WALLY_V, FLAG_BADGE02_GET, FLAG_BEAT_CYRUS1, FLAG_BADGE03_GET, FLAG_BADGE04_GET,
     FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 16, 22, 27, 35, 40, 50, 60, 70, 80 };
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 10, 16, 22, 27, 35, 38, 42, 50, 60, 70, 80 };
 const double sLevelCapReduction[7] = { .0, .1, .15, .20, .25, .33, .5 };
 const double sRelativePartyScaling[27] =
 {

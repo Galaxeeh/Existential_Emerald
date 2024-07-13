@@ -47,6 +47,16 @@ Route112_EventScript_MagmaGrunts::
 	releaseall
 	end
 
+Route112_EventScript_Grunt1::
+	trainerbattle_single TRAINER_DUSTY_4, Route112_Text_Grunt1Intro, Route112_Text_Grunt1Defeat
+	msgbox Route112_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route112_EventScript_Grunt2::
+	trainerbattle_single TRAINER_DUSTY_5, Route112_Text_Grunt2Intro, Route112_Text_Grunt2Defeat
+	msgbox Route112_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route112_EventScript_MtChimneyCableCarSign::
 	msgbox Route112_Text_MtChimneyCableCarSign, MSGBOX_SIGN
 	end

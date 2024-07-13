@@ -2,7 +2,9 @@
 .set LOCALID_VICTORIA, 2
 .set LOCALID_VIVI, 3
 .set LOCALID_VICKY, 4
-.set LOCALID_ROCK_SMASH_MAN, 46
+.set LOCALID_BEAU, 11
+.set LOCALID_BECKY, 12
+.set LOCALID_ROCK_SMASH_MAN, 45
 .set LOCALID_CELINA, 49
 .set LOCALID_TYRON, 50
 
@@ -88,6 +90,14 @@ Route111_EventScript_SetFallingPlayerGfx::
 Route111_EventScript_SetFallingPlayerGfxMale::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	return
+
+Route111_EncounterNotOasisTrigger::
+	setvar VAR_ROUTE_111_OASIS_SWITCH, 0
+	end
+
+Route111__EncounterOasisTrigger::
+	setvar VAR_ROUTE_111_OASIS_SWITCH, 1
+	end
 
 Route111_EventScript_SetFallingPlayerGfxFemale::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
@@ -474,9 +484,17 @@ Route111_EventScript_Drew::
 	end
 
 Route111_EventScript_Heidi::
-	trainerbattle_single TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat
+	trainerbattle_single TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat, Route111_BeauWalk
 	msgbox Route111_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route111_BeauWalk::
+	applymovement LOCALID_BEAU, Route111_Movement_Beau
+	end
+
+Route111_Movement_Beau:
+	walk_down
+	step_end
 
 Route111_EventScript_Beau::
 	trainerbattle_single TRAINER_BEAU, Route111_Text_BeauIntro, Route111_Text_BeauDefeat
@@ -489,7 +507,7 @@ Route111_EventScript_Becky::
 	end
 
 Route111_EventScript_Dusty::
-	trainerbattle_single TRAINER_DUSTY_1, Route111_Text_DustyIntro, Route111_Text_DustyDefeat, Route111_EventScript_RegisterDusty
+	trainerbattle_single TRAINER_DUSTY_1, Route111_Text_DustyIntro, Route111_Text_DustyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route111_EventScript_RematchDusty
 	msgbox Route111_Text_DustyPostBattle, MSGBOX_DEFAULT
@@ -619,9 +637,17 @@ Route111_EventScript_Bryan::
 	end
 
 Route111_EventScript_Branden::
-	trainerbattle_single TRAINER_BRANDEN, Route111_Text_BrandenIntro, Route111_Text_BrandenDefeat
+	trainerbattle_single TRAINER_BRANDEN, Route111_Text_BrandenIntro, Route111_Text_BrandenDefeat, Route111_BeckyWalk
 	msgbox Route111_Text_BrandenPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route111_BeckyWalk::
+	applymovement LOCALID_BECKY, Route111_Movement_Becky
+	end
+
+Route111_Movement_Becky:
+	walk_down
+	step_end
 
 Route111_EventScript_TrainerHillSign::
 	msgbox Route111_Text_TrainerHillSign, MSGBOX_SIGN

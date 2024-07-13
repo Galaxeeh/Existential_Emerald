@@ -52,7 +52,7 @@
 #define FLAG_BAG_USE         0x27 // Unused Flag
 #define FLAG_VIV             0x28 // Unused Flag
 #define FLAG_KIRKSHAWN       0x29 // Unused Flag
-#define FLAG_112_BOULDER     0x2A // Clear 112 Boulder
+#define FLAG_112_HIKER       0x2A // Hide 112 Hiker
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
@@ -1230,7 +1230,7 @@
 #define FLAG_HIDE_111_TRAINERS                                      0x49B // Hide 111 trainers pre Roxie
 #define FLAG_SHOW_111_TRAINERS                                      0x49C // Show 111 trainers post Roxie
 #define FLAG_BEAT_WALLY_V                                           0x49D // Beat Wally Verdanturf
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
+#define FLAG_BEAT_CYRUS1                                            0x49E // Beat Cyrus Mt Chimney
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag

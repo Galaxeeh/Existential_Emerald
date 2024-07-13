@@ -1540,6 +1540,40 @@ Route112_Text_TrentPostBattle:
 	.string "That, my friend, will get your body\n"
 	.string "into serious shape.$"
 
+Route112_Text_Grunt1Intro:
+	@.string "My legs are solid from pounding up\n"
+	@.string "and down the mountains.\p"
+	@.string "They're not going to buckle easily,\n"
+	.string "1!$"
+
+Route112_Text_Grunt1Defeat:
+	.string "1.1!$"
+
+Route112_Text_Grunt1PostBattle:
+	@.string "Try hiking, and I mean really\n"
+	@.string "pounding, on these mountain trails\l"
+	@.string "with a heavy pack weighing dozens of\l"
+	@.string "pounds.\p"
+	@.string "That, my friend, will get your body\n"
+	.string "1.2!$"
+
+Route112_Text_Grunt2Intro:
+	@.string "My legs are solid from pounding up\n"
+	@.string "and down the mountains.\p"
+	@.string "They're not going to buckle easily,\n"
+	.string "2!$"
+
+Route112_Text_Grunt2Defeat:
+	.string "2.1!$"
+
+Route112_Text_Grunt2PostBattle:
+	@.string "Try hiking, and I mean really\n"
+	@.string "pounding, on these mountain trails\l"
+	@.string "with a heavy pack weighing dozens of\l"
+	@.string "pounds.\p"
+	@.string "That, my friend, will get your body\n"
+	.string "2.2!$"
+
 Route112_Text_TrentRegister:
 	.string "Ow, my legs have cramped up.\n"
 	.string "Can you grab me some bandages from\l"
