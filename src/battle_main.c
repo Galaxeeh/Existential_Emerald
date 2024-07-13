@@ -739,6 +739,9 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     TRAINER_CLASS(RS_PROTAG, "{PKMN} Trainer"),
     TRAINER_CLASS(TEAM_PLASMA, "Team Plasma"),
     TRAINER_CLASS(ACE, "Ace Trainer", 5, ITEM_ULTRA_BALL),
+    TRAINER_CLASS(TEAM_GALACTIC, "Team Gal"),
+    TRAINER_CLASS(GALACTIC_COMMANDER, "Galactic"),
+    TRAINER_CLASS(GALACTIC_BOSS, "Galactic"),
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =

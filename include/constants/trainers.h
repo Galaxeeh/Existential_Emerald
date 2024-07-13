@@ -366,7 +366,10 @@
 #define TRAINER_CLASS_RS_PROTAG      0x41
 #define TRAINER_CLASS_TEAM_PLASMA    0x42
 #define TRAINER_CLASS_ACE            0x43
-#define TRAINER_CLASS_COUNT          0x44
+#define TRAINER_CLASS_TEAM_GALACTIC  0x44
+#define TRAINER_CLASS_GALACTIC_COMMANDER 0x45
+#define TRAINER_CLASS_GALACTIC_BOSS  0x46
+#define TRAINER_CLASS_COUNT          0x47
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music
@@ -383,6 +386,7 @@
 #define TRAINER_ENCOUNTER_MUSIC_INTERVIEWER 12
 #define TRAINER_ENCOUNTER_MUSIC_RICH        13 // Rich Boys and Gentlemen
 #define TRAINER_ENCOUNTER_MUSIC_PLASMA      14
+#define TRAINER_ENCOUNTER_MUSIC_GALACTIC      15
 
 #define F_TRAINER_FEMALE (1 << 7)
 

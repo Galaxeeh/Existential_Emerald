@@ -533,13 +533,13 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DUSTY_1] =
     {
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
+        .trainerClass = TRAINER_CLASS_HIKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("Dusty"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Dusty1),
     },
 
@@ -593,25 +593,25 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DUSTY_4] =
     {
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .trainerClass = TRAINER_CLASS_TEAM_GALACTIC,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GALACTIC,
+        .trainerPic = TRAINER_PIC_GALACTIC_F,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Dusty4),
     },
 
     [TRAINER_DUSTY_5] =
     {
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .trainerClass = TRAINER_CLASS_TEAM_GALACTIC,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GALACTIC,
+        .trainerPic = TRAINER_PIC_GALACTIC_M,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Dusty5),
     },
 
@@ -1757,13 +1757,13 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_GRUNT_MT_CHIMNEY_1] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_F,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_TEAM_GALACTIC,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GALACTIC,
+        .trainerPic = TRAINER_PIC_GALACTIC_F,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_GruntMtChimney1),
     },
 
@@ -2552,10 +2552,10 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_CAMPER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_CAMPER,
-        .trainerName = _("BEAU"),
+        .trainerName = _("Beau"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Beau),
     },
 
@@ -5650,10 +5650,10 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_PICNICKER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_PICNICKER,
-        .trainerName = _("HEIDI"),
+        .trainerName = _("Heidi"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Heidi),
     },
 
@@ -7088,13 +7088,13 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_GRUNT_MT_CHIMNEY_2] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_TEAM_GALACTIC,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GALACTIC,
+        .trainerPic = TRAINER_PIC_GALACTIC_M,
+        .trainerName = _("Grunt"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_GruntMtChimney2),
     },
 
@@ -7322,10 +7322,10 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_TABITHA_MT_CHIMNEY] =
     {
-        .trainerClass = TRAINER_CLASS_MAGMA_ADMIN,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_ADMIN,
-        .trainerName = _("TABITHA"),
+        .trainerClass = TRAINER_CLASS_GALACTIC_COMMANDER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GALACTIC,
+        .trainerPic = TRAINER_PIC_MARS,
+        .trainerName = _("Mars"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
@@ -7386,11 +7386,11 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_MAXIE_MT_CHIMNEY] =
     {
-        .trainerClass = TRAINER_CLASS_MAGMA_LEADER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,
-        .trainerName = _("MAXIE"),
-        .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
+        .trainerClass = TRAINER_CLASS_GALACTIC_BOSS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GALACTIC,
+        .trainerPic = TRAINER_PIC_CYRUS,
+        .trainerName = _("Cyrus"),
+        .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_MaxieMtChimney),
@@ -9095,22 +9095,22 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_PICNICKER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_PICNICKER,
-        .trainerName = _("CELIA"),
+        .trainerName = _("Celia"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Celia),
     },
 
     [TRAINER_BRYAN] =
     {
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
+        .trainerClass = TRAINER_CLASS_HIKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("BRYAN"),
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("Bryan"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = TRAINER_PARTY(sParty_Bryan),
     },
 

@@ -19940,6 +19940,46 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .contestComboMoves = {0}
     },
 
+    [MOVE_HIDDEN_POWER_ELECTRIC] =
+    {
+        .name = COMPOUND_STRING("Hidden Power"),
+        .description = COMPOUND_STRING(
+            "The effectiveness varies\n"
+            "with the user."),
+        .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 60 : 1,
+        .effect = EFFECT_HIT,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0}
+    },
+
+    [MOVE_HIDDEN_POWER_ROCK] =
+    {
+        .name = COMPOUND_STRING("Hidden Power"),
+        .description = COMPOUND_STRING(
+            "The effectiveness varies\n"
+            "with the user."),
+        .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 60 : 1,
+        .effect = EFFECT_HIT,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0}
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {
