@@ -12629,63 +12629,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_SLUGMA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_CUBONE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_BRONZOR"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_CARKOL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_NUMEL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_GROWLITHE_HISUIAN"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_KOFFING"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_KOFFING"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_BOLDORE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_ABSOL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_PIGNITE"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 25,
                 "species": "SPECIES_PIGNITE"
               }
             ]
