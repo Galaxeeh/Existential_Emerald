@@ -585,8 +585,38 @@ gStdScripts_End::
 
 EventScript_WhiteOut::
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
+	call_if_not_defeated TRAINER_GINA_AND_MIA_1, GinaMiaReset
+	call_if_not_defeated TRAINER_ANNA_AND_MEG_1, AnnaMegReset
+	call_if_not_defeated TRAINER_JERRY_1, KarenReset
+	call_if_not_defeated TRAINER_JANICE, SarahReset
+	call_if_not_defeated TRAINER_BECKY, BrandenReset
+	call_if_not_defeated TRAINER_BEAU, HeidiReset
 	goto EventScript_ResetMrBriney
 	end
+
+GinaMiaReset::
+	setvar VAR_MIAGINA, 0
+	return
+
+AnnaMegReset::
+	setvar VAR_ANNAMEG, 0
+	return
+
+KarenReset::
+	cleartrainerflag TRAINER_KAREN_1
+	return
+
+SarahReset::
+	cleartrainerflag TRAINER_SARAH
+	return
+
+BrandenReset::
+	cleartrainerflag TRAINER_BRANDEN
+	return
+
+HeidiReset::
+	cleartrainerflag TRAINER_HEIDI
+	return
 
 EventScript_ResetMrBriney::
 	goto_if_eq VAR_BRINEY_LOCATION, 1, EventScript_MoveMrBrineyToHouse
