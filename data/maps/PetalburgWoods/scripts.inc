@@ -680,7 +680,7 @@ PetalburgWoods_Gym_EventScript_BugsyDefeated::
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers
-	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
+	@call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	goto PetalburgWoods_Gym_EventScript_GiveRockTomb
 	end
 
