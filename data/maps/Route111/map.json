@@ -1140,8 +1140,8 @@
     },
     {
       "type": "trigger",
-      "x": 13,
-      "y": 139,
+      "x": 12,
+      "y": 124,
       "elevation": 0,
       "var": "VAR_TEMP_MIXED_RECORDS",
       "var_value": "0",
