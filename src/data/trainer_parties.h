@@ -2874,7 +2874,7 @@ static const struct TrainerMon sParty_Autumn[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 36,
-    .species = SPECIES_SAWSBUCK,
+    .species = SPECIES_SAWSBUCK_AUTUMN,
     .heldItem = ITEM_CLEAR_AMULET,
     .ability = ABILITY_SERENE_GRACE,
     .nature = NATURE_ADAMANT,
@@ -9763,7 +9763,7 @@ static const struct TrainerMon sParty_Gerald[] = {
     },
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 36,
+    .lvl = 38,
     .species = SPECIES_FARFETCHD,
     .heldItem = ITEM_STICK,
     .ability = ABILITY_DEFIANT,
