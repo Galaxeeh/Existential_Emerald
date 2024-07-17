@@ -34,16 +34,16 @@ LavaridgeTown_Gym_B1F_EventScript_EndSetTrainerTempVars::
 
 LavaridgeTown_Gym_B1F_EventScript_CheckBuryTrainers::
 	goto_if_defeated TRAINER_KEEGAN, LavaridgeTown_Gym_B1F_EventScript_CheckBuryJace
-	setobjectmovementtype LOCALID_KEEGAN, MOVEMENT_TYPE_BURIED
+	@setobjectmovementtype LOCALID_KEEGAN, MOVEMENT_TYPE_BURIED
 LavaridgeTown_Gym_B1F_EventScript_CheckBuryJace::
 	goto_if_defeated TRAINER_JACE, LavaridgeTown_Gym_B1F_EventScript_CheckBuryJeff
-	setobjectmovementtype LOCALID_JACE, MOVEMENT_TYPE_BURIED
+	@setobjectmovementtype LOCALID_JACE, MOVEMENT_TYPE_BURIED
 LavaridgeTown_Gym_B1F_EventScript_CheckBuryJeff::
 	goto_if_defeated TRAINER_JEFF, LavaridgeTown_Gym_B1F_EventScript_CheckBuryEli
-	setobjectmovementtype LOCALID_JEFF, MOVEMENT_TYPE_BURIED
+	@setobjectmovementtype LOCALID_JEFF, MOVEMENT_TYPE_BURIED
 LavaridgeTown_Gym_B1F_EventScript_CheckBuryEli::
 	goto_if_defeated TRAINER_ELI, LavaridgeTown_Gym_B1F_EventScript_EndCheckBuryTrainers
-	setobjectmovementtype LOCALID_ELI, MOVEMENT_TYPE_BURIED
+	@setobjectmovementtype LOCALID_ELI, MOVEMENT_TYPE_BURIED
 LavaridgeTown_Gym_B1F_EventScript_EndCheckBuryTrainers::
 	return
 
