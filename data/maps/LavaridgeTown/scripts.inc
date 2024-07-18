@@ -236,16 +236,18 @@ LavaridgeTown_EventScript_EggWoman::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_LAVARIDGE_EGG, LavaridgeTown_EventScript_ReceivedEgg
-	msgbox LavaridgeTown_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_DeclineEgg
-	getpartysize
-	goto_if_eq VAR_RESULT, PARTY_SIZE, LavaridgeTown_EventScript_NoRoomForEgg
+	@msgbox LavaridgeTown_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
+	@goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_DeclineEgg
+	@getpartysize
+	@goto_if_eq VAR_RESULT, PARTY_SIZE, LavaridgeTown_EventScript_NoRoomForEgg
 	msgbox LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
+	giveitem ITEM_UTILITY_UMBRELLA
+	goto_if_eq VAR_RESULT, FALSE, LavaridgeTown_EventScript_NoRoomForUmbrella
 	setflag FLAG_RECEIVED_LAVARIDGE_EGG
-	playfanfare MUS_OBTAIN_ITEM
-	message LavaridgeTown_Text_ReceivedTheEgg
-	waitfanfare
-	giveegg SPECIES_WYNAUT
+	@playfanfare MUS_OBTAIN_ITEM
+	@message LavaridgeTown_Text_ReceivedTheEgg
+	@waitfanfare
+	@giveegg SPECIES_WYNAUT
 	release
 	end
 
@@ -275,6 +277,12 @@ LavaridgeTown_EventScript_GymSign::
 LavaridgeTown_EventScript_HerbShopSign::
 	msgbox LavaridgeTown_Text_HerbShopSign, MSGBOX_SIGN
 	end
+
+LavaridgeTown_EventScript_NoRoomForUmbrella:
+	.string "Everyone should have one of these.\p"
+	.string "Take my wisdom and clear some space in\n"
+	.string "your bag child!$"
+
 
 LavaridgeTown_Text_MayNiceBadgesTakeThis:
 	.string "{RIVAL}: {PLAYER}{KUN}! Long time no see!\p"
@@ -334,8 +342,9 @@ LavaridgeTown_Text_HaveEggWillYouTakeIt:
 	.string "Will you take this EGG to hatch?$"
 
 LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg:
-	.string "Good! I hope you'll walk plenty with\n"
-	.string "this here EGG!$"
+	.string "Well hello young one!\p"
+	.string "You should really protect your skin...\n"
+	.string "Here, take this umbrella!$"
 
 LavaridgeTown_Text_ReceivedTheEgg:
 	.string "{PLAYER} received the EGG.$"
@@ -350,9 +359,8 @@ LavaridgeTown_Text_AsYouWishThen:
 	.string "hatching this EGG, I will be here.$"
 
 LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare:
-	.string "Every so often, an EGG will be found at\n"
-	.string "the POKéMON DAY CARE.\p"
-	.string "Or at least that's how the rumor goes.$"
+	.string "I always keep my umbrella on hand,\n"
+	.string "thats why my skin stays fabulous!$"
 
 LavaridgeTown_Text_HotSpringsNeverRunDry:
 	.string "We draw as much hot water as we need,\n"
