@@ -368,7 +368,7 @@ u32 ScriptGiveMonParameterized(u16 species, u8 level, u16 item, u8 ball, u8 natu
 
     if (gSpeciesInfo[species].isStarter)
     {
-        abilityNum = 3;
+        abilityNum = 0;
     }
 
     SetMonData(&mon, MON_DATA_ABILITY_NUM, &abilityNum);
