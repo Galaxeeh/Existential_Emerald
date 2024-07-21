@@ -690,10 +690,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 4,
-      "y": 36,
+      "x": 11,
+      "y": 4,
       "elevation": 3,
-      "item": "ITEM_POKE_BALL",
+      "item": "ITEM_PERSIM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_POKE_BALL"
     },
     {

@@ -10817,7 +10817,7 @@ static const struct TrainerMon sParty_Bianca[] = {
     .lvl = 32,
     .species = SPECIES_ELDEGOSS,
     .heldItem = ITEM_LEFTOVERS,
-    .ability = ABILITY_EFFECT_SPORE,
+    .ability = ABILITY_COTTON_DOWN,
     .nature = NATURE_BOLD,
     .moves = {MOVE_LEECH_SEED, MOVE_SUBSTITUTE, MOVE_GIGA_DRAIN, MOVE_WEATHER_BALL}
     },
@@ -10834,7 +10834,7 @@ static const struct TrainerMon sParty_Bianca[] = {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 32,
     .species = SPECIES_SEADRA,
-    .heldItem = ITEM_FOCUS_SASH,
+    .heldItem = ITEM_FOCUS_BAND,
     .ability = ABILITY_SNIPER,
     .nature = NATURE_TIMID,
     .moves = {MOVE_SCALD, MOVE_ICE_BEAM, MOVE_WEATHER_BALL, MOVE_DRAGON_PULSE}

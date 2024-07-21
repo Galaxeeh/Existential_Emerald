@@ -1736,12 +1736,13 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     struct Pokemon *mon;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleResources->bufferA[battler][4]);
 
+    type = 0;
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     *(txtPtr)++ = EXT_CTRL_CODE_BEGIN;
     *(txtPtr)++ = EXT_CTRL_CODE_FONT;
     *(txtPtr)++ = FONT_NORMAL;
 
-    /*if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
+    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_HIDDEN_POWER)
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_ATK_IV) & 1) << 1)
@@ -1754,9 +1755,9 @@ static void MoveSelectionDisplayMoveType(u32 battler)
         if (type >= TYPE_MYSTERY)
             type++;
         type |= 0xC0;
-        StringCopy(txtPtr, gTypesInfo[type & 0x3F]);
-    }*/
-    if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
+        StringCopy(txtPtr, gTypesInfo[type & 0x3F].name);
+    }
+    /*else if (moveInfo->moves[gMoveSelectionCursor[battler]] == MOVE_IVY_CUDGEL)
     {
         mon = &GetSideParty(GetBattlerSide(battler))[gBattlerPartyIndexes[battler]];
         speciesId = GetMonData(mon, MON_DATA_SPECIES);
@@ -1767,11 +1768,13 @@ static void MoveSelectionDisplayMoveType(u32 battler)
             type = gBattleMons[battler].type2;
         else
             type = gMovesInfo[MOVE_IVY_CUDGEL].type;
-    }
+    }*/
     else
+        {
         type = gMovesInfo[moveInfo->moves[gMoveSelectionCursor[battler]]].type;
+        StringCopy(txtPtr, gTypesInfo[type].name);
+        }
 
-    StringCopy(txtPtr, gTypesInfo[type].name);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
     MoveSelectionDisplaySplitIcon(battler);
 }

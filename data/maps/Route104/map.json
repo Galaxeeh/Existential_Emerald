@@ -668,7 +668,7 @@
       "x": 26,
       "y": 5,
       "elevation": 3,
-      "item": "ITEM_SUPER_POTION",
+      "item": "ITEM_PERSIM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_SUPER_POTION"
     },
     {
@@ -689,10 +689,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 24,
-      "y": 43,
+      "x": 20,
+      "y": 42,
       "elevation": 3,
-      "item": "ITEM_ANTIDOTE",
+      "item": "ITEM_BERRY_JUICE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE"
     },
     {

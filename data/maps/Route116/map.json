@@ -532,7 +532,7 @@
       "x": 13,
       "y": 4,
       "elevation": 3,
-      "item": "ITEM_SUPER_POTION",
+      "item": "ITEM_RAWST_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_116_SUPER_POTION"
     },
     {
