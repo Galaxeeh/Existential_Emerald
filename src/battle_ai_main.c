@@ -3884,6 +3884,11 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
         // else if (IsPredictedToUsePursuitableMove(battlerDef, battlerAtk) && !MoveWouldHitFirst(move, battlerAtk, battlerDef)) //Pursuit against fast U-Turn
         //     ADJUST_SCORE(GOOD_EFFECT);
         // break;
+        if (GetNoOfHitsToKOBattler(battlerAtk, battlerDef, MOVE_PURSUIT) <= 1)
+            ADJUST_SCORE(BEST_EFFECT);
+        else if (gBattleMons[battlerDef].hp / gBattleMons[battlerDef].maxHP <= 0.2)
+            ADJUST_SCORE(GOOD_EFFECT);
+        break; 
     case EFFECT_DEFOG:
         if ((gSideStatuses[GetBattlerSide(battlerAtk)] & SIDE_STATUS_HAZARDS_ANY && CountUsablePartyMons(battlerAtk) != 0)
             || (gSideStatuses[GetBattlerSide(battlerDef)] & (SIDE_STATUS_SCREEN_ANY | SIDE_STATUS_SAFEGUARD | SIDE_STATUS_MIST)))

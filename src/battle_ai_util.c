@@ -988,28 +988,7 @@ u32 NoOfHitsForTargetToFaintAI(u32 battlerDef, u32 battlerAtk)
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         currNumberOfHits = GetNoOfHitsToKOBattler(battlerDef, battlerAtk, i);
-        switch (currNumberOfHits)
-        {
-        case 0:
-            DebugPrintfLevel(MGBA_LOG_WARN, "0", 0);
-            break;
-        case 1:
-            DebugPrintfLevel(MGBA_LOG_WARN, "1", 0);
-            break;
-        case 2:
-            DebugPrintfLevel(MGBA_LOG_WARN, "2", 0);
-            break;
-        case 3:
-            DebugPrintfLevel(MGBA_LOG_WARN, "3", 0);
-            break;        
-        case 4:
-            DebugPrintfLevel(MGBA_LOG_WARN, "4", 0);
-            break;
-        case 5:
-            DebugPrintfLevel(MGBA_LOG_WARN, "5", 0);
-            break;    
-
-        }
+        
         if (currNumberOfHits != 0)
         {
             if (currNumberOfHits < leastNumberOfHits)

@@ -2731,15 +2731,6 @@ static const struct TrainerMon sParty_Bernie5[] = {
 static const struct TrainerMon sParty_Drew[] = {
     {
     .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-    .lvl = 31,
-    .species = SPECIES_ORICORIO_PAU,
-    .heldItem = ITEM_SAFETY_GOGGLES,
-    .ability = ABILITY_DANCER,
-    .nature = NATURE_MODEST,
-    .moves = {MOVE_QUIVER_DANCE, MOVE_REVELATION_DANCE, MOVE_AIR_SLASH, MOVE_ALLURING_VOICE}
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
     .lvl = 100,
     .species = SPECIES_SHEDINJA,
     .heldItem = ITEM_FOCUS_SASH,
@@ -2764,7 +2755,16 @@ static const struct TrainerMon sParty_Drew[] = {
     .ability = ABILITY_SAND_RUSH,
     .nature = NATURE_CAREFUL,
     .moves = {MOVE_SWORDS_DANCE, MOVE_DRILL_RUN, MOVE_LEECH_LIFE, MOVE_KNOCK_OFF}
-    }
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+    .lvl = 31,
+    .species = SPECIES_ORICORIO_PAU,
+    .heldItem = ITEM_SAFETY_GOGGLES,
+    .ability = ABILITY_DANCER,
+    .nature = NATURE_MODEST,
+    .moves = {MOVE_QUIVER_DANCE, MOVE_REVELATION_DANCE, MOVE_AIR_SLASH, MOVE_ALLURING_VOICE}
+    },
 
 };
 
@@ -2783,7 +2783,7 @@ static const struct TrainerMon sParty_Beau[] = {
     .lvl = 30,
     .species = SPECIES_GIGALITH,
     .heldItem = ITEM_QUICK_CLAW,
-    .ability = ABILITY_SAND_FORCE,
+    .ability = ABILITY_STURDY,
     .nature = NATURE_RELAXED,
     .moves = {MOVE_SAND_TOMB, MOVE_BODY_PRESS, MOVE_STONE_EDGE, MOVE_SELF_DESTRUCT}
     },
