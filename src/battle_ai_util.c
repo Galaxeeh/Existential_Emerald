@@ -983,9 +983,33 @@ u32 NoOfHitsForTargetToFaintAI(u32 battlerDef, u32 battlerAtk)
     u32 currNumberOfHits;
     u32 leastNumberOfHits = UNKNOWN_NO_OF_HITS;
 
+
+
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         currNumberOfHits = GetNoOfHitsToKOBattler(battlerDef, battlerAtk, i);
+        switch (currNumberOfHits)
+        {
+        case 0:
+            DebugPrintfLevel(MGBA_LOG_WARN, "0", 0);
+            break;
+        case 1:
+            DebugPrintfLevel(MGBA_LOG_WARN, "1", 0);
+            break;
+        case 2:
+            DebugPrintfLevel(MGBA_LOG_WARN, "2", 0);
+            break;
+        case 3:
+            DebugPrintfLevel(MGBA_LOG_WARN, "3", 0);
+            break;        
+        case 4:
+            DebugPrintfLevel(MGBA_LOG_WARN, "4", 0);
+            break;
+        case 5:
+            DebugPrintfLevel(MGBA_LOG_WARN, "5", 0);
+            break;    
+
+        }
         if (currNumberOfHits != 0)
         {
             if (currNumberOfHits < leastNumberOfHits)
@@ -1752,10 +1776,10 @@ bool32 CanIndexMoveFaintTarget(u32 battlerAtk, u32 battlerDef, u32 index, u32 nu
 
 u16 *GetMovesArray(u32 battler)
 {
-    if (IsAiBattlerAware(battler) || IsAiBattlerAware(BATTLE_PARTNER(battler)))
+    //if (IsAiBattlerAware(battler) || IsAiBattlerAware(BATTLE_PARTNER(battler)))
         return gBattleMons[battler].moves;
-    else
-        return gBattleResources->battleHistory->usedMoves[battler];
+    //else
+        //return gBattleResources->battleHistory->usedMoves[battler];
 }
 
 bool32 HasOnlyMovesWithCategory(u32 battlerId, u32 category, bool32 onlyOffensive)
@@ -3377,6 +3401,9 @@ static void IncreaseStatUpScoreInternal(u32 battlerAtk, u32 battlerDef, u32 stat
     u32 noOfHitsToFaint = NoOfHitsForTargetToFaintAI(battlerDef, battlerAtk);
     u32 aiIsFaster = GetWhichBattlerFaster(battlerAtk, battlerDef, TRUE) == AI_IS_FASTER;
     u32 shouldSetUp = ((noOfHitsToFaint >= 2 && aiIsFaster) || (noOfHitsToFaint >= 3 && !aiIsFaster) || noOfHitsToFaint == UNKNOWN_NO_OF_HITS);
+
+    if (!shouldSetUp)
+    return;
 
     if (considerContrary && AI_DATA->abilities[battlerAtk] == ABILITY_CONTRARY)
         return;

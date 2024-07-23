@@ -1107,13 +1107,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             break;
     // stat raising effects
         case EFFECT_ATTACK_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_ATTACK_UP_2:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_ATTACK_UP_USER_ALLY:
             if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
                 ADJUST_SCORE(-10);
@@ -1123,97 +1117,60 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 return 0;   // cannot even select
             //fallthrough
         case EFFECT_DEFENSE_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_DEFENSE_UP_2:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_DEFENSE_UP_3:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_DEFENSE_CURL:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER) || (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_DEF)))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_DEF))
                 ADJUST_SCORE(-10);
-                    break;
+            break;
         case EFFECT_SPECIAL_ATTACK_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_SPECIAL_ATTACK_UP_2:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_SPECIAL_ATTACK_UP_3:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER) || (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPATK)) || (!HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_SPECIAL)))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_SPECIAL))
                 ADJUST_SCORE(-10);
-                    break;
+            break;
         case EFFECT_SPECIAL_DEFENSE_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_SPECIAL_DEFENSE_UP_2:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER) || (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPDEF)))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPDEF))
                 ADJUST_SCORE(-10);
-                    break;
+            break;
         case EFFECT_ACCURACY_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_ACCURACY_UP_2:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER) || (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ACC)))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ACC))
                 ADJUST_SCORE(-10);
-                    break;
+            break;
         case EFFECT_EVASION_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_EVASION_UP_2:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_MINIMIZE:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER) || (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_EVASION)))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_EVASION))
                 ADJUST_SCORE(-10);
-                    break;
+            break;
         case EFFECT_COSMIC_POWER:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_DEF))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_DEF))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPDEF))
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_BULK_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_DEF))
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_CALM_MIND:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPATK))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPATK))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPDEF))
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_DRAGON_DANCE:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPEED))
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_COIL:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ACC))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ACC))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
                 ADJUST_SCORE(-8);
@@ -1221,9 +1178,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-6);
             break;
         case EFFECT_ATTACK_ACCURACY_UP: //hone claws
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (aiData->abilities[battlerAtk] != ABILITY_CONTRARY)
+            if (aiData->abilities[battlerAtk] != ABILITY_CONTRARY)
             {
                 if (gBattleMons[battlerAtk].statStages[STAT_ATK] >= MAX_STAT_STAGE
                   && (gBattleMons[battlerAtk].statStages[STAT_ACC] >= MAX_STAT_STAGE || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL)))
@@ -1236,9 +1191,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             }
             break;
         case EFFECT_CHARGE:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (gStatuses3[battlerAtk] & STATUS3_CHARGED_UP)
+            if (gStatuses3[battlerAtk] & STATUS3_CHARGED_UP)
                 ADJUST_SCORE(-20);
             else if (!HasMoveWithType(battlerAtk, TYPE_ELECTRIC))
                 ADJUST_SCORE(-10);
@@ -1247,13 +1200,8 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-5);
             break;
         case EFFECT_QUIVER_DANCE:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_GEOMANCY:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (gBattleMons[battlerAtk].statStages[STAT_SPATK] >= MAX_STAT_STAGE || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_SPECIAL))
+            if (gBattleMons[battlerAtk].statStages[STAT_SPATK] >= MAX_STAT_STAGE || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_SPECIAL))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPEED))
                 ADJUST_SCORE(-8);
@@ -1261,9 +1209,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-6);
             break;
         case EFFECT_VICTORY_DANCE:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (gBattleMons[battlerAtk].statStages[STAT_ATK] >= MAX_STAT_STAGE || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
+            if (gBattleMons[battlerAtk].statStages[STAT_ATK] >= MAX_STAT_STAGE || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPEED))
                 ADJUST_SCORE(-8);
@@ -1271,17 +1217,13 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-6);
             break;
         case EFFECT_SHIFT_GEAR:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
+            if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
                 ADJUST_SCORE(-10);
             else if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPEED))
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_SHELL_SMASH:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY)
+            if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY)
             {
                 if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_DEF))
                     ADJUST_SCORE(-10);
@@ -1299,13 +1241,8 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             }
             break;
         case EFFECT_GROWTH:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-                    break;
         case EFFECT_ATTACK_SPATK_UP:    // work up
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if ((!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) && !BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPATK))
+            if ((!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) && !BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_SPATK))
              || (!HasDamagingMove(battlerAtk)))
                 ADJUST_SCORE(-10);
             break;
@@ -1332,9 +1269,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             }
             break;
         case EFFECT_GEAR_UP:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (aiData->abilities[battlerAtk] == ABILITY_PLUS || aiData->abilities[battlerAtk] == ABILITY_MINUS)
+            if (aiData->abilities[battlerAtk] == ABILITY_PLUS || aiData->abilities[battlerAtk] == ABILITY_MINUS)
             {
                 // same as growth, work up
                 if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_ATK) || !HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
@@ -1363,9 +1298,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             }
             break;
         case EFFECT_ACUPRESSURE:
-            if ((CanAIFaintTarget(battlerAtk, battlerDef, 2) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) || (CanTargetFaintAi(battlerDef, battlerAtk) && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER))
-                ADJUST_SCORE(-10);
-            else if (DoesSubstituteBlockMove(battlerAtk, battlerDef, move) || AreBattlersStatsMaxed(battlerDef))
+            if (DoesSubstituteBlockMove(battlerAtk, battlerDef, move) || AreBattlersStatsMaxed(battlerDef))
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_MAGNETIC_FLUX:
@@ -2016,7 +1949,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         case EFFECT_LASER_FOCUS:
             if (gStatuses3[battlerAtk] & STATUS3_LASER_FOCUS)
                 ADJUST_SCORE(-10);
-            else if (aiData->abilities[battlerDef] == ABILITY_SHELL_ARMOR || aiData->abilities[battlerDef] == ABILITY_BATTLE_ARMOR || aiData->abilities[battlerDef] == ABILITY_MAGMA_ARMOR || aiData->abilities[battlerDef] == ABILITY_LEAF_GUARD)
+            else if (aiData->abilities[battlerDef] == ABILITY_SHELL_ARMOR || aiData->abilities[battlerDef] == ABILITY_BATTLE_ARMOR)
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_SKETCH:
@@ -2067,8 +2000,6 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     ADJUST_SCORE(-10);
                     break;
                 }
-                if (gDisableStructs[battlerAtk].isFirstTurn && gBattleMons[battlerAtk].ability == ABILITY_POWER_OF_ALCHEMY)
-                    ADJUST_SCORE(+20);
 
                 if (move != MOVE_QUICK_GUARD
                   && move != MOVE_WIDE_GUARD
@@ -3610,7 +3541,6 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
           || HasMoveWithAdditionalEffect(battlerDef, MOVE_EFFECT_RAPID_SPIN)
           || aiData->abilities[battlerDef] == ABILITY_LIQUID_OOZE
           || aiData->abilities[battlerDef] == ABILITY_MAGIC_GUARD)
-          ADJUST_SCORE(-10);
             break;
         ADJUST_SCORE(GOOD_EFFECT);
         if (!HasDamagingMove(battlerDef) || IsBattlerTrapped(battlerDef, FALSE))
@@ -4650,12 +4580,12 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
                 case MOVE_EFFECT_SPECTRAL_THIEF:
                     score += AI_ShouldCopyStatChanges(battlerAtk, battlerDef);
                     break;
-                /*case MOVE_EFFECT_BUG_BITE:   // And pluck
-                    if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
+                case MOVE_EFFECT_BUG_BITE:   // And pluck
+                    /*if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
                         break;
                     else if (ItemId_GetPocket(aiData->items[battlerDef]) == POCKET_BERRIES)
-                        ADJUST_SCORE(DECENT_EFFECT);
-                    break;*/
+                        ADJUST_SCORE(DECENT_EFFECT);*/
+                    break;
                 case MOVE_EFFECT_INCINERATE:
                     if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
                         break;
