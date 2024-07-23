@@ -34,7 +34,7 @@
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDGE_TOWN_GYM_MTN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
