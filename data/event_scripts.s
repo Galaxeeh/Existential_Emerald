@@ -1107,3 +1107,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PorytilesTestMap/scripts.inc"
 
 	.include "data/maps/PetalburgCaveB1F/scripts.inc"
+
+	.include "data/maps/LavaridgeTown_GymMtn/scripts.inc"

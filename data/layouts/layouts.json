@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/PetalburgCaveB1F/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgCaveB1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVARIDGE_TOWN_GYM_MTN",
+      "name": "LavaridgeTown_GymMtn_Layout",
+      "width": 36,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/LavaridgeTown_GymMtn/border.bin",
+      "blockdata_filepath": "data/layouts/LavaridgeTown_GymMtn/map.bin"
     }
   ]
 }
