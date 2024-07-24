@@ -149,6 +149,12 @@ JaggedPass_EventScript_Autumn::
 	msgbox JaggedPass_Text_AutumnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Jagged_PCon::
+	setvar VAR_0x40FF, 1
+	setvar VAR_JAGGED_GAUNT, 1
+	releaseall
+	end
+
 JaggedPass_Text_EricIntro:
 	.string "MT. CHIMNEY's JAGGED PASS…\p"
 	.string "Now this is what I've always wanted\n"

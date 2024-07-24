@@ -141,7 +141,7 @@
 #define VAR_ROUTE126_STATE                               0x4079 // Unused Var
 #define VAR_ROUTE127_STATE                               0x407A // Unused Var
 #define VAR_ROUTE128_STATE                               0x407B
-#define VAR_ROUTE129_STATE                               0x407C // Unused Var
+#define VAR_JAGGED_GAUNT                                 0x407C // Jagged Pass Gauntlet PortaPC
 #define VAR_ROUTE130_STATE                               0x407D // Unused Var
 #define VAR_ROUTE131_STATE                               0x407E // Unused Var
 #define VAR_ROUTE132_STATE                               0x407F // Unused Var

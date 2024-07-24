@@ -591,8 +591,16 @@ EventScript_WhiteOut::
 	call_if_not_defeated TRAINER_JANICE, SarahReset
 	call_if_not_defeated TRAINER_BECKY, BrandenReset
 	call_if_not_defeated TRAINER_BEAU, HeidiReset
+	call_if_not_defeated TRAINER_ETHAN_1, JaggedPass_Reset
+	call EventScript_PCon
 	goto EventScript_ResetMrBriney
 	end
+
+JaggedPass_Reset::
+	cleartrainerflag TRAINER_ERIC
+	cleartrainerflag TRAINER_JULIO
+	cleartrainerflag TRAINER_AUTUMN
+	return
 
 GinaMiaReset::
 	setvar VAR_MIAGINA, 0
@@ -849,6 +857,16 @@ Common_EventScript_PlayerHandedOverTheItem::
 	waitmessage
 	waitfanfare
 	removeitem VAR_0x8004
+	return
+
+EventScript_PCoff::
+	lockall
+	setvar VAR_0x40FF, 0
+	releaseall
+	end
+
+EventScript_PCon::
+	setvar VAR_0x40FF, 1
 	return
 
 	.include "data/scripts/elite_four.inc"

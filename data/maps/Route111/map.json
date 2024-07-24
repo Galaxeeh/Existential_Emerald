@@ -396,8 +396,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 37,
-      "y": 17,
+      "x": 32,
+      "y": 3,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -422,8 +422,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 19,
-      "y": 27,
+      "x": 37,
+      "y": 20,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -694,43 +694,43 @@
       "flag": "FLAG_SHOW_111_TRAINERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL_DOLL",
-      "x": 43,
-      "y": -6,
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+      "x": 8,
+      "y": 16,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_111_TRAINERS"
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CHIKORITA_DOLL",
-      "x": 41,
-      "y": -6,
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 15,
+      "y": 31,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_111_TRAINERS"
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TOTODILE_DOLL",
-      "x": 42,
-      "y": -6,
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+      "x": 7,
+      "y": 16,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_111_TRAINERS"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TORCHIC_DOLL",
@@ -746,9 +746,9 @@
       "flag": "FLAG_HIDE_111_TRAINERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TREECKO_DOLL",
-      "x": 45,
-      "y": -6,
+      "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
+      "x": 7,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -756,12 +756,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_111_TRAINERS"
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MUDKIP_DOLL",
-      "x": 46,
-      "y": -6,
+      "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
+      "x": 8,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -769,20 +769,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_111_TRAINERS"
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CYRUS",
-      "x": 44,
-      "y": -6,
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 15,
+      "y": 28,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route111_ThankYou_Man",
-      "flag": "FLAG_HIDE_111_TRAINERS"
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -1095,8 +1095,8 @@
     },
     {
       "type": "trigger",
-      "x": -1,
-      "y": 34,
+      "x": 2,
+      "y": 47,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -1113,8 +1113,8 @@
     },
     {
       "type": "trigger",
-      "x": -1,
-      "y": 34,
+      "x": 2,
+      "y": 47,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
@@ -1122,8 +1122,8 @@
     },
     {
       "type": "trigger",
-      "x": -1,
-      "y": 34,
+      "x": 2,
+      "y": 47,
       "elevation": 3,
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
