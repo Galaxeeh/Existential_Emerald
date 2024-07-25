@@ -430,3 +430,5 @@ const u32 gObjectEventPic_Blastoise[] = INCBIN_U32("graphics/object_events/pics/
 const u16 gObjectEventPal_Blastoise[] = INCBIN_U16("graphics/object_events/palettes/blastoise.gbapal");
 const u32 gObjectEventPic_Shuckle[] = INCBIN_U32("graphics/object_events/pics/pokemon/shuckle.4bpp");
 const u16 gObjectEventPal_Shuckle[] = INCBIN_U16("graphics/object_events/palettes/shuckle.gbapal");
+const u32 gObjectEventPic_Pidgeotite[] = INCBIN_U32("graphics/object_events/pics/misc/pidgeotite.4bpp");
+const u16 gObjectEventPal_Pidgeotite[] = INCBIN_U16("graphics/object_events/palettes/pidgeotite.gbapal");

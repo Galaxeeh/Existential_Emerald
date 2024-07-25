@@ -269,6 +269,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Charizard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blastoise;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Shuckle;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgeotite;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -536,6 +537,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CHARIZARD] =                &gObjectEventGraphicsInfo_Charizard,
     [OBJ_EVENT_GFX_BLASTOISE] =                &gObjectEventGraphicsInfo_Blastoise,
     [OBJ_EVENT_GFX_SHUCKLE] =                  &gObjectEventGraphicsInfo_Shuckle,
+    [OBJ_EVENT_GFX_PIDGEOTITE] =               &gObjectEventGraphicsInfo_Pidgeotite,
 
 };
 

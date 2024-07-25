@@ -253,14 +253,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 33,
-      "y": 78,
+      "x": 29,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_STARDUST",
+      "trainer_sight_or_berry_tree_id": "ITEM_HARD_STONE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_111_TM_SANDSTORM"
     },
@@ -343,7 +343,7 @@
       "flag": "FLAG_HIDE_ROUTE_111_GABBY_AND_TY_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_GOLD_ITEM_BALL",
       "x": 4,
       "y": 94,
       "elevation": 3,
@@ -396,10 +396,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 32,
-      "y": 3,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "x": 16,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -422,14 +422,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 37,
-      "y": 20,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "x": 28,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "4",
       "script": "Route111_EventScript_Wilton",
       "flag": "0"
     },
@@ -552,14 +552,14 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 19,
-      "y": 118,
+      "x": 35,
+      "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
+      "trainer_sight_or_berry_tree_id": "ITEM_FIGHTING_GEM",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_111_ELIXIR"
     },
@@ -710,7 +710,7 @@
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 15,
       "y": 31,
-      "elevation": 0,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -775,7 +775,7 @@
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
       "x": 15,
       "y": 28,
-      "elevation": 0,
+      "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -801,8 +801,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 26,
-      "y": 18,
+      "x": 28,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_ROUTE111_OLD_LADYS_REST_STOP",
       "dest_warp_id": "0"
@@ -1301,8 +1301,8 @@
     },
     {
       "type": "sign",
-      "x": 13,
-      "y": 6,
+      "x": 11,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route111_EventScript_RouteSign113"
@@ -1330,8 +1330,8 @@
     },
     {
       "type": "sign",
-      "x": 25,
-      "y": 19,
+      "x": 27,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route111_EventScript_OldLadysRestStopSign"
@@ -1355,7 +1355,7 @@
       "x": 34,
       "y": 91,
       "elevation": 0,
-      "item": "ITEM_SOFT_SAND",
+      "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST"
     },
     {
@@ -1397,10 +1397,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 33,
-      "y": 77,
+      "x": 12,
+      "y": 7,
       "elevation": 0,
-      "item": "ITEM_RARE_CANDY",
+      "item": "ITEM_WIDE_LENS",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_RARE_CANDY"
     },
     {

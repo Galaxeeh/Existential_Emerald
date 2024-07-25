@@ -290,6 +290,10 @@ static const struct SpriteFrameImage sPicTable_GoldItemBall[] = {
     obj_frame_tiles(gObjectEventPic_GoldItemBall),
 };
 
+static const struct SpriteFrameImage sPicTable_Pidgeotite[] = {
+    obj_frame_tiles(gObjectEventPic_Pidgeotite),
+};
+
 static const struct SpriteFrameImage sPicTable_ProfBirch[] = {
     overworld_ascending_frames(gObjectEventPic_ProfBirch, 2, 4),
 };
