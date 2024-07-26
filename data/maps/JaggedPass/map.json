@@ -42,10 +42,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 23,
-      "y": 24,
+      "x": 24,
+      "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -68,10 +68,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
-      "x": 16,
-      "y": 19,
+      "x": 23,
+      "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -267,15 +267,15 @@
       "x": 8,
       "y": 10,
       "elevation": 3,
-      "item": "ITEM_FULL_HEAL",
+      "item": "ITEM_DRAGON_FANG",
       "flag": "FLAG_HIDDEN_ITEM_JAGGED_PASS_FULL_HEAL"
     },
     {
       "type": "hidden_item",
-      "x": 7,
-      "y": 29,
+      "x": 23,
+      "y": 24,
       "elevation": 3,
-      "item": "ITEM_GREAT_BALL",
+      "item": "ITEM_WHITE_HERB",
       "flag": "FLAG_HIDDEN_ITEM_JAGGED_PASS_GREAT_BALL"
     }
   ]

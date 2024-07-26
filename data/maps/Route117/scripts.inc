@@ -18,8 +18,6 @@ Route117_EventScript_LittleBoy::
 Route117_EventScript_Girl::
 	msgbox Route117_Text_DayCarePokemonHadNewMove, MSGBOX_NPC
 	waitmessage
-	giveitem ITEM_RARE_CANDY
-	call_if_eq VAR_RESULT, FALSE, Route110_TrickHouseEnd_EventScript_BagFull
 	applymovement LOCALID_GIRL, GirlMovement
 	end
 

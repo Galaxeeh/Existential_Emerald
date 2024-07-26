@@ -388,6 +388,7 @@ MauvilleCity_GameCorner_EventScript_Girl::
 	case 0, MauvilleCity_GameCorner_EventScript_GiveTreeckoDoll
 	case 1, MauvilleCity_GameCorner_EventScript_GiveTorchicDoll
 	case 2, MauvilleCity_GameCorner_EventScript_GiveMudkipDoll
+	case 3, MauvilleCity_GameCorner_EventScript_GiveRattataDoll
 	end
 
 MauvilleCity_GameCorner_EventScript_GiveTreeckoDoll::
@@ -418,6 +419,20 @@ MauvilleCity_GameCorner_EventScript_GiveMudkipDoll::
 	givedecoration DECOR_MUDKIP_DOLL
 	setflag FLAG_RECEIVED_STARTER_DOLL
 	goto MauvilleCity_GameCorner_EventScript_ReceivedStarterDoll
+	end
+
+MauvilleCity_GameCorner_EventScript_GiveRattataDoll::
+	@bufferdecorationname STR_VAR_2, DECOR_MUDKIP_DOLL
+	@checkdecorspace DECOR_MUDKIP_DOLL
+	@goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NoRoomForStarterDoll
+	msgbox MauvilleCity_GameCorner_Text_HereYouGo3, MSGBOX_DEFAULT
+	@givedecoration DECOR_MUDKIP_DOLL
+	setflag FLAG_RECEIVED_STARTER_DOLL
+	goto MauvilleCity_GameCorner_EventScript_ReceivedStarterDollRat
+	end
+
+MauvilleCity_GameCorner_EventScript_ReceivedStarterDollRat::
+	release
 	end
 
 MauvilleCity_GameCorner_EventScript_NoRoomForStarterDoll::
@@ -704,6 +719,9 @@ MauvilleCity_GameCorner_Text_GotTwoOfSameDollWantOne:
 
 MauvilleCity_GameCorner_Text_HereYouGo2:
 	.string "Here you go!$"
+
+MauvilleCity_GameCorner_Text_HereYouGo3:
+	.string "Sorry, I'm out of rat dolls!$"
 
 MauvilleCity_GameCorner_Text_YouWantItButNotNow:
 	.string "Huh?\n"
