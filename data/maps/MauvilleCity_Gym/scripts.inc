@@ -10,6 +10,7 @@
 .set LOCALID_SECURITY2, 9
 .set LOCALID_LOUDRED1, 11
 .set LOCALID_LOUDRED2, 10
+.set LOCALID_GYMGUIDE, 6
 
 
 
@@ -178,6 +179,10 @@ RoxieToPlayer:
 	walk_right
 	step_end
 
+PlayerRight:
+	walk_right
+	step_end
+
 MauvilleCity_Gym_EventScript_Wattson::
 	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -220,6 +225,8 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	setvar VAR_SECURITY, 1
 	setvar VAR_KIRKSHAWN, 2
 	setvar VAR_BENVIV, 2
+	setvar VAR_MAUVILLE_GYM_CHALLENGE, 1
+	setvar VAR_0x40FF, 1
 	release
 	end
 
@@ -473,6 +480,28 @@ MauvilleCity_Gym_EventScript_GymStatue::
 	msgbox MauvilleCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	releaseall
 	end
+
+MauvilleGym_Checkmons::
+	lock
+	getpartysize
+	goto_if_eq VAR_RESULT, 1, MauvilleGymNeed2mons
+	release
+	end
+
+MauvilleGymNeed2mons::
+	applymovement LOCALID_GYMGUIDE, Common_Movement_FacePlayer
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox MauvilleCity_Gym_Need2mons, MSGBOX_DEFAULT
+	waitmessage
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerRight
+	waitmovement 0
+	releaseall
+	end
+
+MauvilleCity_Gym_Need2mons:
+	.string "Sorry, but you need at least two\n"
+	.string "Pokémon for this gym challenge.$"
 
 MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, Champion-\n"

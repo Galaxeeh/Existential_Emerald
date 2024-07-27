@@ -2000,6 +2000,9 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     ADJUST_SCORE(-10);
                     break;
                 }
+                
+                if (gDisableStructs[battlerAtk].isFirstTurn && gBattleMons[battlerAtk].ability == ABILITY_POWER_OF_ALCHEMY)
+                    ADJUST_SCORE(+20);
 
                 if (move != MOVE_QUICK_GUARD
                   && move != MOVE_WIDE_GUARD
