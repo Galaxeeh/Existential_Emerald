@@ -2285,7 +2285,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         FOOTPRINT(Sunkern)
         .levelUpLearnset = sSunkernLevelUpLearnset,
         .teachableLearnset = sSunkernTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_SUNFLORA}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_SUNFLORA}),
     },
 
     [SPECIES_SUNFLORA] =

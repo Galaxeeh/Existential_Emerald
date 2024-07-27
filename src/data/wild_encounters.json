@@ -12700,62 +12700,62 @@
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_PANSEAR"
+                "species": "SPECIES_CAPSAKID"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_MONFERNO"
+                "species": "SPECIES_IVYSAUR"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_RABOOT"
+                "species": "SPECIES_GROTLE"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_PIGNITE"
+                "species": "SPECIES_GROVYLE"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_QUILAVA"
+                "species": "SPECIES_PANSAGE"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_CHARMELEON"
+                "species": "SPECIES_ROSELIA"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_COMBUSKEN"
+                "species": "SPECIES_PETILIL"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_FLETCHINDER"
+                "species": "SPECIES_DOLLIV"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_TAUROS_PALDEAN_COMBAT_BREED"
+                "species": "SPECIES_TANGELA"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_TAUROS_PALDEAN_BLAZE_BREED"
+                "species": "SPECIES_FLORAGATO"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_LARVESTA"
+                "species": "SPECIES_SUNKERN"
               },
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_LARVESTA"
+                "species": "SPECIES_SUNFLORA"
               }
             ]
           }
