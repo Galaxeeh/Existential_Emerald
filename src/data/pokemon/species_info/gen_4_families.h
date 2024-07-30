@@ -3641,7 +3641,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG, EGG_GROUP_WATER_3),
-        .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_SNIPER, ABILITY_KEEN_EYE },
+        .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_BATTLE_ARMOR, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Skorupi"),
         .cryId = CRY_SKORUPI,
@@ -3674,7 +3674,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         FOOTPRINT(Skorupi)
         .levelUpLearnset = sSkorupiLevelUpLearnset,
         .teachableLearnset = sSkorupiTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_DRAPION}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_DRAPION}),
     },
 
     [SPECIES_DRAPION] =
@@ -3695,7 +3695,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG, EGG_GROUP_WATER_3),
-        .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_SNIPER, ABILITY_KEEN_EYE },
+        .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_BATTLE_ARMOR, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Drapion"),
         .cryId = CRY_DRAPION,
